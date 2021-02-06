@@ -108,7 +108,7 @@ class DatabaseSeeder extends Seeder
         DB::table('academics')->insert([
             'EmployeeID'=> '01',
             'Photo'=>'SM@gmail.com.jpg',
-            'Title'=>'Dr',
+            'Title'=>'Dr.',
             'FirstName'=>'S',
             'LastName'=>' Mahesan',
             'Gender'=>'Male',
@@ -135,7 +135,7 @@ class DatabaseSeeder extends Seeder
         DB::table('academics')->insert([
             'EmployeeID'=> '02',
             'Photo'=>'EC@gmail.com.jpg',
-            'Title'=>'Dr',
+            'Title'=>'Dr.',
             'FirstName'=>'Eugene',
             'LastName'=>'Charles',
             'Gender'=>'Male',
@@ -163,7 +163,7 @@ class DatabaseSeeder extends Seeder
         DB::table('academics')->insert([
             'EmployeeID'=> '03',
             'Photo'=>'KT@gmail.com.jpg',
-            'Title'=>'Dr',
+            'Title'=>'Dr.',
             'FirstName'=>'Kathiravelu',
             'LastName'=>'Thabotharan',
             'Gender'=>'Male',
@@ -191,7 +191,7 @@ class DatabaseSeeder extends Seeder
         DB::table('academics')->insert([
             'EmployeeID'=> '04',
             'Photo'=>'AR@gmail.com.jpg',
-            'Title'=>'Dr',
+            'Title'=>'Dr.',
             'FirstName'=>'Amirthalingam',
             'LastName'=>'Ramanan',
             'Gender'=>'Male',
@@ -219,7 +219,7 @@ class DatabaseSeeder extends Seeder
         DB::table('academics')->insert([
             'EmployeeID'=> '05',
             'Photo'=>'BM@gmail.com.jpg',
-            'Title'=>'Dr. (Mrs)',
+            'Title'=>'Dr.',
             'FirstName'=>'Barathy',
             'LastName'=>'Mayurathan',
             'Gender'=>'Female',
@@ -246,15 +246,15 @@ class DatabaseSeeder extends Seeder
 
         DB::table('academics')->insert([
             'EmployeeID'=> '06',
-            'Photo'=>'MS@gmail.com.jpg',
-            'Title'=>'Dr',
+            'Photo'=>'MSa@gmail.com.jpg',
+            'Title'=>'Dr.',
             'FirstName'=>'Manivannan',
             'LastName'=>'Siyamalan',
             'Gender'=>'Male',
             'DateOfBirth'=>'1976-08-14',
             'Designation'=>'Senior Lecturer',
             'AdminRole'=>'',
-            'EmailID'=>'MS@gmail.com',
+            'EmailID'=>'MSa@gmail.com',
             'LinkedIn'=>'https://www.linkedin.com/in/siyamalanmanivannan?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Ba59PqMYUTC%2BfJKu%2BeV3q%2BQ%3D%3D',
             'ContactNumber'=>'0775446259',
             'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-dr-m-siyamalan/',
@@ -267,7 +267,7 @@ class DatabaseSeeder extends Seeder
             'role'=> 'Senior Lecturer',
             'fname'=>'Manivannan',
             'lname'=>'Siyamalan',
-            'email'=>'MS@gmail.com',
+            'email'=>'MSa@gmail.com',
             'password'=> Hash::make('abcd1234'),
         ]);
 
@@ -275,7 +275,7 @@ class DatabaseSeeder extends Seeder
         DB::table('academics')->insert([
             'EmployeeID'=> '07',
             'Photo'=>'KS@gmail.com.jpg',
-            'Title'=>'Mr',
+            'Title'=>'Mr.',
             'FirstName'=>'Kengatharaiyer',
             'LastName'=>'Sarveswaran',
             'Gender'=>'Male',
@@ -302,15 +302,15 @@ class DatabaseSeeder extends Seeder
 
         DB::table('academics')->insert([
             'EmployeeID'=> '08',
-            'Photo'=>'SS@gmail.com.jpg',
-            'Title'=>'Mr',
+            'Photo'=>'SSa@gmail.com.jpg',
+            'Title'=>'Mr.',
             'FirstName'=>'Sriskandarajah',
             'LastName'=>'Shriparen',
             'Gender'=>'Male',
             'DateOfBirth'=>'1979-08-15',
             'Designation'=>'Lecturer (Probationary)',
             'AdminRole'=>'',
-            'EmailID'=>'SS@gmail.com',
+            'EmailID'=>'SSa@gmail.com',
             'LinkedIn'=>'https://www.linkedin.com/in/sriskandarajah-shriparen-43583737?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B1UCej2%2F1TPu9isUsC5S84Q%3D%3D',
             'ContactNumber'=>'0776542589',
             'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-dr-k-thabotharan/',
@@ -323,7 +323,7 @@ class DatabaseSeeder extends Seeder
             'role'=> 'Lecturer (Probationary)',
             'fname'=>'Sriskandarajah',
             'lname'=>'Shriparen',
-            'email'=>'SS@gmail.com',
+            'email'=>'SSa@gmail.com',
             'password'=> Hash::make('abcd1234'),
         ]);
 
@@ -331,7 +331,7 @@ class DatabaseSeeder extends Seeder
         DB::table('academics')->insert([
             'EmployeeID'=> '09',
             'Photo'=>'ST@gmail.com.jpg',
-            'Title'=>'Ms',
+            'Title'=>'Ms.',
             'FirstName'=>'Samantha',
             'LastName'=>'Tharani',
             'Gender'=>'Female',
