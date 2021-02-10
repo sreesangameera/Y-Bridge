@@ -72,7 +72,9 @@
                                 type="password"
                                 name="password_confirmation" required />
             </div>
-
+            @if($msg = session()->get('msg'))
+            <h3>{{$msg}}</h3>
+            @endif
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
                     {{ __('Already registered?') }}
@@ -84,5 +86,21 @@
             </div>
         </form>
     </x-auth-card>
+    
 </x-guest-layout>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+@if($msg = session()->get('msg'))
+@if($msg == "Wait for the acceptance")
+<script>
+     Swal.fire({
+               position: 'top',
+               icon: 'success',
+               title: '{{$msg}}',
+               showConfirmButton: false,
+               timer: 2000
+            
+          });
+     </script>
+     @endif
+     @endif
 

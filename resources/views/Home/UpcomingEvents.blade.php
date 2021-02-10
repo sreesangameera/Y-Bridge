@@ -65,7 +65,7 @@
 }
 
 .blog-home2 .subtitle {
-  color: #00FF00;
+  color: #37065B;
   line-height: 24px;
 }
 
@@ -237,7 +237,7 @@ body{
                         <span class="icon-bar"></span>
                     </button>
                     <div class="navbar-brand" href="home"><img src="images/logos/logo.png" id="Logo"> <h1 class="animated fadeInDown heading" style="color: #03a1fc" ><b>Y-Bridge</h1>
-                        <h4 style="color: #03a1fc">"A match-module to bridge students with Academic and Industry-based supervisors" </h4><div class="col-md-10">
+                        <h4 style="color: #0049FF">"A match-module to bridge students with Academic and Industry-based supervisors" </h4><div class="col-md-10">
                         
     </div>
                                             </div>
@@ -277,7 +277,7 @@ body{
 			</div>
 		</div>
 	</div>
-    <hr class="hr1"><hr class="hr1">
+    <hr class="hr1">
     <div class="panel panel-primary">
 
 <div class="blog-home2 py-5">
@@ -288,28 +288,18 @@ body{
       <div class="panel-body">
         <h1 class="my-3">Upcoming Events</h1>
         <h6 class="subtitle font-weight-normal">You can relay on our upcoming event list and also our upcoming events will be great experience for you without doubt</h6>
-      </div>
-      <!-- Column -->
-      <!-- Column -->
-    </div>
-    <div class="row mt-4">
-
-    <!-- Column -->
-      
-    
-      
-      <table  >
+      </div><table  >
                         <thead>
                         <tr>
                             
                             <th></th>
                       
-                        </tr>
+                        </tr></thead><tbody>
                         @foreach ($upcominget as $user)
                             <tr>
                 
                              <td>
-                             <div class="col-md-4 on-hover">
+                             <div class="">
         <div class="card border-0 mb-4">
           
           <div class="date-pos bg-info-gradiant p-8 d-inline-block text-center rounded text-white position-absolute">{{$user->Date}}</div>
@@ -323,8 +313,18 @@ body{
                                 
                              </tr>
                         @endforeach
-                        <thead>
+                        </tbody>
                               </table> 
+      <!-- Column -->
+      <!-- Column -->
+    </div>
+    <div class="row mt-4">
+
+    <!-- Column -->
+      
+    
+      
+      
       
      
       
@@ -338,20 +338,20 @@ body{
       <br />
       <br />
       <br />
-      <hr class="hr1">
+     
         </div><!-- end container -->
        
     </div><!-- end section -->
 
 
-    <hr class="hr1">
+   
 
 <div class="copyrights">
         <div class="container">
             <div class="footer-distributed">
                 <div class="footer-left">                   
                     <p class="footer-company-name">All Rights Reserved. &copy; 2020  Design By : 
-					<a href="https://html.design/">YBridgeTeam</a></p>
+					<a href="https://html.design/">TeamY-Bridge</a></p>
                 </div>
 
                 

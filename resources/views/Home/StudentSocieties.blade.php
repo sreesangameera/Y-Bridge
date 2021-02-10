@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,7 +60,7 @@ body{
         }
         .events > p:before{
             padding-right: 10px;
-            /*content: '>';*/
+            content: '>';
         }
         .events span{
            font-size: 14px;
@@ -130,6 +129,75 @@ body{
                 width:20%;
             }
         }
+
+        @import url(//fonts.googleapis.com/css?family=Montserrat:300,400,500);
+.service-15 {
+  font-family: "Montserrat", sans-serif;
+	color: #8d97ad;
+  font-weight: 300;
+}
+
+.service-15 h1, .service-15 h2, .service-15 h3, .service-15 h4, .service-15 h5, .service-15 h6 {
+  color: #3e4555;
+}
+
+.service-15 h6 {
+		line-height: 22px;
+    font-size: 18px;
+}
+
+.service-15 .font-weight-medium {
+	font-weight: 500;
+}
+
+.service-15 a {
+	text-decoration: none;
+}
+
+.service-15 .linking {
+	color: #3e4555;
+}
+
+.service-15 .linking:hover {
+	color: #316ce8;
+}
+
+.service-15 .bg-light {
+    background-color: #f4f8fa !important;
+}
+
+.service-15 .text-success {
+	color: #2cdd9b !important;
+}
+
+.service-15 .icon-round {
+    width: 80px;
+    line-height: 80px;
+		font-size: 2rem;
+}
+
+.service-15 .btn-success-gradiant {
+		background: #2cdd9b;
+    background: -webkit-linear-gradient(legacy-direction(to right), #2cdd9b 0%, #1dc8cc 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#2cdd9b), to(#1dc8cc));
+    background: -webkit-linear-gradient(left, #2cdd9b 0%, #1dc8cc 100%);
+    background: -o-linear-gradient(left, #2cdd9b 0%, #1dc8cc 100%);
+    background: linear-gradient(to right, #2cdd9b 0%, #1dc8cc 100%);
+}
+
+.service-15 .btn-success-gradiant:hover {
+		background: #C9FFE5;
+    background: -webkit-linear-gradient(legacy-direction(to right), #C9FFE5 0%, #2cdd9b 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#C9FFE5), to(#2cdd9b));
+    background: -webkit-linear-gradient(left, #C9FFE5 0%, #2cdd9b 100%);
+    background: -o-linear-gradient(left, #C9FFE5 0%, #2cdd9b 100%);
+    background: linear-gradient(to right, #C9FFE5 0%, #2cdd9b 100%);	
+}
+
+.service-15 .btn-md {
+    padding: 15px 45px;
+    font-size: 16px;
+}
     </style>
 <body>
 
@@ -158,7 +226,7 @@ body{
                         <span class="icon-bar"></span>
                     </button>
                     <div class="navbar-brand" href="home"><img src="images/logos/logo.png" id="Logo"> <h1 class="animated fadeInDown heading" style="color: #03a1fc" ><b>Y-Bridge</h1>
-                        <h4 style="color: #03a1fc">"A match-module to bridge students with Academic and Industry-based supervisors" </h4><div class="col-md-10">
+                        <h4 style="color: #0049FF">"A match-module to bridge students with Academic and Industry-based supervisors" </h4><div class="col-md-10">
                         
     </div>
                                             </div>
@@ -198,42 +266,49 @@ body{
 			</div>
 		</div>
 	</div>
-    <hr class="hr1"><hr class="hr1">
+    <hr class="hr1">
     <div class="panel panel-primary">
+
+    <div class="panel-body">
+    <h3> <a href="#">Student societies</a></h3>
+        <hr>
+        <table  >
+                        <thead>
+                        <tr>
+                            
+                            <th></th>
+                      
+                        </tr>
+                        </thead>
+        <tbody>
+                        @foreach ($studentsoct as $user)
+                            <tr>
+                
+                             <td>
+                             <div class="">
+        <div class="card border-0 mb-4">
+        <div class="no-shrink"><span class="icon-round bg-white text-success rounded-circle text-center d-inline-block">&#10687</span>
+          <!--div class="date-pos bg-info-gradiant p-8 d-inline-block text-center rounded text-white position-absolute">{{$user->Date}}</div-->
+          <div class="p-3">
+          <h4 class="font-weight-medium"><a href="javascript:void(0)" class="linking"><b>{{$user->EName}}</b></a></h4>
+          <p class="mt-3">{{$user->Description}}</p></div></div>
+          <!--a href="#" class="text-decoration-none linking text-themecolor mt-2">Learn More</a-->
+        </div>
+      </div>
+      </td>
+                                
+                             </tr>
+                        @endforeach
+        </tbody>
+                              </table> 
+    </div>
     
-                                <div class="panel-body">
-                                    <h3> <a href="#">Student societies</a></h3>
-                                    <hr>
-                                    <div class="events">
-                                        <p><i class="fa fa-bullseye"></i> <a href="http://society.jfn.ac.lk/comsoc/" target="_blank">Computer-society</a></p>
-                                    </div>
 
-                                </div>
-                            </div>
-
-                        
-                            <!-- end testi-meta -->
-                        </div>
-                        <!-- end testimonial -->
-                        
-                        <!-- end testimonial -->
-
-                        
-                        <!-- end testimonial -->
-
-                       <br>
-                    </div><!-- end carousel -->
-                </div><!-- end col -->
-               
-            </div><!-- end row -->
-<br>
-<br>
-<br>
 <hr class="hr1">
         </div><!-- end container -->
        
     </div><!-- end section -->
-
+    </div></div></div>
 
     <hr class="hr1">
 
@@ -243,7 +318,7 @@ body{
             <div class="footer-distributed">
                 <div class="footer-left">                   
                     <p class="footer-company-name">All Rights Reserved. &copy; 2020  Design By : 
-					<a href="https://html.design/">Reverse576</a></p>
+					<a href="https://html.design/">TeamY-Bridge</a></p>
                 </div>
 
                 

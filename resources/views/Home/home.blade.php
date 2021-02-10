@@ -38,6 +38,82 @@
 
 </head>
 <style>
+    @import url(//fonts.googleapis.com/css?family=Montserrat:300,400,500);
+.blog-home2 {
+  font-family: "Montserrat", sans-serif;
+  color: #1b1b1b;
+  font-weight: 300;
+}
+
+.blog-home2 h1,
+.blog-home2 h2,
+.blog-home2 h3,
+.blog-home2 h4,
+.blog-home2 h5,
+.blog-home2 h6 {
+  color: #3e4555;
+}
+
+.blog-home2 .font-weight-medium {
+  font-weight: 500;
+}
+
+.blog-home2 .bg-light {
+  background-color: #f4f8fa !important;
+}
+
+.blog-home2 .subtitle {
+  color: #37065B;
+  line-height: 24px;
+}
+
+.blog-home2 .text-themecolor {
+  color: #316ce8;
+}
+
+.blog-home2 h5 {
+  line-height: 22px;
+  font-size: 18px;
+}
+
+.blog-home2 a.link {
+  color: #3e4555;
+}
+
+.blog-home2 a.link:hover {
+  color: #316ce8;
+}
+
+.blog-home2 .on-hover {
+  -webkit-transition: 0.2s ease-in;
+  -o-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+.blog-home2 .on-hover:hover {
+  -webkit-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+
+.blog-home2 .date-pos {
+  right: 10px;
+  top: 10px;
+}
+
+.blog-home2 .date-pos span {
+  font-size: 30px;
+  line-height: 30px;
+}
+.blog-home2 .bg-info-gradiant {
+    background: #00FF7F;
+    background: -webkit-linear-gradient(legacy-direction(to right), #00FF7F 0%, #316ce8 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#00FF7F), to(#316ce8));
+    background: -webkit-linear-gradient(left, #00FF7F 0%, #316ce8 100%);
+    background: -o-linear-gradient(left, #00FF7F 0%, #316ce8 100%);
+    background: linear-gradient(to right, #00FF7F 0%, #316ce8 100%);
+}
+
 body{
         background-color: #fff !important;
     }
@@ -174,7 +250,7 @@ body{
                         <span class="icon-bar"></span>
                      </button>
                     <div class="navbar-brand"  href="home"><img src="images/logos/logo.png" id="Logo"> <h1 class="animated fadeInDown heading" style="color: #03a1fc" ><b>Y-Bridge</h1>
-                        <h4 style="color: #03a1fc">"A match-module to bridge students with Academic and Industry-based supervisors" </h4><div class="col-md-10">
+                        <h4 style="color: #0049FF">"A match-module to bridge students with Academic and Industry-based supervisors" </h4><div class="col-md-10">
                         
     </div>
                                             </div>
@@ -331,37 +407,60 @@ body{
         </div><!-- end container -->
     </div><!-- end section -->
 	
-	
-    <div id="about" class="section wb">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="message-box">
-                    <h3> <a href="#">Upcoming Events</a></h3>
-                        <hr>
-                                    <div class="events">
-                                                                                    <p><a href="http://www.jfn.ac.lk/index.php/gallery/thirty-second-general-convocation-10-11-january-2017/" target="_blank"><i class="fa fa-thumb-tack"></i> General Convocation-2017</a>
-                                            </p>
-                                                                                    <p><a href="http://www.sci.jfn.ac.lk/index.php/academic/" target="_blank"><i class="fa fa-thumb-tack"></i> ECE-2014</a>
-                                            </p>
-                                                                                    <p><a href="http://www.csc.jfn.ac.lk/events/slswcs17/" target="_blank"><i class="fa fa-thumb-tack"></i> SL-SWCS&#039;17</a>
-                                            </p>
-                                                                                    <p><a href="http://www.csc.jfn.ac.lk/index.php/2017/08/14/cs-career-fair17/" target="_blank"><i class="fa fa-thumb-tack"></i> Career Fair 2017</a>
-                                            </p>
-                                            <br>    <a href="http://192.248.56.20/match-module/all-user/5?Atype=5" class="btn btn-light btn-radius btn-brd grd1">More</a>
-            </div><!-- end title -->
-        </div><!-- end container -->
+	<div class="panel panel-primary">
+    <div class="blog-home2 py-5">
+  <div class="container">
+    <!-- Row  -->
+    <div class="row justify-content-center">
+      <!-- Column -->
+      <div class="panel-body">
+        <h1 class="my-3">Upcoming Events</h1>
+        <h6 class="subtitle font-weight-normal">You can relay on our upcoming event list and also our upcoming events will be great experience for you without doubt</h6>
+      </div><table  >
+                        <thead>
+                        <tr>
+                            
+                            <th></th>
+                      
+                        </tr></thead><tbody>
+                        @foreach ($upcominget as $user)
+                            <tr>
+                
+                             <td>
+                             <div class="">
+        <div class="card border-0 mb-4">
+          
+          <div class="date-pos bg-info-gradiant p-8 d-inline-block text-center rounded text-white position-absolute">{{$user->Date}}</div>
+          <br />
+           <h5 class="font-weight-medium mt-3"><a href="{{$user->Link}}" target="_blank" class="text-decoration-none link">{{$user->EName}}</a></h5>
+          <p class="mt-3">{{$user->Description}}</p>
+          <a href="#" class="text-decoration-none linking text-themecolor mt-2">Learn More</a>
+        </div>
+      </div>
+      </td>
+                                
+                             </tr>
+                        @endforeach
+                        </tbody>
+                              </table> 
+      <!-- Column -->
+      <!-- Column -->
+    </div>
+    <div class="row mt-4">
 
-               
-
-               
-
-               
-            <hr class="hr1">
-
-           
-        </div><!-- end container -->
-    </div><!-- end section -->
+    <!-- Column -->
+      
+    
+      
+      
+      
+     
+      
+     <br />
+      <br />
+    </div>
+  </div></div>
+</div>
 
      <div class="panel panel-primary">
                                 <div class="panel-body">
@@ -401,148 +500,50 @@ body{
                                                     </ul>
                                                     <div class="tab-content">
                                                         <div role="tabpanel" class="tab-pane active" id="1g">
-                                                                                                                            <div class="user Searchable">
-            <a href="https://www.linkedin.com/" target="_blank">
-    	    <div class="pull-left">
-	        <img src="http://192.248.56.20/match-module/uploads/lecture/profile/default.png" class="">
-	    </div>
-	    <div class="name " > Angodage Shehan Akalanka Perera</div>
-    </a>
-                <p class=""></p>
-        <p class="">Level 1G</p>
-      
-    
-</div>                                                                                                                        <a href="http://192.248.56.20/match-module/all-user/2?Atype=1G&amp;Btype=1S" class="pull-right" id="showUserBtn" title="Students">More...</a>
+                                                                                                                                                                                                                                                 
                                                         </div>
                                                         <div role="tabpanel" class="tab-pane" id="2g">
-                                                                                                                        <a href="http://192.248.56.20/match-module/all-user/2?Atype=2G&amp;Btype=2S" class="pull-right" id="showUserBtn" title="Students">More...</a>
+                                                                                                                        
                                                         </div>
                                                         <div role="tabpanel" class="tab-pane" id="3g">
-                                                        <div class="user Searchable">
-            <a href="https://www.linkedin.com/in/vishnuga-sivakumaran-a900431a4/" target="_blank">
-    	    <div class="pull-left">
-	        <img src="http://192.248.56.20/match-module/uploads/lecture/profile/default.png" class="">
-	    </div>
-	    <div class="name " > Vishnuga Sivakumaran</div>
-    </a>
-                <p class=""></p>
-        <p class="">Level 3M</p>
-      
-    
-</div>      <div class="user Searchable">
-            <a href="https://www.linkedin.com/" target="_blank">
-    	    <div class="pull-left">
-	        <img src="http://192.248.56.20/match-module/uploads/lecture/profile/default.png" class="">
-	    </div>
-	    <div class="name " > Harischandra Patabendige Malki Maduka</div>
-    </a>
-                <p class=""></p>
-        <p class="">Level 3M</p>
-      
-    
-</div>                                                                                                                            <div class="user Searchable">
-            <a href="https://www.linkedin.com/" target="_blank">
-    	    <div class="pull-left">
-	        <img src="http://192.248.56.20/match-module/uploads/lecture/profile/default.png" class="">
-	    </div>
-	    <div class="name " > Kabilathas Parkavi</div>
-    </a>
-                <p class=""></p>
-        <p class="">Level 3M</p>
-      
-    
-</div>                                                                                                                            <div class="user Searchable">
-            <a href="https://www.linkedin.com/" target="_blank">
-    	    <div class="pull-left">
-	        <img src="http://192.248.56.20/match-module/uploads/lecture/profile/default.png" class="">
-	    </div>
-	    <div class="name " > Kanagaratnam  Derushan</div>
-    </a>
-                <p class=""></p>
-        <p class="">Level 3M</p>
-      
-    
-</div>                                                                                                                            <div class="user Searchable">
-            <a href="https://www.linkedin.com/" target="_blank">
-    	    <div class="pull-left">
-	        <img src="http://192.248.56.20/match-module/uploads/lecture/profile/default.png" class="">
-	    </div>
-	    <div class="name " > Mohan Vithusha</div>
-    </a>
-                <p class=""></p>
-        <p class="">Level 3M</p>
-      
-    
-</div>                                                                                                                            <div class="user Searchable">
-            <a href="https://www.linkedin.com/" target="_blank">
-    	    <div class="pull-left">
-	        <img src="http://192.248.56.20/match-module/uploads/lecture/profile/default.png" class="">
-	    </div>
-	    <div class="name " > Selvarasa Sangeerthana</div>
-    </a>
-                <p class=""></p>
-        <p class="">Level 3M</p>
-      
-    
-</div>                                                                                                                        <a href="http://192.248.56.20/match-module/all-user/2?Atype=3G&amp;Btype=3M&amp;Ctype=3S" class="pull-right" id="showUserBtn" title="Students">More...</a>
+                                                        <table  >
+                        <thead>
+                        <tr>
+                            
+                            <th></th>
+                            <th><th>
+                            
+                            
+                        
+                            
+                            
+                        </tr>
+                        @foreach ($studentt as $user)
+                            <tr>
+                
+                                <td><div class="pull-left" >
+                                <img src="/upload/profile/{{ $user->photo}}" class="profilep"height="60" width="60" alt="">
+	    </div><td>
+                                <td><div class="pull-up" ><a href="{{$user->LinkedIn}}"  target="_blank"><br>{{$user->FirstName}}{{" "}}{{$user->LastName}}</a><br>{{$user->YearOfStudy}}
+                                </div></td>
+                                
+                                
+                            
+                            
+
+                                        
+
+                                        
+                            
+                                
+                            
+                            </tr>
+                        @endforeach
+                        <thead>
+                              </table>                                                                                                                       
                                                         </div>
                                                          <div role="tabpanel" class="tab-pane" id="4g">
-                                                                                                                            <div class="user Searchable">
-            <a href="https://www.linkedin.com/" target="_blank">
-    	    <div class="pull-left">
-	        <img src="http://192.248.56.20/match-module/uploads/lecture/profile/default.png" class="">
-	    </div>
-	    <div class="name " > Senthuja Karunanithy</div>
-    </a>
-                <p class=""></p>
-        <p class="">Level 4M</p>
-      
-    
-</div>                                                                                                                            <div class="user Searchable">
-            <a href="https://www.linkedin.com/" target="_blank">
-    	    <div class="pull-left">
-	        <img src="http://192.248.56.20/match-module/uploads/lecture/profile/default.png" class="">
-	    </div>
-	    <div class="name " > Senthuja Karunanithy</div>
-    </a>
-                <p class=""></p>
-        <p class="">Level 4M</p>
-      
-    
-</div>                                                                                                                            <div class="user Searchable">
-            <a href="https://www.linkedin.com/" target="_blank">
-    	    <div class="pull-left">
-	        <img src="http://192.248.56.20/match-module/uploads/lecture/profile/default.png" class="">
-	    </div>
-	    <div class="name " > Senthuja Karunanithy</div>
-    </a>
-                <p class=""></p>
-        <p class="">Level 4M</p>
-      
-    
-</div>                                                                                                                            <div class="user Searchable">
-            <a href="https://www.linkedin.com/" target="_blank">
-    	    <div class="pull-left">
-	        <img src="http://192.248.56.20/match-module/uploads/lecture/profile/default.png" class="">
-	    </div>
-	    <div class="name " > Senthuja Karunanithy</div>
-    </a>
-                <p class=""></p>
-        <p class="">Level 4M</p>
-      
-    
-</div>                                                                                                                            <div class="user Searchable">
-            <a href="https://www.linkedin.com/" target="_blank">
-    	    <div class="pull-left">
-	        <img src="http://192.248.56.20/match-module/uploads/lecture/profile/default.png" class="">
-	    </div>
-	    <div class="name " > Senthuja Karunanithy</div>
-    </a>
-                <p class=""></p>
-        <p class="">Level 4M</p>
-      
-    
-</div>                                                                                                                        <a href="http://192.248.56.20/match-module/all-user/2?Atype=4S&amp;Btype=4M" class="pull-right" id="showUserBtn" title="Students">More...</a>
+                                                                                                                                                                                                                                                   
                                                         </div>
 
                                                     </div>
@@ -550,110 +551,78 @@ body{
 
                                             </div>
                                             <div role="tabpanel" class="tab-pane active" id="Academics">
-                                                                                                    <div class="user Searchable">
-            <a href="http://www.csc.jfn.ac.lk/index.php/profile-dr-s-mahesan/" target="_blank">
-    	    <div class="pull-left">
-	        <img src="http://192.248.56.20/match-module/uploads/member/profile/img18.jpg" class="">
-	    </div>
-	    <div class="name " >Dr. Sinnathamby Mahesan</div>
-    </a>
-            <p class="">Senior Lecturer</p>
-          
-    
-</div>                                                                                                    <div class="user Searchable">
-            <a href="http://www.csc.jfn.ac.lk/index.php/profile-dr-e-y-a-charles/" target="_blank">
-    	    <div class="pull-left">
-	        <img src="http://192.248.56.20/match-module/uploads/member/profile/img19.jpg" class="">
-	    </div>
-	    <div class="name " >Dr. Eugene Yougarajah Andrew Charles</div>
-    </a>
-            <p class="">Senior Lecturer</p>
-          
-    
-</div>                                                                                                    <div class="user Searchable">
-            <a href="http://www.csc.jfn.ac.lk/index.php/profile-dr-k-thabotharan/" target="_blank">
-    	    <div class="pull-left">
-	        <img src="http://192.248.56.20/match-module/uploads/member/profile/img20.jpg" class="">
-	    </div>
-	    <div class="name " >Dr. Kathiravelu  Thabotharan</div>
-    </a>
-            <p class="">Senior Lecturer</p>
-          
-    
-</div>                                                                                                    <div class="user Searchable">
-            <a href="http://www.csc.jfn.ac.lk/index.php/profile-dr-a-ramanan/" target="_blank">
-    	    <div class="pull-left">
-	        <img src="http://192.248.56.20/match-module/uploads/member/profile/user21.jpg" class="">
-	    </div>
-	    <div class="name " >Dr. Amirthalingam  Ramanan</div>
-    </a>
-            <p class="">Senior Lecturer</p>
-          
-    
-</div>                                                                                                    <div class="user Searchable">
-            <a href="http://www.csc.jfn.ac.lk/index.php/profile-mr-s-suthakar/" target="_blank">
-    	    <div class="pull-left">
-	        <img src="http://192.248.56.20/match-module/uploads/member/profile/user22.jpg" class="">
-	    </div>
-	    <div class="name " >Mr. Somaskandan Suthakar</div>
-    </a>
-            <p class="">Senior Lecturer</p>
-          
-    
-</div>                                                                                                <a href="http://192.248.56.20/match-module/all-user/1" class="pull-right" id="showUserBtn" title="Academics">More...</a>
+                                            <table  >
+                        <thead>
+                        <tr>
+                            
+                            <th></th>
+                            <th><th>
+                            
+                            
+                        
+                            
+                            
+                        </tr>
+                        @foreach ($academict as $user)
+                            <tr>
+                
+                                <td><div class="pull-left">
+                                <img src="/upload/profile/{{ $user->Photo}}" class="profilep"height="60" width="60" alt="">
+	    </div><td>
+                                <td><div class="pull-center"><a href="{{$user->LinkedIn}}" class="pull-up" target="_blank"><br>{{$user->Title}}{{$user->FirstName}}{{" "}}{{$user->LastName}}</a><br>{{$user->Designation}}
+                                </td>
+                                
+                                
+                            
+                            
+
+                                        
+
+                                        
+                            
+                                
+                            
+                            </tr>
+                        @endforeach
+                        <thead>
+                              </table>                                                                                                                
                                             </div>
                                             <div role="tabpanel" class="tab-pane" id="Industries">
-                                                                                                    <div class="user Searchable">
-            <a href="https://www.linkedin.com/" target="_blank">
-    	    <div class="pull-left">
-	        <img src="http://192.248.56.20/match-module/uploads/member/profile/user6.jpg" class="">
-	    </div>
-	    <div class="name " > Sanjiva Weerawarana</div>
-    </a>
-          
-            <p class="">CEO / Wso2</p>
-    
-</div>                                                                                                    <div class="user Searchable">
-            <a href="https://www.linkedin.com/" target="_blank">
-    	    <div class="pull-left">
-	        <img src="http://192.248.56.20/match-module/uploads/member/profile/img7.png" class="">
-	    </div>
-	    <div class="name " > Harsha Purasinghe</div>
-    </a>
-          
-            <p class="">CEO / Microimage</p>
-    
-</div>                                                                                                    <div class="user Searchable">
-            <a href="https://www.linkedin.com/" target="_blank">
-    	    <div class="pull-left">
-	        <img src="http://192.248.56.20/match-module/uploads/lecture/profile/default.png" class="">
-	    </div>
-	    <div class="name " > Mano Sekaram</div>
-    </a>
-          
-            <p class="">CEO / 99xtechnology</p>
-    
-</div>                                                                                                    <div class="user Searchable">
-            <a href="https://www.linkedin.com/" target="_blank">
-    	    <div class="pull-left">
-	        <img src="http://192.248.56.20/match-module/uploads/member/profile/img9.jpg" class="">
-	    </div>
-	    <div class="name " > Sankalpa Gamwarige</div>
-    </a>
-          
-            <p class="">CEO / Zone 24/7</p>
-    
-</div>                                                                                                    <div class="user Searchable">
-            <a href="https://www.linkedin.com/" target="_blank">
-    	    <div class="pull-left">
-	        <img src="http://192.248.56.20/match-module/uploads/member/profile/img10.jpg" class="">
-	    </div>
-	    <div class="name " > Mathu Ratnayake</div>
-    </a>
-          
-            <p class="">CEO / Virtusa</p>
-    
-</div>                                                                                                <a href="http://192.248.56.20/match-module/all-user/3" class="pull-right" id="showUserBtn" title="Industries">More...</a>
+                                            <table  >
+                        <thead>
+                        <tr>
+                            
+                            <th></th>
+                            <th><th>
+                            
+                            
+                        
+                            
+                            
+                        </tr>
+                        @foreach ($industrialistt as $user)
+                            <tr>
+                
+                                <td><div class="pull-left">
+                                <img src="/upload/profile/{{ $user->Photo}}" class="profilep"height="60" width="60" alt="">
+	    </div><td>
+                                <td><a href="{{$user->LinkedIn}}" class="pull-up" target="_blank"><br>{{$user->NameWithInitials}}</a><br>{{$user->Designation}} at {{$user->CompanyName}}
+                                </td>
+                                
+                                
+                            
+                            
+
+                                        
+
+                                        
+                            
+                                
+                            
+                            </tr>
+                        @endforeach
+                        <thead>
+                              </table>                                                                                                                         
                                             </div>
                                         </div>
                                     </div>
@@ -673,10 +642,35 @@ body{
     <div class="panel-body">
     <h3> <a href="#">Student societies</a></h3>
         <hr>
-        <div class="events">
-         <p><i class="fa fa-bullseye"></i> <a href="http://society.jfn.ac.lk/comsoc/" target="_blank">Computer-society</a></p>
-            <hr class="hr1">
+        <table  >
+                        <thead>
+                        <tr>
+                            
+                            <th></th>
+                      
+                        </tr>
+                        </thead>
+        <tbody>
+                        @foreach ($studentsoct as $user)
+                            <tr>
+                
+                             <td>
+                             <div class="">
+        <div class="card border-0 mb-4">
+        <div class="no-shrink"><span class="icon-round bg-white text-success rounded-circle text-center d-inline-block">&#10687</span>
+          <!--div class="date-pos bg-info-gradiant p-8 d-inline-block text-center rounded text-white position-absolute">{{$user->Date}}</div-->
+          <div class="p-3">
+          <h4 class="font-weight-medium"><a href="javascript:void(0)" class="linking"><b>{{$user->EName}}</b></a></h4>
+          <p class="mt-3">{{$user->Description}}</p></div></div>
+          <!--a href="#" class="text-decoration-none linking text-themecolor mt-2">Learn More</a-->
         </div>
+      </div>
+      </td>
+                                
+                             </tr>
+                        @endforeach
+        </tbody>
+                              </table> 
     </div>
 </div>
                 </div><!-- end col -->
@@ -697,7 +691,7 @@ body{
             <div class="footer-distributed">
                 <div class="footer-left">                   
                     <p class="footer-company-name">All Rights Reserved. &copy; 2020  Design By : 
-					<a href="https://html.design/">Reverse576</a></p>
+					<a href="https://html.design/">TeamY-Bridge</a></p>
                 </div>
 
                 

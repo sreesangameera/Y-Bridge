@@ -9,19 +9,19 @@
      <meta name="_token" content="SFC22gpZIqy5TAzLOu4onWvu4TqiJ6da2P7Tlwi4"/>
 
 
-    <link rel="stylesheet" type="text/css" href="http://192.248.56.20/match-module/asset/admin-tem/css/bootstrap.min.css"/>
+     <link rel="stylesheet" type="text/css" href="/css/bootstrap1.min.css"/>
     
-    <link rel="stylesheet" type="text/css" href="http://192.248.56.20/match-module/asset/admin-tem/css/font-awesome.css"/>
-    <link rel="stylesheet" type="text/css" href="http://192.248.56.20/match-module/asset/admin-tem/css/menu.css"/>
-    <link rel="stylesheet" type="text/css" href="http://192.248.56.20/match-module/asset/css/custom.css"/>
-    <link rel="stylesheet" type="text/css" href="http://192.248.56.20/match-module/asset/css/AdminLTE.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome1.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/menu1.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/custom1.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/AdminLTE1.min.css"/>
 
 
-    <link rel="stylesheet" type="text/css" href="http://192.248.56.20/match-module/asset/css/datatables.bootstrap.css" />
-    <link href="http://192.248.56.20/match-module/asset/admin-tem/css/sweetalert.css" rel="stylesheet" />
-    <link href="http://192.248.56.20/match-module/asset/css/AdminLTE.css" rel="stylesheet" typeee="text/css"/>
-    <link href="http://192.248.56.20/match-module/asset/date/css/metallic.css" rel="stylesheet" typeee="text/css"/>
-        <link href="http://192.248.56.20/match-module/asset/select2/select2.css" rel="stylesheet" typeee="text/css"/>
+    <link rel="stylesheet" type="text/css" href="/css/datatables.bootstrap1.css" />
+    <link href="/css/sweetalert1.css" rel="stylesheet" />
+    
+    <link href="/css/metallic1.css" rel="stylesheet" typeee="text/css"/>
+        <link href="/css/select21.css" rel="stylesheet" typeee="text/css"/>
 
 
 
@@ -88,14 +88,14 @@
 
 
                   
-                 <li data-toggle="collapse" data-target="#profile" class="collapsed">
+                 <!--li data-toggle="collapse" data-target="#profile" class="collapsed">
                     <a href="#"><i class="fa fa-user fa-lg"></i> Profile <span class="arrow"></span></a>
                 </li>
                 <ul class="sub-menu collapse" id="profile">
                   <li><a href="http://192.248.56.20/match-module/mail/update">Update Mail</a></li>
                   <li><a href="http://192.248.56.20/match-module/members/change-password">Change Password</a></li>
                   <li><a href="http://192.248.56.20/match-module/auth/logout">Logout</a></li>
-                </ul>
+                </ul-->
 
                  
                
@@ -105,57 +105,102 @@
 
   <div class="admin-header login">
       <a href="#"><i class="fa fa-user"></i> &nbsp;Administrator</a> &nbsp; 
-      <span><a href="http://192.248.56.20/match-module/auth/logout"><i class="fa fa-sign-out"></i> Log out</span></a></div>
+      <span><button class="fa fa-sign-out" style="height:40px;" >
+                <!--i class="fa fa-sign-out"></i-->
+                <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+
+                            <x-dropdown-link :href="route('logout')"
+                                    onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                {{ __('Logout') }}
+                            </x-dropdown-link>
+                        </form>
+                
+              </button></span></a></div>
   </div>
  <div id="page-wrapper">
     <div class="row">
     
-        <div class="border"><span>Lecturer Details</span></div>
-        <table class="table table-bordered table-responsive-lg" class="table text-center">
+        <div class="border"><span>Student Societies</span></div><div><button onclick="document.getElementById('myModalqw2').style.display = 'block';" id="myBtnqw2" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i></button></div>
+        <table  class="table table-striped table-bordered tabledash" >
         <thead>
         <tr>
             <th>Link</th>
             <th>Event Name</th>
             <th>Date</th>
             <th>Description</th>
-           
+            <th>Edit</th>
             
             
             
         </tr>
-        @foreach ($upcomingevet as $user)
+        </thead>
+        <tbody>
+        @foreach ($studentsoct as $user)
             <tr>
                 
                 <td>{{$user->Link}}</td>
                 <td>{{$user->EName}}</td>
                 <td>{{$user->Date}}</td>
                 <td>{{$user->Description}}</td>
-                
+                <td><button onclick="document.getElementById('myModalqw').style.display = 'block';document.getElementById('des').value = '{{$user->Description}}';document.getElementById('link').value='{{ $user->Link}}';document.getElementById('id').value='{{ $user->id}}';document.getElementById('ename').value='{{ $user->EName}}';document.getElementById('date').value='{{ $user->Date}}';" id="myBtnqw" class="btn btn-primary"><i class="glyphicon glyphicon-pencil"></i></button></td>
                 
                
             </tr>
         @endforeach
-        <thead>
+        </tbody>
     </table>
     
     </div>
 </div>
+<div id="myModalqw" class="modal" >
+<div class="modal-content" style="width:25%">
+    <span onclick="document.getElementById('myModalqw').style.display = 'none';" class="close">&times;</span>
+<form method="POST" action="/studentsocietiesadmin" enctype="multipart/form-data">
+        @csrf
+        
+        <div title="Link">Link</div><input id="link" class="form-control" type="text" name="link" placeholder="Link" required="required" ><br>
+        <input id="id" class="form-control" type="hidden" name="id" placeholder="Link" required="required" ><br>
+        <div title="firstname">Date</div><input id="date" class="form-control" type="text" name="date" placeholder="Date" required="required" ><br>
+        <div title="event name">Event Name</div><input id="ename" class="form-control" type="text" name="ename" placeholder="Event Name" required="required" ><br>
+        <div title="description">Description</div><input id="des" class="form-control" type="text" name="description" placeholder="Description" required="required" ><br>
+       <input class="btn btn-primary" type="submit" value="submit">
+        
+    </form>
+    </div>
+
+</div>
+<div id="myModalqw2" class="modal" >
+<div class="modal-content" style="width:25%">
+    <span onclick="document.getElementById('myModalqw2').style.display = 'none';" class="close">&times;</span>
+<form method="POST" action="/studentsocietiesadminadd" enctype="multipart/form-data">
+        @csrf
+        
+        <div title="Link">Link</div><input id="link" class="form-control" type="text" name="link" placeholder="Link" required="required" ><br>
+        <input id="id" class="form-control" type="hidden" name="id" placeholder="Link" required="required" ><br>
+        <div title="firstname">Date</div><input id="date" class="form-control" type="text" name="date" placeholder="Date" required="required" ><br>
+        <div title="event name">Event Name</div><input id="ename" class="form-control" type="text" name="ename" placeholder="Event Name" required="required" ><br>
+        <div title="description">Description</div><input id="des" class="form-control" type="text" name="description" placeholder="Description" required="required" ><br>
+       <input class="btn btn-primary" type="submit" value="submit">
+        
+    </form>
+    </div>
+
+</div>
+
+
+
+<script type="text/javascript" src="/js/jquery-1.10.21.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap1.min.js"></script>
     
 
+    <script type="text/javascript" src="/js/jquery.dataTables1.min.js"></script>
+    <script type="text/javascript" src="/js/datatables.bootstrap1.js"></script>
+    <script type="text/javascript" src="/js/sweetalert1.min.js"></script>
 
-
-
-
-    <script type="text/javascript" src="http://192.248.56.20/match-module/asset/admin-tem/js/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="http://192.248.56.20/match-module/asset/admin-tem/js/bootstrap.min.js"></script>
-    
-
-    <script type="text/javascript" src="http://192.248.56.20/match-module/asset/admin-tem/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="http://192.248.56.20/match-module/asset/admin-tem/js/datatables.bootstrap.js"></script>
-    <script type="text/javascript" src="http://192.248.56.20/match-module/asset/admin-tem/js/sweetalert.min.js"></script>
-
-    <script type="text/javascript" src="http://192.248.56.20/match-module/asset/date/js/zebra_datepicker.js"></script>
-    <script type="text/javascript" src="http://192.248.56.20/match-module/asset/select2/select2.full.js"></script>
+    <script type="text/javascript" src="/js/zebra_datepicker1.js"></script>
+    <script type="text/javascript" src="/js/select21.full.js"></script>
     <script type="text/javascript">
 
 
@@ -201,7 +246,7 @@ $(document).ready(function(){
    var table= $('#lecture-table').DataTable({
         processing: true,
         serverSide: true,
-        ajax: 'http://192.248.56.20/match-module/lectures/lecture-data',
+        ajax: '',
         columns: [
             {data: 'first_name', name: 'first_name'},
             {data: 'last_name', name: 'last_name'},
@@ -271,6 +316,42 @@ $(document).on("click","#DeleteBtn",function(e){
 	
 	
 </script>
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+@if($msg = session()->get('msg'))
+@if($msg == "Event updated")
+<script>
+     Swal.fire({
+               position: 'top',
+               icon: 'success',
+               title: '{{$msg}}',
+               showConfirmButton: false,
+               timer: 2000
+            
+          });
+     </script>
+     
+     @elseif($msg == "Event Added")
+     <script>
+     Swal.fire({
+               position: 'top',
+               icon: 'success',
+               title: '{{$msg}}',
+               showConfirmButton: false,
+               timer: 2000
+            
+          });
+     </script>
+     
+     
+     @endif
+@endif
+<script> 
+    $('.tabledash').DataTable();
+ </script>
+<script src="https://code.jquery.com/jquery-3.5.1.js" ></script>
+<script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js" ></script>
+<script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js" ></script>
+<script src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js" ></script>
+<script src="https://cdn.datatables.net/responsive/2.2.6/js/responsive.bootstrap4.min.js" ></script>
 </body>
 </html>

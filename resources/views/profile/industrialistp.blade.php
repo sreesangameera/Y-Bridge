@@ -89,6 +89,7 @@
                   </a>
                       <!--span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span-->
                     </div>
+                    <button id="myBtnqw" class="btn btn-primary"><i class="fa fa-fw fa-camera"></i></button>
                   </div>
                 </div>
                 <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
@@ -241,10 +242,10 @@
         @csrf
         <div title="Initials.Name">Name with initials</div><input class="form-control" type="text" name="namewi" placeholder="Name with initials" required="required" value="{{ $c->NameWithInitials}}"><br>
         <input type="hidden" name="email" value="{{ $c->CompanyPersonalEmailID}}" >
-        <div title="upload an image">Profile Picture</div><input class="form-control" type="file" name="photo" placeholder="add photo" required="required"><br>
+        
         <div title="Companyname(pvt)ltd">Company Name</div><input class="form-control" type="text" name="comn" placeholder="Company Name" required="required" value="{{ $c->CompanyName}}"><br>
         <div title="your position">Designation</div><input class="form-control" type="text" name="designation" placeholder="Designation" required="required" value="{{ $c->Designation}}"><br>
-        <div title="https://www.linkedin.com/in/username/">LinkedIn Id</div><input class="form-control" type="text" name="linkedin" placeholder="LinkedIn" required="required" value="{{ $c->LinkedIn}}"><br>
+        <div title="https://www.linkedin.com/in/username/">LinkedIn Id</div><input class="form-control" type="text" name="linkedin" placeholder="LinkedIn"  value="{{ $c->LinkedIn}}"><br>
         <div title="">Fields of Interests</div><div>
                     
                     <select class="form-control" class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"  name="foi" value="{{ $c->FieldOfInterests}}"  required autofocus>
@@ -294,6 +295,81 @@
   </div>
 
 </div>
+<div id="myModalqw" class="modal" >
+
+  <!-- Modal content -->
+  <div class="modal-content" style="width:25%">
+    <span class="close">&times;</span>
+    <form method="POST" action="/updateindustrialistpp" enctype="multipart/form-data">
+        @csrf
+        <div title="upload an image">Profile Picture</div><input class="form-control" type="file" name="photo" placeholder="add photo"> 
+        <input type="hidden" name="email" value="{{ $c->CompanyPersonalEmailID}}" >
+        <input class="btn btn-primary" type="submit" value="submit">
+        
+    </form>
+  </div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+@if($msg = session()->get('msg'))
+@if($msg == "Profile Successfully Updated")
+<script>
+     Swal.fire({
+               position: 'top',
+               icon: 'success',
+               title: '{{$msg}}',
+               showConfirmButton: false,
+               timer: 2000
+            
+          });
+     </script>
+     @elseif($msg == "Old password is wrong")
+     <script>
+     Swal.fire({
+               position: 'top',
+               icon: 'error',
+               title: '{{$msg}}',
+               showConfirmButton: false,
+               timer: 2000
+            
+          });
+     </script>
+     @elseif($msg == "Profile picture updated successfully.")
+     <script>
+     Swal.fire({
+               position: 'top',
+               icon: 'success',
+               title: '{{$msg}}',
+               showConfirmButton: false,
+               timer: 2000
+            
+          });
+     </script>
+     @elseif($msg == "This linkedin is already using")
+     <script>
+     Swal.fire({
+               position: 'top',
+               icon: 'error',
+               title: '{{$msg}}',
+               showConfirmButton: false,
+               timer: 2000
+            
+          });
+     </script>
+     @elseif($msg == "DOB can not be a future date")
+     <script>
+     Swal.fire({
+               position: 'top',
+               icon: 'error',
+               title: '{{$msg}}',
+               showConfirmButton: false,
+               timer: 2000
+            
+          });
+     </script>
+     @endif
+@endif
+
 <script>
   var tooltipSpan = document.getElementById('tooltip-span');
 
@@ -325,6 +401,33 @@ span.onclick = function() {
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
+  }
+}
+
+</script>
+<script>
+    var modal1 = document.getElementById("myModalqw");
+
+// Get the button that opens the modal
+var btn1 = document.getElementById("myBtnqw");
+
+// Get the <span> element that closes the modal
+var span1 = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn1.onclick = function() {
+  modal1.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span1.onclick = function() {
+  modal1.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal1) {
+    modal1.style.display = "none";
   }
 }
 

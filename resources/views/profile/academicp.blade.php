@@ -49,6 +49,40 @@
   width: 140px;
   height: 140px;
 }
+
+.multiselect {
+  width: 200px;
+}
+
+.selectBox {
+  position: relative;
+}
+
+.selectBox select {
+  width: 100%;
+  font-weight: bold;
+}
+
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#checkboxes {
+  display: none;
+  border: 1px #dadada solid;
+}
+
+#checkboxes label {
+  display: block;
+}
+
+#checkboxes label:hover {
+  background-color: #1e90ff;
+}
 </style>
 <div class="container">
 <div class="row flex-lg-nowrap">
@@ -80,6 +114,7 @@
                   </a>
                       <!--span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span-->
                     </div>
+                    <button id="myBtnqw" class="btn btn-primary"><i class="fa fa-fw fa-camera"></i></button>
                   </div>
                 </div>
                 <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
@@ -231,7 +266,7 @@
 
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close">&times;</span>
+    <span  onclick="document.getElementById('myModal').style.display = 'none';" class="close">&times;</span>
     <form method="POST" action="/updateacademic" enctype="multipart/form-data">
         @csrf
         <div title="title">Title</div><div>
@@ -248,7 +283,7 @@
                     
                 </div> <br>
         <input type="hidden" name="email" value="{{ $c->EmailID }}" >
-        <div title="add an image">Profile Picture</div><input class="form-control" type="file" name="photo" placeholder="Add photo" required="required" ><br>
+        
         <div title="firstname">First Name</div><input class="form-control" type="text" name="fname" placeholder="First Name" required="required" value="{{ $c->FirstName}}"><br>
         <div title="lastname">Last Name</div><input class="form-control" type="text" name="lname" placeholder="Last Name" required="required" value="{{ $c->LastName}}"><br>
         <div title="employee id">Employee Id</div><input class="form-control" type="text" name="eid" placeholder="Employee ID" required="required" value="{{ $c->EmployeeID }}"><br>
@@ -292,9 +327,34 @@
                         
                     </select>
                     
-                </div> <br>
-        <div title="https://www.linkedin.com/in/username/">LinkedIn Id</div><input class="form-control" type="text" name="linkedin" placeholder="LinkedIn" required="required" value="{{ $c->LinkedIn}}"><br>
-        <div title="07XXXXXXXX">Contact No.</div><input class="form-control" type="text" name="cno" placeholder="Contact Number" required="required" value="{{ $c->ContactNumber}}"><br>
+                </div>
+                 <br>
+                 <!--div class="multiselect">
+    <div class="selectBox" onclick="showCheckboxes()">
+      <select>
+        <option>Select an option</option>
+      </select>
+      <div class="overSelect"></div>
+    </div>
+    <div id="checkboxes">
+      <label for="one">
+        <input type="checkbox" id="one" />First checkbox</label>
+      <label for="two">
+        <input type="checkbox" id="two" />Second checkbox</label>
+      <label for="three">
+        <input type="checkbox" id="three" />Third checkbox</label>
+      <label for="four">
+        <input type="checkbox" id="four" />Fourth checkbox</label>
+        <label for="three">
+        <input type="checkbox" id="five" />Third checkbox</label>
+        <label for="three">
+        <input type="checkbox" id="six" />Third checkbox</label>
+        <label for="three">
+        <input type="checkbox" id="three" />Third checkbox</label>
+    </div>
+  </div><br-->
+        <div title="https://www.linkedin.com/in/username/">LinkedIn Id</div><input class="form-control" type="text" name="linkedin" placeholder="LinkedIn"  value="{{ $c->LinkedIn}}"><br>
+        <div title="07XXXXXXXX">Contact No.</div><input class="form-control" type="text" name="cno" placeholder="Contact Number"  value="{{ $c->ContactNumber}}"><br>
         <div title="www.sitename.lk/com">Official website</div><input class="form-control" type="text" name="ow" placeholder="Official Website" required="required" value="{{ $c->OfficialWebsite}}"><br>
         <div title="select">Research Interests</div><div>
                     
@@ -384,6 +444,81 @@
   </div>
 
 </div>
+<div id="myModalqw" class="modal" >
+
+  <!-- Modal content -->
+  <div class="modal-content" style="width:25%">
+    <span  onclick="document.getElementById('myModalqw').style.display = 'none';" class="close">&times;</span>
+    <form method="POST" action="/updateacademicpp" enctype="multipart/form-data">
+        @csrf
+        <div title="upload an image">Profile Picture</div><input class="form-control" type="file" name="photo" placeholder="add photo"> 
+        <input type="hidden" name="email" value="{{ $c->EmailID}}" >
+        <input class="btn btn-primary" type="submit" value="submit">
+        
+    </form>
+  </div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+@if($msg = session()->get('msg'))
+@if($msg == "Profile Successfully Updated")
+<script>
+     Swal.fire({
+               position: 'top',
+               icon: 'success',
+               title: '{{$msg}}',
+               showConfirmButton: false,
+               timer: 2000
+            
+          });
+     </script>
+     @elseif($msg == "Old password is wrong")
+     <script>
+     Swal.fire({
+               position: 'top',
+               icon: 'error',
+               title: '{{$msg}}',
+               showConfirmButton: false,
+               timer: 2000
+            
+          });
+     </script>
+     @elseif($msg == "Profile picture updated successfully.")
+     <script>
+     Swal.fire({
+               position: 'top',
+               icon: 'success',
+               title: '{{$msg}}',
+               showConfirmButton: false,
+               timer: 2000
+            
+          });
+     </script>
+     @elseif($msg == "This linkedin is already using")
+     <script>
+     Swal.fire({
+               position: 'top',
+               icon: 'error',
+               title: '{{$msg}}',
+               showConfirmButton: false,
+               timer: 2000
+            
+          });
+     </script>
+     @elseif($msg == "DOB can not be a future date")
+     <script>
+     Swal.fire({
+               position: 'top',
+               icon: 'error',
+               title: '{{$msg}}',
+               showConfirmButton: false,
+               timer: 2000
+            
+          });
+     </script>
+     @endif
+@endif
+
 <script>
     var modal = document.getElementById("myModal");
 
@@ -410,4 +545,44 @@ window.onclick = function(event) {
   }
 }
 
+</script>
+<script>
+    var modal1 = document.getElementById("myModalqw");
+
+// Get the button that opens the modal
+var btn1 = document.getElementById("myBtnqw");
+
+// Get the <span> element that closes the modal
+var span1 = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn1.onclick = function() {
+  modal1.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span1.onclick = function() {
+  modal1.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal1) {
+    modal1.style.display = "none";
+  }
+}
+
+
+var expanded = false;
+
+function showCheckboxes() {
+  var checkboxes = document.getElementById("checkboxes");
+  if (!expanded) {
+    checkboxes.style.display = "block";
+    expanded = true;
+  } else {
+    checkboxes.style.display = "none";
+    expanded = false;
+  }
+}
 </script>

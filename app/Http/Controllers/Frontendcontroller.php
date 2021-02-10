@@ -9,7 +9,24 @@ use Illuminate\Support\Facades\DB;
 class Frontendcontroller extends Controller
 {
     public function home(){
-        return view('Home/home');      }
+        $p=DB::table('students')->get();
+            
+            $q=DB::table('academics')->get();
+            
+            $r=DB::table('industrialists')->get();
+            $v=DB::table('student_societies')->get();
+            $u=DB::table('upcoming_events')->get();
+        return view('Home/home')->with('studentt',$p)->with('academict',$q)->with('industrialistt',$r)->with('studentsoct',$v)->with('upcominget',$u);     }
+
+    public function homea(){
+            $p=DB::table('students')->get();
+                
+                $q=DB::table('academics')->get();
+                
+                $r=DB::table('industrialists')->get();
+                $v=DB::table('student_societies')->get();
+                $u=DB::table('upcoming_events')->get();
+            return view('/Home/home')->with('studentt',$p)->with('academict',$q)->with('industrialistt',$r)->with('studentsoct',$v)->with('upcominget',$u) ;      }
 
     public function index(){
         return view('Home/Introduction');      }
@@ -23,7 +40,7 @@ class Frontendcontroller extends Controller
     public function prs(){
         return view('Home/Participants');      }
     
-    public function sts(){
+    public function stsa(){
         return view('Home/StudentSocieties');      }
 
     public function log(){
@@ -58,6 +75,10 @@ class Frontendcontroller extends Controller
             $v=DB::table('upcoming_events')->get();
             return view('Home/UpcomingEvents')->with('upcominget',$v);      
         }
+    public function sts(){
+        $v=DB::table('student_societies')->get();
+            return view('Home/StudentSocieties')->with('studentsoct',$v);      }
+    
     public function profile(){
       $email=   Auth::user()->email ;
       $role= Auth::user()->role ;
@@ -77,18 +98,17 @@ class Frontendcontroller extends Controller
             return view('profile.academicp')->with('c', $c);
 
         }
-        
-        
-        
-               
-       
-          
-          
-        
-          
-           
+        elseif($role=="Admin"){
+            $p=DB::table('students')->get();
+                
+            $q=DB::table('academics')->get();
+            
+            $r=DB::table('industrialists')->get();
 
+            $s=DB::table('users')->get();
+            
+            return view('AdminDash.dashboard')->with('studentt',$p)->with('academict',$q)->with('industrialistt',$r)->with('usert',$s);
 
-        
-        
-}}
+        }
+    }
+}

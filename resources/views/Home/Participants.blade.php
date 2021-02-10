@@ -161,7 +161,7 @@ body{
                         <span class="icon-bar"></span>
                     </button>
                     <div class="navbar-brand" href="home"><img src="images/logos/logo.png" id="Logo"> <h1 class="animated fadeInDown heading" style="color: #03a1fc" ><b>Y-Bridge</h1>
-                        <h4 style="color: #03a1fc">"A match-module to bridge students with Academic and Industry-based supervisors" </h4><div class="col-md-10">
+                        <h4 style="color: #0049FF">"A match-module to bridge students with Academic and Industry-based supervisors" </h4><div class="col-md-10">
                         
     </div>
                                             </div>
@@ -241,51 +241,109 @@ body{
                                                     </ul>
                                                     <div class="tab-content">
                                                         <div role="tabpanel" class="tab-pane active" id="1g">
-                                                                                                                                                                                                                              <a href="http://192.248.56.20/match-module/all-user/2?Atype=1G&amp;Btype=1S" class="pull-right" id="showUserBtn" title="Students"></a>
+                                                        <table  >
+                                                                    <thead>
+                                                                    <tr>
+                                                                        
+                                                                        <th></th>
+                                                                        <th></th>
+                                                                        
+                                                                    </tr>
+                                                                    </thead>
+                                                                    @foreach ($studentt as $user)
+                                                                        @if($user->YearOfStudy=="Level-1G" || $user->YearOfStudy=="Level-1S" )
+                                                                        <tr>
+                                                            
+                                                                            <td><div class="pull-left" >
+                                                                            <img src="/upload/profile/{{ $user->photo}}" class="profilep"height="60" width="60" alt="">
+                                                                            </div><td>
+                                                                            <td><div class="pull-up" ><a href="{{$user->LinkedIn}}"  target="_blank"><br>{{$user->FirstName}}{{" "}}{{$user->LastName}}</a><br>{{$user->YearOfStudy}}
+                                                                            </div></td>
+                                                                            
+                                                                        </tr>
+                                                                        @endif
+                                                                    @endforeach
+                                                                
+                                                                </table>                                                                                                                                                                   
                                                         </div>
                                                         <div role="tabpanel" class="tab-pane" id="2g">
-                                                                                                                        <a href="http://192.248.56.20/match-module/all-user/2?Atype=2G&amp;Btype=2S" class="pull-right" id="showUserBtn" title="Students"></a>
+                                                        <table  >
+                                                                    <thead>
+                                                                    <tr>
+                                                                        
+                                                                        <th></th>
+                                                                        <th></th>
+                                                                        
+                                                                    </tr>
+                                                                    </thead>
+                                                                    @foreach ($studentt as $user)
+                                                                        @if($user->YearOfStudy=="Level-2G" || $user->YearOfStudy=="Level-2S")
+                                                                        <tr>
+                                                            
+                                                                            <td><div class="pull-left" >
+                                                                            <img src="/upload/profile/{{ $user->photo}}" class="profilep"height="60" width="60" alt="">
+                                                                            </div><td>
+                                                                            <td><div class="pull-up" ><a href="{{$user->LinkedIn}}"  target="_blank"><br>{{$user->FirstName}}{{" "}}{{$user->LastName}}</a><br>{{$user->YearOfStudy}}
+                                                                            </div></td>
+                                                                            
+                                                                        </tr>
+                                                                        @endif
+                                                                    @endforeach
+                                                                
+                                                                </table>                                                           
                                                         </div>
                                                         <div role="tabpanel" class="tab-pane" id="3g">
                                                                                                                            
-                    <table  >
-                        <thead>
-                        <tr>
-                            
-                            <th></th>
-                            <th><th>
-                            
-                            
-                        
-                            
-                            
-                        </tr>
-                        @foreach ($studentt as $user)
-                            <tr>
-                
-                                <td><div class="pull-left">
-                                <img src="/upload/profile/{{ $user->photo}}" class="profilep"height="60" width="60" alt="">
-	    </div><td>
-                                <td><div class="pull-up" ><a href="{{$user->LinkedIn}}"  target="_blank"><br>{{$user->FirstName}}{{" "}}{{$user->LastName}}</a><br>{{$user->YearOfStudy}}
-                                </div></td>
-                                
-                                
-                            
-                            
-
-                                        
-
-                                        
-                            
-                                
-                            
-                            </tr>
-                        @endforeach
-                        <thead>
-                              </table>                                                                                                                                                                                                                                                                                                                                                             <a href="http://192.248.56.20/match-module/all-user/2?Atype=3G&amp;Btype=3M&amp;Ctype=3S" class="pull-right" id="showUserBtn" title="Students"></a>
+                                                                <table  >
+                                                                    <thead>
+                                                                    <tr>
+                                                                        
+                                                                        <th></th>
+                                                                        <th></th>
+                                                                        
+                                                                    </tr>
+                                                                    </thead>
+                                                                    @foreach ($studentt as $user)
+                                                                        @if($user->YearOfStudy=="Level-3G" || $user->YearOfStudy=="Level-3M" || $user->YearOfStudy=="Level-3S")
+                                                                        <tr>
+                                                            
+                                                                            <td><div class="pull-left" >
+                                                                            <img src="/upload/profile/{{ $user->photo}}" class="profilep"height="60" width="60" alt="">
+                                                                            </div><td>
+                                                                            <td><div class="pull-up" ><a href="{{$user->LinkedIn}}"  target="_blank"><br>{{$user->FirstName}}{{" "}}{{$user->LastName}}</a><br>{{$user->YearOfStudy}}
+                                                                            </div></td>
+                                                                            
+                                                                        </tr>
+                                                                        @endif
+                                                                    @endforeach
+                                                                
+                                                                </table>                                                                                                                                                                                                                                                                                                                                                             <a href="http://192.248.56.20/match-module/all-user/2?Atype=3G&amp;Btype=3M&amp;Ctype=3S" class="pull-right" id="showUserBtn" title="Students"></a>
                                                         </div>
                                                          <div role="tabpanel" class="tab-pane" id="4g">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               <a href="http://192.248.56.20/match-module/all-user/2?Atype=4S&amp;Btype=4M" class="pull-right" id="showUserBtn" title="Students"></a>
+                                                         <table  >
+                                                                    <thead>
+                                                                    <tr>
+                                                                        
+                                                                        <th></th>
+                                                                        <th></th>
+                                                                        
+                                                                    </tr>
+                                                                    </thead>
+                                                                    @foreach ($studentt as $user)
+                                                                        @if($user->YearOfStudy=="Level-4X" || $user->YearOfStudy=="Level-4M" || $user->YearOfStudy=="Level-4S")
+                                                                        <tr>
+                                                            
+                                                                            <td><div class="pull-left" >
+                                                                            <img src="/upload/profile/{{ $user->photo}}" class="profilep"height="60" width="60" alt="">
+                                                                            </div><td>
+                                                                            <td><div class="pull-up" ><a href="{{$user->LinkedIn}}"  target="_blank"><br>{{$user->FirstName}}{{" "}}{{$user->LastName}}</a><br>{{$user->YearOfStudy}}
+                                                                            </div></td>
+                                                                            
+                                                                        </tr>
+                                                                        @endif
+                                                                    @endforeach
+                                                                
+                                                                </table>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       <a href="http://192.248.56.20/match-module/all-user/2?Atype=4S&amp;Btype=4M" class="pull-right" id="showUserBtn" title="Students"></a>
                                                         </div>
 
                                                     </div>
@@ -329,107 +387,7 @@ body{
                         @endforeach
                         <thead>
                               </table> 
-                                                                                                    <div class="user Searchable">
-            <a href="http://www.csc.jfn.ac.lk/index.php/profile-dr-s-mahesan/" target="_blank">
-    	    <div class="pull-left">
-	        <img src="http://www.csc.jfn.ac.lk/wp-content/uploads/2017/02/mahesan_150x150.jpg" class="">
-	    </div>
-	    <div class="name " >Dr. S. Mahesan</div>
-    </a>
-            <p class="">Senior Lecturer</p>
-          
-    
-</div>                                                                                                    <div class="user Searchable">
-            <a href="http://www.csc.jfn.ac.lk/index.php/profile-dr-e-y-a-charles/" target="_blank">
-    	    <div class="pull-left">
-	        <img src="http://www.csc.jfn.ac.lk/wp-content/uploads/2017/02/EYACharles_150x150-1.jpg" class="">
-	    </div>
-	    <div class="name " >Dr. E. Y. A. Charles</div>
-    </a>
-            <p class="">Senior Lecturer</p>
-          
-    
-</div>                                                                                                    <div class="user Searchable">
-            <a href="http://www.csc.jfn.ac.lk/index.php/profile-dr-k-thabotharan/" target="_blank">
-    	    <div class="pull-left">
-	        <img src="http://www.csc.jfn.ac.lk/wp-content/uploads/2017/02/thabotharan_150x150-1.jpg" class="">
-	    </div>
-	    <div class="name " >Dr. K. Thabotharan</div>
-    </a>
-            <p class="">Senior Lecturer</p>
-          
-    
-</div>                                                                                                    <div class="user Searchable">
-            <a href="http://www.csc.jfn.ac.lk/index.php/profile-dr-a-ramanan/" target="_blank">
-    	    <div class="pull-left">
-	        <img src="http://www.csc.jfn.ac.lk/wp-content/uploads/2017/02/ramanan_150x150.jpg" class="">
-	    </div>
-	    <div class="name " >Dr. A. Ramanan</div>
-    </a>
-            <p class="">Senior Lecturer</p>
-          
-    
-</div>                       
-
-<div class="user Searchable">
-            <a href="http://www.csc.jfn.ac.lk/index.php/profile-dr-mrs-b-mayurathan/" target="_blank">
-    	    <div class="pull-left">
-	        <img src="http://www.csc.jfn.ac.lk/wp-content/uploads/2017/02/mayurathan_150x150.jpg" class="">
-	    </div>
-	    <div class="name " >Dr. (Mrs). B. Mayurathan</div>
-    </a>
-            <p class="">Senior Lecturer</p>
-          
-    
-</div>
-
-<div class="user Searchable">
-            <a href="http://www.csc.jfn.ac.lk/index.php/profile-dr-m-siyamalan/" target="_blank">
-    	    <div class="pull-left">
-	        <img src="http://www.csc.jfn.ac.lk/wp-content/uploads/2018/05/dr.siyam150.jpg" class="">
-	    </div>
-	    <div class="name " >Dr. M. Siyamalan</div>
-    </a>
-            <p class="">Senior Lecturer</p>
-          
-    
-</div>
-
-<div class="user Searchable">
-            <a href="http://www.csc.jfn.ac.lk/index.php/profile-mr-k-sarveswaran/" target="_blank">
-    	    <div class="pull-left">
-	        <img src="http://www.csc.jfn.ac.lk/wp-content/uploads/2017/02/sarves_150x150-1.jpg" class="">
-	    </div>
-	    <div class="name " >Mr. K. Sarveswaran (On Study Leave)</div>
-    </a>
-            <p class="">Lecturer</p>
-          
-    
-</div>
-
-<div class="user Searchable">
-            <a href="http://www.csc.jfn.ac.lk/index.php/profile-dr-k-thabotharan/" target="_blank">
-    	    <div class="pull-left">
-	        <img src="http://www.csc.jfn.ac.lk/wp-content/uploads/2017/02/shri_150x150-1.jpg" class="">
-	    </div>
-	    <div class="name " >Mr. S. Shriparen</div>
-    </a>
-            <p class="">Lecturer (Probationary)</p>
-          
-    
-</div>
-
-<div class="user Searchable">
-            <a href="http://www.csc.jfn.ac.lk/index.php/profile-ms-j-samantha-tharani/" target="_blank">
-    	    <div class="pull-left">
-	        <img src="http://www.csc.jfn.ac.lk/wp-content/uploads/2018/12/samantha150x150.jpg" class="">
-	    </div>
-	    <div class="name " >Ms. J. Samantha Tharani</div>
-    </a>
-            <p class="">Lecturer (Probationary)</p>
-          
-    
-</div>
+                                                                                                    
 
                                                                                                                                                                             <a href="http://192.248.56.20/match-module/all-user/1" class="pull-right" id="showUserBtn" title="Academics"></a>
                                             </div>
@@ -452,7 +410,7 @@ body{
                                 <td><div class="pull-left">
                                 <img src="/upload/profile/{{ $user->Photo}}" class="profilep"height="60" width="60" alt="">
 	    </div><td>
-                                <td><a href="{{$user->LinkedIn}}" class="pull-up" target="_blank"><br>{{$user->NameWithInitials}}</a><br>{{$user->Designation}}
+                                <td><a href="{{$user->LinkedIn}}" class="pull-up" target="_blank"><br>{{$user->NameWithInitials}}</a><br>{{$user->Designation}} at {{$user->CompanyName}}
                                 </td>
                                 
                                 
@@ -468,47 +426,7 @@ body{
                             </tr>
                         @endforeach
                         <thead>
-                              </table>                                                                                                  <div class="user Searchable">
-            <a href="https://www.linkedin.com/in/harsha-purasinghe-8713504?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bb28Ls99zS3KCs8VUQQPerA%3D%3D" target="_blank">
-    	    <div class="pull-left">
-	        <img src="https://media-exp1.licdn.com/dms/image/C5603AQF8e4G3vTqVCw/profile-displayphoto-shrink_400_400/0/1594963509476?e=1615420800&v=beta&t=tRgpaP6_HdI2zr959bxTSBkHBdUtPbFT_N0uACVfUkE" class="">
-	    </div>
-	    <div class="name " > Harsha Purasinghe</div>
-    </a>
-          
-            <p class="">Founder/CEO of MiHCM & Microimage, Founded WSO2Mobile, Entrepreneur, Impact Investor, Eisenhower Fellow</p>
-    
-</div>                                                                                                    <div class="user Searchable">
-            <a href="https://www.linkedin.com/in/manosekaram?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B2RxXZXYBTSCyMZGM3IYkmA%3D%3D" target="_blank">
-    	    <div class="pull-left">
-	        <img src="https://media-exp1.licdn.com/dms/image/C5103AQFDQqCObEl-wQ/profile-displayphoto-shrink_400_400/0/1582273090660?e=1615420800&v=beta&t=2kmSccq6UJaNZoSl5LVu6vcvCiYFePEkwsqq87gLmlk" class="">
-	    </div>
-	    <div class="name " > Mano Sekaram</div>
-    </a>
-          
-            <p class="">Founder and CEO at 99x and Founder at StartupX Foundry</p>
-    
-</div>                                                                                                    <div class="user Searchable">
-            <a href="https://www.linkedin.com/in/sankalpa-gamwarige-35a58b8?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BbuKuDM%2BNSbmmAt5kWhDV5A%3D%3D" target="_blank">
-    	    <div class="pull-left">
-	        <img src="http://192.248.56.20/match-module/uploads/member/profile/img9.jpg" class="">
-	    </div>
-	    <div class="name " > Sankalpa Gamwarige</div>
-    </a>
-          
-            <p class="">General Manager and VP Engineering at Zone24x7 Inc/Ltd Innovative Digital Transformation Partner</p>
-    
-</div>                                                                                                    <div class="user Searchable">
-            <a href="https://www.linkedin.com/in/maduratnayake?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BOp1QeRLZTTSFVnk9jJ%2B5GA%3D%3D" target="_blank">
-    	    <div class="pull-left">
-	        <img src="https://media-exp1.licdn.com/dms/image/C5603AQHCrKfCHy3m5A/profile-displayphoto-shrink_400_400/0/1516260087469?e=1615420800&v=beta&t=RLlKhoGkAvF-YwcUyNbXufqoydZw5VxkWgHkkrIrlps" class="">
-	    </div>
-	    <div class="name " >Madu Ratnayake</div>
-    </a>
-          
-            <p class="">Chief Information Officer and Board Member/ Virtusa</p>
-    
-</div>                                                                                               
+                              </table>                                                                                                                                                                                      
                                         </div>
                                     </div>
                                     
@@ -539,7 +457,7 @@ body{
             <div class="footer-distributed">
                 <div class="footer-left">                   
                     <p class="footer-company-name">All Rights Reserved. &copy; 2020  Design By : 
-					<a href="https://html.design/">Reverse576</a></p>
+					<a href="https://html.design/">TeamY-Bridge</a></p>
                 </div>
 
                 

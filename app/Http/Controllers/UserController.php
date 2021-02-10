@@ -123,6 +123,7 @@ class UserController extends Controller
     }
 
     public function registeruser(Request $request){
+        try{
         $user=new User;
        
             $user->fname=$request->fname;
@@ -131,12 +132,18 @@ class UserController extends Controller
             $user->email=$request->email;
             $user->password= Hash::make($request->password);
             $user->save();
-
-
-        return 'wait for the acceptance';     
+        }
+        catch(\Illuminate\Database\QueryException $exception){
+            $s="This email already ";
+            return redirect()->back()->with('msg',$s);
+        }
+        $t="Wait for the acceptance";
+        return redirect()->back()->with('msg',$t);     
      }
 
      public function selectu($id){
+        DB::table('users')->where('id',$id)->update(['not_confirmed' => "0",
+                                                                         ]);
         $x=DB::table('users')->where('id',$id)->first();
         if($x->role=="Industry"){
         $user=new Industrialist;
@@ -168,7 +175,8 @@ class UserController extends Controller
               
                 $user->save();
          }
-         return 'user saved';     
+         $t="User Added";
+        return redirect()->back()->with('msg',$t);    
         }
     public function stud(){
         $p=DB::table('students')->get();
@@ -180,13 +188,69 @@ class UserController extends Controller
         $p=DB::table('academics')->get();
             return view('AdminDash/academicd')->with('academict',$p);      }
     public function stusd(){
-        $p=DB::table('students_societies')->get();
+        $p=DB::table('student_societies')->get();
             return view('AdminDash/studentsoc')->with('studentsoct',$p);      }
     public function uped(){
         $p=DB::table('upcoming_events')->get();
-            return view('AdminDash/upcomingeve')->with('upcomingevet',$p);      }
+            return view('AdminDash/upcomingeve')->with('c',$p);      }
     
+    public function upcomingeventsadmin(Request $request){
 
+        
+
+        
+                
+                
+            
+                DB::table('upcoming_events')->where('id',$request->id)->update([
+                    'Link' => $request->link,'Date' => $request->date,'EName' => $request->ename,'Description' => $request->description,
+
+                                                                                ]);
+                return redirect()->back()->with('msg',"Event updated");
+            
+        }
+    public function studentsocietiesadmin(Request $request){
+
+        
+
+        
+                
+                
+            
+            DB::table('student_societies')->where('id',$request->id)->update([
+                'Link' => $request->link,'Date' => $request->date,'EName' => $request->ename,'Description' => $request->description,
+
+                                                                            ]);
+            return redirect()->back()->with('msg',"Event updated");
+        
+    }
+    
+    public function upcomingeventsadminadd(Request $request){
+
+        
+
+        DB::table('upcoming_events')->insert([
+            'Link' => $request->link,'Date' => $request->date,'EName' => $request->ename,'Description' => $request->description, ]);
+                
+                
+        return redirect()->back()->with('msg',"Event Added");
+    
+}
+public function studentsocietiesadminadd(Request $request){
+
+        
+
+        
+                
+                
+            
+    DB::table('student_societies')->insert([
+        'Link' => $request->link,'Date' => $request->date,'EName' => $request->ename,'Description' => $request->description,
+
+                                                                    ]);
+    return redirect()->back()->with('msg',"Event Added");
+
+}
 }
 
 

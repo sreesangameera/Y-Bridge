@@ -16,7 +16,7 @@ class CreateStudentSocietiesTable extends Migration
         Schema::create('student_societies', function (Blueprint $table) {
             $table->id();
             $table->String('Link')->unique()->nullable();
-            $table->String('Date')->unique()->nullable();
+            $table->String('Date')->nullable();
             $table->String('EName')->unique()->nullable();
             $table->String('Description')->nullable();
             $table->timestamps();
