@@ -46,7 +46,7 @@
                
 
                 <li class="active">
-                  <a href="admindash"><i class="fa fa-dashboard fa-lg"></i>Dashboard</span></a>
+                  <a href="profile"><i class="fa fa-dashboard fa-lg"></i>Dashboard</span></a>
                 </li>
                 <li class="collapsed ">
                   <a href="acad"><i class="fa fa-gift fa-lg"></i>Academic</a>

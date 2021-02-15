@@ -106,8 +106,8 @@ class Frontendcontroller extends Controller
             $r=DB::table('industrialists')->get();
 
             $s=DB::table('users')->get();
-            
-            return view('AdminDash.dashboard')->with('studentt',$p)->with('academict',$q)->with('industrialistt',$r)->with('usert',$s);
+            $l=1;
+            return view('AdminDash.dashboard')->with('studentt',$p)->with('academict',$q)->with('industrialistt',$r)->with('usert',$s)->with('l',$l);
 
         }
     }

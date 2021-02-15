@@ -10,6 +10,8 @@ use App\Models\Student;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ybridge_mail;
 
 class UserController extends Controller
 {
@@ -138,6 +140,9 @@ class UserController extends Controller
             return redirect()->back()->with('msg',$s);
         }
         $t="Wait for the acceptance";
+        $details=['title'=>'new user is waiting',
+                  'body'=>' : '];
+           Mail::to('ybridgejaffna@gmail.com')->send(new ybridge_mail($details));
         return redirect()->back()->with('msg',$t);     
      }
 
@@ -175,6 +180,11 @@ class UserController extends Controller
               
                 $user->save();
          }
+
+         $details=['title'=>'your account successfully registered in ybridge.',
+                  'body'=>'You are welcome to ybridge : '];
+           Mail::to($x->email)->send(new ybridge_mail($details));
+
          $t="User Added";
         return redirect()->back()->with('msg',$t);    
         }

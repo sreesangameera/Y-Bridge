@@ -247,7 +247,7 @@ body{
                 </div><!-- end col -->
             </div><!-- end row -->
 
-            <hr class="hr1"> 
+           
 
            
         </div><!-- end container -->

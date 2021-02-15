@@ -10,6 +10,7 @@ use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserController;
 use App\user;
 use App\Http\Controllers\UpdateProfiles;
+use App\Http\Controllers\login;
 
 
 /*
@@ -94,6 +95,11 @@ Route::get('selectu/{user}/', [UserController::class,'selectu'])->name('selectu'
 
 Route::get('crop-image-upload', [CropImageController::class,'index']);
 Route::post('crop-image-upload ', [CropImageController::class,'uploadCropImage']);
+
+Route::post('/forgetp',[login::class,'forgetp']);
+Route::get('/forget',function(){
+    return view('auth.forgot-password');
+  });
 
 /*Route::get('Admin/Admin',function(){
     $data=App\user::all();
