@@ -15,7 +15,7 @@
                         <i class="fa fa-instagram fa-3x" aria-hidden="true"></i>
                         
 						<div class="title">
-							<h4>Instagram</h4>
+							<h4>Instagra</h4>
 						</div>
                         
 						<div class="text">
