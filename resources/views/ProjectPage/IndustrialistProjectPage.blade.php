@@ -39,11 +39,11 @@ form {
 
 
 <body> 
-	<h2 class="p-3 mb-2 bg-dark text-white" style="text-align: center;">Project Details For Students</h2> 
+	<h2 class="p-3 mb-2 bg-dark text-white" style="text-align: center;">Project Details For Industrialists</h2> 
 	<form class="p-3 mb-2 bg-secondary text-white" name="ProjectForm" action="/submit.php"
         onsubmit="return GEEKFORGEEKS()" method="post"> 
         
-        <p>Student ID :<br> <input type="text"
+        <p>Industrialist ID :<br> <input type="text"
                         size="45" name="StudentID" />
                     </p> 
         <br />
@@ -60,17 +60,7 @@ form {
 		<p>Description :<br> <input type="text"
 						class="div1" name="Description" /></p> 
         <br /> 
-        <p> 
-			Project Type <br>
-			<select type="text" value="" name="ProjectType"> 
-				<option>Project for first year</option> 
-				<option>Project for second year</option> 
-				<option>Project for third year</option> 
-				<option>Project for fourth year</option> 
-				
-			</select> 
-        </p> 
-        <br />
+        
 		<p> 
             Technologies<br>
 			<select type="text" value="" name="Technologies"> 
@@ -108,16 +98,15 @@ form {
 
 <script> 
 	function GEEKFORGEEKS() { 
-        var StudentID = document.forms["ProjectForm"]["StudentID"]; 
+        var IndustrialistID = document.forms["ProjectForm"]["IndustrialistID"]; 
         var ProjectID = document.forms["ProjectForm"]["ProjectID"]; 
 		var Titleoftheproject = document.forms["ProjectForm"]["Titleoftheproject"]; 
 		var Description = document.forms["ProjectForm"]["Description"]; 
-		var ProjectType = document.forms["ProjectForm"]["ProjectType"]; 
 		var Technologies = document.forms["ProjectForm"]["Technologies"]; 
 		
 
         if (password.value == "") { 
-			window.alert("Please select StudentID."); 
+			window.alert("Please select IndustrialistID."); 
 			password.focus(); 
 			return false; 
 		} 
@@ -137,13 +126,6 @@ form {
 		if (address.value == "") { 
 			window.alert("Please enter Description."); 
 			address.focus(); 
-			return false; 
-		} 
-
-		if (email.value == "") { 
-			window.alert( 
-			"Please select Project Type."); 
-			email.focus(); 
 			return false; 
 		} 
 

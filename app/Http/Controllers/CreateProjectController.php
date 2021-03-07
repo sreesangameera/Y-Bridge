@@ -11,4 +11,7 @@ class CreateProjectController extends Controller
 
     public function LProject(){
         return view('ProjectPage/LecturerProjectPage');      }
+
+        public function IProject(){
+            return view('ProjectPage/IndustrialistProjectPage');      }
 }

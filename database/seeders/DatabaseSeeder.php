@@ -125,7 +125,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            'role'=> 'Senior Lecturer',
+            'role'=> 'Lecturer',
             'fname'=>'S',
             'lname'=>'Mahesan',
             'email'=>'SM@gmail.com',
@@ -152,7 +152,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            'role'=> 'Senior Lecturer',
+            'role'=> 'Lecturer',
             'fname'=>'Eugene',
             'lname'=>'Charles',
             'email'=>'EC@gmail.com',
@@ -180,7 +180,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            'role'=> 'Senior Lecturer',
+            'role'=> 'Lecturer',
             'fname'=>'Kathiravelu',
             'lname'=>'Thabotharan',
             'email'=>'KT@gmail.com',
@@ -208,7 +208,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            'role'=> 'Senior Lecturer',
+            'role'=> 'Lecturer',
             'fname'=>'Amirthalingam',
             'lname'=>'Ramanan',
             'email'=>'AR@gmail.com',
@@ -236,7 +236,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            'role'=> 'Senior Lecturer',
+            'role'=> 'Lecturer',
             'fname'=>'Barathy',
             'lname'=>'Mayurathan',
             'email'=>'BM@gmail.com',
@@ -264,7 +264,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            'role'=> 'Senior Lecturer',
+            'role'=> 'Lecturer',
             'fname'=>'Manivannan',
             'lname'=>'Siyamalan',
             'email'=>'MSa@gmail.com',
@@ -320,7 +320,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            'role'=> 'Lecturer (Probationary)',
+            'role'=> 'Lecturer',
             'fname'=>'Sriskandarajah',
             'lname'=>'Shriparen',
             'email'=>'SSa@gmail.com',
@@ -348,7 +348,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            'role'=> 'Lecturer (Probationary)',
+            'role'=> 'Lecturer',
             'fname'=>'Samantha',
             'lname'=>'Tharani',
             'email'=>'ST@gmail.com',

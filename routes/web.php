@@ -92,7 +92,7 @@ Route::get('selectu/{user}/', [UserController::class,'selectu'])->name('selectu'
 
 Route::get('/spp',[CreateProjectController::class, 'SProject']);
 Route::get('/lpp',[CreateProjectController::class, 'LProject']);
-
+Route::get('/ipp',[CreateProjectController::class, 'IProject']);
 
 
 /*Route::get('Admin/Admin',function(){
