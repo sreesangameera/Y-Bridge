@@ -8,6 +8,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProjectController;
 use App\user;
 use App\Http\Controllers\UpdateProfiles;
 use App\Http\Controllers\login;
@@ -100,6 +101,21 @@ Route::post('/forgetp',[login::class,'forgetp']);
 Route::get('/forget',function(){
     return view('auth.forgot-password');
   });
+
+
+  Route::get('/',[Frontendcontroller::class, 'wfa']);
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*Route::get('Admin/Admin',function(){
     $data=App\user::all();
