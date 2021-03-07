@@ -49,6 +49,7 @@
   width: 140px;
   height: 140px;
 }
+<<<<<<< HEAD
 
 .multiselect {
   width: 200px;
@@ -83,6 +84,8 @@
 #checkboxes label:hover {
   background-color: #1e90ff;
 }
+=======
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
 </style>
 <div class="container">
 <div class="row flex-lg-nowrap">
@@ -114,7 +117,10 @@
                   </a>
                       <!--span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span-->
                     </div>
+<<<<<<< HEAD
                     <button id="myBtnqw" class="btn btn-primary"><i class="fa fa-fw fa-camera"></i></button>
+=======
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
                   </div>
                 </div>
                 <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
@@ -187,7 +193,11 @@
                     <p><strong>Contact No: </strong> {{ $c->ContactNumber}} </p>
                     <p><strong>Official Website: </strong> {{ $c->OfficialWebsite}}</p>
                     <p><strong>Research Interest: </strong> {{ $c->ResearchInterest}} </p>
+<<<<<<< HEAD
                     <p><strong>Field of Specialization: </strong> {{ $c->FieldOfSpecialization}} </p>
+=======
+                    <p><strong>FieldOfSpecialization: </strong> {{ $c->FieldOfSpecialization}} </p>
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
                     
                 </div>   
                       </div>
@@ -266,7 +276,11 @@
 
   <!-- Modal content -->
   <div class="modal-content">
+<<<<<<< HEAD
     <span  onclick="document.getElementById('myModal').style.display = 'none';" class="close">&times;</span>
+=======
+    <span class="close">&times;</span>
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
     <form method="POST" action="/updateacademic" enctype="multipart/form-data">
         @csrf
         <div title="title">Title</div><div>
@@ -283,7 +297,11 @@
                     
                 </div> <br>
         <input type="hidden" name="email" value="{{ $c->EmailID }}" >
+<<<<<<< HEAD
         
+=======
+        <div title="add an image">Profile Picture</div><input class="form-control" type="file" name="photo" placeholder="Add photo" required="required" ><br>
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
         <div title="firstname">First Name</div><input class="form-control" type="text" name="fname" placeholder="First Name" required="required" value="{{ $c->FirstName}}"><br>
         <div title="lastname">Last Name</div><input class="form-control" type="text" name="lname" placeholder="Last Name" required="required" value="{{ $c->LastName}}"><br>
         <div title="employee id">Employee Id</div><input class="form-control" type="text" name="eid" placeholder="Employee ID" required="required" value="{{ $c->EmployeeID }}"><br>
@@ -315,7 +333,11 @@
                 </div> <br>
         <div title="select">Admin Role</div><div>
                     
+<<<<<<< HEAD
                     <select class="form-control" class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"  name="arole" value="{{ $c->AdminRole}}"   autofocus>
+=======
+                    <select class="form-control" class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"  name="arole" value="{{ $c->AdminRole}}"  required autofocus>
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
                     <option value="{{ $c->Designation}}">{{ $c->Designation}}</option>
                         <option value="Head of the Department">Head of the Department</option>
                         <option value="Head of the Unit">Head of the Unit</option>
@@ -327,6 +349,7 @@
                         
                     </select>
                     
+<<<<<<< HEAD
                 </div>
                  <br>
                  <!--div class="multiselect">
@@ -407,6 +430,15 @@
         <div title="select">Research Interests</div><div>
                     
                     <!--select class="form-control" class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"  name="ri" value="{{ $c->ResearchInterest}}"  required autofocus>
+=======
+                </div> <br>
+        <div title="https://www.linkedin.com/in/username/">LinkedIn Id</div><input class="form-control" type="text" name="linkedin" placeholder="LinkedIn" required="required" value="{{ $c->LinkedIn}}"><br>
+        <div title="07XXXXXXXX">Contact No.</div><input class="form-control" type="text" name="cno" placeholder="Contact Number" required="required" value="{{ $c->ContactNumber}}"><br>
+        <div title="www.sitename.lk/com">Official website</div><input class="form-control" type="text" name="ow" placeholder="Official Website" required="required" value="{{ $c->OfficialWebsite}}"><br>
+        <div title="select">Research Interests</div><div>
+                    
+                    <select class="form-control" class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"  name="ri" value="{{ $c->ResearchInterest}}"  required autofocus>
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
                         <option value="{{ $c->ResearchInterest}}">{{ $c->ResearchInterest}}</option>
                         <option value="Advanced database design and systems">Advanced database design and systems</option>
                         <option value="Bioinformatics Computing">Bioinformatics Computing</option>
@@ -441,6 +473,7 @@
                         <option value="Systems and Network Administration">Systems and Network Administration</option>
                         
                         
+<<<<<<< HEAD
                     </select-->
 
                     <div class="multiselect">
@@ -520,6 +553,14 @@
                 <div title="select">Field of Specialization</div><div>
                     
                     <!--select class="form-control" class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"  name="fos" value="{{ $c->FieldOfSpecialization}}"  required autofocus>
+=======
+                    </select>
+                    
+                </div> <br>
+                <div title="select">Field of Specialization</div><div>
+                    
+                    <select class="form-control" class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"  name="fos" value="{{ $c->FieldOfSpecialization}}"  required autofocus>
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
                         <option value="{{ $c->FieldOfSpecialization}}">{{ $c->FieldOfSpecialization}}</option>
                         <option value="Advanced database design and systems">Advanced database design and systems</option>
                         <option value="Bioinformatics Computing">Bioinformatics Computing</option>
@@ -554,6 +595,7 @@
                         <option value="Systems and Network Administration">Systems and Network Administration</option>
                         
                         
+<<<<<<< HEAD
                     </select-->
 
                     <div class="multiselect">
@@ -628,6 +670,9 @@
         <input type="checkbox" id="thirtyone"value="Systems and Network Administration" />Systems and Network Administration</label>
     </div>
   </div>
+=======
+                    </select>
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
                     
                 </div>  <br>
         <div title="old password">Old Password</div><input class="form-control" type="password" name="pwrd" placeholder="Old Password" required="required" ><br>
@@ -638,6 +683,7 @@
   </div>
 
 </div>
+<<<<<<< HEAD
 <div id="myModalqw" class="modal" >
 
   <!-- Modal content -->
@@ -713,6 +759,8 @@
      @endif
 @endif
 
+=======
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
 <script>
     var modal = document.getElementById("myModal");
 
@@ -739,6 +787,7 @@ window.onclick = function(event) {
   }
 }
 
+<<<<<<< HEAD
 </script>
 <script>
     var modal1 = document.getElementById("myModalqw");
@@ -779,4 +828,6 @@ function showCheckboxes() {
     expanded = false;
   }
 }
+=======
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
 </script>

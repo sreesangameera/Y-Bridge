@@ -10,8 +10,11 @@ use App\Models\Student;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ybridge_mail;
+=======
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
 
 class UserController extends Controller
 {
@@ -125,7 +128,10 @@ class UserController extends Controller
     }
 
     public function registeruser(Request $request){
+<<<<<<< HEAD
         try{
+=======
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
         $user=new User;
        
             $user->fname=$request->fname;
@@ -134,6 +140,7 @@ class UserController extends Controller
             $user->email=$request->email;
             $user->password= Hash::make($request->password);
             $user->save();
+<<<<<<< HEAD
         }
         catch(\Illuminate\Database\QueryException $exception){
             $s="This email already ";
@@ -149,6 +156,14 @@ class UserController extends Controller
      public function selectu($id){
         DB::table('users')->where('id',$id)->update(['not_confirmed' => "0",
                                                                          ]);
+=======
+
+
+        return 'wait for the acceptance';     
+     }
+
+     public function selectu($id){
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
         $x=DB::table('users')->where('id',$id)->first();
         if($x->role=="Industry"){
         $user=new Industrialist;
@@ -180,6 +195,7 @@ class UserController extends Controller
               
                 $user->save();
          }
+<<<<<<< HEAD
 
          $details=['title'=>'your account successfully registered in ybridge.',
                   'body'=>'You are welcome to ybridge : '];
@@ -187,6 +203,9 @@ class UserController extends Controller
 
          $t="User Added";
         return redirect()->back()->with('msg',$t);    
+=======
+         return 'user saved';     
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
         }
     public function stud(){
         $p=DB::table('students')->get();
@@ -198,6 +217,7 @@ class UserController extends Controller
         $p=DB::table('academics')->get();
             return view('AdminDash/academicd')->with('academict',$p);      }
     public function stusd(){
+<<<<<<< HEAD
         $p=DB::table('student_societies')->get();
             return view('AdminDash/studentsoc')->with('studentsoct',$p);      }
     public function uped(){
@@ -261,6 +281,15 @@ public function studentsocietiesadminadd(Request $request){
     return redirect()->back()->with('msg',"Event Added");
 
 }
+=======
+        $p=DB::table('students_societies')->get();
+            return view('AdminDash/studentsoc')->with('studentsoct',$p);      }
+    public function uped(){
+        $p=DB::table('upcoming_events')->get();
+            return view('AdminDash/upcomingeve')->with('upcomingevet',$p);      }
+    
+
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
 }
 
 

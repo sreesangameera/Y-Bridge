@@ -6,7 +6,10 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -16,6 +19,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+<<<<<<< HEAD
         // \App\Models\User::factory(10)->create();
         DB::table('users')->insert([
             'role'=> 'Lecturer',
@@ -149,6 +153,9 @@ class DatabaseSeeder extends Seeder
         ]);
         
        
+=======
+
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
         DB::table('industrialists')->insert([
             'Photo'=> 'HP@gmail.com.jpg',
             'NameWithInitials'=>' H.Purasinghe',
@@ -171,10 +178,17 @@ class DatabaseSeeder extends Seeder
 
     
         DB::table('industrialists')->insert([
+<<<<<<< HEAD
             'Photo'=> 'MSa@gmail.com.jpg',
             'NameWithInitials'=>' M.Sekaram',
             'Designation'=>'Founder and CEO',
             'CompanyPersonalEmailID'=>'MSa@gmail.com',
+=======
+            'Photo'=> 'MS@gmail.com.jpg',
+            'NameWithInitials'=>' M.Sekaram',
+            'Designation'=>'Founder and CEO',
+            'CompanyPersonalEmailID'=>'MS@gmail.com',
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
             'LinkedIn'=>'https://www.linkedin.com/in/manosekaram?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B2RxXZXYBTSCyMZGM3IYkmA%3D%3D',
             'FieldOfInterests'=>'',
             'ContactNumber'=>'0778218520',
@@ -186,7 +200,11 @@ class DatabaseSeeder extends Seeder
             'role'=> 'Industry',
             'fname'=>'Mano ',
             'lname'=>'Sekaram',
+<<<<<<< HEAD
             'email'=>'MSa@gmail.com',
+=======
+            'email'=>'MS@gmail.com',
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
             'password'=> Hash::make('abcd1234'),
         ]);
 
@@ -379,7 +397,11 @@ class DatabaseSeeder extends Seeder
 
         DB::table('academics')->insert([
             'EmployeeID'=> '06',
+<<<<<<< HEAD
             'Photo'=>'MS@gmail.com.jpg',
+=======
+            'Photo'=>'MSa@gmail.com.jpg',
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
             'Title'=>'Dr.',
             'FirstName'=>'Manivannan',
             'LastName'=>'Siyamalan',
@@ -387,7 +409,11 @@ class DatabaseSeeder extends Seeder
             'DateOfBirth'=>'1976-08-14',
             'Designation'=>'Senior Lecturer',
             'AdminRole'=>'',
+<<<<<<< HEAD
             'EmailID'=>'MS@gmail.com',
+=======
+            'EmailID'=>'MSa@gmail.com',
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
             'LinkedIn'=>'https://www.linkedin.com/in/siyamalanmanivannan?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Ba59PqMYUTC%2BfJKu%2BeV3q%2BQ%3D%3D',
             'ContactNumber'=>'0775446259',
             'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-dr-m-siyamalan/',
@@ -400,7 +426,11 @@ class DatabaseSeeder extends Seeder
             'role'=> 'Lecturer',
             'fname'=>'Manivannan',
             'lname'=>'Siyamalan',
+<<<<<<< HEAD
             'email'=>'MS@gmail.com',
+=======
+            'email'=>'MSa@gmail.com',
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
             'password'=> Hash::make('abcd1234'),
         ]);
 
@@ -487,6 +517,7 @@ class DatabaseSeeder extends Seeder
             'email'=>'ST@gmail.com',
             'password'=> Hash::make('abcd1234'),
         ]);
+<<<<<<< HEAD
         
         DB::table('student_societies')->insert([
             'Link'=> '1',
@@ -514,5 +545,15 @@ class DatabaseSeeder extends Seeder
             
         ]);
         
+=======
+
+
+        
+
+
+        
+
+        // \App\Models\User::factory(10)->create();
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
     }
 }

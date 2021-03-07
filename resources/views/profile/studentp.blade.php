@@ -1,5 +1,6 @@
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<<<<<<< HEAD
 <meta name="_token" content="{{ csrf_token() }}">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"></script>
@@ -23,6 +24,8 @@ border: 1px solid red;
 max-width: 1000px !important;
 }
 </style>
+=======
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
 <style>
     body{
     margin-top:20px;
@@ -111,7 +114,10 @@ input[type=text], select, textarea{
                   </a>
                       <!--span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span-->
                     </div>
+<<<<<<< HEAD
                     <button id="myBtnqw" class="btn btn-primary"><i class="fa fa-fw fa-camera"></i></button>
+=======
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
                   </div>
                 </div>
                 <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
@@ -133,7 +139,11 @@ input[type=text], select, textarea{
           
             <div class="px-xl-3" >
                <div>
+<<<<<<< HEAD
             <button id="myBtn" type="button" class="btn btn-primary">Edit Profile</button>
+=======
+            <button id="myBtn"type="button" class="btn btn-primary">Edit Profile</button>
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
             </div>
               <button class="btn btn-block btn-warning" style="height:40px;" >
                 <!--i class="fa fa-sign-out"></i-->
@@ -185,7 +195,10 @@ input[type=text], select, textarea{
                 </div>   
                       </div>
                     </div>
+<<<<<<< HEAD
                     
+=======
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
                     <!--div class="row">
                       <div class="col-12 col-sm-6 mb-3">
                         <div class="mb-2"><b>Change Password</b></div>
@@ -261,7 +274,10 @@ input[type=text], select, textarea{
   <!-- Modal content -->
   <div class="modal-content" style="width:75%">
     <span class="close">&times;</span>
+<<<<<<< HEAD
     
+=======
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
     <form method="POST" action="/updatestudent" enctype="multipart/form-data">
         @csrf
         <!--button class="btn btn-primary" type="button">
@@ -288,17 +304,26 @@ input[type=text], select, textarea{
                     </select>
                     
                 </div><br>
+<<<<<<< HEAD
         
         
         <div title="20XX/CSC/XXX,20XX/SP/XXX">Student Id</div><input class="form-control" type="text" name="si" placeholder="Student ID" required="required" value="{{ $c->StudentID}}"><br>
         
+=======
+        <div title="upload an image">Profile Picture</div><input class="form-control" type="file" name="photo" placeholder="add photo" required="required"> <br>
+        <div title="20XX/CSC/XXX,20XX/SP/XXX">Student Id</div><input class="form-control" type="text" name="si" placeholder="Student ID" required="required" value="{{ $c->StudentID}}"><br>
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
         <div title="Male/Female/Other">Gender</div><div>
                     
                     <select class="form-control" class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"  name="g" value="{{ $c->Gender}}"  required autofocus>
                         <option value="{{ $c->Gender}}">{{ $c->Gender}}</option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
+<<<<<<< HEAD
                        
+=======
+                        <option value="Other">Other</option>
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
                         
                     </select>
                     
@@ -306,7 +331,11 @@ input[type=text], select, textarea{
         <div title="select">Date of Birth</div><input class="form-control" type="date" name="dob" placeholder="DOB" required="required" value="{{ $c->DateOfBirth}}"><br>
         <div title="enter your home address">Home Address</div><input class="form-control" type="text" name="ha" placeholder="Home Address" required="required" value="{{ $c->HomeAddress}}"><br>
         <div title="07XXXXXXXX">Contact No</div><input class="form-control" type="text" name="cn" placeholder="Contact Number" required="required" value="{{ $c->ContactNumber}}"><br>
+<<<<<<< HEAD
         <div title="https://www.linkedin.com/in/username/">LinkedIn Id</div><input class="form-control" type="text" name="li" placeholder="LinkedIn" value="{{ $c->LinkedIn}}"><br>
+=======
+        <div title="https://www.linkedin.com/in/username/">LinkedIn Id</div><input class="form-control" type="text" name="li" placeholder="LinkedIn" required="required" value="{{ $c->LinkedIn}}"><br>
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
         <div title="select">Study Programme</div><div>
                     
                     <select class="form-control" class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"  name="sp" value="{{ $c->StudyProgramme}}"  required autofocus>
@@ -323,8 +352,13 @@ input[type=text], select, textarea{
                     <select class="form-control" class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"  name="so" value="{{ $c->SubjectsOffered}}"  required autofocus>
                         <option value="{{ $c->SubjectsOffered}}">{{ $c->SubjectsOffered}}</option>
                         <option value="Direct Computer Science"> Direct Computer Science</option>
+<<<<<<< HEAD
                         <option value="PMM,AMM,CSC">PMM,AMM,CSC</option>
                         <option value="PMM,STA,CSC">PMM,STA,CSC</option>
+=======
+                        <option value="PMM, AMM, CSC">PMM,AMM,CSC</option>
+                        <option value="PMM, STA, CSC">PMM,STA,CSC</option>
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
                         <option value="AMM,STA,CSC">AMM,STA,CSC</option>
                         <option value="AMM,PHY,CSC">AMM,PHY,CSC</option>
                         <option value="PMM,PHY,CSC">PMM,PHY,CSC</option>
@@ -335,13 +369,17 @@ input[type=text], select, textarea{
                 </div> <br>
         <div title="old password">Old Password</div><input class="form-control" type="password" name="pwrd" placeholder="Old Password" required="required" ><br>
         <div title="new password or confirm the old password">New Password</div><input class="form-control" type="password" name="nwpswrd" placeholder="New Password" required="required"><br>
+<<<<<<< HEAD
         
+=======
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
         <input class="btn btn-primary" type="submit" value="submit">
         
     </form>
   </div>
 
 </div>
+<<<<<<< HEAD
 
 <div id="myModalqw" class="modal" >
 
@@ -419,6 +457,8 @@ input[type=text], select, textarea{
      @endif
 @endif
 
+=======
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
 <script>
     var modal = document.getElementById("myModal");
 
@@ -445,6 +485,7 @@ window.onclick = function(event) {
   }
 }
 
+<<<<<<< HEAD
 </script>
 <script>
     var modal1 = document.getElementById("myModalqw");
@@ -473,3 +514,6 @@ window.onclick = function(event) {
 }
 
 </script>
+=======
+</script>
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95

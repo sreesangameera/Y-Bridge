@@ -72,9 +72,13 @@
                                 type="password"
                                 name="password_confirmation" required />
             </div>
+<<<<<<< HEAD
             @if($msg = session()->get('msg'))
             <h3>{{$msg}}</h3>
             @endif
+=======
+
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
                     {{ __('Already registered?') }}
@@ -86,6 +90,7 @@
             </div>
         </form>
     </x-auth-card>
+<<<<<<< HEAD
     
 </x-guest-layout>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
@@ -103,4 +108,7 @@
      </script>
      @endif
      @endif
+=======
+</x-guest-layout>
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
 

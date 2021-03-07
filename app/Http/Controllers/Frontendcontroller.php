@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 class Frontendcontroller extends Controller
 {
     public function home(){
+<<<<<<< HEAD
         $p=DB::table('students')->get();
             
             $q=DB::table('academics')->get();
@@ -27,6 +28,9 @@ class Frontendcontroller extends Controller
                 $v=DB::table('student_societies')->get();
                 $u=DB::table('upcoming_events')->get();
             return view('/Home/home')->with('studentt',$p)->with('academict',$q)->with('industrialistt',$r)->with('studentsoct',$v)->with('upcominget',$u) ;      }
+=======
+        return view('Home/home');      }
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
 
     public function index(){
         return view('Home/Introduction');      }
@@ -40,7 +44,11 @@ class Frontendcontroller extends Controller
     public function prs(){
         return view('Home/Participants');      }
     
+<<<<<<< HEAD
     public function stsa(){
+=======
+    public function sts(){
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
         return view('Home/StudentSocieties');      }
 
     public function log(){
@@ -75,10 +83,13 @@ class Frontendcontroller extends Controller
             $v=DB::table('upcoming_events')->get();
             return view('Home/UpcomingEvents')->with('upcominget',$v);      
         }
+<<<<<<< HEAD
     public function sts(){
         $v=DB::table('student_societies')->get();
             return view('Home/StudentSocieties')->with('studentsoct',$v);      }
     
+=======
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
     public function profile(){
       $email=   Auth::user()->email ;
       $role= Auth::user()->role ;
@@ -98,6 +109,7 @@ class Frontendcontroller extends Controller
             return view('profile.academicp')->with('c', $c);
 
         }
+<<<<<<< HEAD
         elseif($role=="Admin"){
             $p=DB::table('students')->get();
                 
@@ -112,3 +124,20 @@ class Frontendcontroller extends Controller
         }
     }
 }
+=======
+        
+        
+        
+               
+       
+          
+          
+        
+          
+           
+
+
+        
+        
+}}
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95

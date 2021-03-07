@@ -16,7 +16,11 @@ class CreateUpcomingEventsTable extends Migration
         Schema::create('upcoming_events', function (Blueprint $table) {
             $table->id();
             $table->String('Link')->unique()->nullable();
+<<<<<<< HEAD
             $table->String('Date')->nullable();
+=======
+            $table->String('Date')->unique()->nullable();
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
             $table->String('EName')->unique()->nullable();
             $table->String('Description')->nullable();
             $table->timestamps();

@@ -161,7 +161,11 @@ body{
                         <span class="icon-bar"></span>
                     </button>
                     <div class="navbar-brand" href="home"><img src="images/logos/logo.png" id="Logo"> <h1 class="animated fadeInDown heading" style="color: #03a1fc" ><b>Y-Bridge</h1>
+<<<<<<< HEAD
                         <h4 style="color: #0049FF">"A match-module to bridge students with Academic and Industry-based supervisors" </h4><div class="col-md-10">
+=======
+                        <h4 style="color: #03a1fc">"A match-module to bridge students with Academic and Industry-based supervisors" </h4><div class="col-md-10">
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
                         
     </div>
                                             </div>
@@ -241,6 +245,7 @@ body{
                                                     </ul>
                                                     <div class="tab-content">
                                                         <div role="tabpanel" class="tab-pane active" id="1g">
+<<<<<<< HEAD
                                                         <table  >
                                                                     <thead>
                                                                     <tr>
@@ -353,6 +358,16 @@ body{
                                             <div role="tabpanel" class="tab-pane active" id="Academics">
                                            
                                             <table  >
+=======
+                                                                                                                                                                                                                              <a href="http://192.248.56.20/match-module/all-user/2?Atype=1G&amp;Btype=1S" class="pull-right" id="showUserBtn" title="Students"></a>
+                                                        </div>
+                                                        <div role="tabpanel" class="tab-pane" id="2g">
+                                                                                                                        <a href="http://192.248.56.20/match-module/all-user/2?Atype=2G&amp;Btype=2S" class="pull-right" id="showUserBtn" title="Students"></a>
+                                                        </div>
+                                                        <div role="tabpanel" class="tab-pane" id="3g">
+                                                                                                                           
+                    <table  >
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
                         <thead>
                         <tr>
                             
@@ -364,6 +379,7 @@ body{
                             
                             
                         </tr>
+<<<<<<< HEAD
                         @foreach ($academict as $user)
                             <tr>
                 
@@ -372,6 +388,16 @@ body{
 	    </div><td>
                                 <td><div class="pull-center"><a href="{{$user->LinkedIn}}" class="pull-up" target="_blank"><br>{{$user->Title}}{{$user->FirstName}}{{" "}}{{$user->LastName}}</a><br>{{$user->Designation}}
                                 </td>
+=======
+                        @foreach ($studentt as $user)
+                            <tr>
+                
+                                <td><div class="pull-left">
+                                <img src="/upload/profile/{{ $user->photo}}" class="profilep"height="60" width="60" alt="">
+	    </div><td>
+                                <td><div class="pull-up" ><a href="{{$user->LinkedIn}}"  target="_blank"><br>{{$user->FirstName}}{{" "}}{{$user->LastName}}</a><br>{{$user->YearOfStudy}}
+                                </div></td>
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
                                 
                                 
                             
@@ -386,12 +412,27 @@ body{
                             </tr>
                         @endforeach
                         <thead>
+<<<<<<< HEAD
                               </table> 
                                                                                                     
 
                                                                                                                                                                             <a href="http://192.248.56.20/match-module/all-user/1" class="pull-right" id="showUserBtn" title="Academics"></a>
                                             </div>
                                             <div role="tabpanel" class="tab-pane" id="Industries">
+=======
+                              </table>                                                                                                                                                                                                                                                                                                                                                             <a href="http://192.248.56.20/match-module/all-user/2?Atype=3G&amp;Btype=3M&amp;Ctype=3S" class="pull-right" id="showUserBtn" title="Students"></a>
+                                                        </div>
+                                                         <div role="tabpanel" class="tab-pane" id="4g">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               <a href="http://192.248.56.20/match-module/all-user/2?Atype=4S&amp;Btype=4M" class="pull-right" id="showUserBtn" title="Students"></a>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div role="tabpanel" class="tab-pane active" id="Academics">
+                                           
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
                                             <table  >
                         <thead>
                         <tr>
@@ -404,13 +445,21 @@ body{
                             
                             
                         </tr>
+<<<<<<< HEAD
                         @foreach ($industrialistt as $user)
+=======
+                        @foreach ($academict as $user)
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
                             <tr>
                 
                                 <td><div class="pull-left">
                                 <img src="/upload/profile/{{ $user->Photo}}" class="profilep"height="60" width="60" alt="">
 	    </div><td>
+<<<<<<< HEAD
                                 <td><a href="{{$user->LinkedIn}}" class="pull-up" target="_blank"><br>{{$user->NameWithInitials}}</a><br>{{$user->Designation}} at {{$user->CompanyName}}
+=======
+                                <td><div class="pull-center"><a href="{{$user->LinkedIn}}" class="pull-up" target="_blank"><br>{{$user->Title}}{{$user->FirstName}}{{" "}}{{$user->LastName}}</a><br>{{$user->Designation}}
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
                                 </td>
                                 
                                 
@@ -426,7 +475,12 @@ body{
                             </tr>
                         @endforeach
                         <thead>
+<<<<<<< HEAD
                               </table>                                                                                                                                                                                      
+=======
+                              </table> 
+                                                                                                                                                                                                  
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
                                         </div>
                                     </div>
                                     
@@ -457,7 +511,11 @@ body{
             <div class="footer-distributed">
                 <div class="footer-left">                   
                     <p class="footer-company-name">All Rights Reserved. &copy; 2020  Design By : 
+<<<<<<< HEAD
 					<a href="https://html.design/">TeamY-Bridge</a></p>
+=======
+					<a href="https://html.design/">Reverse576</a></p>
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
                 </div>
 
                 

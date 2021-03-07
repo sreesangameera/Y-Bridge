@@ -38,6 +38,7 @@
 
 </head>
 <style>
+<<<<<<< HEAD
     @import url(//fonts.googleapis.com/css?family=Montserrat:300,400,500);
 .blog-home2 {
   font-family: "Montserrat", sans-serif;
@@ -114,6 +115,8 @@
     background: linear-gradient(to right, #00FF7F 0%, #316ce8 100%);
 }
 
+=======
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
 body{
         background-color: #fff !important;
     }
@@ -250,7 +253,11 @@ body{
                         <span class="icon-bar"></span>
                      </button>
                     <div class="navbar-brand"  href="home"><img src="images/logos/logo.png" id="Logo"> <h1 class="animated fadeInDown heading" style="color: #03a1fc" ><b>Y-Bridge</h1>
+<<<<<<< HEAD
                         <h4 style="color: #0049FF">"A match-module to bridge students with Academic and Industry-based supervisors" </h4><div class="col-md-10">
+=======
+                        <h4 style="color: #03a1fc">"A match-module to bridge students with Academic and Industry-based supervisors" </h4><div class="col-md-10">
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
                         
     </div>
                                             </div>
@@ -407,6 +414,7 @@ body{
         </div><!-- end container -->
     </div><!-- end section -->
 	
+<<<<<<< HEAD
 	<div class="panel panel-primary">
     <div class="blog-home2 py-5">
   <div class="container">
@@ -461,6 +469,39 @@ body{
     </div>
   </div></div>
 </div>
+=======
+	
+    <div id="about" class="section wb">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="message-box">
+                    <h3> <a href="#">Upcoming Events</a></h3>
+                        <hr>
+                                    <div class="events">
+                                                                                    <p><a href="http://www.jfn.ac.lk/index.php/gallery/thirty-second-general-convocation-10-11-january-2017/" target="_blank"><i class="fa fa-thumb-tack"></i> General Convocation-2017</a>
+                                            </p>
+                                                                                    <p><a href="http://www.sci.jfn.ac.lk/index.php/academic/" target="_blank"><i class="fa fa-thumb-tack"></i> ECE-2014</a>
+                                            </p>
+                                                                                    <p><a href="http://www.csc.jfn.ac.lk/events/slswcs17/" target="_blank"><i class="fa fa-thumb-tack"></i> SL-SWCS&#039;17</a>
+                                            </p>
+                                                                                    <p><a href="http://www.csc.jfn.ac.lk/index.php/2017/08/14/cs-career-fair17/" target="_blank"><i class="fa fa-thumb-tack"></i> Career Fair 2017</a>
+                                            </p>
+                                            <br>    <a href="http://192.248.56.20/match-module/all-user/5?Atype=5" class="btn btn-light btn-radius btn-brd grd1">More</a>
+            </div><!-- end title -->
+        </div><!-- end container -->
+
+               
+
+               
+
+               
+            <hr class="hr1">
+
+           
+        </div><!-- end container -->
+    </div><!-- end section -->
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
 
      <div class="panel panel-primary">
                                 <div class="panel-body">
@@ -500,6 +541,7 @@ body{
                                                     </ul>
                                                     <div class="tab-content">
                                                         <div role="tabpanel" class="tab-pane active" id="1g">
+<<<<<<< HEAD
                                                                                                                                                                                                                                                  
                                                         </div>
                                                         <div role="tabpanel" class="tab-pane" id="2g">
@@ -544,6 +586,150 @@ body{
                                                         </div>
                                                          <div role="tabpanel" class="tab-pane" id="4g">
                                                                                                                                                                                                                                                    
+=======
+                                                                                                                            <div class="user Searchable">
+            <a href="https://www.linkedin.com/" target="_blank">
+    	    <div class="pull-left">
+	        <img src="http://192.248.56.20/match-module/uploads/lecture/profile/default.png" class="">
+	    </div>
+	    <div class="name " > Angodage Shehan Akalanka Perera</div>
+    </a>
+                <p class=""></p>
+        <p class="">Level 1G</p>
+      
+    
+</div>                                                                                                                        <a href="http://192.248.56.20/match-module/all-user/2?Atype=1G&amp;Btype=1S" class="pull-right" id="showUserBtn" title="Students">More...</a>
+                                                        </div>
+                                                        <div role="tabpanel" class="tab-pane" id="2g">
+                                                                                                                        <a href="http://192.248.56.20/match-module/all-user/2?Atype=2G&amp;Btype=2S" class="pull-right" id="showUserBtn" title="Students">More...</a>
+                                                        </div>
+                                                        <div role="tabpanel" class="tab-pane" id="3g">
+                                                        <div class="user Searchable">
+            <a href="https://www.linkedin.com/in/vishnuga-sivakumaran-a900431a4/" target="_blank">
+    	    <div class="pull-left">
+	        <img src="http://192.248.56.20/match-module/uploads/lecture/profile/default.png" class="">
+	    </div>
+	    <div class="name " > Vishnuga Sivakumaran</div>
+    </a>
+                <p class=""></p>
+        <p class="">Level 3M</p>
+      
+    
+</div>      <div class="user Searchable">
+            <a href="https://www.linkedin.com/" target="_blank">
+    	    <div class="pull-left">
+	        <img src="http://192.248.56.20/match-module/uploads/lecture/profile/default.png" class="">
+	    </div>
+	    <div class="name " > Harischandra Patabendige Malki Maduka</div>
+    </a>
+                <p class=""></p>
+        <p class="">Level 3M</p>
+      
+    
+</div>                                                                                                                            <div class="user Searchable">
+            <a href="https://www.linkedin.com/" target="_blank">
+    	    <div class="pull-left">
+	        <img src="http://192.248.56.20/match-module/uploads/lecture/profile/default.png" class="">
+	    </div>
+	    <div class="name " > Kabilathas Parkavi</div>
+    </a>
+                <p class=""></p>
+        <p class="">Level 3M</p>
+      
+    
+</div>                                                                                                                            <div class="user Searchable">
+            <a href="https://www.linkedin.com/" target="_blank">
+    	    <div class="pull-left">
+	        <img src="http://192.248.56.20/match-module/uploads/lecture/profile/default.png" class="">
+	    </div>
+	    <div class="name " > Kanagaratnam  Derushan</div>
+    </a>
+                <p class=""></p>
+        <p class="">Level 3M</p>
+      
+    
+</div>                                                                                                                            <div class="user Searchable">
+            <a href="https://www.linkedin.com/" target="_blank">
+    	    <div class="pull-left">
+	        <img src="http://192.248.56.20/match-module/uploads/lecture/profile/default.png" class="">
+	    </div>
+	    <div class="name " > Mohan Vithusha</div>
+    </a>
+                <p class=""></p>
+        <p class="">Level 3M</p>
+      
+    
+</div>                                                                                                                            <div class="user Searchable">
+            <a href="https://www.linkedin.com/" target="_blank">
+    	    <div class="pull-left">
+	        <img src="http://192.248.56.20/match-module/uploads/lecture/profile/default.png" class="">
+	    </div>
+	    <div class="name " > Selvarasa Sangeerthana</div>
+    </a>
+                <p class=""></p>
+        <p class="">Level 3M</p>
+      
+    
+</div>                                                                                                                        <a href="http://192.248.56.20/match-module/all-user/2?Atype=3G&amp;Btype=3M&amp;Ctype=3S" class="pull-right" id="showUserBtn" title="Students">More...</a>
+                                                        </div>
+                                                         <div role="tabpanel" class="tab-pane" id="4g">
+                                                                                                                            <div class="user Searchable">
+            <a href="https://www.linkedin.com/" target="_blank">
+    	    <div class="pull-left">
+	        <img src="http://192.248.56.20/match-module/uploads/lecture/profile/default.png" class="">
+	    </div>
+	    <div class="name " > Senthuja Karunanithy</div>
+    </a>
+                <p class=""></p>
+        <p class="">Level 4M</p>
+      
+    
+</div>                                                                                                                            <div class="user Searchable">
+            <a href="https://www.linkedin.com/" target="_blank">
+    	    <div class="pull-left">
+	        <img src="http://192.248.56.20/match-module/uploads/lecture/profile/default.png" class="">
+	    </div>
+	    <div class="name " > Senthuja Karunanithy</div>
+    </a>
+                <p class=""></p>
+        <p class="">Level 4M</p>
+      
+    
+</div>                                                                                                                            <div class="user Searchable">
+            <a href="https://www.linkedin.com/" target="_blank">
+    	    <div class="pull-left">
+	        <img src="http://192.248.56.20/match-module/uploads/lecture/profile/default.png" class="">
+	    </div>
+	    <div class="name " > Senthuja Karunanithy</div>
+    </a>
+                <p class=""></p>
+        <p class="">Level 4M</p>
+      
+    
+</div>                                                                                                                            <div class="user Searchable">
+            <a href="https://www.linkedin.com/" target="_blank">
+    	    <div class="pull-left">
+	        <img src="http://192.248.56.20/match-module/uploads/lecture/profile/default.png" class="">
+	    </div>
+	    <div class="name " > Senthuja Karunanithy</div>
+    </a>
+                <p class=""></p>
+        <p class="">Level 4M</p>
+      
+    
+</div>                                                                                                                            <div class="user Searchable">
+            <a href="https://www.linkedin.com/" target="_blank">
+    	    <div class="pull-left">
+	        <img src="http://192.248.56.20/match-module/uploads/lecture/profile/default.png" class="">
+	    </div>
+	    <div class="name " > Senthuja Karunanithy</div>
+    </a>
+                <p class=""></p>
+        <p class="">Level 4M</p>
+      
+    
+</div>                                                                                                                        <a href="http://192.248.56.20/match-module/all-user/2?Atype=4S&amp;Btype=4M" class="pull-right" id="showUserBtn" title="Students">More...</a>
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
                                                         </div>
 
                                                     </div>
@@ -551,6 +737,7 @@ body{
 
                                             </div>
                                             <div role="tabpanel" class="tab-pane active" id="Academics">
+<<<<<<< HEAD
                                             <table  >
                         <thead>
                         <tr>
@@ -623,6 +810,112 @@ body{
                         @endforeach
                         <thead>
                               </table>                                                                                                                         
+=======
+                                                                                                    <div class="user Searchable">
+            <a href="http://www.csc.jfn.ac.lk/index.php/profile-dr-s-mahesan/" target="_blank">
+    	    <div class="pull-left">
+	        <img src="http://192.248.56.20/match-module/uploads/member/profile/img18.jpg" class="">
+	    </div>
+	    <div class="name " >Dr. Sinnathamby Mahesan</div>
+    </a>
+            <p class="">Senior Lecturer</p>
+          
+    
+</div>                                                                                                    <div class="user Searchable">
+            <a href="http://www.csc.jfn.ac.lk/index.php/profile-dr-e-y-a-charles/" target="_blank">
+    	    <div class="pull-left">
+	        <img src="http://192.248.56.20/match-module/uploads/member/profile/img19.jpg" class="">
+	    </div>
+	    <div class="name " >Dr. Eugene Yougarajah Andrew Charles</div>
+    </a>
+            <p class="">Senior Lecturer</p>
+          
+    
+</div>                                                                                                    <div class="user Searchable">
+            <a href="http://www.csc.jfn.ac.lk/index.php/profile-dr-k-thabotharan/" target="_blank">
+    	    <div class="pull-left">
+	        <img src="http://192.248.56.20/match-module/uploads/member/profile/img20.jpg" class="">
+	    </div>
+	    <div class="name " >Dr. Kathiravelu  Thabotharan</div>
+    </a>
+            <p class="">Senior Lecturer</p>
+          
+    
+</div>                                                                                                    <div class="user Searchable">
+            <a href="http://www.csc.jfn.ac.lk/index.php/profile-dr-a-ramanan/" target="_blank">
+    	    <div class="pull-left">
+	        <img src="http://192.248.56.20/match-module/uploads/member/profile/user21.jpg" class="">
+	    </div>
+	    <div class="name " >Dr. Amirthalingam  Ramanan</div>
+    </a>
+            <p class="">Senior Lecturer</p>
+          
+    
+</div>                                                                                                    <div class="user Searchable">
+            <a href="http://www.csc.jfn.ac.lk/index.php/profile-mr-s-suthakar/" target="_blank">
+    	    <div class="pull-left">
+	        <img src="http://192.248.56.20/match-module/uploads/member/profile/user22.jpg" class="">
+	    </div>
+	    <div class="name " >Mr. Somaskandan Suthakar</div>
+    </a>
+            <p class="">Senior Lecturer</p>
+          
+    
+</div>                                                                                                <a href="http://192.248.56.20/match-module/all-user/1" class="pull-right" id="showUserBtn" title="Academics">More...</a>
+                                            </div>
+                                            <div role="tabpanel" class="tab-pane" id="Industries">
+                                                                                                    <div class="user Searchable">
+            <a href="https://www.linkedin.com/" target="_blank">
+    	    <div class="pull-left">
+	        <img src="http://192.248.56.20/match-module/uploads/member/profile/user6.jpg" class="">
+	    </div>
+	    <div class="name " > Sanjiva Weerawarana</div>
+    </a>
+          
+            <p class="">CEO / Wso2</p>
+    
+</div>                                                                                                    <div class="user Searchable">
+            <a href="https://www.linkedin.com/" target="_blank">
+    	    <div class="pull-left">
+	        <img src="http://192.248.56.20/match-module/uploads/member/profile/img7.png" class="">
+	    </div>
+	    <div class="name " > Harsha Purasinghe</div>
+    </a>
+          
+            <p class="">CEO / Microimage</p>
+    
+</div>                                                                                                    <div class="user Searchable">
+            <a href="https://www.linkedin.com/" target="_blank">
+    	    <div class="pull-left">
+	        <img src="http://192.248.56.20/match-module/uploads/lecture/profile/default.png" class="">
+	    </div>
+	    <div class="name " > Mano Sekaram</div>
+    </a>
+          
+            <p class="">CEO / 99xtechnology</p>
+    
+</div>                                                                                                    <div class="user Searchable">
+            <a href="https://www.linkedin.com/" target="_blank">
+    	    <div class="pull-left">
+	        <img src="http://192.248.56.20/match-module/uploads/member/profile/img9.jpg" class="">
+	    </div>
+	    <div class="name " > Sankalpa Gamwarige</div>
+    </a>
+          
+            <p class="">CEO / Zone 24/7</p>
+    
+</div>                                                                                                    <div class="user Searchable">
+            <a href="https://www.linkedin.com/" target="_blank">
+    	    <div class="pull-left">
+	        <img src="http://192.248.56.20/match-module/uploads/member/profile/img10.jpg" class="">
+	    </div>
+	    <div class="name " > Mathu Ratnayake</div>
+    </a>
+          
+            <p class="">CEO / Virtusa</p>
+    
+</div>                                                                                                <a href="http://192.248.56.20/match-module/all-user/3" class="pull-right" id="showUserBtn" title="Industries">More...</a>
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
                                             </div>
                                         </div>
                                     </div>
@@ -642,6 +935,7 @@ body{
     <div class="panel-body">
     <h3> <a href="#">Student societies</a></h3>
         <hr>
+<<<<<<< HEAD
         <table  >
                         <thead>
                         <tr>
@@ -671,6 +965,12 @@ body{
                         @endforeach
         </tbody>
                               </table> 
+=======
+        <div class="events">
+         <p><i class="fa fa-bullseye"></i> <a href="http://society.jfn.ac.lk/comsoc/" target="_blank">Computer-society</a></p>
+            <hr class="hr1">
+        </div>
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
     </div>
 </div>
                 </div><!-- end col -->
@@ -691,7 +991,11 @@ body{
             <div class="footer-distributed">
                 <div class="footer-left">                   
                     <p class="footer-company-name">All Rights Reserved. &copy; 2020  Design By : 
+<<<<<<< HEAD
 					<a href="https://html.design/">TeamY-Bridge</a></p>
+=======
+					<a href="https://html.design/">Reverse576</a></p>
+>>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
                 </div>
 
                 
