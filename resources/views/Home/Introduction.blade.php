@@ -159,11 +159,7 @@ body{
                         <span class="icon-bar"></span>
                     </button>
                     <div class="navbar-brand" href="home"><img src="images/logos/logo.png" id="Logo"> <h1 class="animated fadeInDown heading" style="color: #03a1fc" ><b>Y-Bridge</h1>
-<<<<<<< HEAD
                         <h4 style="color: #0049FF">"A match-module to bridge students with Academic and Industry-based supervisors" </h4><div class="col-md-10">
-=======
-                        <h4 style="color: #03a1fc">"A match-module to bridge students with Academic and Industry-based supervisors" </h4><div class="col-md-10">
->>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
                         
     </div>
                                             </div>
@@ -251,11 +247,7 @@ body{
                 </div><!-- end col -->
             </div><!-- end row -->
 
-<<<<<<< HEAD
            
-=======
-            <hr class="hr1"> 
->>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
 
            
         </div><!-- end container -->
@@ -287,11 +279,7 @@ body{
             <div class="footer-distributed">
                 <div class="footer-left">                   
                     <p class="footer-company-name">All Rights Reserved. &copy; 2020  Design By : 
-<<<<<<< HEAD
 					<a href="https://html.design/">TeamY-Bridge</a></p>
-=======
-					<a href="https://html.design/">Reverse576</a></p>
->>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
                 </div>
 
                 

@@ -8,16 +8,11 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserController;
-<<<<<<< HEAD
 use App\Http\Controllers\ProjectController;
-use App\user;
-use App\Http\Controllers\UpdateProfiles;
-use App\Http\Controllers\login;
-=======
 use App\Http\Controllers\CreateProjectController;
 use App\user;
 use App\Http\Controllers\UpdateProfiles;
->>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
+use App\Http\Controllers\login;
 
 
 /*
@@ -31,19 +26,12 @@ use App\Http\Controllers\UpdateProfiles;
 |
 */
 
-<<<<<<< HEAD
 Route::get('/',[Frontendcontroller::class, 'home']);
-=======
-Route::get('/', function () {
-    return view('welcome');
-});
->>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
 
 Route::get('/profile',[Frontendcontroller::class, 'profile'])->middleware(['auth'])->name('profile');
 
 require __DIR__.'/auth.php';
 
-<<<<<<< HEAD
 
 
 Route::post('/updatestudent',[UpdateProfiles::class, 'updatestudent']);
@@ -53,15 +41,6 @@ Route::post('/updateindustrialist',[UpdateProfiles::class, 'updateindustrialist'
 Route::post('/updateindustrialistpp',[UpdateProfiles::class, 'updateindustrialistpp']);
 Route::post('/updateacademic',[UpdateProfiles::class, 'updateacademic']);
 Route::post('/updateacademicpp',[UpdateProfiles::class, 'updateacademicpp']);
-=======
-Route::get('/', function () {
-    return view('Home/home');
-});
-
-Route::post('/updatestudent',[UpdateProfiles::class, 'updatestudent']);
-Route::post('/updateindustrialist',[UpdateProfiles::class, 'updateindustrialist']);
-Route::post('/updateacademic',[UpdateProfiles::class, 'updateacademic']);
->>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
 
 
 
@@ -79,13 +58,9 @@ Route::get('/h1',[Frontendcontroller::class, 'h']);
 Route::get('/fp',[Frontendcontroller::class, 'fgp']);
 Route::get('/a',[Frontendcontroller::class, 'a']);
 
-<<<<<<< HEAD
 //Route::get('/admin',[Frontendcontroller::class, 'admin']);
-=======
-Route::get('/admin',[Frontendcontroller::class, 'admin']);
->>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
-Route::post('/waitfortheacceptance',[Frontendcontroller::class, 'wfa']);
-Route::get('/waitfortheacceptance',[Frontendcontroller::class, 'wfa']);
+//Route::post('/waitfortheacceptance',[Frontendcontroller::class, 'wfa']);
+//Route::get('/waitfortheacceptance',[Frontendcontroller::class, 'wfa']);
 
 
 
@@ -95,9 +70,9 @@ Route::resource('/users', UserController::class);
 
 Route::get('/inl',[UserController::class, 'indexl']);
 
-Route::get('/welcome', function () {
-    return view('a');
-});
+//Route::get('/welcome', function () {
+//    return view('a');
+//});
 
 Route::get('/urpd',[UserController::class,'index']);
 Route::get('/create',[UserController::class,'create']);
@@ -106,29 +81,20 @@ Route::get('/edit/{id}',[UserController::class,'edit'])->name('edit');
 Route::patch('/update/{id}',[UserController::class,'update'])->name('update');
 Route::delete('/delete/{id}',[UserController::class,'destroy'])->name('delete');
 
-<<<<<<< HEAD
 //Route::get('/admindash',[UserController::class,'admindash']);
-=======
-Route::get('/admindash',[UserController::class,'admindash']);
->>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
 Route::get('/indd',[UserController::class,'indd']);
 Route::get('/stud',[UserController::class,'stud']);
 Route::get('/acad',[UserController::class,'acad']);
 Route::get('/stusd',[UserController::class,'stusd']);
-<<<<<<< HEAD
 Route::post('/studentsocietiesadmin',[UserController::class,'studentsocietiesadmin']);
 Route::post('/studentsocietiesadminadd',[UserController::class,'studentsocietiesadminadd']);
 Route::get('/uped',[UserController::class,'uped']);
 Route::post('/upcomingeventsadmin',[UserController::class,'upcomingeventsadmin']);
 Route::post('/upcomingeventsadminadd',[UserController::class,'upcomingeventsadminadd']);
-=======
-Route::get('/uped',[UserController::class,'uped']);
->>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
 Route::post('/registeruser',[UserController::class,'registeruser']);
 
 Route::get('selectu/{user}/', [UserController::class,'selectu'])->name('selectu');
 
-<<<<<<< HEAD
 Route::get('crop-image-upload', [CropImageController::class,'index']);
 Route::post('crop-image-upload ', [CropImageController::class,'uploadCropImage']);
 
@@ -138,7 +104,7 @@ Route::get('/forget',function(){
   });
 
 
-  Route::get('/',[Frontendcontroller::class, 'wfa']);
+  //Route::get('/',[Frontendcontroller::class, 'wfa']);
 
 
 
@@ -150,12 +116,14 @@ Route::get('/forget',function(){
 
 
 
-=======
 
 Route::get('/spp',[CreateProjectController::class, 'SProject']);
 Route::get('/lpp',[CreateProjectController::class, 'LProject']);
 Route::get('/ipp',[CreateProjectController::class, 'IProject']);
->>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
+
+Route::get('/spps',[ProjectController::class, 'spps']);
+Route::get('/sppi',[ProjectController::class, 'sppi']);
+Route::get('/sppa',[ProjectController::class, 'sppa']);
 
 
 /*Route::get('Admin/Admin',function(){

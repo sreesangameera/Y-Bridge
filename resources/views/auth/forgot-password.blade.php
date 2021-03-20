@@ -16,22 +16,14 @@
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
-<<<<<<< HEAD
         <form method="POST" action="/forgetp">
-=======
-        <form method="POST" action="{{ route('password.email') }}">
->>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
             @csrf
 
             <!-- Email Address -->
             <div>
                 <x-label for="email" :value="__('Email')" />
 
-<<<<<<< HEAD
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email"  required />
-=======
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
->>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
             </div>
 
             <div class="flex items-center justify-end mt-4">

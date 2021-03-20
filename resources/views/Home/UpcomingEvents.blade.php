@@ -65,11 +65,7 @@
 }
 
 .blog-home2 .subtitle {
-<<<<<<< HEAD
   color: #37065B;
-=======
-  color: #00FF00;
->>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
   line-height: 24px;
 }
 
@@ -241,11 +237,7 @@ body{
                         <span class="icon-bar"></span>
                     </button>
                     <div class="navbar-brand" href="home"><img src="images/logos/logo.png" id="Logo"> <h1 class="animated fadeInDown heading" style="color: #03a1fc" ><b>Y-Bridge</h1>
-<<<<<<< HEAD
                         <h4 style="color: #0049FF">"A match-module to bridge students with Academic and Industry-based supervisors" </h4><div class="col-md-10">
-=======
-                        <h4 style="color: #03a1fc">"A match-module to bridge students with Academic and Industry-based supervisors" </h4><div class="col-md-10">
->>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
                         
     </div>
                                             </div>
@@ -285,11 +277,7 @@ body{
 			</div>
 		</div>
 	</div>
-<<<<<<< HEAD
     <hr class="hr1">
-=======
-    <hr class="hr1"><hr class="hr1">
->>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
     <div class="panel panel-primary">
 
 <div class="blog-home2 py-5">
@@ -300,40 +288,18 @@ body{
       <div class="panel-body">
         <h1 class="my-3">Upcoming Events</h1>
         <h6 class="subtitle font-weight-normal">You can relay on our upcoming event list and also our upcoming events will be great experience for you without doubt</h6>
-<<<<<<< HEAD
       </div><table  >
-=======
-      </div>
-      <!-- Column -->
-      <!-- Column -->
-    </div>
-    <div class="row mt-4">
-
-    <!-- Column -->
-      
-    
-      
-      <table  >
->>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
                         <thead>
                         <tr>
                             
                             <th></th>
                       
-<<<<<<< HEAD
                         </tr></thead><tbody>
-=======
-                        </tr>
->>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
                         @foreach ($upcominget as $user)
                             <tr>
                 
                              <td>
-<<<<<<< HEAD
                              <div class="">
-=======
-                             <div class="col-md-4 on-hover">
->>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
         <div class="card border-0 mb-4">
           
           <div class="date-pos bg-info-gradiant p-8 d-inline-block text-center rounded text-white position-absolute">{{$user->Date}}</div>
@@ -347,7 +313,6 @@ body{
                                 
                              </tr>
                         @endforeach
-<<<<<<< HEAD
                         </tbody>
                               </table> 
       <!-- Column -->
@@ -360,10 +325,6 @@ body{
     
       
       
-=======
-                        <thead>
-                              </table> 
->>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
       
      
       
@@ -377,32 +338,20 @@ body{
       <br />
       <br />
       <br />
-<<<<<<< HEAD
      
-=======
-      <hr class="hr1">
->>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
         </div><!-- end container -->
        
     </div><!-- end section -->
 
 
-<<<<<<< HEAD
    
-=======
-    <hr class="hr1">
->>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
 
 <div class="copyrights">
         <div class="container">
             <div class="footer-distributed">
                 <div class="footer-left">                   
                     <p class="footer-company-name">All Rights Reserved. &copy; 2020  Design By : 
-<<<<<<< HEAD
 					<a href="https://html.design/">TeamY-Bridge</a></p>
-=======
-					<a href="https://html.design/">YBridgeTeam</a></p>
->>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
                 </div>
 
                 

@@ -34,7 +34,7 @@ div {text-align: center;}
   class="btn btn-outline-primary btn-rounded"
   data-mdb-ripple-color="dark"
 >
-  <a href="/spp">Add Project</a>
+  <a href="/ipp">Add Project</a>
 </button>
 <br>
 

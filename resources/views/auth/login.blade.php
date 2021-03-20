@@ -42,11 +42,7 @@
 
             <div class="flex items-center justify-end mt-4">
                 @if (Route::has('password.request'))
-<<<<<<< HEAD
                     <a class="underline text-sm text-gray-600 hover:text-gray-900" href="forget">
-=======
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
->>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
                         {{ __('Forgot your password?') }}
                     </a>
                 @endif

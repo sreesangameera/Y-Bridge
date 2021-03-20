@@ -89,10 +89,7 @@
                   </a>
                       <!--span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span-->
                     </div>
-<<<<<<< HEAD
                     <button id="myBtnqw" class="btn btn-primary"><i class="fa fa-fw fa-camera"></i></button>
-=======
->>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
                   </div>
                 </div>
                 <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
@@ -115,7 +112,10 @@
         
           
             <div class="px-xl-3">
-               <div>
+            <div>
+            <button  type="button" class="btn btn-dark "><a href="/sppi">Project</a></button>
+            </div>
+            <div>
             <button id="myBtn"type="button" class="btn btn-primary">Edit Profile</button>
             </div>
               <button class="btn btn-block btn-warning" style="height:40px;" >
@@ -245,7 +245,6 @@
         @csrf
         <div title="Initials.Name">Name with initials</div><input class="form-control" type="text" name="namewi" placeholder="Name with initials" required="required" value="{{ $c->NameWithInitials}}"><br>
         <input type="hidden" name="email" value="{{ $c->CompanyPersonalEmailID}}" >
-<<<<<<< HEAD
         
         <div title="Companyname(pvt)ltd">Company Name</div><input class="form-control" type="text" name="comn" placeholder="Company Name" required="required" value="{{ $c->CompanyName}}"><br>
         <div title="your position">Designation</div><input class="form-control" type="text" name="designation" placeholder="Designation" required="required" value="{{ $c->Designation}}"><br>
@@ -253,15 +252,6 @@
         <div title="">Fields of Interests</div><div>
                     
                     <!--select class="form-control" class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"  name="foi" value="{{ $c->FieldOfInterests}}"  required autofocus>
-=======
-        <div title="upload an image">Profile Picture</div><input class="form-control" type="file" name="photo" placeholder="add photo" required="required"><br>
-        <div title="Companyname(pvt)ltd">Company Name</div><input class="form-control" type="text" name="comn" placeholder="Company Name" required="required" value="{{ $c->CompanyName}}"><br>
-        <div title="your position">Designation</div><input class="form-control" type="text" name="designation" placeholder="Designation" required="required" value="{{ $c->Designation}}"><br>
-        <div title="https://www.linkedin.com/in/username/">LinkedIn Id</div><input class="form-control" type="text" name="linkedin" placeholder="LinkedIn" required="required" value="{{ $c->LinkedIn}}"><br>
-        <div title="">Fields of Interests</div><div>
-                    
-                    <select class="form-control" class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"  name="foi" value="{{ $c->FieldOfInterests}}"  required autofocus>
->>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
                         <option value="{{ $c->FieldOfInterests}}">{{ $c->FieldOfInterests}}</option>
                         <option value="Advanced database design and systems">Advanced database design and systems</option>
                         <option value="Bioinformatics Computing">Bioinformatics Computing</option>
@@ -296,7 +286,6 @@
                         <option value="Systems and Network Administration">Systems and Network Administration</option>
                         
                         
-<<<<<<< HEAD
                     </select-->
 
                     <div class="multiselect">
@@ -371,9 +360,6 @@
         <input type="checkbox" id="thirtyone"value="Systems and Network Administration" />Systems and Network Administration</label>
     </div>
   </div>
-=======
-                    </select>
->>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
                     
                 </div><br>
         <div title="07XXXXXXXX">Contact No.</div><input class="form-control" type="text" name="cn" placeholder="Contact Number" required="required" value="{{ $c->ContactNumber}}"><br>
@@ -385,7 +371,6 @@
   </div>
 
 </div>
-<<<<<<< HEAD
 <div id="myModalqw" class="modal" >
 
   <!-- Modal content -->
@@ -461,8 +446,6 @@
      @endif
 @endif
 
-=======
->>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
 <script>
   var tooltipSpan = document.getElementById('tooltip-span');
 
@@ -497,7 +480,6 @@ window.onclick = function(event) {
   }
 }
 
-<<<<<<< HEAD
 </script>
 <script>
     var modal1 = document.getElementById("myModalqw");
@@ -525,6 +507,4 @@ window.onclick = function(event) {
   }
 }
 
-=======
->>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
 </script>

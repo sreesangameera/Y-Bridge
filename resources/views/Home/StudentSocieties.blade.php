@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
 <!DOCTYPE html>
 <html lang="en">
 
@@ -64,11 +60,7 @@ body{
         }
         .events > p:before{
             padding-right: 10px;
-<<<<<<< HEAD
             content: '>';
-=======
-            /*content: '>';*/
->>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
         }
         .events span{
            font-size: 14px;
@@ -137,7 +129,6 @@ body{
                 width:20%;
             }
         }
-<<<<<<< HEAD
 
         @import url(//fonts.googleapis.com/css?family=Montserrat:300,400,500);
 .service-15 {
@@ -207,8 +198,6 @@ body{
     padding: 15px 45px;
     font-size: 16px;
 }
-=======
->>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
     </style>
 <body>
 
@@ -237,11 +226,7 @@ body{
                         <span class="icon-bar"></span>
                     </button>
                     <div class="navbar-brand" href="home"><img src="images/logos/logo.png" id="Logo"> <h1 class="animated fadeInDown heading" style="color: #03a1fc" ><b>Y-Bridge</h1>
-<<<<<<< HEAD
                         <h4 style="color: #0049FF">"A match-module to bridge students with Academic and Industry-based supervisors" </h4><div class="col-md-10">
-=======
-                        <h4 style="color: #03a1fc">"A match-module to bridge students with Academic and Industry-based supervisors" </h4><div class="col-md-10">
->>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
                         
     </div>
                                             </div>
@@ -281,7 +266,6 @@ body{
 			</div>
 		</div>
 	</div>
-<<<<<<< HEAD
     <hr class="hr1">
     <div class="panel panel-primary">
 
@@ -320,48 +304,11 @@ body{
     </div>
     
 
-=======
-    <hr class="hr1"><hr class="hr1">
-    <div class="panel panel-primary">
-    
-                                <div class="panel-body">
-                                    <h3> <a href="#">Student societies</a></h3>
-                                    <hr>
-                                    <div class="events">
-                                        <p><i class="fa fa-bullseye"></i> <a href="http://society.jfn.ac.lk/comsoc/" target="_blank">Computer-society</a></p>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        
-                            <!-- end testi-meta -->
-                        </div>
-                        <!-- end testimonial -->
-                        
-                        <!-- end testimonial -->
-
-                        
-                        <!-- end testimonial -->
-
-                       <br>
-                    </div><!-- end carousel -->
-                </div><!-- end col -->
-               
-            </div><!-- end row -->
-<br>
-<br>
-<br>
->>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
 <hr class="hr1">
         </div><!-- end container -->
        
     </div><!-- end section -->
-<<<<<<< HEAD
     </div></div></div>
-=======
-
->>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
 
     <hr class="hr1">
 
@@ -371,11 +318,7 @@ body{
             <div class="footer-distributed">
                 <div class="footer-left">                   
                     <p class="footer-company-name">All Rights Reserved. &copy; 2020  Design By : 
-<<<<<<< HEAD
 					<a href="https://html.design/">TeamY-Bridge</a></p>
-=======
-					<a href="https://html.design/">Reverse576</a></p>
->>>>>>> 35ff1ad92f5c0bd24a6d1b89dbd7d0fff8bdca95
                 </div>
 
                 
