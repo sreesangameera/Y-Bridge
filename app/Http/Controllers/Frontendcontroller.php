@@ -60,6 +60,16 @@ class Frontendcontroller extends Controller
 
     public function wfa(){
         return view('Login/waitingforacceptance');      }
+
+    public function sstp($email){
+        $c=DB::table('students')->where('EmailID',$email)->first();
+        return view('ShowProfile/studentsp')->with('c',$c);      }
+    public function sacp($email){
+        $c=DB::table('academics')->where('EmailID',$email)->first();
+        return view('ShowProfile/academicsp')->with('c',$c);      }
+    public function sinp($email){
+        $c=DB::table('industrialists')->where('CompanyPersonalEmailID',$email)->first();
+        return view('ShowProfile/industrialistsp')->with('c',$c);      }
         
 
     public function pr(){

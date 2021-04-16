@@ -58,6 +58,11 @@ Route::get('/h1',[Frontendcontroller::class, 'h']);
 Route::get('/fp',[Frontendcontroller::class, 'fgp']);
 Route::get('/a',[Frontendcontroller::class, 'a']);
 
+Route::get('/sstp/{email}',[Frontendcontroller::class, 'sstp'])->name('sstp');
+Route::get('/sacp/{email}',[Frontendcontroller::class, 'sacp'])->name('sacp');
+Route::get('/sinp/{email}',[Frontendcontroller::class, 'sinp'])->name('sinp');
+
+
 //Route::get('/admin',[Frontendcontroller::class, 'admin']);
 //Route::post('/waitfortheacceptance',[Frontendcontroller::class, 'wfa']);
 //Route::get('/waitfortheacceptance',[Frontendcontroller::class, 'wfa']);
