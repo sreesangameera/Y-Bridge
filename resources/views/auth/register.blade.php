@@ -72,9 +72,9 @@
                                 type="password"
                                 name="password_confirmation" required />
             </div>
-            @if($msg = session()->get('msg'))
+            <!--@if($msg = session()->get('msg'))
             <h3>{{$msg}}</h3>
-            @endif
+            @endif-->
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
                     {{ __('Already registered?') }}
@@ -101,6 +101,19 @@
             
           });
      </script>
+     
+     @elseif($msg == "This email already have an account")
+     <script>
+     Swal.fire({
+               position: 'top',
+               icon: 'error',
+               title: '{{$msg}}',
+               showConfirmButton: false,
+               timer: 2000
+            
+          });
+     </script>
+     
      @endif
      @endif
 

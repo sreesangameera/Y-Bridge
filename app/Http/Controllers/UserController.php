@@ -136,7 +136,7 @@ class UserController extends Controller
             $user->save();
         }
         catch(\Illuminate\Database\QueryException $exception){
-            $s="This email already ";
+            $s="This email already have an account";
             return redirect()->back()->with('msg',$s);
         }
         $t="Wait for the acceptance";
