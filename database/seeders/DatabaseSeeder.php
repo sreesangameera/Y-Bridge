@@ -16,18 +16,13 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
+        
+        
         DB::table('users')->insert([
-            'role'=> 'Lecturer',
-            'fname'=>'a',
-            'lname'=>'b',
-            'email'=>'ab@gmail.com',
-            'password'=> Hash::make('abcd1234'),
-        ]);
-        DB::table('users')->insert([
-            'role'=> 'Industry',
-            'fname'=>'c',
-            'lname'=>'d',
-            'email'=>'cd@gmail.com',
+            'role'=> 'Admin',
+            'fname'=>'Ybridge',
+            'lname'=>'Admin',
+            'email'=>'ybridgeadmin@univ.jfn.ac.lk',
             'password'=> Hash::make('abcd1234'),
         ]);
         DB::table('users')->insert([
@@ -41,7 +36,7 @@ class DatabaseSeeder extends Seeder
             'role'=> 'Student',
             'fname'=>'Rasika',
             'lname'=>'Lakmal',
-            'email'=>'rl@gmail.com',
+            'email'=>'drasikalakmal@gmail.com',
             'password'=> Hash::make('abcd1234'),
         ]);
         DB::table('users')->insert([
@@ -86,11 +81,11 @@ class DatabaseSeeder extends Seeder
             'StudentID'=> '2017/SP/040',
             'photo'=>'rl@gmail.com.jpg',
             'FirstName'=>'Rasika',
-            'LastName'=>'Lakmal',
+            'LastName'=>'Lakmal Dassanayaka',
             'Gender'=>'Male',
             'DateOfBirth'=>'1996-12-02',
             'HomeAddress'=>'Gampaha',
-            'EmailID'=>'rl@gmail.com',
+            'EmailID'=>'drasikalakmal@gmail.com',
             'LinkedIn'=>'https://www.linkedin.com/in/rasika-lakmal-dassanayaka-11a52b173/',
             'ContactNumber'=>'0718919576',
             'YearOfStudy'=>'Level-3G',
@@ -512,6 +507,15 @@ class DatabaseSeeder extends Seeder
             'Description'=>'abc',
             
         ]);
+
+        
+    
+        //$this->call(RoleSeeder::class);
+        //$this->call(UserSeeder::class);
+        $this->call(DictionarySeeder::class);
+        $this->call(MainTerm::class);
+    
         
     }
+
 }

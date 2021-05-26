@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="styleprof.css">
+</head>
+<body>
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
@@ -18,7 +28,8 @@
                         <option value="Student">Student</option>
                         <option value="Industry">Industry</option>
                     </select>
-                    <span class="fa fa-envelope form-control-feedback"></span>
+                    <!--span class="fa fa-envelope form-control-feedback"></span-->
+</br>
                 </div>
                 <div class="hidden">
                     <x-label for="level" :value="__('Lavel')" />
@@ -40,6 +51,7 @@
 
                 <x-input id="fname" class="block mt-1 w-full" type="text" name="fname" :value="old('fname')" required autofocus />
             </div>
+</br>
             <!-- Name -->
             <div>
                 <x-label for="lname" :value="__('Last Name')" />
@@ -117,3 +129,30 @@
      @endif
      @endif
 
+     <div class="copyrights">
+        <div class="container">
+       
+            <div class="footer-distributed">
+                <div class="footer-left">                   
+                    <p class="footer-company-name">All Rights Reserved. &copy; 2020  Design By : 
+					<a href="#">TeamY-Bridge</a></p>
+                </div>
+
+                
+            </div>
+        </div><!-- end container -->
+    </div><!-- end copyrights -->
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script src="js/hoverdir.js"></script>    
+    
+  
+
+</body>
+</html>

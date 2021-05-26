@@ -8,6 +8,7 @@ use App\Models\Academic;
 use App\Models\Student;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
@@ -260,6 +261,54 @@ public function studentsocietiesadminadd(Request $request){
                                                                     ]);
     return redirect()->back()->with('msg',"Event Added");
 
+}
+
+      
+public function shlec($id){
+    $q=str_replace("*","/",$id);
+    $c=DB::table('academics')->where('EmployeeID',$q)->first();
+return view('ShowProfile/academicsp')->with('c', $c);      
+}
+public function shstu($id){
+    $q=str_replace("*","/",$id);
+    $c=DB::table('students')->where('StudentID',$q)->first();
+return view('ShowProfile/studentsp')->with('c', $c);
+}
+
+public function shind($id){
+    $r=str_replace("*","/",$id);
+    $c=DB::table('industrialists')->where('NameWithInitials',$r)->first();
+return view('ShowProfile/industrialistsp')->with('c', $c);      
+}
+
+public function sug(){
+           
+    $ss =DB::table('suggestions')->orderby('id','DESC')->limit(1)->value('LecturerID');
+    $ssi =DB::table('suggestions')->orderby('id','DESC')->limit(1)->value('NameWithInitials');
+
+    //$su=implode("<br>",$user->LecturerID)->with('suggestiont',$ssi);
+    
+        return view('studentprojects/suggestion')->with('suggestiont',$ss)->with('suggestionta',$ssi);
+  
+}
+    //return view('studentprojects/sugglec')->with('suggestionlec',$ll);
+  
+
+public function sugglec(){
+       
+$ll =DB::table('suggestions')->orderby('id','DESC')->limit(1)->value('StudentID');
+$lli =DB::table('suggestions')->orderby('id','DESC')->limit(1)->value('NameWithInitials');
+$x=explode(',',$ll,0);
+    return view('studentprojects/sugglec')->with('suggestionlec',$ll);
+    
+}
+
+public function suggind(){
+       
+$ii =DB::table('suggestions')->orderby('id','DESC')->limit(1)->value('StudentID');
+$iil =DB::table('suggestions')->orderby('id','DESC')->limit(1)->value('LecturerID');
+
+    return view('studentprojects/suggind')->with('suggestionind',$ii);
 }
 }
 

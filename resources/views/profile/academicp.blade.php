@@ -1,5 +1,28 @@
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ $c->Title}}{{ $c->FirstName}}{{' '}}{{ $c->LastName}}</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/uoj.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/uicon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="styleprof.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Modernizer for Portfolio -->
+    <script src="js/modernizer.js"></script>
+</head>
 <style>
     body{
     margin-top:20px;
@@ -84,6 +107,7 @@
   background-color: #1e90ff;
 }
 </style>
+<body>
 <div class="container">
 <div class="row flex-lg-nowrap">
   <div class="col-12 col-lg-auto mb-3" style="width: 200px;">
@@ -119,7 +143,7 @@
                 </div>
                 <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
                   <div class="text-center text-sm-left mb-2 mb-sm-0">
-                    <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">{{ $c->Title}}{{ $c->FirstName}}{{' '}}{{ $c->LastName}}</h4>
+                    <h2 class="pt-sm-2 pb-1 mb-0 text-nowrap"><b>{{ $c->Title}}{{ $c->FirstName}}{{' '}}{{ $c->LastName}}</b></h2>
                     <p class="mb-0">{{ $c->EmployeeID }}</p>
                     <!--div class="text-muted"><small>Last seen 2 hours ago</small></div-->
                     <!--div class="mt-2">
@@ -138,7 +162,7 @@
           
             <div class="px-xl-3">
             <div>
-            <button  type="button" class="btn btn-dark "><a href="/sppa">Project</a></button>
+            <button  type="button" class="btn btn-secondary "><a href="/sppa">Project</a></button>
             </div>
                <div>
             <button id="myBtn"type="button" class="btn btn-primary">Edit Profile</button>
@@ -188,9 +212,9 @@
                     <p><strong>Email : </strong> {{ $c->EmailID }} </p>
                     <p><strong>LinkedIn: </strong> <a href="{{ $c->LinkedIn}} ">{{ $c->LinkedIn}}</a> </p>
                     <p><strong>Contact No: </strong> {{ $c->ContactNumber}} </p>
-                    <p><strong>Official Website: </strong> {{ $c->OfficialWebsite}}</p>
-                    <p><strong>Research Interest: </strong> {{ $c->ResearchInterest}} </p>
-                    <p><strong>Field of Specialization: </strong> {{ $c->FieldOfSpecialization}} </p>
+                    <p><strong>Official Website: </strong> <a href="{{ $c->OfficialWebsite}} ">{{ $c->OfficialWebsite}}</a></p>
+                    <!--p><strong>Research Interest: </strong> {{ $c->ResearchInterest}} </p>
+                    <p><strong>Field of Specialization: </strong> {{ $c->FieldOfSpecialization}} </p-->
                     
                 </div>   
                       </div>
@@ -269,7 +293,7 @@
 
   <!-- Modal content -->
   <div class="modal-content">
-    <span  onclick="document.getElementById('myModal').style.display = 'none';" class="close">&times;</span>
+  <a href="/profile">X</a>
     <form method="POST" action="/updateacademic" enctype="multipart/form-data">
         @csrf
         <div title="title">Title</div><div>
@@ -407,9 +431,9 @@
         <div title="https://www.linkedin.com/in/username/">LinkedIn Id</div><input class="form-control" type="text" name="linkedin" placeholder="LinkedIn"  value="{{ $c->LinkedIn}}"><br>
         <div title="07XXXXXXXX">Contact No.</div><input class="form-control" type="text" name="cno" placeholder="Contact Number"  value="{{ $c->ContactNumber}}"><br>
         <div title="www.sitename.lk/com">Official website</div><input class="form-control" type="text" name="ow" placeholder="Official Website" required="required" value="{{ $c->OfficialWebsite}}"><br>
-        <div title="select">Research Interests</div><div>
+        <!--div title="select">Research Interests</div><div>
                     
-                    <!--select class="form-control" class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"  name="ri" value="{{ $c->ResearchInterest}}"  required autofocus>
+                    <select class="form-control" class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"  name="ri" value="{{ $c->ResearchInterest}}"  required autofocus>
                         <option value="{{ $c->ResearchInterest}}">{{ $c->ResearchInterest}}</option>
                         <option value="Advanced database design and systems">Advanced database design and systems</option>
                         <option value="Bioinformatics Computing">Bioinformatics Computing</option>
@@ -444,7 +468,7 @@
                         <option value="Systems and Network Administration">Systems and Network Administration</option>
                         
                         
-                    </select-->
+                    </select>
 
                     <div class="multiselect">
     <div class="selectBox" name="ri" onclick="showCheckboxes()">
@@ -520,9 +544,9 @@
   </div>
                     
                 </div> <br-->
-                <div title="select">Field of Specialization</div><div>
+                <!--div title="select">Field of Specialization</div><div>
                     
-                    <!--select class="form-control" class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"  name="fos" value="{{ $c->FieldOfSpecialization}}"  required autofocus>
+                    <select class="form-control" class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"  name="fos" value="{{ $c->FieldOfSpecialization}}"  required autofocus>
                         <option value="{{ $c->FieldOfSpecialization}}">{{ $c->FieldOfSpecialization}}</option>
                         <option value="Advanced database design and systems">Advanced database design and systems</option>
                         <option value="Bioinformatics Computing">Bioinformatics Computing</option>
@@ -557,7 +581,7 @@
                         <option value="Systems and Network Administration">Systems and Network Administration</option>
                         
                         
-                    </select-->
+                    </select>
 
                     <div class="multiselect">
     <div class="selectBox" name="fos" onclick="showCheckboxes()">
@@ -632,7 +656,7 @@
     </div>
   </div>
                     
-                </div>  <br>
+                </div>  <br-->
         <div title="old password">Old Password</div><input class="form-control" type="password" name="pwrd" placeholder="Old Password" required="required" ><br>
         <div title="new password or confirm the old password">New Password</div><input class="form-control" type="password" name="nwpswrd" placeholder="New Password" required="required"><br>
         <input class="btn btn-primary" type="submit" value="submit">
@@ -783,3 +807,31 @@ function showCheckboxes() {
   }
 }
 </script>
+</br>
+</br>
+</br>
+<div class="copyrights">
+        <div class="container">
+       
+            <div class="footer-distributed">
+                <div class="footer-left">                   
+                    <p class="footer-company-name">All Rights Reserved. &copy; 2020  Design By : 
+					<a href="#">TeamY-Bridge</a></p>
+                </div>
+
+                
+            </div>
+        </div><!-- end container -->
+    </div><!-- end copyrights -->
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script src="js/hoverdir.js"></script>    
+    
+</body>
+</html>

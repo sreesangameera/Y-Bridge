@@ -13,6 +13,10 @@ use App\Http\Controllers\CreateProjectController;
 use App\user;
 use App\Http\Controllers\UpdateProfiles;
 use App\Http\Controllers\login;
+use App\Http\Controllers\StudentprojectController;
+use App\Http\Controllers\DescriptionController;
+use App\Http\Controllers\AcademicprojectController;
+use App\Http\Controllers\IndustrialistprojectController;
 
 
 /*
@@ -50,7 +54,7 @@ Route::get('/ob',[Frontendcontroller::class, 'obj']);
 Route::get('/ue',[Frontendcontroller::class, 'upe']);
 Route::get('/p',[Frontendcontroller::class, 'pr']);
 Route::get('/ss',[Frontendcontroller::class, 'sts']);
-
+Route::get('/abc',[Frontendcontroller::class, 'abc']);
 Route::get('/h1',[Frontendcontroller::class, 'h']);
 
 
@@ -79,7 +83,9 @@ Route::get('/inl',[UserController::class, 'indexl']);
 //    return view('a');
 //});
 
-Route::get('/urpd',[UserController::class,'index']);
+Route::get('/urpd',[UserController::class,'sug'])->name('urpd');
+Route::get('/urp',[UserController::class,'sugglec'])->name('urp');
+Route::get('/uri',[UserController::class,'suggind'])->name('uri');
 Route::get('/create',[UserController::class,'create']);
 Route::post('/store',[UserController::class,'store']);
 Route::get('/edit/{id}',[UserController::class,'edit'])->name('edit');
@@ -129,6 +135,54 @@ Route::get('/ipp',[CreateProjectController::class, 'IProject']);
 Route::get('/spps',[ProjectController::class, 'spps']);
 Route::get('/sppi',[ProjectController::class, 'sppi']);
 Route::get('/sppa',[ProjectController::class, 'sppa']);
+Route::get('/snotifi',[ProjectController::class, 'snotifi']);
+Route::get('/lnotifi',[ProjectController::class, 'lnotifi']);
+Route::get('/inotifi',[ProjectController::class, 'inotifi']);
+Route::get('/sspro',[ProjectController::class, 'sspro']);
+Route::get('/ispro',[ProjectController::class, 'ispro']);
+Route::get('/lspro',[ProjectController::class, 'lspro']);
+
+
+Route::get('/create1',[StudentprojectController::class,'create']);
+
+Route::post('/st',[StudentprojectController::class,'store1']);
+
+
+Route::post('/split',[DescriptionController::class,'split']);
+
+Route::post('/keywords',[DescriptionController::class,'keywords']);
+
+Route::post('/collection',[DescriptionController::class,'index']);
+
+//Route::post('/sto',[DescriptionController::class,'store']);
+
+Route::get('/join',[DescriptionController::class,'join']);
+Route::get('/receive',[DescriptionController::class,'receive']);
+Route::get('/sql',[StudentprojectController::class,'sql']);
+
+Route::get('/remove',[StudentprojectController::class,'remove']);
+
+Route::post('/check',[StudentprojectController::class,'check']);
+
+Route::get('/createL',[AcademicprojectController::class,'create']);
+Route::post('/sto',[AcademicprojectController::class,'store1']);
+
+Route::post('/stor',[IndustrialistprojectController::class,'stor']);
+
+Route::get('/shstu/{id}',[UserController::class,'shstu'])->name('shstu');
+Route::get('/shlec/{id}',[UserController::class,'shlec'])->name('shlec');
+Route::get('/shind/{id}',[UserController::class,'shind'])->name('shind');
+/*Route::get('Admin/Admin',function(){
+    $data=App\user::all();
+    return view('Admin/Admin')->with('table_data',$data);
+});*/
+
+
+
+
+/*Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');*/
 
 
 /*Route::get('Admin/Admin',function(){

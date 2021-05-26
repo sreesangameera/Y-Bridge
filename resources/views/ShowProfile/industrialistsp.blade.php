@@ -92,7 +92,10 @@
                    
                   </div>
                 </div>
-                <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
+                
+            <div>
+            
+            <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
                   <div class="text-center text-sm-left mb-2 mb-sm-0">
                     <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">{{ $c->NameWithInitials}}</h4>
                     <p class="mb-0">{{ $c->CompanyPersonalEmailID}}</p>
@@ -112,9 +115,6 @@
         
           
             <div class="px-xl-3">
-            <div>
-            
-              
             
           </div>
           

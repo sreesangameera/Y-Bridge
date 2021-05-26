@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap1.min.css"/>
+    
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome1.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/menu1.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/custom1.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/AdminLTE1.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/datatables.bootstrap1.css" />
+    <link href="/css/sweetalert1.css" rel="stylesheet" />
+    
+    <link href="/css/metallic1.css" rel="stylesheet" typeee="text/css"/>
+        <link href="/css/select21.css" rel="stylesheet" typeee="text/css"/>
+        <link rel="sty1esheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="sty1esheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">   
+</head>
+<body>
+<table  class="table table-striped table-bordered tabledash" >
+        <thead>
+        <tr>
+            <th>project ID</th>
+            <th>Title of the project</th>
+            <th>Description</th>
+            <th>Project Type</th>
+            <th>Technologies</th>
+            <th>LecturerID</th>
+            <th>Industrialist</th>
+            <th>created at</th>
+            
+            
+        </tr>
+        </thead>
+        <tbody>
+        @foreach ($usert as $user)
+        
+            <tr>
+                
+                <td>{{$user->projectID}}</td>
+                <td>{{$user->Titleoftheproject}}</td>
+                <td>{{$user->Description}}</td>
+                <td>{{$user->ProjectType}}</td>
+                <td>{{$user->Technologies}}</td>
+                <td>{{$user->LecturerID}}</td>
+                <td>{{$user->NameWithInitials}}</td>
+                <td>{{$user->created_at}}</td> 
+                
+                
+                   
+        @endforeach
+        </tbody>
+    </table>
+
+    <script type="text/javascript" src="/js/jquery.dataTables1.min.js"></script>
+    <script type="text/javascript" src="/js/datatables.bootstrap1.js"></script>
+    <script type="text/javascript" src="/js/sweetalert1.min.js"></script>
+    <script src="https://cdn.datatab1es.net/l.16.19/js/dataTab1es.bootstrap4.min.js"></script>   
+</body>
+</html>

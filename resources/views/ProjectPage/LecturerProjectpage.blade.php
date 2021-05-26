@@ -1,32 +1,41 @@
-
-<!-- CSS only -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details For Lecturers</title>
+    <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
 <!--link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"-->
+<!-- Site Icons -->
+<link rel="shortcut icon" href="images/uoj.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/uicon.png">
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="styleprof.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Modernizer for Portfolio -->
+    <script src="js/modernizer.js"></script>
+</head>
 <style> 
-div { 
-	box-sizing: border-box; 
-	width: 100%; 
-	border: 100px solid black; 
-	float: left; 
-	align-content: center; 
-	align-items: center; 
-} 
 
 form { 
 	margin: 0 auto; 
 	width: 800px; 
 }
-
 .div1 {
   width: 300px;
   height: 100px;
   border: 1px solid black;
 }
-
-.bg-secondary{}
-
 
 .btn {
     width:120px;
@@ -35,18 +44,24 @@ form {
 </style> 
 
 
+<body>
 
-
-
-
-<body> 
-    <h2
-    class="p-3 mb-2 bg-dark text-white" style="text-align: center;">Project Details For lecturers</h2> 
+    <h1 class="p-3 mb-2 bg-dark text-white" style="text-align: center;"><b>Project Details For Lecturers</b></h1> 
     <form
-    class="p-3 mb-2 bg-secondary text-white"
-    name="ProjectForm" action="/submit.php"
-        onsubmit="return GEEKFORGEEKS()" method="post"> 
+    class="p-3 mb-2 bg-info text-black"
+    name="ProjectForm" method="post" action="/sto">
+         @csrf
         
+		 <p> 
+            Destination<br>
+			<select type="text" value="" name="Destination"> 
+				<option>Lecturer</option> 
+				<!--option>Student</option> 
+				<option>Industrialist</option--> 
+                
+				</select>
+        </p> 
+		<br />
         <p>Lecturer ID :<br> <input type="text"
                         size="45" name="LecturerID" />
                     </p> 
@@ -69,8 +84,8 @@ form {
 
                    
 		<br /> 
-		<p>Description :<br> <input type="text"
-						class="div1" name="Description" /></p> 
+		<p>Description :<br> <textarea type="text"
+						class="div1" name="Description" ></textarea></p> 
         <br /> 
         <p> 
             Technologies<br>
@@ -104,23 +119,14 @@ form {
 			</select> 
         </p> 
         <br />
-        <p> 
-			Project Status <br>
-			<select type="text" value="" name="ProjectType">  
-				<option>individual</option> 
-				<option>group</option> 
-				<option></option>
-				<option></option> 
-				
-			</select> 
-        </p> 
-        <br />
+       
+		
 		
         <br />
         
-            <input class="btn btn-info" type="Submit"
+            <input class="btn btn-warning" type="Submit"
 				value="Submit" name="Submit" /> 
-			<input class="btn btn-warning" type="Submit"
+			<input class="btn btn-secondary" type="Submit"
 				value="Cancel" name="Cancel" /> 
         </p> 
         
@@ -128,7 +134,7 @@ form {
     </form> 
     
     
-</body> 
+
 
 
 <script> 
@@ -139,60 +145,79 @@ form {
 		var Description = document.forms["ProjectForm"]["Description"]; 
         var Technologies = document.forms["ProjectForm"]["Technologies"]; 
 		var ProjectType = document.forms["ProjectForm"]["ProjectType"]; 
-        var ProjectStatus = document.forms["ProjectForm"]["ProjectStatus"];
+        //var ProjectStatus = document.forms["ProjectForm"]["ProjectStatus"];
 		 
         if (name.value == "") { 
 			window.alert("Please enter LecturerID."); 
 			name.focus(); 
 			return false; 
 		} 
-
         if (name.value == "") { 
 			window.alert("Please enter ProjectID."); 
 			name.focus(); 
 			return false; 
 		} 
-
 		if (name.value == "") { 
 			window.alert("Please enter Title of the project."); 
 			name.focus(); 
 			return false; 
 		} 
-
 		if (address.value == "") { 
 			window.alert("Please enter Description."); 
 			address.focus(); 
 			return false; 
 		} 
-
         if (password.value == "") { 
 			window.alert("Please select Technologies."); 
 			password.focus(); 
 			return false; 
 		} 
-
 		
-		if (email.value == "") { 
+		if (password.value == "") { 
 			window.alert( 
 			"Please select Project Type."); 
 			email.focus(); 
 			return false; 
 		} 
-
 		 
-		if (email.value == "") { 
+		/**if (email.value == "") { 
 			window.alert( 
 			"Please select Project Status."); 
 			email.focus(); 
 			return false; 
 		} 
-
-
+		*/
 		
-
 		return true; 
 	} 
 </script> 
 
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</br>
+
+<div class="copyrights">
+        <div class="container">
+       
+            <div class="footer-distributed">
+                <div class="footer-left">                   
+                    <p class="footer-company-name">All Rights Reserved. &copy; 2020  Design By : 
+					<a href="#">TeamY-Bridge</a></p>
+                </div>
+
+                
+            </div>
+        </div><!-- end container -->
+    </div><!-- end copyrights -->
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script src="js/hoverdir.js"></script>    
+    
+</body>
+</html>

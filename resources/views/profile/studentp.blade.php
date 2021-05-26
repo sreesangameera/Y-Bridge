@@ -1,4 +1,11 @@
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ $c->FirstName}}{{' '}}{{ $c->LastName}}</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <meta name="_token" content="{{ csrf_token() }}">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
@@ -7,6 +14,25 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.6/cropper.css"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.6/cropper.js"></script>
+<!-- Site Icons -->
+<link rel="shortcut icon" href="images/uoj.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/uicon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="styleprof.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Modernizer for Portfolio -->
+    <script src="js/modernizer.js"></script>
+   
+
+
+</head>
 <style type="text/css">
 img {
 display: block;
@@ -80,7 +106,55 @@ input[type=text], select, textarea{
   box-sizing: border-box;
   resize: vertical;
 }
+ul.nav-tabs li{
+            background-color: rgba(210, 242, 255);
+        }
+        @media (max-width:600px){
+            img#Logo{
+                width:10%;
+                float: left;
+                padding-right: 1px;
+            }
+        }
+        @media (max-width:768px) and (min-width:600px){
+            img#Logo{
+                width:10%;
+                float: left;
+                padding-right: 6px;
+
+            }
+        }
+
+        @media (max-width:1024px) and (min-width:768px){
+            img#Logo{
+                width:13%;
+                float: left;
+                padding-right: 6px;
+            }
+        }
+        @media (max-width:1600px) and (min-width:1024px){
+            img#Logo{
+                width:18%;
+                padding-right: 20px;
+
+                float: left;
+            }
+        }
+        @media (max-width:2800px) and (min-width:1600px){
+            img#Logo{
+                padding-right: 30px;
+                float: left;
+                width:20%;
+            }
+        }
 </style>
+<body>
+<!--div class="navbar-brand"  href="home"><img src="images/logos/logo.png" id="Logo"> <h1 class="animated fadeInDown heading" style="color: #03a1fc" ><b>Y-Bridge</h1>
+                        <h4 style="color: #0049FF">"A match-module to bridge students with Academic and Industry-based supervisors" </h4><div class="col-md-10">
+                        
+    </div>
+                                            </div>
+</br></br></br></br></br-->
 <div class="container" >
 <div class="row flex-lg-nowrap">
   <div class="col-12 col-lg-auto mb-3" style="width: 200px;">
@@ -116,7 +190,7 @@ input[type=text], select, textarea{
                 </div>
                 <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
                   <div class="text-center text-sm-left mb-2 mb-sm-0">
-                    <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">{{ $c->FirstName}}{{' '}}{{ $c->LastName}}</h4>
+                    <h2 class="pt-sm-2 pb-1 mb-0 text-nowrap"><b>{{ $c->FirstName}}{{' '}}{{ $c->LastName}}</b></h2>
                     <p class="mb-0">{{ $c->StudentID}}</p>
                     <p class="mb-0">{{ $c->YearOfStudy}}</p>
                     <!--div class="text-muted"><small>Last seen 2 hours ago</small></div-->
@@ -133,7 +207,10 @@ input[type=text], select, textarea{
           
             <div class="px-xl-3" >
             <div>
-            <button  type="button" class="btn btn-dark "><a href="/spps">Project</a></button>
+            <button  type="button" class="btn btn-secondary "><a href="/spps">Project</a></button>
+            </div>
+            <div>
+            <button  type="button" class="btn btn-success "><a href="/snotifi">Notifications</a></button>
             </div>
                <div>
             <button id="myBtn" type="button" class="btn btn-primary">Edit Profile</button>
@@ -264,7 +341,7 @@ input[type=text], select, textarea{
 
   <!-- Modal content -->
   <div class="modal-content" style="width:75%">
-    <span class="close">&times;</span>
+  <a href="/profile">X</a>
     
     <form method="POST" action="/updatestudent" enctype="multipart/form-data">
         @csrf
@@ -477,3 +554,37 @@ window.onclick = function(event) {
 }
 
 </script>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<div class="copyrights">
+        <div class="container">
+       
+            <div class="footer-distributed">
+                <div class="footer-left">                   
+                    <p class="footer-company-name">All Rights Reserved. &copy; 2020  Design By : 
+					<a href="#">TeamY-Bridge</a></p>
+                </div>
+
+                
+            </div>
+        </div><!-- end container -->
+    </div><!-- end copyrights -->
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script src="js/hoverdir.js"></script>    
+    
+  
+</body>
+</html>

@@ -1,5 +1,28 @@
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ $c->NameWithInitials}}</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<!-- Site Icons -->
+<link rel="shortcut icon" href="images/uoj.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/uicon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="styleprof.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Modernizer for Portfolio -->
+    <script src="js/modernizer.js"></script>
+</head>
 <style>
     body{
     margin-top:20px;
@@ -59,6 +82,7 @@
     overflow:hidden;
 }
 </style>
+<body>
 <div class="container">
 <div class="row flex-lg-nowrap">
   <div class="col-12 col-lg-auto mb-3" style="width: 200px;">
@@ -94,7 +118,7 @@
                 </div>
                 <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
                   <div class="text-center text-sm-left mb-2 mb-sm-0">
-                    <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">{{ $c->NameWithInitials}}</h4>
+                    <h2 class="pt-sm-2 pb-1 mb-0 text-nowrap"><b>{{ $c->NameWithInitials}}</b></h2>
                     <p class="mb-0">{{ $c->CompanyPersonalEmailID}}</p>
                     <!--div class="text-muted"><small>Last seen 2 hours ago</small></div-->
                     <!--div class="mt-2">
@@ -113,7 +137,7 @@
           
             <div class="px-xl-3">
             <div>
-            <button  type="button" class="btn btn-dark "><a href="/sppi">Project</a></button>
+            <button  type="button" class="btn btn-secondary "><a href="/sppi">Project</a></button>
             </div>
             <div>
             <button id="myBtn"type="button" class="btn btn-primary">Edit Profile</button>
@@ -240,7 +264,7 @@
 
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close">&times;</span>
+  <a href="/profile">X</a>
     <form method="POST" action="/updateindustrialist" enctype="multipart/form-data">
         @csrf
         <div title="Initials.Name">Name with initials</div><input class="form-control" type="text" name="namewi" placeholder="Name with initials" required="required" value="{{ $c->NameWithInitials}}"><br>
@@ -508,3 +532,36 @@ window.onclick = function(event) {
 }
 
 </script>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class="copyrights">
+        <div class="container">
+       
+            <div class="footer-distributed">
+                <div class="footer-left">                   
+                    <p class="footer-company-name">All Rights Reserved. &copy; 2020  Design By : 
+					<a href="#">TeamY-Bridge</a></p>
+                </div>
+
+                
+            </div>
+        </div><!-- end container -->
+    </div><!-- end copyrights -->
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script src="js/hoverdir.js"></script>    
+    
+  
+</body>
+</html>

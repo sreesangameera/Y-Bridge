@@ -286,7 +286,7 @@ body{
     <div class="row justify-content-center">
       <!-- Column -->
       <div class="panel-body">
-        <h1 class="my-3">Upcoming Events</h1>
+        <h1 class="my-3"><b>Upcoming Events</b></h1>
         <h6 class="subtitle font-weight-normal">You can relay on our upcoming event list and also our upcoming events will be great experience for you without doubt</h6>
       </div><table  >
                         <thead>
@@ -302,11 +302,11 @@ body{
                              <div class="">
         <div class="card border-0 mb-4">
           
-          <div class="date-pos bg-info-gradiant p-8 d-inline-block text-center rounded text-white position-absolute">{{$user->Date}}</div>
+          <h1><div class="date-pos bg-info-gradiant p-8 d-inline-block text-center rounded text-white position-absolute">{{$user->EName}}</div></h1>
           <br />
-           <h5 class="font-weight-medium mt-3"><a href="{{$user->Link}}" target="_blank" class="text-decoration-none link">{{$user->EName}}</a></h5>
+           <h5 class="font-weight-medium mt-3"><a href="{{$user->Link}}" target="_blank" class="text-decoration-none link">{{$user->Date}}</a></h5>
           <p class="mt-3">{{$user->Description}}</p>
-          <a href="#" class="text-decoration-none linking text-themecolor mt-2">Learn More</a>
+          <a href="{{$user->Link}}" class="text-decoration-none linking text-themecolor mt-2">Learn More</a>
         </div>
       </div>
       </td>
@@ -351,7 +351,7 @@ body{
             <div class="footer-distributed">
                 <div class="footer-left">                   
                     <p class="footer-company-name">All Rights Reserved. &copy; 2020  Design By : 
-					<a href="https://html.design/">TeamY-Bridge</a></p>
+					<a href="#">TeamY-Bridge</a></p>
                 </div>
 
                 

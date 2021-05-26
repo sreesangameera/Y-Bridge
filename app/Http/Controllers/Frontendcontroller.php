@@ -88,6 +88,10 @@ class Frontendcontroller extends Controller
     public function sts(){
         $v=DB::table('student_societies')->get();
             return view('Home/StudentSocieties')->with('studentsoct',$v);      }
+    public function abc(){
+        $email=   Auth::user()->email ;
+        $c=DB::table('students')->where('EmailID',$email)->first();
+            return view('test4')->with('c',$c);      }
     
     public function profile(){
       $email=   Auth::user()->email ;

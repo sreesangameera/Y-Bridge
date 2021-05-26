@@ -44,7 +44,7 @@ div {text-align: center;}
   class="btn btn-outline-secondary btn-rounded"
   data-mdb-ripple-color="dark"
 >
-  Requests
+  Project Requests
 </button>
 <br>
 <br>
@@ -53,42 +53,17 @@ div {text-align: center;}
   class="btn btn-outline-success btn-rounded"
   data-mdb-ripple-color="dark"
 >
-  Grant Oppertunities
+<a href="/sspro">My Projects</a>
 </button>
 <br>
 <br>
+
 <button
   type="button"
-  class="btn btn-outline-danger btn-rounded"
+  class="btn btn-dark btn-rounded"
   data-mdb-ripple-color="dark"
 >
-  Available Projects
-</button>
-<br>
-<br>
-<button
-  type="button"
-  class="btn btn-outline-warning btn-rounded"
-  data-mdb-ripple-color="dark"
->
-  Available Jobs
-</button>
-<br>
-<br>
-<button
-  type="button"
-  class="btn btn-outline-info btn-rounded"
-  data-mdb-ripple-color="dark"
->
-  Available Intern
-</button>
-<br><br>
-<button
-  type="button"
-  class="btn btn-outline-dark btn-rounded"
-  data-mdb-ripple-color="dark"
->
-  Notifications
+<a href="/profile">back</a>
 </button>
 </div>
 </body>

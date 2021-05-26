@@ -279,7 +279,7 @@ body{
             <div class="footer-distributed">
                 <div class="footer-left">                   
                     <p class="footer-company-name">All Rights Reserved. &copy; 2020  Design By : 
-					<a href="https://html.design/">TeamY-Bridge</a></p>
+					<a href="#">TeamY-Bridge</a></p>
                 </div>
 
                 

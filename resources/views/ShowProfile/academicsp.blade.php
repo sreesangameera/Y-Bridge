@@ -108,7 +108,7 @@
                 <div class="col-12 col-sm-auto mb-3">
                   <div class="mx-auto" style="width: 140px;">
                   <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px; background-color: rgb(233, 236, 239);">
-                    <!--a href="{{ $c->Photo}}"-->
+                    
                     <img src="/upload/profile/{{ $c->Photo}}" class="profilep" alt="">
                     
                   </a>
@@ -116,6 +116,9 @@
                     </div>
                     
                   </div>
+                  <div>
+            <button  type="button" class="btn btn-warning btn-rounded"><a href="/spps">Request for project + </a></button>
+            </div>
                 </div>
                 <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
                   <div class="text-center text-sm-left mb-2 mb-sm-0">
@@ -152,7 +155,7 @@
       
                   
                 
-              </div>
+              </div></div>
               <ul class="nav nav-tabs">
                 <li class="nav-item"><a href="" class="active nav-link">Profile</a></li>
               </ul>
@@ -171,9 +174,9 @@
                     <p><strong>Email : </strong> {{ $c->EmailID }} </p>
                     <p><strong>LinkedIn: </strong> <a href="{{ $c->LinkedIn}} ">{{ $c->LinkedIn}}</a> </p>
                     <p><strong>Contact No: </strong> {{ $c->ContactNumber}} </p>
-                    <p><strong>Official Website: </strong> {{ $c->OfficialWebsite}}</p>
-                    <p><strong>Research Interest: </strong> {{ $c->ResearchInterest}} </p>
-                    <p><strong>Field of Specialization: </strong> {{ $c->FieldOfSpecialization}} </p>
+                    <p><strong>Official Website: </strong><a href="{{ $c->OfficialWebsite}} ">{{ $c->OfficialWebsite}}</a></p>
+                    <!--p><strong>Research Interest: </strong> {{ $c->ResearchInterest}} </p>
+                    <p><strong>Field of Specialization: </strong> {{ $c->FieldOfSpecialization}} </p-->
                     
                 </div>   
                       </div>
