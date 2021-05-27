@@ -213,7 +213,7 @@ body{
                                                 <a href="#Academics" aria-controls="Academics" role="tab" data-toggle="tab">Academics</a>
                                             </li>
                                              <li role="presentation">
-                                                <a href="#Industries" aria-controls="Industries" role="tab" data-toggle="tab">Industries</a>
+                                                <a href="#Industries" aria-controls="Industries" role="tab" data-toggle="tab">Industrialists</a>
                                             </li>
                                             <li role="presentation">
                                                 <a href="#Students" aria-controls="Students" role="tab" data-toggle="tab">Students</a>

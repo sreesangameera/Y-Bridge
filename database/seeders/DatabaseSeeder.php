@@ -483,28 +483,28 @@ class DatabaseSeeder extends Seeder
         ]);
         
         DB::table('student_societies')->insert([
-            'Link'=> '1',
+            'Link'=> 'www.society.jfn.ac.lk/comsoc/',
             'Date'=>'',
             'EName'=>'CompSoc',
             'Description'=>'Our aims and objectives to promote the dissemination of scientific knowledge with special emphasis on Computers and their application.',
         ]);
         DB::table('student_societies')->insert([
-            'Link'=> '2',
+            'Link'=> 'www.facebook.com/uojgavelclub/?_rdc=1&_rdr',
             'Date'=>'',
             'EName'=>'Gavel-Club',
             'Description'=>'The Gavel Club of the University of Jaffna was initiated in 2018 by Computer Society of Department of Computer Science, Faculty of Science, University of Jaffna.',
         ]);
         DB::table('student_societies')->insert([
-            'Link'=> '3',
+            'Link'=> 'www.society.jfn.ac.lk/ieee/',
             'Date'=>'',
             'EName'=>'IEEE Student Branch',
             'Description'=>'The IEEE student branch of the University of Jaffna, Sri Lanka consists of IEEE members from the Department of Computer Science and Faculty of Engineering of the University of Jaffna.',
         ]);
         DB::table('upcoming_events')->insert([
-            'Link'=> 'a',
-            'Date'=>'1997-02-04',
-            'EName'=>'',
-            'Description'=>'abc',
+            'Link'=> 't.me/c/1194079853/1099',
+            'Date'=>'2021-03-28',
+            'EName'=>'UOJ ECE 2019 ',
+            'Description'=>'see more details through link provided',
             
         ]);
 

@@ -290,7 +290,7 @@ body{
         <div class="no-shrink"><span class="icon-round bg-white text-success rounded-circle text-center d-inline-block">&#10687</span>
           <!--div class="date-pos bg-info-gradiant p-8 d-inline-block text-center rounded text-white position-absolute">{{$user->Date}}</div-->
           <div class="p-3">
-          <h4 class="font-weight-medium"><a href="javascript:void(0)" class="linking"><b>{{$user->EName}}</b></a></h4>
+          <h4 class="font-weight-medium"><a href="//{{$user->Link}}" target="_blank"><b>{{$user->EName}}</b></a></h4>
           <p class="mt-3">{{$user->Description}}</p></div></div>
           <!--a href="#" class="text-decoration-none linking text-themecolor mt-2">Learn More</a-->
         </div>
