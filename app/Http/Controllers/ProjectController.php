@@ -24,6 +24,15 @@ class ProjectController extends Controller
     
     public function inotifi(){
         return view('Notification/innotifi');      } 
+    
+    public function sprqsts(){
+        return view('ProjectRequests/sprequests');      }
+        
+    public function lprqsts(){
+        return view('ProjectRequests/lprequests');      }
+        
+    public function iprqsts(){
+        return view('ProjectRequests/iprequests');      } 
             
      public function sspro(){
         $p=DB::table('studentprojects')->get();

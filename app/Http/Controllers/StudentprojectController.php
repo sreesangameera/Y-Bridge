@@ -29,7 +29,7 @@ class StudentprojectController extends Controller
     {
 
     
-        $studentproject = new Studentproject();
+       try{ $studentproject = new Studentproject();
         $studentproject->Destination = request('Destination');
         $studentproject->StudentID = request('StudentID');
         $studentproject->ProjectID = request('ProjectID');
@@ -80,7 +80,7 @@ class StudentprojectController extends Controller
      $connect->StudentID = request('StudentID');
      //$st = request('StudentID');
      $connect->LecturerID = implode(",",$stu);
-     $connect->save();
+     //$connect->save();
      //$connect->LecturerID =$stu;
      //$ls=implode(",",$stu);
      //$connect->LecturerID = Str::of($ls)->split('/[\s,]+/');
@@ -92,10 +92,10 @@ class StudentprojectController extends Controller
      
 
      $stuss =DB::table('connectindustrialists')->where('MainTermID',$maxMainKey)->pluck('CompanyPersonalEmailID')->toArray();
-     $connect = new Suggestion();
-     $connect->Destination=request('Destination');
-     $connect->MainTermID = $maxMainKey;
-     $connect->StudentID = request('StudentID');
+     //$connect = new Suggestion();
+     //$connect->Destination=request('Destination');
+     //$connect->MainTermID = $maxMainKey;
+     //$connect->StudentID = request('StudentID');
      $connect->CompanyPersonalEmailID=implode(",",$stuss);
      
      
@@ -106,8 +106,11 @@ class StudentprojectController extends Controller
      $connect1->StudentID= request('StudentID');
      
      $connect1->save();**/
-     $connect->save();
-     
+     $connect->save();}
+     catch(\Illuminate\Database\QueryException $exception){
+        $s="These words are not maching in description box,try another description";
+        return redirect()->back()->with('msg',$s);
+    }
     return redirect('/urpd');
 }
 }

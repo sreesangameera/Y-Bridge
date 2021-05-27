@@ -27,7 +27,8 @@ class AcademicprojectController extends Controller
     public function store1()
     {
     
-        $academicproject = new Academicproject();
+       try{
+            $academicproject = new Academicproject();
         $academicproject->Destination = request('Destination');
         $academicproject->LecturerID = request('LecturerID');
         $academicproject->ProjectID = request('ProjectID');
@@ -77,7 +78,7 @@ class AcademicprojectController extends Controller
         $connect->MainTermID = $maxMainKey;
         $connect->LecturerID = request('LecturerID');
         $connect->StudentID = implode(",",$lec);
-        $connect->save();
+        $connect->save();}
 
         /*$stuss =DB::table('connectindustrialists')->where('MainTermID',$maxMainKey)->pluck('NameWithInitials')->toArray();
      $connect = new Suggestion();
@@ -89,7 +90,10 @@ class AcademicprojectController extends Controller
     
 
 
-
+        catch(\Illuminate\Database\QueryException $exception){
+            $s="These words are not maching in description box,try another description";
+            return redirect()->back()->with('msg',$s);
+        }
        // $connect->save();
 
     return redirect('/urp');

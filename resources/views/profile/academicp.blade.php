@@ -165,6 +165,9 @@
             <button  type="button" class="btn btn-secondary "><a href="/sppa">Project</a></button>
             </div>
                <div>
+               <div>
+            <button  type="button" class="btn btn-success "><a href="/lnotifi">Notifications</a></button>
+            </div>
             <button id="myBtn"type="button" class="btn btn-primary">Edit Profile</button>
             </div>
               <button class="btn btn-block btn-warning" style="height:40px;" >

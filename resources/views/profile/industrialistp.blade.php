@@ -140,6 +140,9 @@
             <button  type="button" class="btn btn-secondary "><a href="/sppi">Project</a></button>
             </div>
             <div>
+            <button  type="button" class="btn btn-success "><a href="/inotifi">Notifications</a></button>
+            </div>
+            <div>
             <button id="myBtn"type="button" class="btn btn-primary">Edit Profile</button>
             </div>
               <button class="btn btn-block btn-warning" style="height:40px;" >

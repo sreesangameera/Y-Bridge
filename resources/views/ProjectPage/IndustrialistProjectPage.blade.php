@@ -58,7 +58,7 @@ form {
          @csrf
         
 		 <p> 
-            Destination<br>
+            Role :<br>
 			<select type="text" value="" name="Destination"> 
 				<!--option>Lecturer</option> 
 				<option>Student</option--> 
@@ -67,7 +67,7 @@ form {
 				</select>
         </p> 
 		<br />
-        <p>Company Personal EmailID  :<br> <input type="text"
+        <p>Company Personal EmailID :<br> <input type="text"
                         size="45" name="CompanyPersonalEmailID" />
                     </p> 
 
@@ -129,7 +129,7 @@ form {
         
         <br /> 
         <p> 
-            Technologies<br>
+            Technologies :<br>
 			<select type="text" value="" name="Technologies"> 
 				<option>Arduino</option> 
 				<option>c#</option> 
@@ -160,13 +160,31 @@ form {
         
             <input class="btn btn-warning" type="Submit"
 				value="Submit" name="Submit" /> 
-			<input class="btn btn-secondary" type="Submit"
-				value="Cancel" name="Cancel" /> 
+                <button class="btn btn-secondary" type="Cancel">
+			<a href="/sppi">back</a></button>
         </p> 
         
         
     </form> 
-    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    @if($msg = session()->get('msg'))
+
+     
+     @if($msg == "These words are not maching in description box,try another description")
+     <script>
+     Swal.fire({
+               position: 'top',
+               icon: 'error',
+               title: '{{$msg}}',
+               showConfirmButton: false,
+               timer: 5000
+            
+          });
+     </script>
+     
+     @endif
+     @endif
+     
     <script> 
 	function GEEKFORGEEKS() { 
         var LecturerID = document.forms["ProjectForm"]["LecturerID"];

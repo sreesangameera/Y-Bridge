@@ -53,7 +53,7 @@ form {
          @csrf
         
 		 <p> 
-            Destination<br>
+            Role :<br>
 			<select type="text" value="" name="Destination"> 
 				<option>Lecturer</option> 
 				<!--option>Student</option> 
@@ -88,7 +88,7 @@ form {
 						class="div1" name="Description" ></textarea></p> 
         <br /> 
         <p> 
-            Technologies<br>
+            Technologies :<br>
 			<select type="text" value="" name="Technologies"> 
 				<option>Arduino</option> 
 				<option>c#</option> 
@@ -109,7 +109,7 @@ form {
 		<br />
         
         <p> 
-			Project Type <br>
+			Project Type :<br>
 			<select type="text" value="" name="ProjectType"> 
 				<option>Project for first year</option> 
 				<option>Project for second year</option> 
@@ -126,14 +126,31 @@ form {
         
             <input class="btn btn-warning" type="Submit"
 				value="Submit" name="Submit" /> 
-			<input class="btn btn-secondary" type="Submit"
-				value="Cancel" name="Cancel" /> 
+                <button class="btn btn-secondary" type="Cancel">
+			<a href="/sppa">back</a></button>
         </p> 
         
         
     </form> 
-    
-    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    @if($msg = session()->get('msg'))
+
+     
+     @if($msg == "These words are not maching in description box,try another description")
+     <script>
+     Swal.fire({
+               position: 'top',
+               icon: 'error',
+               title: '{{$msg}}',
+               showConfirmButton: false,
+               timer: 5000
+            
+          });
+     </script>
+     
+     @endif
+     @endif
+     
 
 
 

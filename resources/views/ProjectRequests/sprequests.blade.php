@@ -38,7 +38,7 @@
   Lecturer Ms.Samantha Tharani has requested you to join a new project.
   </div>
 </div>
-<div class="alert alert-success d-flex align-items-center" role="alert">
+<!--div class="alert alert-success d-flex align-items-center" role="alert">
   <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
   <div>
   Industrialist Mr.H.Purasinghe
@@ -50,7 +50,7 @@ has accepted your request to join your project!
   <div>
     Lecturer Dr.Kathiravelu Thabotharan has declined your invitation to join your project.
   </div>
-</div>
+</div-->
 <a href="/profile">back</a>
 </button>
 </div>

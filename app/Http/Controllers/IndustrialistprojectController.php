@@ -29,7 +29,7 @@ class IndustrialistprojectController extends Controller
     public function stor()
     {
 
-    
+    try{
         $industrialistproject = new Industrialistproject();
         $industrialistproject ->Destination = request('Destination');
         //$industrialistproject ->StudentID = request('StudentID');
@@ -79,7 +79,7 @@ class IndustrialistprojectController extends Controller
         $connect->MainTermID = $maxMainKey;
         $connect->CompanyPersonalEmailID  = request('CompanyPersonalEmailID');
         $connect->StudentID = implode(",",$ind);
-        $connect->save();
+        $connect->save();}
 
         /*$stu =DB::table('connectlecturers')->where('MainTermID',$maxMainKey)->pluck('LecturerID')->toArray();
      $connect = new Suggestion();
@@ -114,7 +114,10 @@ class IndustrialistprojectController extends Controller
         $connect->StudentID =implode(",", $lec);
         $connect->save();*/
 
-     
+        catch(\Illuminate\Database\QueryException $exception){
+            $s="These words are not maching in description box,try another description";
+            return redirect()->back()->with('msg',$s);
+        }
      
      
     return redirect('/uri');
