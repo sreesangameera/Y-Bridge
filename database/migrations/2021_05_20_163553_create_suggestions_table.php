@@ -19,7 +19,7 @@ class CreateSuggestionsTable extends Migration
             $table->string('MainTermID');
             $table->string('StudentID');
             $table->string('LecturerID')->nullable();
-            $table->string('NameWithInitials')->nullable();
+            $table->string('CompanyPersonalEmailID')->nullable();
             $table->timestamps();
         });
     }

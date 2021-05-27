@@ -41,7 +41,7 @@
                  
                @endphp 
                 
-                <td><a href="{{url('shind',$q)}}">{{$user}}</a></br></td>
+                <td><a href="{{url('shstu',$q)}}">{{$user}}</a></br></td>
                 @csrf
                 
                 

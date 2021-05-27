@@ -23,7 +23,7 @@ class CreateStudentprojectsTable extends Migration
             $table->string('ProjectType');
             $table->string('Technologies');
             $table->string('LecturerID')->nullable();
-            $table->string('NameWithInitials')->nullable();
+            $table->string('CompanyPersonalEmailID')->nullable();
             $table->timestamps();
         });
     

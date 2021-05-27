@@ -34,7 +34,7 @@ class IndustrialistprojectController extends Controller
         $industrialistproject ->Destination = request('Destination');
         //$industrialistproject ->StudentID = request('StudentID');
         $industrialistproject ->ProjectID = request('ProjectID');
-        $industrialistproject ->NameWithInitials = request('NameWithInitials');
+        $industrialistproject ->CompanyPersonalEmailID  = request('CompanyPersonalEmailID');
         $industrialistproject ->Description = request('Description');
         $industrialistproject ->Titleoftheproject= request('Titleoftheproject');
         
@@ -56,7 +56,7 @@ class IndustrialistprojectController extends Controller
         
     }
     $desc = new Descindustrialist();
-    $desc->NameWithInitials = request('NameWithInitials');
+    $desc->CompanyPersonalEmailID  = request('CompanyPersonalEmailID');
     $desc->Description = implode(", ",$newArr);
 
     $desc->save();
@@ -68,7 +68,7 @@ class IndustrialistprojectController extends Controller
     $maxMainKey = array_key_first($dict);
 
         $connectioni = new Connectindustrialist();
-        $connectioni->NameWithInitials = request('NameWithInitials');
+        $connectioni->CompanyPersonalEmailID  = request('CompanyPersonalEmailID');
         $connectioni->MainTermID = $maxMainKey;
         $connectioni->save();
 
@@ -77,7 +77,7 @@ class IndustrialistprojectController extends Controller
         $connect = new Suggestion();
         $connect->Destination=request('Destination');
         $connect->MainTermID = $maxMainKey;
-        $connect->NameWithInitials = request('NameWithInitials');
+        $connect->CompanyPersonalEmailID  = request('CompanyPersonalEmailID');
         $connect->StudentID = implode(",",$ind);
         $connect->save();
 

@@ -91,12 +91,12 @@ class StudentprojectController extends Controller
      
      
 
-     $stuss =DB::table('connectindustrialists')->where('MainTermID',$maxMainKey)->pluck('NameWithInitials')->toArray();
+     $stuss =DB::table('connectindustrialists')->where('MainTermID',$maxMainKey)->pluck('CompanyPersonalEmailID')->toArray();
      $connect = new Suggestion();
      $connect->Destination=request('Destination');
      $connect->MainTermID = $maxMainKey;
      $connect->StudentID = request('StudentID');
-     $connect->NameWithInitials=implode(",",$stuss);
+     $connect->CompanyPersonalEmailID=implode(",",$stuss);
      
      
      

@@ -106,6 +106,9 @@
                         <span>Change Photo</span>
                       </button-->
                     </div-->
+                    <div>
+            <button  type="button" class="btn btn-warning btn-rounded"><a href="/spps">Request for project + </a></button>
+            </div>
                   </div>
 
                   <div class="btn-toolbar">

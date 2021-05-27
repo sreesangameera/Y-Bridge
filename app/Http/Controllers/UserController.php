@@ -277,14 +277,14 @@ return view('ShowProfile/studentsp')->with('c', $c);
 
 public function shind($id){
     $r=str_replace("*","/",$id);
-    $c=DB::table('industrialists')->where('NameWithInitials',$r)->first();
+    $c=DB::table('industrialists')->where('CompanyPersonalEmailID',$r)->first();
 return view('ShowProfile/industrialistsp')->with('c', $c);      
 }
 
 public function sug(){
            
     $ss =DB::table('suggestions')->orderby('id','DESC')->limit(1)->value('LecturerID');
-    $ssi =DB::table('suggestions')->orderby('id','DESC')->limit(1)->value('NameWithInitials');
+    $ssi =DB::table('suggestions')->orderby('id','DESC')->limit(1)->value('CompanyPersonalEmailID');
 
     //$su=implode("<br>",$user->LecturerID)->with('suggestiont',$ssi);
     
@@ -297,7 +297,7 @@ public function sug(){
 public function sugglec(){
        
 $ll =DB::table('suggestions')->orderby('id','DESC')->limit(1)->value('StudentID');
-$lli =DB::table('suggestions')->orderby('id','DESC')->limit(1)->value('NameWithInitials');
+$lli =DB::table('suggestions')->orderby('id','DESC')->limit(1)->value('CompanyPersonalEmailID');
 $x=explode(',',$ll,0);
     return view('studentprojects/sugglec')->with('suggestionlec',$ll);
     

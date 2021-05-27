@@ -16,7 +16,7 @@ class CreateIndustrialistprojectsTable extends Migration
         Schema::create('industrialistprojects', function (Blueprint $table) {
             $table->id();
             $table->string('Destination');
-            $table->Text('NameWithInitials');
+            $table->Text('CompanyPersonalEmailID');
             $table->String('Titleoftheproject')->nullable();
             $table->String('Description');
             $table->String('ProjectID');

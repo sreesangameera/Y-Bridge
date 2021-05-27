@@ -15,7 +15,7 @@ class CreateDescindustrialistsTable extends Migration
     {
         Schema::create('descindustrialists', function (Blueprint $table) {
             $table->id();
-            $table->String('NameWithInitials');
+            $table->String('CompanyPersonalEmailID');
             $table->String('Description');
             $table->timestamps();
         });

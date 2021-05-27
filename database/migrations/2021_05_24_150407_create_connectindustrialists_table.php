@@ -15,7 +15,7 @@ class CreateConnectindustrialistsTable extends Migration
     {
         Schema::create('connectindustrialists', function (Blueprint $table) {
             $table->id();
-            $table->String('NameWithInitials');
+            $table->String('CompanyPersonalEmailID');
             $table->String('mainTermID');
             $table->timestamps();
         });

@@ -67,8 +67,8 @@ form {
 				</select>
         </p> 
 		<br />
-        <p>NameWithInitials :<br> <input type="text"
-                        size="45" name="NameWithInitials" />
+        <p>Company Personal EmailID  :<br> <input type="text"
+                        size="45" name="CompanyPersonalEmailID" />
                     </p> 
 
 
