@@ -162,11 +162,11 @@
           
             <div class="px-xl-3">
             <div>
-            <button  type="button" class="btn btn-secondary "><a href="/sppa">Project</a></button>
+            <a href="/sppa" type="button" class="btn btn-secondary ">Project</a>
             </div>
                <div>
                <div>
-            <button  type="button" class="btn btn-success "><a href="/lnotifi">Notifications</a></button>
+            <a href="/lnotifi" type="button" class="btn btn-success ">Notifications</a>
             </div>
             <button id="myBtn"type="button" class="btn btn-primary">Edit Profile</button>
             </div>

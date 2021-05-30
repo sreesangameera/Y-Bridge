@@ -7,6 +7,15 @@ use Illuminate\Support\Facades\DB;
 
 class ProjectController extends Controller
 {
+    public function SProject(){
+        return view('ProjectPage/StudentProjectPage');      }
+
+    public function LProject(){
+        return view('ProjectPage/LecturerProjectPage');      }
+
+    public function IProject(){
+        return view('ProjectPage/IndustrialistProjectPage');      }
+
     public function spps(){
         return view('searchpps');      }
 

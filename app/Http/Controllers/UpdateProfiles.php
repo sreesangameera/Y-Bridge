@@ -52,9 +52,6 @@ class UpdateProfiles extends Controller
     }
     public function updatestudentpp(Request $request){
 
-        
-
-        
             $name = $request->email.'.'.$request->photo->extension();
             $request->photo->move(public_path().'/upload/profile', $name);
             
@@ -65,8 +62,6 @@ class UpdateProfiles extends Controller
         
     }
     
-    
-
     public function updateindustrialist(Request $request){
 
         $dt = Carbon::createFromFormat('Y-m-d',$request->dob );

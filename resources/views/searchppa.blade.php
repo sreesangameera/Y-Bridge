@@ -30,42 +30,38 @@ div {text-align: center;}
 	<br>
 	<br>
 <div class="text-center">
-<button
+<a
   type="button"
   class="btn btn-primary btn-rounded"
   data-mdb-ripple-color="dark"
->
-  <a href="/lpp">Add Project</a>
-</button>
+href="/lpp">Add Project
+</a>
 <br>
 
 <br>
-<button
+<a
   type="button"
   class="btn btn-secondary btn-rounded"
   data-mdb-ripple-color="dark"
->
-<a href="/lprqsts">Project Requests</a>
-</button>
+ href="/lprqsts">Project Requests</a>
+
 <br>
 <br>
-<button
+<a
   type="button"
   class="btn btn-success btn-rounded"
   data-mdb-ripple-color="dark"
->
-<a href="/lspro">My Projects</a>
-</button>
+ href="/lspro">My Projects</a>
+
 <br>
 <br>
 
-<button
+<a
   type="button"
   class="btn btn-dark btn-rounded"
   data-mdb-ripple-color="dark"
->
-<a href="/profile">back</a>
-</button>
+ href="/profile">back</a>
+
 </div>
 </body>
 </html>

@@ -111,8 +111,8 @@ form {
 			<input class="btn btn-warning" type="Submit"
 				value="Submit" name="Submit" /> 
 				
-			<button class="btn btn-secondary" type="Cancel">
-			<a href="/spps">back</a></button>
+		
+			<a href="/spps" class="btn btn-secondary">back</a>
 		</p> 
 	</form> 
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>

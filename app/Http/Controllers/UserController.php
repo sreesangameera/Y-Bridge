@@ -182,7 +182,7 @@ class UserController extends Controller
                 $user->save();
          }
 
-         $details=['title'=>'your account successfully registered in ybridge.',
+         $details=['title'=>'your account successfully registered in y-bridge.',
                   'body'=>'You are welcome to ybridge : '];
            Mail::to($x->email)->send(new ybridge_mail($details));
 
@@ -207,12 +207,6 @@ class UserController extends Controller
     
     public function upcomingeventsadmin(Request $request){
 
-        
-
-        
-                
-                
-            
                 DB::table('upcoming_events')->where('id',$request->id)->update([
                     'Link' => $request->link,'Date' => $request->date,'EName' => $request->ename,'Description' => $request->description,
 
@@ -221,13 +215,7 @@ class UserController extends Controller
             
         }
     public function studentsocietiesadmin(Request $request){
-
-        
-
-        
-                
-                
-            
+  
             DB::table('student_societies')->where('id',$request->id)->update([
                 'Link' => $request->link,'Date' => $request->date,'EName' => $request->ename,'Description' => $request->description,
 
@@ -238,8 +226,6 @@ class UserController extends Controller
     
     public function upcomingeventsadminadd(Request $request){
 
-        
-
         DB::table('upcoming_events')->insert([
             'Link' => $request->link,'Date' => $request->date,'EName' => $request->ename,'Description' => $request->description, ]);
                 
@@ -248,12 +234,7 @@ class UserController extends Controller
     
 }
 public function studentsocietiesadminadd(Request $request){
-
         
-
-        
-                
-                
             
     DB::table('student_societies')->insert([
         'Link' => $request->link,'Date' => $request->date,'EName' => $request->ename,'Description' => $request->description,

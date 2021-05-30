@@ -54,13 +54,13 @@ Route::get('/ob',[Frontendcontroller::class, 'obj']);
 Route::get('/ue',[Frontendcontroller::class, 'upe']);
 Route::get('/p',[Frontendcontroller::class, 'pr']);
 Route::get('/ss',[Frontendcontroller::class, 'sts']);
-Route::get('/abc',[Frontendcontroller::class, 'abc']);
-Route::get('/h1',[Frontendcontroller::class, 'h']);
+//Route::get('/abc',[Frontendcontroller::class, 'abc']);
+//Route::get('/h1',[Frontendcontroller::class, 'h']);
 
 
 
-Route::get('/fp',[Frontendcontroller::class, 'fgp']);
-Route::get('/a',[Frontendcontroller::class, 'a']);
+//Route::get('/fp',[Frontendcontroller::class, 'fgp']);
+//Route::get('/a',[Frontendcontroller::class, 'a']);
 
 Route::get('/sstp/{email}',[Frontendcontroller::class, 'sstp'])->name('sstp');
 Route::get('/sacp/{email}',[Frontendcontroller::class, 'sacp'])->name('sacp');
@@ -128,9 +128,9 @@ Route::get('/forget',function(){
 
 
 
-Route::get('/spp',[CreateProjectController::class, 'SProject']);
-Route::get('/lpp',[CreateProjectController::class, 'LProject']);
-Route::get('/ipp',[CreateProjectController::class, 'IProject']);
+Route::get('/spp',[ProjectController::class, 'SProject']);
+Route::get('/lpp',[ProjectController::class, 'LProject']);
+Route::get('/ipp',[ProjectController::class, 'IProject']);
 
 Route::get('/spps',[ProjectController::class, 'spps']);
 Route::get('/sppi',[ProjectController::class, 'sppi']);

@@ -160,9 +160,9 @@ form {
         
             <input class="btn btn-warning" type="Submit"
 				value="Submit" name="Submit" /> 
-                <button class="btn btn-secondary" type="Cancel">
-			<a href="/sppi">back</a></button>
-        </p> 
+                
+			<a href="/sppi" class="btn btn-secondary">back</a>
+        
         
         
     </form> 

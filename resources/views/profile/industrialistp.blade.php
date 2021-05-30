@@ -137,10 +137,10 @@
           
             <div class="px-xl-3">
             <div>
-            <button  type="button" class="btn btn-secondary "><a href="/sppi">Project</a></button>
+            <a href="/sppi" type="button" class="btn btn-secondary ">Project</a>
             </div>
             <div>
-            <button  type="button" class="btn btn-success "><a href="/inotifi">Notifications</a></button>
+            <a href="/inotifi" type="button" class="btn btn-success ">Notifications</a>
             </div>
             <div>
             <button id="myBtn"type="button" class="btn btn-primary">Edit Profile</button>
@@ -186,7 +186,7 @@
                     <p><strong>Company Personal Email: </strong> {{ $c->CompanyPersonalEmailID}} </p>
                     <p><strong>Designation: </strong> {{ $c->Designation}}</ </p>
                     <p><strong>LinkedIn: </strong><a href="{{ $c->LinkedIn}} "> {{ $c->LinkedIn}}</a> </p>
-                    <p><strong>Fields Of Interests: </strong> {{ $c->FieldOfInterests}} </p>
+                    <!--p><strong>Fields Of Interests: </strong> {{ $c->FieldOfInterests}} </p-->
                     <p><strong>ContactNumber: </strong> {{ $c->ContactNumber}} </p>
                     
                       
@@ -276,9 +276,9 @@
         <div title="Companyname(pvt)ltd">Company Name</div><input class="form-control" type="text" name="comn" placeholder="Company Name" required="required" value="{{ $c->CompanyName}}"><br>
         <div title="your position">Designation</div><input class="form-control" type="text" name="designation" placeholder="Designation" required="required" value="{{ $c->Designation}}"><br>
         <div title="https://www.linkedin.com/in/username/">LinkedIn Id</div><input class="form-control" type="text" name="linkedin" placeholder="LinkedIn"  value="{{ $c->LinkedIn}}"><br>
-        <div title="">Fields of Interests</div><div>
+        <!--div title="">Fields of Interests</div><div>
                     
-                    <!--select class="form-control" class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"  name="foi" value="{{ $c->FieldOfInterests}}"  required autofocus>
+                    <select class="form-control" class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"  name="foi" value="{{ $c->FieldOfInterests}}"  required autofocus>
                         <option value="{{ $c->FieldOfInterests}}">{{ $c->FieldOfInterests}}</option>
                         <option value="Advanced database design and systems">Advanced database design and systems</option>
                         <option value="Bioinformatics Computing">Bioinformatics Computing</option>
@@ -313,7 +313,7 @@
                         <option value="Systems and Network Administration">Systems and Network Administration</option>
                         
                         
-                    </select-->
+                    </select>
 
                     <div class="multiselect">
     <div class="selectBox" name="fos" onclick="showCheckboxes()">
@@ -388,7 +388,7 @@
     </div>
   </div>
                     
-                </div><br>
+                </div><br-->
         <div title="07XXXXXXXX">Contact No.</div><input class="form-control" type="text" name="cn" placeholder="Contact Number" required="required" value="{{ $c->ContactNumber}}"><br>
         <div title="old password">Old Password</div><input class="form-control" type="password" name="pwrd" placeholder="Old Password" required="required" ><br>
         <div title="new password or confirm the old password">New Password</div><input class="form-control" type="password" name="nwpswrd" placeholder="New Password" required="required"><br>
@@ -535,6 +535,8 @@ window.onclick = function(event) {
 }
 
 </script>
+<br />
+<br />
 <br />
 <br />
 <br />

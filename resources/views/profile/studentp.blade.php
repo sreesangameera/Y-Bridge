@@ -207,10 +207,10 @@ ul.nav-tabs li{
           
             <div class="px-xl-3" >
             <div>
-            <button  type="button" class="btn btn-secondary "><a href="/spps">Project</a></button>
+            <a href="/spps"  type="button" class="btn btn-secondary ">Project</a>
             </div>
             <div>
-            <button  type="button" class="btn btn-success "><a href="/snotifi">Notifications</a></button>
+            <a href="/snotifi" type="button" class="btn btn-success ">Notifications</a>
             </div>
                <div>
             <button id="myBtn" type="button" class="btn btn-primary">Edit Profile</button>

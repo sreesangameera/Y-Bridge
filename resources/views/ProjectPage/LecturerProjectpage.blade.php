@@ -126,8 +126,8 @@ form {
         
             <input class="btn btn-warning" type="Submit"
 				value="Submit" name="Submit" /> 
-                <button class="btn btn-secondary" type="Cancel">
-			<a href="/sppa">back</a></button>
+               
+			<a href="/sppa" class="btn btn-secondary">back</a>
         </p> 
         
         
