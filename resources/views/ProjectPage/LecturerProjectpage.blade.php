@@ -32,7 +32,7 @@ form {
 	width: 800px; 
 }
 .div1 {
-  width: 300px;
+  width: 700px;
   height: 100px;
   border: 1px solid black;
 }
@@ -53,14 +53,7 @@ form {
          @csrf
         
 		 <p> 
-            Role :<br>
-			<select type="text" value="" name="Destination"> 
-				<option>Lecturer</option> 
-				<!--option>Student</option> 
-				<option>Industrialist</option--> 
-                
-				</select>
-        </p> 
+         <input type="hidden" value="Lecturer" name="Destination">
 		<br />
         <p>Lecturer ID :<br> <input type="text"
                         size="45" name="LecturerID" />
@@ -87,7 +80,7 @@ form {
 		<p>Description :<br> <textarea type="text"
 						class="div1" name="Description" ></textarea></p> 
         <br /> 
-        <p> 
+        <!--p> 
             Technologies :<br>
 			<select type="text" value="" name="Technologies"> 
 				<option>Arduino</option> 
@@ -106,7 +99,7 @@ form {
 				
             </select>
         </p> 
-		<br />
+		<br /-->
         
         <p> 
 			Project Type :<br>

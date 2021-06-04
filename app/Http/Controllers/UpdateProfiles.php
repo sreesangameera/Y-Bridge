@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Carbon\Carbon;
+use App\y_bridge;
+use Illuminate\Support\Facades\Auth;
 
 class UpdateProfiles extends Controller
 {
@@ -61,24 +63,27 @@ class UpdateProfiles extends Controller
             return redirect()->back()->with('msg',"Profile picture updated successfully.");
         
     }
+    public function updatestudentri(Request $request){
+
+        DB::table('students')->where('EmailID',$request->email)->update(['Skills'=>implode(',',$request->Skills)]);
+        return redirect()->back();
+    
+    }
     
     public function updateindustrialist(Request $request){
 
-        $dt = Carbon::createFromFormat('Y-m-d',$request->dob );
-
+        
+//dd($request->all());
         $pw=DB::table('users')->where('email',$request->email)->value('password');
         if(Hash::check($request->pwrd,$pw)){
-            if($dt->isFuture()){
-                $s="DOB can not be a future date";
-            }
-            else{
+            
             
             try{
             DB::table('industrialists')->where('CompanyPersonalEmailID',$request->email)->update(['NameWithInitials'=>$request->namewi,
                                                                                     'CompanyName'=>$request->comn,
                                                                                     'Designation'=>$request->designation,
                                                                                     'LinkedIn'=>$request->linkedin,
-                                                                                    'FieldOfInterests'=>$request->foi,
+                                                                                    'FieldOfInterests'=>implode(',',$request->FieldOfInterests),
                                                                                     'ContactNumber'=>$request->cn,
                                                                                     
                                                                         ]);
@@ -90,7 +95,7 @@ class UpdateProfiles extends Controller
             $s="This linkedin is already using";
         }
         }
-    }
+    
         else{
             $s="Old password is wrong";
         }
@@ -110,6 +115,12 @@ class UpdateProfiles extends Controller
         DB::table('industrialists')->where('CompanyPersonalEmailID',$request->email)->update(['Photo' => $name,]);
         return redirect()->back()->with('msg',"Profile picture updated successfully.");
     
+}
+public function updateindustrialistri(Request $request){
+
+    DB::table('industrialists')->where('CompanyPersonalEmailID',$request->email)->update(['FieldOfInterests'=>implode(',',$request->FieldOfInterests)]);
+    return redirect()->back();
+
 }
     
     public function updateacademic(Request $request){
@@ -135,8 +146,8 @@ class UpdateProfiles extends Controller
                                                                         'LinkedIn'=>$request->linkedin,
                                                                         'ContactNumber'=>$request->cno,
                                                                         'OfficialWebsite'=>$request->ow,
-                                                                        'ResearchInterest'=>$request->ri,
-                                                                        'FieldOfSpecialization'=>$request->fos,
+                                                                        'ResearchInterest'=>implode(',',$request->ResearchInterest),
+                                                                        'FieldOfSpecialization'=>implode(',',$request->FieldOfSpecialization),
                                                                         
                                                                         ]);
             DB::table('users')->where('email',$request->email)->update(['password'=>Hash::make($request->nwpswrd)]);
@@ -168,6 +179,19 @@ class UpdateProfiles extends Controller
         return redirect()->back()->with('msg',"Profile picture updated successfully.");
     
 }
+public function updateacademicri(Request $request){
+    try{
+    DB::table('academics')->where('EmailID',$request->email)->update(['FieldOfSpecialization'=>implode(',',$request->FieldOfSpecialization),'FieldOfSpecialization'=>implode(',',$request->FieldOfSpecialization)]);
+   
+}
+catch(\Illuminate\Database\QueryException $exception){
+    $s="These info should be filled";
+    return redirect()->back()->with('msg',$s);
+}
 
-
+}
+public function abcd(){
+    $email=   Auth::user()->email ;
+    $c=DB::table('industrialists')->where('CompanyPersonalEmailID',$email)->first();
+    return view('testab')->with('c',$c);      }
 }

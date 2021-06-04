@@ -33,7 +33,7 @@
             <th>Title of the project</th>
             <th>Description</th>
             <th>Project Type</th>
-            <th>Technologies</th>
+           
             <th>LecturerID</th>
             <th>Industrialist</th>
             <th>created at</th>
@@ -50,7 +50,7 @@
                 <td>{{$user->Titleoftheproject}}</td>
                 <td>{{$user->Description}}</td>
                 <td>{{$user->ProjectType}}</td>
-                <td>{{$user->Technologies}}</td>
+                
                 <td>{{$user->LecturerID}}</td>
                 <td>{{$user->CompanyPersonalEmailID}}</td>
                 <td>{{$user->created_at}}</td> 

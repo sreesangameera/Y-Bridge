@@ -39,7 +39,7 @@ form {
 	width: 800px; 
 }
 .div1 {
-  width: 300px;
+  width: 700px;
   height: 100px;
   border: 1px solid black;
 }
@@ -58,14 +58,7 @@ form {
          @csrf
         
 		 <p> 
-            Role :<br>
-			<select type="text" value="" name="Destination"> 
-				<!--option>Lecturer</option> 
-				<option>Student</option--> 
-				<option>Industrialist</option> 
-                
-				</select>
-        </p> 
+         <input type="hidden" value="Industrialist" name="Destination">
 		<br />
         <p>Company Personal EmailID :<br> <input type="text"
                         size="45" name="CompanyPersonalEmailID" />
@@ -90,8 +83,9 @@ form {
 
                    
 		<br /> 
-		<p>Description :<br>  </p> 
-			<select type="text" value="" name="Description">  
+		<p>Description :<br> <textarea type="text"
+						class="div1" name="Description" ></textarea> </p> 
+			<!--select type="text" value="" name="Description">  
                 <option>Advanced database design and systems</option>
                 <option>Bioinformatics Computing</option>
                 <option>Compiler design</option>
@@ -125,10 +119,10 @@ form {
                 <option>Systems and Network Administration</option>
                 <option>Artificial Intelligence</option>
 				
-            </select>
+            </select-->
         
         <br /> 
-        <p> 
+        <!--p> 
             Technologies :<br>
 			<select type="text" value="" name="Technologies"> 
 				<option>Arduino</option> 
@@ -147,7 +141,7 @@ form {
 				
             </select>
         </p> 
-		<br />
+		<br /-->
         
 		<br />
         

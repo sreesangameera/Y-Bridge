@@ -170,6 +170,8 @@
             </div>
             <button id="myBtn"type="button" class="btn btn-primary">Edit Profile</button>
             </div>
+            <button id="myBtnri"type="button" class="btn btn-info">Field of Specialization</button>
+            </div>
               <button class="btn btn-block btn-warning" style="height:40px;" >
                 <!--i class="fa fa-sign-out"></i-->
                 <form method="POST" action="{{ route('logout') }}">
@@ -197,6 +199,7 @@
                   
                 
               </div>
+              
               <ul class="nav nav-tabs">
                 <li class="nav-item"><a href="" class="active nav-link">Profile</a></li>
               </ul>
@@ -216,8 +219,8 @@
                     <p><strong>LinkedIn: </strong> <a href="{{ $c->LinkedIn}} ">{{ $c->LinkedIn}}</a> </p>
                     <p><strong>Contact No: </strong> {{ $c->ContactNumber}} </p>
                     <p><strong>Official Website: </strong> <a href="{{ $c->OfficialWebsite}} ">{{ $c->OfficialWebsite}}</a></p>
-                    <!--p><strong>Research Interest: </strong> {{ $c->ResearchInterest}} </p>
-                    <p><strong>Field of Specialization: </strong> {{ $c->FieldOfSpecialization}} </p-->
+                    <p><strong>Research Interest: </strong> {{ $c->ResearchInterest}} </p>
+                    <p><strong>Field of Specialization: </strong> {{ $c->FieldOfSpecialization}} </p>
                     
                 </div>   
                       </div>
@@ -359,307 +362,11 @@
                     
                 </div>
                  <br>
-                 <!--div class="multiselect">
-    <div class="selectBox" name="ri" onclick="showCheckboxes()">
-      <select>
-        <option>Select an option</option>
-      </select>
-      <div class="overSelect"></div>
-    </div>
-    <div id="checkboxes" >
-      <label for="one">
-        <input type="checkbox" id="one" value="Advanced database design and systems" />Advanced database design and systems</label>
-      <label for="two">
-        <input type="checkbox" id="two"value="Bioinformatics Computing" />Bioinformatics Computing</label>
-        <label for="three">
-        <input type="checkbox" id="three"value="Compiler design" />Compiler design</label>
-        <label for="four">
-        <input type="checkbox" id="four"value="Computer Networks and Internet Computing" />Computer Networks and Internet Computing</label>
-        <label for="five">
-        <input type="checkbox" id="five"value="Cryptography and Data Security" />Cryptography and Data Security</label>
-        <label for="six">
-        <input type="checkbox" id="six"value="Data communication and computer networks" />Data communication and computer networks</label>
-        <label for="seven">
-        <input type="checkbox" id="seven"value="Data Structures and Algorithms" />Data Structures and Algorithms</label>
-        <label for="eight">
-        <input type="checkbox" id="eight"value="Digital Image Processing" />Digital Image Processing</label>
-        <label for="nine">
-        <input type="checkbox" id="nine"value="E-technologies" />E-technologies</label>
-        <label for="ten">
-        <input type="checkbox" id="ten"value="Foundations of Computer Science" />Foundations of Computer Science</label>
-        <label for="eleven">
-        <input type="checkbox" id="eleven"value="Graphics and Visual Computing" />Graphics and Visual Computing</label>
-       <label for="twelve">
-        <input type="checkbox" id="twelve"value="Multimedia Technologies" />Multimedia Technologies</label>
-        <label for="thirteen">
-        <input type="checkbox" id="thirteen"value="Numerical Computing" />Numerical Computing</label>
-        <label for="fourteen">
-        <input type="checkbox" id="fourteen"value="Numerical Linear algebra and solutions of differential equations" />Numerical Linear algebra and solutions of differential equations</label>
-        <label for="fifeteen">
-        <input type="checkbox" id="fifeteen"value="Object Oriented Programming" />Object Oriented Programming</label>
-        <label for="sixteen">
-        <input type="checkbox" id="sixteen"value="Parallel computing" />Parallel computing</label>
-        <label for="seventeen">
-        <input type="checkbox" id="seventeen"value="Principles of computer Architecture" />Principles of computer Architecture</label>
-        <label for="eighteen">
-        <input type="checkbox" id="eighteen"value="Programming in Logic" />Programming in Logic</label>
-        <label for="nineteen">
-        <input type="checkbox" id="nineteen"value="System design, analysis and project management" />System design, analysis and project management</label>
-        <label for="twenty">
-        <input type="checkbox" id="twenty"value="Computer Systems" />Computer Systems</label>
-        <label for="twentyone">
-        <input type="checkbox" id="twentyone"value="Human Computer Interaction" />Human Computer Interaction</label>
-        <label for="twentytwo">
-        <input type="checkbox" id="twentytwo"value="Design of Algorithms" />Design of Algorithms</label>
-        <label for="twentythree">
-        <input type="checkbox" id="twentythree"value="Organisational Behaviour" />Organisational Behaviour</label>
-        <label for="twentyfour">
-        <input type="checkbox" id="twentyfour"value="Computer Architecture" />Computer Architecture</label>
-        <label for="twentyfive">
-        <input type="checkbox" id="twentyfive"value="Programming Languages" />Programming Languages</label>
-        <label for="twentysix">
-        <input type="checkbox" id="twentysix"value="Web Technologies" />Web Technologies</label>
-        <label for="twentyseven">
-        <input type="checkbox" id="twentyseven"value="Emerging Trends" />Emerging Trends</label>
-        <label for="twentyeight">
-        <input type="checkbox" id="twentyeight"value="High Performance Computing" />High Performance Computing</label>
-        <label for="twentynine">
-        <input type="checkbox" id="twentynine"value="Image Processing and Computer Vision" />Image Processing and Computer Vision</label>
-        <label for="thirty">
-        <input type="checkbox" id="thirty"value="Machine Learning" />Machine Learning</label>
-        <label for="thirtyone">
-        <input type="checkbox" id="thirtyone"value="Systems and Network Administration" />Systems and Network Administration</label>
-    </div>
-  </div><br-->
+                 
         <div title="https://www.linkedin.com/in/username/">LinkedIn Id</div><input class="form-control" type="text" name="linkedin" placeholder="LinkedIn"  value="{{ $c->LinkedIn}}"><br>
         <div title="07XXXXXXXX">Contact No.</div><input class="form-control" type="text" name="cno" placeholder="Contact Number"  value="{{ $c->ContactNumber}}"><br>
         <div title="www.sitename.lk/com">Official website</div><input class="form-control" type="text" name="ow" placeholder="Official Website" required="required" value="{{ $c->OfficialWebsite}}"><br>
-        <!--div title="select">Research Interests</div><div>
-                    
-                    <select class="form-control" class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"  name="ri" value="{{ $c->ResearchInterest}}"  required autofocus>
-                        <option value="{{ $c->ResearchInterest}}">{{ $c->ResearchInterest}}</option>
-                        <option value="Advanced database design and systems">Advanced database design and systems</option>
-                        <option value="Bioinformatics Computing">Bioinformatics Computing</option>
-                        <option value="Compiler design">Compiler design</option>
-                        <option value="Computer Networks and Internet Computing">Computer Networks and Internet Computing</option>
-                        <option value="Cryptography and Data Security">Cryptography and Data Security</option>
-                        <option value="Data communication and computer networks">Data communication and computer networks</option>
-                        <option value="Data Structures and Algorithms">Data Structures and Algorithms</option>
-                        <option value="Digital Image Processing">Digital Image Processing</option>
-                        <option value="E-technologies">E-technologies</option>
-                        <option value="Foundations of Computer Science">Foundations of Computer Science</option>
-                        <option value="Graphics and Visual Computing">Graphics and Visual Computing</option>
-                        <option value="Multimedia Technologies">Multimedia Technologies</option>
-                        <option value="Numerical Computing">Numerical Computing</option>
-                        <option value="Numerical Linear algebra and solutions of differential equations">Numerical Linear algebra and solutions of differential equations</option>
-                        <option value="Object Oriented Programming">Object Oriented Programming</option>
-                        <option value="Parallel computing">Parallel computing</option>
-                        <option value="Principles of computer Architecture">Principles of computer Architecture</option>
-                        <option value="Programming in Logic">Programming in Logic</option>
-                        <option value="System design, analysis and project management">System design, analysis and project management</option>
-                        <option value="Computer Systems">Computer Systems</option>
-                        <option value="Human Computer Interaction">Human Computer Interaction</option>
-                        <option value="Design of Algorithms">Design of Algorithms</option>
-                        <option value="Organisational Behaviour">Organisational Behaviour</option>
-                        <option value="Computer Architecture">Computer Architecture</option>
-                        <option value="Programming Languages">Programming Languages</option>
-                        <option value="Web Technologies">Web Technologies</option>
-                        <option value="Emerging Trends">Emerging Trends</option>
-                        <option value="High Performance Computing">High Performance Computing</option>
-                        <option value="Image Processing and Computer Vision">Image Processing and Computer Vision</option>
-                        <option value="Machine Learning">Machine Learning</option>
-                        <option value="Systems and Network Administration">Systems and Network Administration</option>
-                        
-                        
-                    </select>
-
-                    <div class="multiselect">
-    <div class="selectBox" name="ri" onclick="showCheckboxes()">
-      <select>
-        <option>Select an option</option>
-      </select>
-      <div class="overSelect"></div>
-    </div>
-    <div id="checkboxes" >
-      <label for="one">
-        <input type="checkbox" id="one" value="Advanced database design and systems" />Advanced database design and systems</label>
-      <label for="two">
-        <input type="checkbox" id="two"value="Bioinformatics Computing" />Bioinformatics Computing</label>
-        <label for="three">
-        <input type="checkbox" id="three"value="Compiler design" />Compiler design</label>
-        <label for="four">
-        <input type="checkbox" id="four"value="Computer Networks and Internet Computing" />Computer Networks and Internet Computing</label>
-        <label for="five">
-        <input type="checkbox" id="five"value="Cryptography and Data Security" />Cryptography and Data Security</label>
-        <label for="six">
-        <input type="checkbox" id="six"value="Data communication and computer networks" />Data communication and computer networks</label>
-        <label for="seven">
-        <input type="checkbox" id="seven"value="Data Structures and Algorithms" />Data Structures and Algorithms</label>
-        <label for="eight">
-        <input type="checkbox" id="eight"value="Digital Image Processing" />Digital Image Processing</label>
-        <label for="nine">
-        <input type="checkbox" id="nine"value="E-technologies" />E-technologies</label>
-        <label for="ten">
-        <input type="checkbox" id="ten"value="Foundations of Computer Science" />Foundations of Computer Science</label>
-        <label for="eleven">
-        <input type="checkbox" id="eleven"value="Graphics and Visual Computing" />Graphics and Visual Computing</label>
-       <label for="twelve">
-        <input type="checkbox" id="twelve"value="Multimedia Technologies" />Multimedia Technologies</label>
-        <label for="thirteen">
-        <input type="checkbox" id="thirteen"value="Numerical Computing" />Numerical Computing</label>
-        <label for="fourteen">
-        <input type="checkbox" id="fourteen"value="Numerical Linear algebra and solutions of differential equations" />Numerical Linear algebra and solutions of differential equations</label>
-        <label for="fifeteen">
-        <input type="checkbox" id="fifeteen"value="Object Oriented Programming" />Object Oriented Programming</label>
-        <label for="sixteen">
-        <input type="checkbox" id="sixteen"value="Parallel computing" />Parallel computing</label>
-        <label for="seventeen">
-        <input type="checkbox" id="seventeen"value="Principles of computer Architecture" />Principles of computer Architecture</label>
-        <label for="eighteen">
-        <input type="checkbox" id="eighteen"value="Programming in Logic" />Programming in Logic</label>
-        <label for="nineteen">
-        <input type="checkbox" id="nineteen"value="System design, analysis and project management" />System design, analysis and project management</label>
-        <label for="twenty">
-        <input type="checkbox" id="twenty"value="Computer Systems" />Computer Systems</label>
-        <label for="twentyone">
-        <input type="checkbox" id="twentyone"value="Human Computer Interaction" />Human Computer Interaction</label>
-        <label for="twentytwo">
-        <input type="checkbox" id="twentytwo"value="Design of Algorithms" />Design of Algorithms</label>
-        <label for="twentythree">
-        <input type="checkbox" id="twentythree"value="Organisational Behaviour" />Organisational Behaviour</label>
-        <label for="twentyfour">
-        <input type="checkbox" id="twentyfour"value="Computer Architecture" />Computer Architecture</label>
-        <label for="twentyfive">
-        <input type="checkbox" id="twentyfive"value="Programming Languages" />Programming Languages</label>
-        <label for="twentysix">
-        <input type="checkbox" id="twentysix"value="Web Technologies" />Web Technologies</label>
-        <label for="twentyseven">
-        <input type="checkbox" id="twentyseven"value="Emerging Trends" />Emerging Trends</label>
-        <label for="twentyeight">
-        <input type="checkbox" id="twentyeight"value="High Performance Computing" />High Performance Computing</label>
-        <label for="twentynine">
-        <input type="checkbox" id="twentynine"value="Image Processing and Computer Vision" />Image Processing and Computer Vision</label>
-        <label for="thirty">
-        <input type="checkbox" id="thirty"value="Machine Learning" />Machine Learning</label>
-        <label for="thirtyone">
-        <input type="checkbox" id="thirtyone"value="Systems and Network Administration" />Systems and Network Administration</label>
-    </div>
-  </div>
-                    
-                </div> <br-->
-                <!--div title="select">Field of Specialization</div><div>
-                    
-                    <select class="form-control" class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"  name="fos" value="{{ $c->FieldOfSpecialization}}"  required autofocus>
-                        <option value="{{ $c->FieldOfSpecialization}}">{{ $c->FieldOfSpecialization}}</option>
-                        <option value="Advanced database design and systems">Advanced database design and systems</option>
-                        <option value="Bioinformatics Computing">Bioinformatics Computing</option>
-                        <option value="Compiler design">Compiler design</option>
-                        <option value="Computer Networks and Internet Computing">Computer Networks and Internet Computing</option>
-                        <option value="Cryptography and Data Security">Cryptography and Data Security</option>
-                        <option value="Data communication and computer networks">Data communication and computer networks</option>
-                        <option value="Data Structures and Algorithms">Data Structures and Algorithms</option>
-                        <option value="Digital Image Processing">Digital Image Processing</option>
-                        <option value="E-technologies">E-technologies</option>
-                        <option value="Foundations of Computer Science">Foundations of Computer Science</option>
-                        <option value="Graphics and Visual Computing">Graphics and Visual Computing</option>
-                        <option value="Multimedia Technologies">Multimedia Technologies</option>
-                        <option value="Numerical Computing">Numerical Computing</option>
-                        <option value="Numerical Linear algebra and solutions of differential equations">Numerical Linear algebra and solutions of differential equations</option>
-                        <option value="Object Oriented Programming">Object Oriented Programming</option>
-                        <option value="Parallel computing">Parallel computing</option>
-                        <option value="Principles of computer Architecture">Principles of computer Architecture</option>
-                        <option value="Programming in Logic">Programming in Logic</option>
-                        <option value="System design, analysis and project management">System design, analysis and project management</option>
-                        <option value="Computer Systems">Computer Systems</option>
-                        <option value="Human Computer Interaction">Human Computer Interaction</option>
-                        <option value="Design of Algorithms">Design of Algorithms</option>
-                        <option value="Organisational Behaviour">Organisational Behaviour</option>
-                        <option value="Computer Architecture">Computer Architecture</option>
-                        <option value="Programming Languages">Programming Languages</option>
-                        <option value="Web Technologies">Web Technologies</option>
-                        <option value="Emerging Trends">Emerging Trends</option>
-                        <option value="High Performance Computing">High Performance Computing</option>
-                        <option value="Image Processing and Computer Vision">Image Processing and Computer Vision</option>
-                        <option value="Machine Learning">Machine Learning</option>
-                        <option value="Systems and Network Administration">Systems and Network Administration</option>
-                        
-                        
-                    </select>
-
-                    <div class="multiselect">
-    <div class="selectBox" name="fos" onclick="showCheckboxes()">
-      <select>
-        <option>Select an option</option>
-      </select>
-      <div class="overSelect"></div>
-    </div>
-    <div id="checkboxes" >
-      <label for="one">
-        <input type="checkbox" id="one" value="Advanced database design and systems" />Advanced database design and systems</label>
-      <label for="two">
-        <input type="checkbox" id="two"value="Bioinformatics Computing" />Bioinformatics Computing</label>
-        <label for="three">
-        <input type="checkbox" id="three"value="Compiler design" />Compiler design</label>
-        <label for="four">
-        <input type="checkbox" id="four"value="Computer Networks and Internet Computing" />Computer Networks and Internet Computing</label>
-        <label for="five">
-        <input type="checkbox" id="five"value="Cryptography and Data Security" />Cryptography and Data Security</label>
-        <label for="six">
-        <input type="checkbox" id="six"value="Data communication and computer networks" />Data communication and computer networks</label>
-        <label for="seven">
-        <input type="checkbox" id="seven"value="Data Structures and Algorithms" />Data Structures and Algorithms</label>
-        <label for="eight">
-        <input type="checkbox" id="eight"value="Digital Image Processing" />Digital Image Processing</label>
-        <label for="nine">
-        <input type="checkbox" id="nine"value="E-technologies" />E-technologies</label>
-        <label for="ten">
-        <input type="checkbox" id="ten"value="Foundations of Computer Science" />Foundations of Computer Science</label>
-        <label for="eleven">
-        <input type="checkbox" id="eleven"value="Graphics and Visual Computing" />Graphics and Visual Computing</label>
-       <label for="twelve">
-        <input type="checkbox" id="twelve"value="Multimedia Technologies" />Multimedia Technologies</label>
-        <label for="thirteen">
-        <input type="checkbox" id="thirteen"value="Numerical Computing" />Numerical Computing</label>
-        <label for="fourteen">
-        <input type="checkbox" id="fourteen"value="Numerical Linear algebra and solutions of differential equations" />Numerical Linear algebra and solutions of differential equations</label>
-        <label for="fifeteen">
-        <input type="checkbox" id="fifeteen"value="Object Oriented Programming" />Object Oriented Programming</label>
-        <label for="sixteen">
-        <input type="checkbox" id="sixteen"value="Parallel computing" />Parallel computing</label>
-        <label for="seventeen">
-        <input type="checkbox" id="seventeen"value="Principles of computer Architecture" />Principles of computer Architecture</label>
-        <label for="eighteen">
-        <input type="checkbox" id="eighteen"value="Programming in Logic" />Programming in Logic</label>
-        <label for="nineteen">
-        <input type="checkbox" id="nineteen"value="System design, analysis and project management" />System design, analysis and project management</label>
-        <label for="twenty">
-        <input type="checkbox" id="twenty"value="Computer Systems" />Computer Systems</label>
-        <label for="twentyone">
-        <input type="checkbox" id="twentyone"value="Human Computer Interaction" />Human Computer Interaction</label>
-        <label for="twentytwo">
-        <input type="checkbox" id="twentytwo"value="Design of Algorithms" />Design of Algorithms</label>
-        <label for="twentythree">
-        <input type="checkbox" id="twentythree"value="Organisational Behaviour" />Organisational Behaviour</label>
-        <label for="twentyfour">
-        <input type="checkbox" id="twentyfour"value="Computer Architecture" />Computer Architecture</label>
-        <label for="twentyfive">
-        <input type="checkbox" id="twentyfive"value="Programming Languages" />Programming Languages</label>
-        <label for="twentysix">
-        <input type="checkbox" id="twentysix"value="Web Technologies" />Web Technologies</label>
-        <label for="twentyseven">
-        <input type="checkbox" id="twentyseven"value="Emerging Trends" />Emerging Trends</label>
-        <label for="twentyeight">
-        <input type="checkbox" id="twentyeight"value="High Performance Computing" />High Performance Computing</label>
-        <label for="twentynine">
-        <input type="checkbox" id="twentynine"value="Image Processing and Computer Vision" />Image Processing and Computer Vision</label>
-        <label for="thirty">
-        <input type="checkbox" id="thirty"value="Machine Learning" />Machine Learning</label>
-        <label for="thirtyone">
-        <input type="checkbox" id="thirtyone"value="Systems and Network Administration" />Systems and Network Administration</label>
-    </div>
-  </div>
-                    
-                </div>  <br-->
+        
         <div title="old password">Old Password</div><input class="form-control" type="password" name="pwrd" placeholder="Old Password" required="required" ><br>
         <div title="new password or confirm the old password">New Password</div><input class="form-control" type="password" name="nwpswrd" placeholder="New Password" required="required"><br>
         <input class="btn btn-primary" type="submit" value="submit">
@@ -678,6 +385,188 @@
         <div title="upload an image">Profile Picture</div><input class="form-control" type="file" name="photo" placeholder="add photo"> 
         <input type="hidden" name="email" value="{{ $c->EmailID}}" >
         <input class="btn btn-primary" type="submit" value="submit">
+        
+    </form>
+  </div>
+
+</div>
+
+<div id="myModalri" class="modal" >
+
+  <!-- Modal content -->
+  <div class="modal-content" style="width:75%">
+    
+    <form method="POST" action="/updateacademicri" enctype="multipart/form-data">
+        @csrf
+       
+        <input type="hidden" name="email" value="{{ $c->EmailID}}" >
+        <div title="">Field Of Specialization</div><select><div>
+                    
+                   
+                    <div class="multiselect">
+    <div    >
+      
+      <br>
+       
+      
+      
+      <div class="overSelect"></div>
+    
+    <div id="checkboxes" >
+      <label for="one">
+        <input type="checkbox" id="Advanced database design and systems" name="FieldOfSpecialization[]" value="Advanced database design and systems" />Advanced database design and systems</label>
+      <label for="two">
+        <input type="checkbox" id="Bioinformatics Computing" name="FieldOfSpecialization[]" value="Bioinformatics Computing" />Bioinformatics Computing</label>
+        <label for="three">
+        <input type="checkbox" id="Compiler design" name="FieldOfSpecialization[]" value="Compiler design" />Compiler design</label>
+        <label for="four">
+        <input type="checkbox" id="Computer Networks and Internet Computing" name="FieldOfSpecialization[]" value="Computer Networks and Internet Computing" />Computer Networks and Internet Computing</label>
+        <label for="five">
+        <input type="checkbox" id="Cryptography and Data Security" name="FieldOfSpecialization[]" value="Cryptography and Data Security" />Cryptography and Data Security</label>
+        <label for="six">
+        <input type="checkbox" id="Data communication and computer networks" name="FieldOfSpecialization[]" value="Data communication and computer networks" />Data communication and computer networks</label>
+        <label for="seven">
+        <input type="checkbox" id="Data Structures and Algorithms" name="FieldOfSpecialization[]" value="Data Structures and Algorithms" />Data Structures and Algorithms</label>
+        <label for="eight">
+        <input type="checkbox" id="Digital Image Processing" name="FieldOfSpecialization[]" value="Digital Image Processing" />Digital Image Processing</label>
+        <label for="nine">
+        <input type="checkbox" id="E-technologies" name="FieldOfSpecialization[]" value="E-technologies" />E-technologies</label>
+        <label for="ten">
+        <input type="checkbox" id="Foundations of Computer Science" name="FieldOfSpecialization[]" value="Foundations of Computer Science" />Foundations of Computer Science</label>
+        <label for="eleven">
+        <input type="checkbox" id="Graphics and Visual Computing" name="FieldOfSpecialization[]" value="Graphics and Visual Computing" />Graphics and Visual Computing</label>
+       <label for="twelve">
+        <input type="checkbox" id="Multimedia Technologies" name="FieldOfSpecialization[]" value="Multimedia Technologies" />Multimedia Technologies</label>
+        <label for="thirteen">
+        <input type="checkbox" id="Numerical Computing" name="FieldOfSpecialization[]" value="Numerical Computing" />Numerical Computing</label>
+        <label for="fourteen">
+        <input type="checkbox" id="Numerical Linear algebra and solutions of differential equations" name="FieldOfSpecialization[]" value="Numerical Linear algebra and solutions of differential equations" />Numerical Linear algebra and solutions of differential equations</label>
+        <label for="fifeteen">
+        <input type="checkbox" id="Object Oriented Programming" name="FieldOfSpecialization[]" value="Object Oriented Programming" />Object Oriented Programming</label>
+        <label for="sixteen">
+        <input type="checkbox" id="Parallel computing" name="FieldOfSpecialization[]" value="Parallel computing" />Parallel computing</label>
+        <label for="seventeen">
+        <input type="checkbox" id="Principles of computer Architecture" name="FieldOfSpecialization[]" value="Principles of computer Architecture" />Principles of computer Architecture</label>
+        <label for="eighteen">
+        <input type="checkbox" id="Programming in Logic" name="FieldOfSpecialization[]" value="Programming in Logic" />Programming in Logic</label>
+        <label for="nineteen">
+        <input type="checkbox" id="System design, analysis and project management" name="FieldOfSpecialization[]" value="System design, analysis and project management" />System design, analysis and project management</label>
+        <label for="twenty">
+        <input type="checkbox" id="Computer Systems" name="FieldOfSpecialization[]" value="Computer Systems" />Computer Systems</label>
+        <label for="twentyone">
+        <input type="checkbox" id="Human Computer Interaction" name="FieldOfSpecialization[]" value="Human Computer Interaction" />Human Computer Interaction</label>
+        <label for="twentytwo">
+        <input type="checkbox" id="Design of Algorithms" name="FieldOfSpecialization[]" value="Design of Algorithms" />Design of Algorithms</label>
+        <label for="twentythree">
+        <input type="checkbox" id="Organisational Behaviour" name="FieldOfSpecialization[]" value="Organisational Behaviour" />Organisational Behaviour</label>
+        <label for="twentyfour">
+        <input type="checkbox" id="Computer Architecture" name="FieldOfSpecialization[]" value="Computer Architecture" />Computer Architecture</label>
+        <label for="twentyfive">
+        <input type="checkbox" id="Programming Languages" name="FieldOfSpecialization[]" value="Programming Languages" />Programming Languages</label>
+        <label for="twentysix">
+        <input type="checkbox" id="Web Technologies" name="FieldOfSpecialization[]" value="Web Technologies" />Web Technologies</label>
+        <label for="twentyseven">
+        <input type="checkbox" id="Emerging Trends" name="FieldOfSpecialization[]" value="Emerging Trends" />Emerging Trends</label>
+        <label for="twentyeight">
+        <input type="checkbox" id="High Performance Computing" name="FieldOfSpecialization[]" value="High Performance Computing" />High Performance Computing</label>
+        <label for="twentynine">
+        <input type="checkbox" id="Image Processing and Computer Vision" name="FieldOfSpecialization[]" value="Image Processing and Computer Vision" />Image Processing and Computer Vision</label>
+        <label for="thirty">
+        <input type="checkbox" id="Machine Learning" name="FieldOfSpecialization[]" value="Machine Learning" />Machine Learning</label>
+        <label for="thirtyone">
+        <input type="checkbox" id="Systems and Network Administration" name="FieldOfSpecialization[]" value="Systems and Network Administration" />Systems and Network Administration</label>
+        
+        <br>
+        <br>
+        
+        
+        
+        <div title="">Research Interest</div> <select><div>
+                    
+                   
+                    <div class="multiselect">
+    
+     
+        
+      <div class="overSelect"></div>
+    </div>
+    <div id="checkboxes" >
+      <label for="one">
+        <input type="checkbox" id="Advanced database design and systems" name="ResearchInterest[]" value="Advanced database design and systems" />Advanced database design and systems</label>
+      <label for="two">
+        <input type="checkbox" id="Bioinformatics Computing" name="ResearchInterest[]" value="Bioinformatics Computing" />Bioinformatics Computing</label>
+        <label for="three">
+        <input type="checkbox" id="Compiler design" name="ResearchInterest[]" value="Compiler design" />Compiler design</label>
+        <label for="four">
+        <input type="checkbox" id="Computer Networks and Internet Computing" name="ResearchInterest[]" value="Computer Networks and Internet Computing" />Computer Networks and Internet Computing</label>
+        <label for="five">
+        <input type="checkbox" id="Cryptography and Data Security" name="ResearchInterest[]" value="Cryptography and Data Security" />Cryptography and Data Security</label>
+        <label for="six">
+        <input type="checkbox" id="Data communication and computer networks" name="ResearchInterest[]" value="Data communication and computer networks" />Data communication and computer networks</label>
+        <label for="seven">
+        <input type="checkbox" id="Data Structures and Algorithms" name="ResearchInterest[]" value="Data Structures and Algorithms" />Data Structures and Algorithms</label>
+        <label for="eight">
+        <input type="checkbox" id="Digital Image Processing" name="ResearchInterest[]" value="Digital Image Processing" />Digital Image Processing</label>
+        <label for="nine">
+        <input type="checkbox" id="E-technologies" name="ResearchInterest[]" value="E-technologies" />E-technologies</label>
+        <label for="ten">
+        <input type="checkbox" id="Foundations of Computer Science" name="ResearchInterest[]" value="Foundations of Computer Science" />Foundations of Computer Science</label>
+        <label for="eleven">
+        <input type="checkbox" id="Graphics and Visual Computing" name="ResearchInterest[]" value="Graphics and Visual Computing" />Graphics and Visual Computing</label>
+       <label for="twelve">
+        <input type="checkbox" id="Multimedia Technologies" name="ResearchInterest[]" value="Multimedia Technologies" />Multimedia Technologies</label>
+        <label for="thirteen">
+        <input type="checkbox" id="Numerical Computing" name="ResearchInterest[]" value="Numerical Computing" />Numerical Computing</label>
+        <label for="fourteen">
+        <input type="checkbox" id="Numerical Linear algebra and solutions of differential equations" name="ResearchInterest[]" value="Numerical Linear algebra and solutions of differential equations" />Numerical Linear algebra and solutions of differential equations</label>
+        <label for="fifeteen">
+        <input type="checkbox" id="Object Oriented Programming" name="ResearchInterest[]" value="Object Oriented Programming" />Object Oriented Programming</label>
+        <label for="sixteen">
+        <input type="checkbox" id="Parallel computing" name="ResearchInterest[]" value="Parallel computing" />Parallel computing</label>
+        <label for="seventeen">
+        <input type="checkbox" id="Principles of computer Architecture" name="ResearchInterest[]" value="Principles of computer Architecture" />Principles of computer Architecture</label>
+        <label for="eighteen">
+        <input type="checkbox" id="Programming in Logic" name="ResearchInterest[]" value="Programming in Logic" />Programming in Logic</label>
+        <label for="nineteen">
+        <input type="checkbox" id="System design, analysis and project management" name="ResearchInterest[]" value="System design, analysis and project management" />System design, analysis and project management</label>
+        <label for="twenty">
+        <input type="checkbox" id="Computer Systems" name="ResearchInterest[]" value="Computer Systems" />Computer Systems</label>
+        <label for="twentyone">
+        <input type="checkbox" id="Human Computer Interaction" name="ResearchInterest[]" value="Human Computer Interaction" />Human Computer Interaction</label>
+        <label for="twentytwo">
+        <input type="checkbox" id="Design of Algorithms" name="ResearchInterest[]" value="Design of Algorithms" />Design of Algorithms</label>
+        <label for="twentythree">
+        <input type="checkbox" id="Organisational Behaviour" name="ResearchInterest[]" value="Organisational Behaviour" />Organisational Behaviour</label>
+        <label for="twentyfour">
+        <input type="checkbox" id="Computer Architecture" name="ResearchInterest[]" value="Computer Architecture" />Computer Architecture</label>
+        <label for="twentyfive">
+        <input type="checkbox" id="Programming Languages" name="ResearchInterest[]" value="Programming Languages" />Programming Languages</label>
+        <label for="twentysix">
+        <input type="checkbox" id="Web Technologies" name="ResearchInterest[]" value="Web Technologies" />Web Technologies</label>
+        <label for="twentyseven">
+        <input type="checkbox" id="Emerging Trends" name="ResearchInterest[]" value="Emerging Trends" />Emerging Trends</label>
+        <label for="twentyeight">
+        <input type="checkbox" id="High Performance Computing" name="ResearchInterest[]" value="High Performance Computing" />High Performance Computing</label>
+        <label for="twentynine">
+        <input type="checkbox" id="Image Processing and Computer Vision" name="ResearchInterest[]" value="Image Processing and Computer Vision" />Image Processing and Computer Vision</label>
+        <label for="thirty">
+        <input type="checkbox" id="Machine Learning" name="ResearchInterest[]" value="Machine Learning" />Machine Learning</label>
+        <label for="thirtyone">
+        <input type="checkbox" id="Systems and Network Administration" name="ResearchInterest[]" value="Systems and Network Administration" />Systems and Network Administration</label>
+    
+                    
+                <br>
+        
+        
+        <br><input class="btn btn-primary" type="submit" value="submit">
+        </div></div>
+  </div>
+    </div>
+    
+  </div>
+                    
+                </div><br>
+        
         
     </form>
   </div>
@@ -730,6 +619,17 @@
           });
      </script>
      @elseif($msg == "DOB can not be a future date")
+     <script>
+     Swal.fire({
+               position: 'top',
+               icon: 'error',
+               title: '{{$msg}}',
+               showConfirmButton: false,
+               timer: 2000
+            
+          });
+     </script>
+     @elseif($msg == "These info should be filled")
      <script>
      Swal.fire({
                position: 'top',
@@ -809,6 +709,33 @@ function showCheckboxes() {
     expanded = false;
   }
 }
+</script>
+<script>
+    var modal3 = document.getElementById("myModalri");
+
+// Get the button that opens the modal
+var btn3 = document.getElementById("myBtnri");
+
+// Get the <span> element that closes the modal
+var span3 = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn3.onclick = function() {
+  modal3.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span3.onclick = function() {
+  modal3.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal3) {
+    modal3.style.display = "none";
+  }
+}
+
 </script>
 </br>
 </br>

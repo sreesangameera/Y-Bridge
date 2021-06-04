@@ -145,6 +145,9 @@
             <div>
             <button id="myBtn"type="button" class="btn btn-primary">Edit Profile</button>
             </div>
+            <div>
+            <button id="myBtnri"type="button" class="btn btn-info">Field of Interests</button>
+            </div>
               <button class="btn btn-block btn-warning" style="height:40px;" >
                 <!--i class="fa fa-sign-out"></i-->
                 <form method="POST" action="{{ route('logout') }}">
@@ -186,7 +189,7 @@
                     <p><strong>Company Personal Email: </strong> {{ $c->CompanyPersonalEmailID}} </p>
                     <p><strong>Designation: </strong> {{ $c->Designation}}</ </p>
                     <p><strong>LinkedIn: </strong><a href="{{ $c->LinkedIn}} "> {{ $c->LinkedIn}}</a> </p>
-                    <!--p><strong>Fields Of Interests: </strong> {{ $c->FieldOfInterests}} </p-->
+                    <p><strong>Fields Of Interests: </strong> {{ $c->FieldOfInterests}} </p>
                     <p><strong>ContactNumber: </strong> {{ $c->ContactNumber}} </p>
                     
                       
@@ -276,119 +279,7 @@
         <div title="Companyname(pvt)ltd">Company Name</div><input class="form-control" type="text" name="comn" placeholder="Company Name" required="required" value="{{ $c->CompanyName}}"><br>
         <div title="your position">Designation</div><input class="form-control" type="text" name="designation" placeholder="Designation" required="required" value="{{ $c->Designation}}"><br>
         <div title="https://www.linkedin.com/in/username/">LinkedIn Id</div><input class="form-control" type="text" name="linkedin" placeholder="LinkedIn"  value="{{ $c->LinkedIn}}"><br>
-        <!--div title="">Fields of Interests</div><div>
-                    
-                    <select class="form-control" class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"  name="foi" value="{{ $c->FieldOfInterests}}"  required autofocus>
-                        <option value="{{ $c->FieldOfInterests}}">{{ $c->FieldOfInterests}}</option>
-                        <option value="Advanced database design and systems">Advanced database design and systems</option>
-                        <option value="Bioinformatics Computing">Bioinformatics Computing</option>
-                        <option value="Compiler design">Compiler design</option>
-                        <option value="Computer Networks and Internet Computing">Computer Networks and Internet Computing</option>
-                        <option value="Cryptography and Data Security">Cryptography and Data Security</option>
-                        <option value="Data communication and computer networks">Data communication and computer networks</option>
-                        <option value="Data Structures and Algorithms">Data Structures and Algorithms</option>
-                        <option value="Digital Image Processing">Digital Image Processing</option>
-                        <option value="E-technologies">E-technologies</option>
-                        <option value="Foundations of Computer Science">Foundations of Computer Science</option>
-                        <option value="Graphics and Visual Computing">Graphics and Visual Computing</option>
-                        <option value="Multimedia Technologies">Multimedia Technologies</option>
-                        <option value="Numerical Computing">Numerical Computing</option>
-                        <option value="Numerical Linear algebra and solutions of differential equations">Numerical Linear algebra and solutions of differential equations</option>
-                        <option value="Object Oriented Programming">Object Oriented Programming</option>
-                        <option value="Parallel computing">Parallel computing</option>
-                        <option value="Principles of computer Architecture">Principles of computer Architecture</option>
-                        <option value="Programming in Logic">Programming in Logic</option>
-                        <option value="System design, analysis and project management">System design, analysis and project management</option>
-                        <option value="Computer Systems">Computer Systems</option>
-                        <option value="Human Computer Interaction">Human Computer Interaction</option>
-                        <option value="Design of Algorithms">Design of Algorithms</option>
-                        <option value="Organisational Behaviour">Organisational Behaviour</option>
-                        <option value="Computer Architecture">Computer Architecture</option>
-                        <option value="Programming Languages">Programming Languages</option>
-                        <option value="Web Technologies">Web Technologies</option>
-                        <option value="Emerging Trends">Emerging Trends</option>
-                        <option value="High Performance Computing">High Performance Computing</option>
-                        <option value="Image Processing and Computer Vision">Image Processing and Computer Vision</option>
-                        <option value="Machine Learning">Machine Learning</option>
-                        <option value="Systems and Network Administration">Systems and Network Administration</option>
-                        
-                        
-                    </select>
-
-                    <div class="multiselect">
-    <div class="selectBox" name="fos" onclick="showCheckboxes()">
-      <select>
-        <option>Select an option</option>
-      </select>
-      <div class="overSelect"></div>
-    </div>
-    <div id="checkboxes" >
-      <label for="one">
-        <input type="checkbox" id="one" value="Advanced database design and systems" />Advanced database design and systems</label>
-      <label for="two">
-        <input type="checkbox" id="two"value="Bioinformatics Computing" />Bioinformatics Computing</label>
-        <label for="three">
-        <input type="checkbox" id="three"value="Compiler design" />Compiler design</label>
-        <label for="four">
-        <input type="checkbox" id="four"value="Computer Networks and Internet Computing" />Computer Networks and Internet Computing</label>
-        <label for="five">
-        <input type="checkbox" id="five"value="Cryptography and Data Security" />Cryptography and Data Security</label>
-        <label for="six">
-        <input type="checkbox" id="six"value="Data communication and computer networks" />Data communication and computer networks</label>
-        <label for="seven">
-        <input type="checkbox" id="seven"value="Data Structures and Algorithms" />Data Structures and Algorithms</label>
-        <label for="eight">
-        <input type="checkbox" id="eight"value="Digital Image Processing" />Digital Image Processing</label>
-        <label for="nine">
-        <input type="checkbox" id="nine"value="E-technologies" />E-technologies</label>
-        <label for="ten">
-        <input type="checkbox" id="ten"value="Foundations of Computer Science" />Foundations of Computer Science</label>
-        <label for="eleven">
-        <input type="checkbox" id="eleven"value="Graphics and Visual Computing" />Graphics and Visual Computing</label>
-       <label for="twelve">
-        <input type="checkbox" id="twelve"value="Multimedia Technologies" />Multimedia Technologies</label>
-        <label for="thirteen">
-        <input type="checkbox" id="thirteen"value="Numerical Computing" />Numerical Computing</label>
-        <label for="fourteen">
-        <input type="checkbox" id="fourteen"value="Numerical Linear algebra and solutions of differential equations" />Numerical Linear algebra and solutions of differential equations</label>
-        <label for="fifeteen">
-        <input type="checkbox" id="fifeteen"value="Object Oriented Programming" />Object Oriented Programming</label>
-        <label for="sixteen">
-        <input type="checkbox" id="sixteen"value="Parallel computing" />Parallel computing</label>
-        <label for="seventeen">
-        <input type="checkbox" id="seventeen"value="Principles of computer Architecture" />Principles of computer Architecture</label>
-        <label for="eighteen">
-        <input type="checkbox" id="eighteen"value="Programming in Logic" />Programming in Logic</label>
-        <label for="nineteen">
-        <input type="checkbox" id="nineteen"value="System design, analysis and project management" />System design, analysis and project management</label>
-        <label for="twenty">
-        <input type="checkbox" id="twenty"value="Computer Systems" />Computer Systems</label>
-        <label for="twentyone">
-        <input type="checkbox" id="twentyone"value="Human Computer Interaction" />Human Computer Interaction</label>
-        <label for="twentytwo">
-        <input type="checkbox" id="twentytwo"value="Design of Algorithms" />Design of Algorithms</label>
-        <label for="twentythree">
-        <input type="checkbox" id="twentythree"value="Organisational Behaviour" />Organisational Behaviour</label>
-        <label for="twentyfour">
-        <input type="checkbox" id="twentyfour"value="Computer Architecture" />Computer Architecture</label>
-        <label for="twentyfive">
-        <input type="checkbox" id="twentyfive"value="Programming Languages" />Programming Languages</label>
-        <label for="twentysix">
-        <input type="checkbox" id="twentysix"value="Web Technologies" />Web Technologies</label>
-        <label for="twentyseven">
-        <input type="checkbox" id="twentyseven"value="Emerging Trends" />Emerging Trends</label>
-        <label for="twentyeight">
-        <input type="checkbox" id="twentyeight"value="High Performance Computing" />High Performance Computing</label>
-        <label for="twentynine">
-        <input type="checkbox" id="twentynine"value="Image Processing and Computer Vision" />Image Processing and Computer Vision</label>
-        <label for="thirty">
-        <input type="checkbox" id="thirty"value="Machine Learning" />Machine Learning</label>
-        <label for="thirtyone">
-        <input type="checkbox" id="thirtyone"value="Systems and Network Administration" />Systems and Network Administration</label>
-    </div>
-  </div>
-                    
-                </div><br-->
+        
         <div title="07XXXXXXXX">Contact No.</div><input class="form-control" type="text" name="cn" placeholder="Contact Number" required="required" value="{{ $c->ContactNumber}}"><br>
         <div title="old password">Old Password</div><input class="form-control" type="password" name="pwrd" placeholder="Old Password" required="required" ><br>
         <div title="new password or confirm the old password">New Password</div><input class="form-control" type="password" name="nwpswrd" placeholder="New Password" required="required"><br>
@@ -413,6 +304,103 @@
   </div>
 
 </div>
+
+<div id="myModalri" class="modal" >
+
+  <!-- Modal content -->
+  <div class="modal-content" style="width:75%">
+    <span class="close">&times;</span>
+    <form method="POST" action="/updateindustrialistri" enctype="multipart/form-data">
+        @csrf
+        <input type="hidden" name="email" value="{{ $c->CompanyPersonalEmailID}}" >
+        <div title="">Fields of Interests</div><div>
+                    
+                   
+                    <div class="multiselect">
+    <div class="selectBox" name="fos" onclick="showCheckboxes()">
+      <!--select>
+        <option>Select an option</option>
+      </select-->
+      <div class="overSelect"></div>
+    </div>
+    <div id="checkboxes" >
+      <label for="one">
+        <input type="checkbox" id="Advanced database design and systems" name="FieldOfInterests[]" value="Advanced database design and systems" />Advanced database design and systems</label>
+      <label for="two">
+        <input type="checkbox" id="Bioinformatics Computing" name="FieldOfInterests[]" value="Bioinformatics Computing" />Bioinformatics Computing</label>
+        <label for="three">
+        <input type="checkbox" id="Compiler design" name="FieldOfInterests[]" value="Compiler design" />Compiler design</label>
+        <label for="four">
+        <input type="checkbox" id="Computer Networks and Internet Computing" name="FieldOfInterests[]" value="Computer Networks and Internet Computing" />Computer Networks and Internet Computing</label>
+        <label for="five">
+        <input type="checkbox" id="Cryptography and Data Security" name="FieldOfInterests[]" value="Cryptography and Data Security" />Cryptography and Data Security</label>
+        <label for="six">
+        <input type="checkbox" id="Data communication and computer networks" name="FieldOfInterests[]" value="Data communication and computer networks" />Data communication and computer networks</label>
+        <label for="seven">
+        <input type="checkbox" id="Data Structures and Algorithms" name="FieldOfInterests[]" value="Data Structures and Algorithms" />Data Structures and Algorithms</label>
+        <label for="eight">
+        <input type="checkbox" id="Digital Image Processing" name="FieldOfInterests[]" value="Digital Image Processing" />Digital Image Processing</label>
+        <label for="nine">
+        <input type="checkbox" id="E-technologies" name="FieldOfInterests[]" value="E-technologies" />E-technologies</label>
+        <label for="ten">
+        <input type="checkbox" id="Foundations of Computer Science" name="FieldOfInterests[]" value="Foundations of Computer Science" />Foundations of Computer Science</label>
+        <label for="eleven">
+        <input type="checkbox" id="Graphics and Visual Computing" name="FieldOfInterests[]" value="Graphics and Visual Computing" />Graphics and Visual Computing</label>
+       <label for="twelve">
+        <input type="checkbox" id="Multimedia Technologies" name="FieldOfInterests[]" value="Multimedia Technologies" />Multimedia Technologies</label>
+        <label for="thirteen">
+        <input type="checkbox" id="Numerical Computing" name="FieldOfInterests[]" value="Numerical Computing" />Numerical Computing</label>
+        <label for="fourteen">
+        <input type="checkbox" id="Numerical Linear algebra and solutions of differential equations" name="FieldOfInterests[]" value="Numerical Linear algebra and solutions of differential equations" />Numerical Linear algebra and solutions of differential equations</label>
+        <label for="fifeteen">
+        <input type="checkbox" id="Object Oriented Programming" name="FieldOfInterests[]" value="Object Oriented Programming" />Object Oriented Programming</label>
+        <label for="sixteen">
+        <input type="checkbox" id="Parallel computing" name="FieldOfInterests[]" value="Parallel computing" />Parallel computing</label>
+        <label for="seventeen">
+        <input type="checkbox" id="Principles of computer Architecture" name="FieldOfInterests[]" value="Principles of computer Architecture" />Principles of computer Architecture</label>
+        <label for="eighteen">
+        <input type="checkbox" id="Programming in Logic" name="FieldOfInterests[]" value="Programming in Logic" />Programming in Logic</label>
+        <label for="nineteen">
+        <input type="checkbox" id="System design, analysis and project management" name="FieldOfInterests[]" value="System design, analysis and project management" />System design, analysis and project management</label>
+        <label for="twenty">
+        <input type="checkbox" id="Computer Systems" name="FieldOfInterests[]" value="Computer Systems" />Computer Systems</label>
+        <label for="twentyone">
+        <input type="checkbox" id="Human Computer Interaction" name="FieldOfInterests[]" value="Human Computer Interaction" />Human Computer Interaction</label>
+        <label for="twentytwo">
+        <input type="checkbox" id="Design of Algorithms" name="FieldOfInterests[]" value="Design of Algorithms" />Design of Algorithms</label>
+        <label for="twentythree">
+        <input type="checkbox" id="Organisational Behaviour" name="FieldOfInterests[]" value="Organisational Behaviour" />Organisational Behaviour</label>
+        <label for="twentyfour">
+        <input type="checkbox" id="Computer Architecture" name="FieldOfInterests[]" value="Computer Architecture" />Computer Architecture</label>
+        <label for="twentyfive">
+        <input type="checkbox" id="Programming Languages" name="FieldOfInterests[]" value="Programming Languages" />Programming Languages</label>
+        <label for="twentysix">
+        <input type="checkbox" id="Web Technologies" name="FieldOfInterests[]" value="Web Technologies" />Web Technologies</label>
+        <label for="twentyseven">
+        <input type="checkbox" id="Emerging Trends" name="FieldOfInterests[]" value="Emerging Trends" />Emerging Trends</label>
+        <label for="twentyeight">
+        <input type="checkbox" id="High Performance Computing" name="FieldOfInterests[]" value="High Performance Computing" />High Performance Computing</label>
+        <label for="twentynine">
+        <input type="checkbox" id="Image Processing and Computer Vision" name="FieldOfInterests[]" value="Image Processing and Computer Vision" />Image Processing and Computer Vision</label>
+        <label for="thirty">
+        <input type="checkbox" id="Machine Learning" name="FieldOfInterests[]" value="Machine Learning" />Machine Learning</label>
+        <label for="thirtyone">
+        <input type="checkbox" id="Systems and Network Administration" name="FieldOfInterests[]" value="Systems and Network Administration" />Systems and Network Administration</label>
+    </div>
+  </div>
+                    
+                </div><br>
+        <input class="btn btn-primary" type="submit" value="submit">
+        
+    </form>
+  </div>
+
+</div>
+
+
+
+
+
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 @if($msg = session()->get('msg'))
 @if($msg == "Profile Successfully Updated")
@@ -531,6 +519,34 @@ span1.onclick = function() {
 window.onclick = function(event) {
   if (event.target == modal1) {
     modal1.style.display = "none";
+  }
+}
+
+</script>
+
+<script>
+    var modal3 = document.getElementById("myModalri");
+
+// Get the button that opens the modal
+var btn3 = document.getElementById("myBtnri");
+
+// Get the <span> element that closes the modal
+var span3 = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn3.onclick = function() {
+  modal3.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span3.onclick = function() {
+  modal3.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal3) {
+    modal3.style.display = "none";
   }
 }
 

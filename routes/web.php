@@ -45,6 +45,9 @@ Route::post('/updateindustrialist',[UpdateProfiles::class, 'updateindustrialist'
 Route::post('/updateindustrialistpp',[UpdateProfiles::class, 'updateindustrialistpp']);
 Route::post('/updateacademic',[UpdateProfiles::class, 'updateacademic']);
 Route::post('/updateacademicpp',[UpdateProfiles::class, 'updateacademicpp']);
+Route::post('/updateindustrialistri',[UpdateProfiles::class, 'updateindustrialistri']);
+Route::post('/updatestudentri',[UpdateProfiles::class, 'updatestudentri']);
+Route::post('/updateacademicri',[UpdateProfiles::class, 'updateacademicri']);
 
 
 
@@ -179,7 +182,8 @@ Route::get('/shind/{id}',[UserController::class,'shind'])->name('shind');
     $data=App\user::all();
     return view('Admin/Admin')->with('table_data',$data);
 });*/
-
+Route::get('/abcd',[UpdateProfiles::class,'abcd'])->name('abcd');
+Route::post('post',[UpdateProfiles::class,'store'])->name('post');
 
 
 

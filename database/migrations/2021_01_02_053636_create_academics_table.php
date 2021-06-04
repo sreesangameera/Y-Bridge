@@ -27,12 +27,12 @@ class CreateAcademicsTable extends Migration
             $table->String('EmailID')->unique();
             $table->String('LinkedIn')->unique()->nullable();
             $table->Integer('ContactNumber')->nullable();
-            $table->Text('Faculty')->nullable();
-            $table->Text('Department')->nullable();
+            //$table->Text('Faculty')->nullable();
+            //$table->Text('Department')->nullable();
             $table->String('OfficialWebsite')->nullable();
             $table->Text('ResearchInterest')->nullable();
             $table->Text('FieldOfSpecialization')->nullable();
-            $table->String('ResearchID')->nullable();
+            //$table->String('ResearchID')->nullable();
 
             $table->timestamps();
         });

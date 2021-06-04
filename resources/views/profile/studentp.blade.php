@@ -215,6 +215,8 @@ ul.nav-tabs li{
                <div>
             <button id="myBtn" type="button" class="btn btn-primary">Edit Profile</button>
             </div>
+            <button id="myBtnri" type="button" class="btn btn-info">Skills</button>
+            </div>
             
               <button class="btn btn-block btn-warning" style="height:40px;" >
                 <!--i class="fa fa-sign-out"></i-->
@@ -262,6 +264,7 @@ ul.nav-tabs li{
                     <p><strong>LinkedIn: </strong> <a href="{{ $c->LinkedIn}} "> {{ $c->LinkedIn}}</a> </p>
                     <p><strong>Study Programme: </strong> {{ $c->StudyProgramme}} </p>
                     <p><strong>Subject Offered: </strong> {{ $c->SubjectsOffered}} </p>
+                    <p><strong>Skills : </strong> {{ $c->Skills}} </p>
                    
                 </div>   
                       </div>
@@ -440,6 +443,99 @@ ul.nav-tabs li{
 
 </div>
 
+<div id="myModalri" class="modal" >
+
+  <!-- Modal content -->
+  <div class="modal-content" style="width:75%">
+    <span class="close">&times;</span>
+    <form method="POST" action="/updatestudentri" enctype="multipart/form-data">
+        @csrf
+        
+        <input type="hidden" name="email" value="{{ $c->EmailID}}" >
+        <div title="">Skills</div><div>
+                    
+                   
+                    <div class="multiselect">
+    <div class="selectBox" name="fos" onclick="showCheckboxes()">
+      <!--select>
+        <option>Select an option</option>
+      </select-->
+      <div class="overSelect"></div>
+    </div>
+    <div id="checkboxes" >
+      <label for="one">
+        <input type="checkbox" id="Advanced database design and systems" name="Skills[]" value="Advanced database design and systems" />Advanced database design and systems</label>
+      <label for="two">
+        <input type="checkbox" id="Bioinformatics Computing" name="Skills[]" value="Bioinformatics Computing" />Bioinformatics Computing</label>
+        <label for="three">
+        <input type="checkbox" id="Compiler design" name="Skills[]" value="Compiler design" />Compiler design</label>
+        <label for="four">
+        <input type="checkbox" id="Computer Networks and Internet Computing" name="Skills[]" value="Computer Networks and Internet Computing" />Computer Networks and Internet Computing</label>
+        <label for="five">
+        <input type="checkbox" id="Cryptography and Data Security" name="Skills[]" value="Cryptography and Data Security" />Cryptography and Data Security</label>
+        <label for="six">
+        <input type="checkbox" id="Data communication and computer networks" name="Skills[]" value="Data communication and computer networks" />Data communication and computer networks</label>
+        <label for="seven">
+        <input type="checkbox" id="Data Structures and Algorithms" name="Skills[]" value="Data Structures and Algorithms" />Data Structures and Algorithms</label>
+        <label for="eight">
+        <input type="checkbox" id="Digital Image Processing" name="Skills[]" value="Digital Image Processing" />Digital Image Processing</label>
+        <label for="nine">
+        <input type="checkbox" id="E-technologies" name="Skills[]" value="E-technologies" />E-technologies</label>
+        <label for="ten">
+        <input type="checkbox" id="Foundations of Computer Science" name="Skills[]" value="Foundations of Computer Science" />Foundations of Computer Science</label>
+        <label for="eleven">
+        <input type="checkbox" id="Graphics and Visual Computing" name="Skills[]" value="Graphics and Visual Computing" />Graphics and Visual Computing</label>
+       <label for="twelve">
+        <input type="checkbox" id="Multimedia Technologies" name="Skills[]" value="Multimedia Technologies" />Multimedia Technologies</label>
+        <label for="thirteen">
+        <input type="checkbox" id="Numerical Computing" name="Skills[]" value="Numerical Computing" />Numerical Computing</label>
+        <label for="fourteen">
+        <input type="checkbox" id="Numerical Linear algebra and solutions of differential equations" name="Skills[]" value="Numerical Linear algebra and solutions of differential equations" />Numerical Linear algebra and solutions of differential equations</label>
+        <label for="fifeteen">
+        <input type="checkbox" id="Object Oriented Programming" name="Skills[]" value="Object Oriented Programming" />Object Oriented Programming</label>
+        <label for="sixteen">
+        <input type="checkbox" id="Parallel computing" name="Skills[]" value="Parallel computing" />Parallel computing</label>
+        <label for="seventeen">
+        <input type="checkbox" id="Principles of computer Architecture" name="Skills[]" value="Principles of computer Architecture" />Principles of computer Architecture</label>
+        <label for="eighteen">
+        <input type="checkbox" id="Programming in Logic" name="Skills[]" value="Programming in Logic" />Programming in Logic</label>
+        <label for="nineteen">
+        <input type="checkbox" id="System design, analysis and project management" name="Skills[]" value="System design, analysis and project management" />System design, analysis and project management</label>
+        <label for="twenty">
+        <input type="checkbox" id="Computer Systems" name="Skills[]" value="Computer Systems" />Computer Systems</label>
+        <label for="twentyone">
+        <input type="checkbox" id="Human Computer Interaction" name="Skills[]" value="Human Computer Interaction" />Human Computer Interaction</label>
+        <label for="twentytwo">
+        <input type="checkbox" id="Design of Algorithms" name="Skills[]" value="Design of Algorithms" />Design of Algorithms</label>
+        <label for="twentythree">
+        <input type="checkbox" id="Organisational Behaviour" name="Skills[]" value="Organisational Behaviour" />Organisational Behaviour</label>
+        <label for="twentyfour">
+        <input type="checkbox" id="Computer Architecture" name="Skills[]" value="Computer Architecture" />Computer Architecture</label>
+        <label for="twentyfive">
+        <input type="checkbox" id="Programming Languages" name="Skills[]" value="Programming Languages" />Programming Languages</label>
+        <label for="twentysix">
+        <input type="checkbox" id="Web Technologies" name="Skills[]" value="Web Technologies" />Web Technologies</label>
+        <label for="twentyseven">
+        <input type="checkbox" id="Emerging Trends" name="Skills[]" value="Emerging Trends" />Emerging Trends</label>
+        <label for="twentyeight">
+        <input type="checkbox" id="High Performance Computing" name="Skills[]" value="High Performance Computing" />High Performance Computing</label>
+        <label for="twentynine">
+        <input type="checkbox" id="Image Processing and Computer Vision" name="Skills[]" value="Image Processing and Computer Vision" />Image Processing and Computer Vision</label>
+        <label for="thirty">
+        <input type="checkbox" id="Machine Learning" name="Skills[]" value="Machine Learning" />Machine Learning</label>
+        <label for="thirtyone">
+        <input type="checkbox" id="Systems and Network Administration" name="Skills[]" value="Systems and Network Administration" />Systems and Network Administration</label>
+    </div>
+  </div>
+                    
+                </div><br>
+        <input class="btn btn-primary" type="submit" value="submit">
+        
+    </form>
+  </div>
+
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 @if($msg = session()->get('msg'))
 @if($msg == "Profile Successfully Updated")
@@ -550,6 +646,33 @@ span1.onclick = function() {
 window.onclick = function(event) {
   if (event.target == modal1) {
     modal1.style.display = "none";
+  }
+}
+
+</script>
+<script>
+    var modal3 = document.getElementById("myModalri");
+
+// Get the button that opens the modal
+var btn3 = document.getElementById("myBtnri");
+
+// Get the <span> element that closes the modal
+var span3 = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn3.onclick = function() {
+  modal3.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span3.onclick = function() {
+  modal3.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal3) {
+    modal3.style.display = "none";
   }
 }
 

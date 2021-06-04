@@ -15,12 +15,12 @@ class CreateAcademicprojectsTable extends Migration
     {
         Schema::create('academicprojects', function (Blueprint $table) {
             $table->id();
-            $table->String('Destination');
+            $table->String('Destination')->default('Lecturer');
             $table->String('LecturerID');
             $table->String('ProjectID');
-            $table->String('Titleoftheproject');
+            $table->String('Titleoftheproject')->nullable();
             $table->String('Description');
-            $table->String('Technologies');
+           
             $table->String('ProjectType');
             $table->string('StudentID')->nullable();
             $table->string('CompanyPersonalEmailID')->nullable();

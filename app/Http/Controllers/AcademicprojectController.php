@@ -36,7 +36,7 @@ class AcademicprojectController extends Controller
 
         $academicproject->Description = request('Description');
         
-        $academicproject->Technologies = request('Technologies');
+        
         $academicproject->ProjectType = request('ProjectType');
         //$academicproject->ProjectStatus = request('ProjectStatus');
         

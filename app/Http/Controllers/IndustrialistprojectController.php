@@ -39,7 +39,7 @@ class IndustrialistprojectController extends Controller
         $industrialistproject ->Titleoftheproject= request('Titleoftheproject');
         
         //$industrialistproject ->ProjectType = request('ProjectType');
-        $industrialistproject ->Technologies = request('Technologies');
+        
         
         //StudentProject::create($request->all());
         $industrialistproject ->save();

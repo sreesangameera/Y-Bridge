@@ -32,7 +32,7 @@ form {
 	width: 800px; 
 }
 .div1 {
-  width: 300px;
+  width: 700px;
   height: 100px;
   border: 1px solid black;
 }
@@ -48,14 +48,9 @@ form {
 		@csrf
         
 		<p> 
-            Role :<br>
-			<select type="text" value="" name="Destination"> 
-				<option>Student</option> 
-				<!--option>Student</option> 
-				<option>Industrialist</option--> 
-                
-				</select>
-        </p> 
+           
+			<input type="hidden" value="Student" name="Destination"> 
+				
 		<br />
         <p>Student ID :<br> <input type="String"
                         size="45" name="StudentID" />
@@ -85,7 +80,7 @@ form {
 			</select> 
         </p> 
         <br />
-		<p> 
+		<!--p> 
             Technologies :<br>
 			<select type="String" value="" name="Technologies"> 
 				<option>Arduino</option> 
@@ -105,7 +100,7 @@ form {
 				
             </select>
         </p> 
-		<br />
+		<br /-->
 		<br />
 		
 			<input class="btn btn-warning" type="Submit"

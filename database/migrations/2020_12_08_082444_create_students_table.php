@@ -28,6 +28,7 @@ class CreateStudentsTable extends Migration
             $table->Integer('ContactNumber')->nullable();
             $table->String('YearOfStudy')->nullable();
             $table->Text('StudyProgramme')->nullable();
+            $table->String('Skills')->nullable();
             $table->Text('SubjectsOffered')->nullable();
             
 

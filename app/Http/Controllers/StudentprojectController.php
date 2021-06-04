@@ -38,7 +38,7 @@ class StudentprojectController extends Controller
         $studentproject->Description = request('Description');
         
         $studentproject->ProjectType = request('ProjectType');
-        $studentproject->Technologies = request('Technologies');
+       
         
         //StudentProject::create($request->all());
        $studentproject->save();

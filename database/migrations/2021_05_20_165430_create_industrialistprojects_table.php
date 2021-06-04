@@ -15,12 +15,12 @@ class CreateIndustrialistprojectsTable extends Migration
     {
         Schema::create('industrialistprojects', function (Blueprint $table) {
             $table->id();
-            $table->string('Destination');
+            $table->string('Destination')->default('Industrialist');
             $table->Text('CompanyPersonalEmailID');
             $table->String('Titleoftheproject')->nullable();
             $table->String('Description');
             $table->String('ProjectID');
-            $table->String('Technologies');
+            
             $table->string('StudentID')->nullable();
             $table->string('LecturerID')->nullable();
             

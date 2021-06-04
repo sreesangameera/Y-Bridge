@@ -15,13 +15,13 @@ class CreateStudentprojectsTable extends Migration
     {
         Schema::create('studentprojects', function (Blueprint $table) {
             $table->id();
-            $table->string('Destination');
+            $table->string('Destination')->default('Student');
             $table->string('StudentID');
             $table->string('projectID');
-            $table->string('Titleoftheproject');
+            $table->string('Titleoftheproject')->nullable();
             $table->string('Description');
             $table->string('ProjectType');
-            $table->string('Technologies');
+            
             $table->string('LecturerID')->nullable();
             $table->string('CompanyPersonalEmailID')->nullable();
             $table->timestamps();
