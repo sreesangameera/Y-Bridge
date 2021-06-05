@@ -169,10 +169,10 @@
             <a href="/lnotifi" type="button" class="btn btn-success ">Notifications</a>
             </div>
             <button id="myBtn"type="button" class="btn btn-primary">Edit Profile</button>
-            </div>
+            </div><div>
             <button id="myBtnri"type="button" class="btn btn-info">Field of Specialization</button>
             </div>
-              <button class="btn btn-block btn-warning" style="height:40px;" >
+              <button class="btn btn-block btn-warning" style="height:32 px;" >
                 <!--i class="fa fa-sign-out"></i-->
                 <form method="POST" action="{{ route('logout') }}">
                             @csrf
@@ -185,6 +185,7 @@
                         </form>
                 
               </button>
+                  </div>
               
             </div>
             
@@ -202,6 +203,9 @@
               
               <ul class="nav nav-tabs">
                 <li class="nav-item"><a href="" class="active nav-link">Profile</a></li>
+                <!--li class="nav-item"><a href="/sppa" type="button" class="btn btn-secondary " class="nav-link">Project</a></li>
+                <li class="nav-item"><a href="/lnotifi" type="button" class="btn btn-success " class="nav-link">Notifications</a></li>
+                <li class="nav-item"><a href="/sppa" type="button" class="btn btn-secondary " class="nav-link">a</a></li-->
               </ul>
               <div class="tab-content pt-3">
                 <div class="tab-pane active">
@@ -367,8 +371,8 @@
         <div title="07XXXXXXXX">Contact No.</div><input class="form-control" type="text" name="cno" placeholder="Contact Number"  value="{{ $c->ContactNumber}}"><br>
         <div title="www.sitename.lk/com">Official website</div><input class="form-control" type="text" name="ow" placeholder="Official Website" required="required" value="{{ $c->OfficialWebsite}}"><br>
         
-        <div title="old password">Old Password</div><input class="form-control" type="password" name="pwrd" placeholder="Old Password" required="required" ><br>
-        <div title="new password or confirm the old password">New Password</div><input class="form-control" type="password" name="nwpswrd" placeholder="New Password" required="required"><br>
+        <div title="old password">Old Password</div><input class="form-control" type="password" id="pwrd" name="pwrd" placeholder="Old Password" required="required" ><br>
+        <div title="new password or confirm the old password">New Password</div><input id="nwpwrd" class="form-control" type="password" name="nwpswrd" placeholder="New Password" required="required"><br>
         <input class="btn btn-primary" type="submit" value="submit">
         
     </form>
@@ -481,7 +485,7 @@
         
         
         
-        <div title="">Research Interest</div> <select><div>
+        <!--div title="">Research Interest</div> <select><div>
                     
                    
                     <div class="multiselect">
@@ -491,7 +495,7 @@
       <div class="overSelect"></div>
     </div>
     <div id="checkboxes" >
-      <label for="one">
+      <label for="thirtytwo">
         <input type="checkbox" id="Advanced database design and systems" name="ResearchInterest[]" value="Advanced database design and systems" />Advanced database design and systems</label>
       <label for="two">
         <input type="checkbox" id="Bioinformatics Computing" name="ResearchInterest[]" value="Bioinformatics Computing" />Bioinformatics Computing</label>
@@ -554,7 +558,7 @@
         <label for="thirtyone">
         <input type="checkbox" id="Systems and Network Administration" name="ResearchInterest[]" value="Systems and Network Administration" />Systems and Network Administration</label>
     
-                    
+                    -->
                 <br>
         
         

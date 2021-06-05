@@ -22,7 +22,7 @@
 
         <form method="POST" action="/registeruser">
             @csrf
-                <div>
+                <div title="select">
                     <x-label for="role" :value="__('Role')" />
                     <select class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" id="role" name="role" :value="old('role')" required autofocus>
                         <option value="Lecturer">Lecturer</option>
@@ -48,28 +48,28 @@
                     </select>
                 </div>
             <div>
-                <x-label for="fname" :value="__('First Name')" />
+                <x-label for="fname"  title="firstname" :value="__('First Name')" />
 
                 <x-input id="fname" class="block mt-1 w-full" type="text" name="fname" :value="old('fname')" required autofocus />
             </div>
 </br>
             <!-- Name -->
             <div>
-                <x-label for="lname" :value="__('Last Name')" />
+                <x-label for="lname" title="lastname" :value="__('Last Name')" />
 
                 <x-input id="lname" class="block mt-1 w-full" type="text" name="lname" :value="old('lname')" required autofocus />
             </div>
 
             <!-- Email Address -->
             <div class="mt-4">
-                <x-label for="email" :value="__('Email')" />
+                <x-label for="email" title="email" :value="__('Email')" />
 
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
 
             <!-- Password -->
             <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
+                <x-label for="password" title="password should have 8 alphabetic character with at least one number" :value="__('Password')" />
 
                 <x-input id="password" class="block mt-1 w-full"
                                 type="password"
@@ -115,17 +115,7 @@
           });
      </script>
      
-     @elseif($msg == "This email already have an account")
-     <script>
-     Swal.fire({
-               position: 'top',
-               icon: 'error',
-               title: '{{$msg}}',
-               showConfirmButton: false,
-               timer: 2000
-            
-          });
-     </script>
+     
      
      @endif
      @endif

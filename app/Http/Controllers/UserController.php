@@ -126,6 +126,16 @@ class UserController extends Controller
     }
 
     public function registeruser(Request $request){
+        $request->validate([
+          
+            'fname' => 'required',
+            'lname' => 'required',
+            'role' => 'required',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:8|regex:/^.*(?=.{3,})(?=.*[a-zA-Z]).*$/|
+            confirmed',
+        ]);
+        
         try{
         $user=new User;
        
@@ -133,7 +143,7 @@ class UserController extends Controller
             $user->lname=$request->lname;
             $user->role=$request->role;
             $user->email=$request->email;
-            $user->password= Hash::make($request->password);
+            $user->password= Hash::make($request->password_confirmation);
             $user->save();
         }
         catch(\Illuminate\Database\QueryException $exception){
@@ -144,7 +154,8 @@ class UserController extends Controller
         $details=['title'=>'new user is waiting',
                   'body'=>' : '];
            Mail::to('ybridgejaffna@gmail.com')->send(new ybridge_mail($details));
-        return redirect()->back()->with('msg',$t);     
+        return redirect()->back()->with('msg',$t);    
+    
      }
 
      public function selectu($id){

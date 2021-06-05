@@ -216,9 +216,9 @@ ul.nav-tabs li{
             <button id="myBtn" type="button" class="btn btn-primary">Edit Profile</button>
             </div>
             <button id="myBtnri" type="button" class="btn btn-info">Skills</button>
-            </div>
             
-              <button class="btn btn-block btn-warning" style="height:40px;" >
+            <div>
+              <button class="btn btn-block btn-warning" style="height:32px;" >
                 <!--i class="fa fa-sign-out"></i-->
                 <form method="POST" action="{{ route('logout') }}">
                             @csrf
@@ -231,7 +231,7 @@ ul.nav-tabs li{
                         </form>
                 
               </button>
-              
+            </div>
             </div>
             
           </div>

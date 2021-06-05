@@ -12,6 +12,13 @@ use Illuminate\Support\Facades\Auth;
 class UpdateProfiles extends Controller
 {
     public function updatestudent(Request $request){
+        /*$request->validate([
+          
+            'StudentID'=>'required|',
+           'email' => 'required|email|unique:users',
+            'password' => 'required|min:8|regex:/^.*(?=.{3,})(?=.*[a-zA-Z]).*$/',
+            'confirm'=> 'required|min:8|regex:/^.*(?=.{3,})(?=.*[a-zA-Z]).*$/'
+        ]);*/
 
         $dt = Carbon::createFromFormat('Y-m-d',$request->dob );
 
@@ -83,7 +90,7 @@ class UpdateProfiles extends Controller
                                                                                     'CompanyName'=>$request->comn,
                                                                                     'Designation'=>$request->designation,
                                                                                     'LinkedIn'=>$request->linkedin,
-                                                                                    'FieldOfInterests'=>implode(',',$request->FieldOfInterests),
+                                                                                    
                                                                                     'ContactNumber'=>$request->cn,
                                                                                     
                                                                         ]);
@@ -124,6 +131,13 @@ public function updateindustrialistri(Request $request){
 }
     
     public function updateacademic(Request $request){
+       /* $request->validate([
+          
+            
+           
+            'pwrd' => 'required|min:8',
+            'nwpwrd'=> 'required|min:8'
+        ]);*/
 
         $dt = Carbon::createFromFormat('Y-m-d',$request->dob );
 
@@ -146,8 +160,7 @@ public function updateindustrialistri(Request $request){
                                                                         'LinkedIn'=>$request->linkedin,
                                                                         'ContactNumber'=>$request->cno,
                                                                         'OfficialWebsite'=>$request->ow,
-                                                                        'ResearchInterest'=>implode(',',$request->ResearchInterest),
-                                                                        'FieldOfSpecialization'=>implode(',',$request->FieldOfSpecialization),
+                                                                        
                                                                         
                                                                         ]);
             DB::table('users')->where('email',$request->email)->update(['password'=>Hash::make($request->nwpswrd)]);
@@ -180,18 +193,12 @@ public function updateindustrialistri(Request $request){
     
 }
 public function updateacademicri(Request $request){
-    try{
+    
     DB::table('academics')->where('EmailID',$request->email)->update(['FieldOfSpecialization'=>implode(',',$request->FieldOfSpecialization),'FieldOfSpecialization'=>implode(',',$request->FieldOfSpecialization)]);
    
-}
-catch(\Illuminate\Database\QueryException $exception){
-    $s="These info should be filled";
-    return redirect()->back()->with('msg',$s);
+
+    
+    return redirect()->back();
 }
 
-}
-public function abcd(){
-    $email=   Auth::user()->email ;
-    $c=DB::table('industrialists')->where('CompanyPersonalEmailID',$email)->first();
-    return view('testab')->with('c',$c);      }
 }
