@@ -131,12 +131,13 @@ public function updateindustrialistri(Request $request){
 }
     
     public function updateacademic(Request $request){
-       /* $request->validate([
+        /*$request->validate([
           
-            
-           
+        
+            'cno' => 'required|min:8|regex:/^.*(?=.{3,}).*$/',
             'pwrd' => 'required|min:8',
-            'nwpwrd'=> 'required|min:8'
+            'nwpwrd' => 'required|min:8|regex:/^.*(?=.{3,})(?=.*[a-zA-Z]).*$/'
+            
         ]);*/
 
         $dt = Carbon::createFromFormat('Y-m-d',$request->dob );
@@ -194,7 +195,7 @@ public function updateindustrialistri(Request $request){
 }
 public function updateacademicri(Request $request){
     
-    DB::table('academics')->where('EmailID',$request->email)->update(['FieldOfSpecialization'=>implode(',',$request->FieldOfSpecialization),'FieldOfSpecialization'=>implode(',',$request->FieldOfSpecialization)]);
+    DB::table('academics')->where('EmailID',$request->email)->update(['FieldOfSpecialization'=>implode(',',$request->FieldOfSpecialization),'ResearchInterest'=>implode(',',$request->ResearchInterest)]);
    
 
     

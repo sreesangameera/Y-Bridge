@@ -7,8 +7,31 @@
   <title>Profile</title>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<meta name="_token" content="{{ csrf_token() }}">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.6/cropper.css"/>
 <link rel="shortcut icon" href="images/uoj.ico" type="image/x-icon" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.6/cropper.js"></script>
 </head>
+<style type="text/css">
+img {
+display: block;
+max-width: 100%;
+}
+.preview {
+overflow: hidden;
+width: 160px; 
+height: 160px;
+margin: 10px;
+border: 1px solid red;
+}
+.modal-lg{
+max-width: 1000px !important;
+}
+</style>
 <style>
     body{
     margin-top:20px;
@@ -58,18 +81,17 @@
   width: 140px;
   height: 140px;
 }
-
-.tooltip span {
-    display:none;
-}
-.tooltip:hover span {
-    display:block;
-    position:fixed;
-    overflow:hidden;
+input[type=text], select, textarea{
+  width: 100%;
+  padding: 1px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
 }
 </style>
 <body>
-<div class="container">
+<div class="container" >
 <div class="row flex-lg-nowrap">
   <div class="col-12 col-lg-auto mb-3" style="width: 200px;">
     <!--div class="card p-3">
@@ -92,44 +114,41 @@
               <div class="row">
                 <div class="col-12 col-sm-auto mb-3">
                   <div class="mx-auto" style="width: 140px;">
-                  <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px; background-color: rgb(233, 236, 239);">
-                    <!--a href=""-->
-                    <img src="/upload/profile/{{ $c->Photo}}" class="profilep" alt="">
+                    <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px; background-color: rgb(233, 236, 239);">
+                    
+                    <img src="/upload/profile/{{ $c->photo}}" class="profilep" alt="">
                     
                   </a>
                       <!--span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span-->
                     </div>
-                   
-                  </div>
-                  <h6>If you wish to add me to your project,fill these requrements and click request</h6>
-                  <form method="post" action="/sreq">
-                  @csrf
-                  <input type="text" placeholder="Student Id" name="stid">
-                  <input type="text" placeholder="Project Id" name="pid">
-                  <input type="hidden" placeholder="Project Id" name="lid" value="{{ $c->CompanyPersonalEmailID}}">
-                  <input type="hidden" placeholder="Project Id" name="ln" value="{{ $c->NameWithInitials}}">
-
-                  <button  type="submit" class="btn btn-warning btn-rounded">Request for project </button>
-                  </form>
-                </div>
-                
-            <div>
-            
-            <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
-                  <div class="text-center text-sm-left mb-2 mb-sm-0">
-                    <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">{{ $c->NameWithInitials}}</h4>
-                    <p class="mb-0">{{ $c->CompanyPersonalEmailID}}</p>
-                    <!--div class="text-muted"><small>Last seen 2 hours ago</small></div-->
-                    <!--div class="mt-2">
-                      <--button class="btn btn-primary" type="button">
-                        <i class="fa fa-fw fa-camera"></i>
-                        <span>Change Photo</span>
-                      </button-->
-                    </div-->
                     <div>
             
             </div>
+            
                   </div>
+                  <h6>If you wish to add me to your project,fill these requrements and click request</h6>
+                  <form method="post" action="/lreq">
+                  @csrf
+                  <input type="text" placeholder="Industrialist Email Id" name="inid">
+                  <input type="text" placeholder="Project Id" name="pid">
+                  <input type="hidden" placeholder="Project Id" name="stid" value="{{ $c->StudentID}}">
+                  <input type="hidden" placeholder="Project Id" name="stn" value="{{ $c->FirstName}}{{' '}}{{ $c->LastName}}">
+
+                  <button  type="submit" class="btn btn-warning btn-rounded">Request for project </button>
+                  </form>
+                  
+                </div>
+                <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
+                  <div class="text-center text-sm-left mb-2 mb-sm-0">
+                    <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">{{ $c->FirstName}}{{' '}}{{ $c->LastName}}</h4>
+                    <p class="mb-0">{{ $c->StudentID}}</p>
+                    <p class="mb-0">{{ $c->YearOfStudy}}</p>
+                    <!--div class="text-muted"><small>Last seen 2 hours ago</small></div-->
+                    <!--div class="mt-2">
+                      
+                    </div-->
+                  </div>
+                  
 
                   <div class="btn-toolbar">
                   <div class="text-center text-sm-right">
@@ -137,7 +156,14 @@
                   
         
           
-            <div class="px-xl-3">
+            <div class="px-xl-3" >
+            
+               
+            
+              
+                      
+              
+            </div>
             
           </div>
           
@@ -150,29 +176,33 @@
                   
                 
               </div>
-              <ul class="nav nav-tabs">
+              <ul class="nav nav-tabs" >
                 <li class="nav-item"><a href="" class="active nav-link">Profile</a></li>
               </ul>
-              <div class="tab-content pt-3">
+              <div class="tab-content pt-3" >
                 <div class="tab-pane active">
-                  <form class="form" novalidate="">
+                  <form class="form" novalidate="" >
                     <div class="row">
                       <div class="col">
-                      <div class="col-xs-12 col-sm-8">
+                      <div class="col-xs-12 col-sm-8" >
                     
-                      <p><strong>CompanyName: </strong> {{ $c->CompanyName}} </p>
-                    <p><strong>Company Personal Email: </strong> {{ $c->CompanyPersonalEmailID}} </p>
-                    <p><strong>Designation: </strong> {{ $c->Designation}}</ </p>
-                    <p><strong>LinkedIn: </strong><a href="{{ $c->LinkedIn}} "> {{ $c->LinkedIn}}</a> </p>
-                    <p><strong>Fields Of Interests: </strong> {{ $c->FieldOfInterests}} </p>
-                    <p><strong>ContactNumber: </strong> {{ $c->ContactNumber}} </p>
-                    
-                      
+                    <p><strong>Gender: </strong> {{ $c->Gender}} </p>
+                    <p><strong>StudentId: </strong> {{ $c->StudentID}} </p>
+                    <p><strong>DOB: </strong> {{ $c->DateOfBirth}} </p>
+                    <p><strong>Email: </strong> {{ $c->EmailID}} </p>
+                    <!--p><strong>Home Address: </strong> {{ $c->HomeAddress}} </p>
+                    <p><strong>Contact No: </strong> {{ $c->ContactNumber}} </p-->
+                    <p><strong>LinkedIn: </strong> <a href="{{ $c->LinkedIn}} "> {{ $c->LinkedIn}}</a> </p>
+                    <p><strong>Study Programme: </strong> {{ $c->StudyProgramme}} </p>
+                    <p><strong>Subject Offered: </strong> {{ $c->SubjectsOffered}} </p>
+                    <p><strong>Skills : </strong> {{ $c->Skills}} </p>
+                   
                 </div>   
                       </div>
                     </div>
+                    
                     <br>
-                    <!--h6>If you wish to add me to your project,fill these requrements and click request</h6-->
+                    
                     <div>
                     
                     </div>
@@ -247,6 +277,8 @@
 </div>
 </div>
 
+
+
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 @if($msg = session()->get('msg'))
 @if($msg == "Your Request has been sent")
@@ -273,6 +305,7 @@
      </script>
      @endif
      @endif
+
 
 </body>
 </html>

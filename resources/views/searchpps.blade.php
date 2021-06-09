@@ -51,7 +51,7 @@ div {text-align: center;}
   type="button"
   class="btn btn-success btn-rounded"
   data-mdb-ripple-color="dark"
- href="/sspro">My Projects</a>
+ href="/sspro/{id}">My Projects</a>
 
 <br>
 <br>

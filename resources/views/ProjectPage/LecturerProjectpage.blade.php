@@ -55,7 +55,7 @@ form {
 		 <p> 
          <input type="hidden" value="Lecturer" name="Destination">
 		<br />
-        <p>Lecturer ID :<br> <input type="text"
+        <p>Lecturer ID :<br> <input type="text" placeholder="LecturerId"
                         size="45" name="LecturerID" />
                     </p> 
 
@@ -63,21 +63,21 @@ form {
                    
         <br /> 
         
-        <p>Project ID :<br> <input type="text"
+        <p>Project ID :<h12>(use employee id with a number)</h12><br> <input type="text" placeholder="LecturerId-1"
                         size="45" name="ProjectID" />
                     </p> 
 
 
                    
 		<br /> 
-		<p>Title of the project :<br> <input type="text"
+		<p>Title of the project :<br> <input id="totp" type="text" placeholder="Title"
                         size="65" name="Titleoftheproject" />
                     </p> 
 
 
                    
 		<br /> 
-		<p>Description :<br> <textarea type="text"
+		<p>Description :<br> <textarea type="text" placeholder="Description"
 						class="div1" name="Description" ></textarea></p> 
         <br /> 
         <!--p> 

@@ -10594,471 +10594,471 @@ class DictionarySeeder extends Seeder
     
                 'keywordId'=>'1705',
                 'keywordName'=>'data mining', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1706',
                 'keywordName'=>'statistics',
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1707',
                 'keywordName'=>'computer vision', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1708',
                 'keywordName'=>'unsupervised learning',
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1709',
                 'keywordName'=>'deep learning', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1710',
                 'keywordName'=>'supervised learning', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1711',
                 'keywordName'=>'artificial intelligence', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1712',
                 'keywordName'=>'mathematical optimization', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1713',
                 'keywordName'=>'training data', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1714',
                 'keywordName'=>'connectionism', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1715',
                 'keywordName'=>'probability theory', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1716',
                 'keywordName'=>'medical diagnosis', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1717',
                 'keywordName'=>'overfitting', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1718',
                 'keywordName'=>'loss function', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1719',
                 'keywordName'=>'brain',
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1720',
                 'keywordName'=>'statistical classification', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1721',
                 'keywordName'=>'heuristic',
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1722',
                 'keywordName'=>'genetic algorithm', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1723',
                 'keywordName'=>'discipline',
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1724',
                 'keywordName'=>'ibmer',
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1725',
                 'keywordName'=>'discovery', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1726',
                 'keywordName'=>'bioinformatics', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1727',
                 'keywordName'=>'perceptron',
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1728',
                 'keywordName'=>'adaline',
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1729',
                 'keywordName'=>'sample', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1730',
                 'keywordName'=>'gofai',
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1731',
                 'keywordName'=>'backpropaggation',
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1732',
                 'keywordName'=>'matrix',
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1733',
                 'keywordName'=>'mathematical model', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1734',
                 'keywordName'=>'ranking',
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1735',
                 'keywordName'=>'email filtering', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1736',
                 'keywordName'=>'computational statistics', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1737',
                 'keywordName'=>'exploratory', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1738',
                 'keywordName'=>'predictive analytics',
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1739',
                 'keywordName'=>'topic modeling', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1740',
                 'keywordName'=>'dimensionality reduction', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1741',
                 'keywordName'=>'meta learning', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1742',
                 'keywordName'=>'arthur samuel', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1743',
                 'keywordName'=>'computer gaming', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1744',
                 'keywordName'=>'operational definition', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1745',
                 'keywordName'=>'alan turing', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1746',
                 'keywordName'=>'intelligence',
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1747',
                 'keywordName'=>'neural network', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1748',
                 'keywordName'=>'generalized linear', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1749',
                 'keywordName'=>'speech recognition', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1750',
                 'keywordName'=>'expert system', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1751',
                 'keywordName'=>'inductive ', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1752',
                 'keywordName'=>'pattern recognition',
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1753',
                 'keywordName'=>'tensor',
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1754',
                 'keywordName'=>'information retrival', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1755',
                 'keywordName'=>'computer science', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1756',
                 'keywordName'=>'john hopfield', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1757',
                 'keywordName'=>'knowledge discovery', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1758',
                 'keywordName'=>'autoencoder',
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1759',
                 'keywordName'=>'statistical inference', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1760',
                 'keywordName'=>'pricing', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1761',
                 'keywordName'=>'data science', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1762',
                 'keywordName'=>'random forest',
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1763',
                 'keywordName'=>'computational learning theory', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1764',
                 'keywordName'=>'errors and residuals', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1765',
                 'keywordName'=>'time complexity', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1766',
                 'keywordName'=>'piecewise',
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1767',
                 'keywordName'=>'array data structure', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1768',
                 'keywordName'=>'active learning', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1769',
                 'keywordName'=>'regression analysis', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1770',
                 'keywordName'=>'similarity learning', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1771',
                 'keywordName'=>'recommendation systems', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1772',
                 'keywordName'=>'density estimation',
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1773',
                 'keywordName'=>'weak supervision', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1774',
                 'keywordName'=>'control theory',
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1775',
                 'keywordName'=>'game theory',
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1776',
                 'keywordName'=>'simulation-based optimization', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1777',
                 'keywordName'=>'swarm intelligence', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1778',
                 'keywordName'=>'entailment',
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1779',
                 'keywordName'=>'feature engineering', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1780',
                 'keywordName'=>'dynamic programming', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1781',
                 'keywordName'=>'multilayer perceptron', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     DB::table('dictionaries')->insert([
     
                 'keywordId'=>'1782',
                 'keywordName'=>'dictionary learning', 
-                'mainTermId' => '39',
+                'mainTermId' => '10',
  ]);
     
     DB::table('dictionaries')->insert([

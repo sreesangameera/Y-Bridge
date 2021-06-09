@@ -240,11 +240,6 @@ class MainTerm extends Seeder
              ]);
 
              DB::table('mainTerms')->insert([
-
-             'mainTermId'=>'39',
-             'mainTerm'=>'Machine Learning',]);
-
-             DB::table('mainTerms')->insert([
              'mainTermId'=>'40',
              'mainTerm'=>'Systems and Network Administration',
             ]);

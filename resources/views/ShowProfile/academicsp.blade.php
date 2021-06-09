@@ -127,7 +127,17 @@
                     
                   </div>
                   <div>
-            <button  type="button" class="btn btn-warning btn-rounded"><a href="/spps">Request for project + </a></button>
+                  <h6>If you wish to add me to your project,fill these requrements and click request</h6>
+                  <form method="post" action="/sreq">
+                  @csrf
+                  <input type="text" placeholder="Student Id" name="stid">
+                  <input type="text" placeholder="Project Id" name="pid">
+                  <input type="hidden" placeholder="Project Id" name="lid" value="{{ $c->EmployeeID }}">
+                  <input type="hidden" placeholder="Project Id" name="ln" value="{{ $c->Title}}{{ $c->FirstName}}{{' '}}{{ $c->LastName}}">
+
+                  <button  type="submit" class="btn btn-warning btn-rounded">Request for project + </button>
+                  </form>
+            
             </div>
                 </div>
                 <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
@@ -185,8 +195,8 @@
                     <p><strong>LinkedIn: </strong> <a href="{{ $c->LinkedIn}} ">{{ $c->LinkedIn}}</a> </p>
                     <p><strong>Contact No: </strong> {{ $c->ContactNumber}} </p>
                     <p><strong>Official Website: </strong><a href="{{ $c->OfficialWebsite}} ">{{ $c->OfficialWebsite}}</a></p>
-                    <!--p><strong>Research Interest: </strong> {{ $c->ResearchInterest}} </p>
-                    <p><strong>Field of Specialization: </strong> {{ $c->FieldOfSpecialization}} </p-->
+                    <p><strong>Research Interest: </strong> {{ $c->ResearchInterest}} </p>
+                    <p><strong>Field of Specialization: </strong> {{ $c->FieldOfSpecialization}} </p>
                     
                 </div>   
                       </div>
@@ -261,7 +271,32 @@
   </div>
 </div>
 </div>
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+@if($msg = session()->get('msg'))
+@if($msg == "Your Request has been sent")
+<script>
+     Swal.fire({
+               position: 'top',
+               icon: 'success',
+               title: '{{$msg}}',
+               showConfirmButton: false,
+               timer: 2000
+            
+          });
+     </script>
+     @elseif($msg == "This field can not be null")
+     <script>
+     Swal.fire({
+               position: 'top',
+               icon: 'error',
+               title: '{{$msg}}',
+               showConfirmButton: false,
+               timer: 2000
+            
+          });
+     </script>
+     @endif
+     @endif
 
 </body>
 </html>

@@ -71,13 +71,36 @@ class AcademicprojectController extends Controller
          $connectionl->LecturerID = request('LecturerID');
          $connectionl->MainTermID = $maxMainKey;
          $connectionl->save();
+
+         $stu = DB::table('students')->select('Skills','LastName','FirstName','StudentID')->get();
+
+     $stuInt= [];
+    $id = [];
+     foreach($stu as $s){
+         if(strcasecmp($s->Skills,'') != 0){
+              $stuInt = explode(',',$s->Skills);
+         
+         
+        for($i = 0 ; $i < count($stuInt); $i++){
+            $num = DB::table('mainTerms')->where('mainTerm',$stuInt[$i])->first();  
+                  
+           if($maxMainKey == (integer)$num->mainTermId){
+            
+               array_push($id, $s->StudentID);
+               break;
+            
+        }
+     
+     }
+         }
+    }
          
         $lec =DB::table('connections')->where('mainTermId',$maxMainKey)->pluck('StudentID')->toArray(); 
         $connect = new Suggestion();
         $connect->Destination=request('Destination');
         $connect->MainTermID = $maxMainKey;
         $connect->LecturerID = request('LecturerID');
-        $connect->StudentID = implode(",",$lec);
+        $connect->StudentID = implode(",",$id);
         $connect->save();}
 
         /*$stuss =DB::table('connectindustrialists')->where('MainTermID',$maxMainKey)->pluck('NameWithInitials')->toArray();
@@ -97,5 +120,6 @@ class AcademicprojectController extends Controller
        // $connect->save();
 
     return redirect('/urp');
+    //return redirect()->route('urp',['id'=> request('EmployeeID')]);
     }
 }

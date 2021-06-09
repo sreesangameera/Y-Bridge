@@ -266,6 +266,11 @@ public function shstu($id){
     $c=DB::table('students')->where('StudentID',$q)->first();
 return view('ShowProfile/studentsp')->with('c', $c);
 }
+public function shstu2($id){
+    $q=str_replace("*","/",$id);
+    $c=DB::table('students')->where('StudentID',$q)->first();
+return view('ShowProfile/studentsp2')->with('c', $c);
+}
 
 public function shind($id){
     $r=str_replace("*","/",$id);
@@ -274,33 +279,118 @@ return view('ShowProfile/industrialistsp')->with('c', $c);
 }
 
 public function sug(){
-           
-    $ss =DB::table('suggestions')->orderby('id','DESC')->limit(1)->value('LecturerID');
-    $ssi =DB::table('suggestions')->orderby('id','DESC')->limit(1)->value('CompanyPersonalEmailID');
+    $id = $_GET['id'];
 
-    //$su=implode("<br>",$user->LecturerID)->with('suggestiont',$ssi);
-    
-        return view('studentprojects/suggestion')->with('suggestiont',$ss)->with('suggestionta',$ssi);
-  
+
+$ss =DB::table('suggestions')->where('StudentID',$id)->orderby('id','DESC')->limit(1)->value('LecturerID');
+$ssar = explode(',',$ss);
+$sw = DB::table('academics')->whereIn('EmployeeID',$ssar)->get()->toArray();
+
+
+$ssi =DB::table('suggestions')->where('StudentID',$id)->orderby('id','DESC')->limit(1)->value('CompanyPersonalEmailID');
+$ssa = explode(',',$ssi);
+$si = DB::table('industrialists')->whereIn('CompanyPersonalEmailID',$ssa)->get()->toArray();
+//$su=implode("<br>",$user->LecturerID)->with('suggestiont',$ssi);
+return view('studentprojects/suggestion')->with('suggestiont',$sw)->with('suggestionta',$si);
+
+///return gettype($ssi);
+
 }
-    //return view('studentprojects/sugglec')->with('suggestionlec',$ll);
-  
+//return view('studentprojects/sugglec')->with('suggestionlec',$ll);
+
 
 public function sugglec(){
-       
-$ll =DB::table('suggestions')->orderby('id','DESC')->limit(1)->value('StudentID');
-$lli =DB::table('suggestions')->orderby('id','DESC')->limit(1)->value('CompanyPersonalEmailID');
-$x=explode(',',$ll,0);
-    return view('studentprojects/sugglec')->with('suggestionlec',$ll);
-    
+
+ $ll =DB::table('suggestions')->orderby('id','DESC')->limit(1)->value('StudentID');
+ $lli =DB::table('suggestions')->orderby('id','DESC')->limit(1)->value('CompanyPersonalEmailID');
+ $x=explode(',',$ll,0);
+     return view('studentprojects/sugglec')->with('suggestionlec',$ll);
+     
+ }
+
+/**public function sugglec(){
+     $id = $_GET['id'];
+
+
+$ssl =DB::table('suggestions')->where('LecturerID',$id)->orderby('id','DESC')->limit(1)->value('StudentID');
+$sslr = explode(',',$ssl);
+$swl = DB::table('students')->whereIn('StudentID',$sslr)->get()->toArray();
+return view('studentprojects/sugglec')->with('suggestionlec',$swl);
+ }**/
+
+
+ /**public function suggind(){
+     $id = $_GET['id'];
+
+
+$ss =DB::table('suggestions')->where('CompanyPersonalEmailID',$id)->orderby('id','DESC')->limit(1)->value('StudentID');
+$ssa = explode(',',$ss);
+$sd = DB::table('students')->whereIn('StudentID',$ssa)->get()->toArray();
+
+return view('studentprojects/suggind')->with('suggestionind',$sd);
+ }
+}**/
+ public function suggind(){
+
+     $ii =DB::table('suggestions')->orderby('id','DESC')->limit(1)->value('StudentID');
+     $iil =DB::table('suggestions')->orderby('id','DESC')->limit(1)->value('LecturerID');
+     
+         return view('studentprojects/suggind')->with('suggestionind',$ii);
+     }
+//stu-lec
+public function streq(request $request){
+    try{$email=   Auth::user()->email ;
+        $fn=DB::table('students')->where('EmailID',$email)->value('FirstName');
+        $ln=DB::table('students')->where('EmailID',$email)->value('LastName');
+
+    DB::table('requests')->insert([
+        'sid' => $request->stid,'rid' => $request->lid,'rn' => $request->ln,'sn' => $fn." ".$ln,'pid' => $request->pid ]);}
+        catch(\Illuminate\Database\QueryException $exception){
+            $s="This field can not be null";
+            return redirect()->back()->with('msg',$s);
+        }
+
+        return redirect()->back()->with('msg',"Your Request has been sent");
 }
+//stu-ind
+public function lereq(request $request){
+    try{$email=   Auth::user()->email ;
+    $nwi=DB::table('industrialists')->where('CompanyPersonalEmailID',$email)->value('NameWithInitials');
+    
 
-public function suggind(){
+        DB::table('requests')->insert([
+            'sid' => $request->inid,'rid' => $request->stid,'rn' => $request->stn,'sn' => $nwi,'pid' => $request->pid ]);}
+            catch(\Illuminate\Database\QueryException $exception){
+                $s="This field can not be null";
+                return redirect()->back()->with('msg',$s);
+            }
+    
+            return redirect()->back()->with('msg',"Your Request has been sent");
+        
+
        
-$ii =DB::table('suggestions')->orderby('id','DESC')->limit(1)->value('StudentID');
-$iil =DB::table('suggestions')->orderby('id','DESC')->limit(1)->value('LecturerID');
+}
+//lec-stu
+//in-stu
+public function inreq(request $request){
+    try{$email=   Auth::user()->email ;
+        //$nwi=DB::table('industrialists')->where('CompanyPersonalEmailID',$email)->value('NameWithInitials');
+        $tt=DB::table('academics')->where('EmailID',$email)->value('Title');
+        $fn=DB::table('academics')->where('EmailID',$email)->value('FirstName');
+        $ln=DB::table('academics')->where('EmailID',$email)->value('LastName');
+        
 
-    return view('studentprojects/suggind')->with('suggestionind',$ii);
+   
+    
+        DB::table('requests')->insert([
+            'sid' => $request->inid,'rid' => $request->stid,'rn' => $request->stn,'sn' => $tt.".".$fn." ".$ln,'pid' => $request->pid ]);}
+            catch(\Illuminate\Database\QueryException $exception){
+                $s="This field can not be null";
+                return redirect()->back()->with('msg',$s);
+            }
+    
+            return redirect()->back()->with('msg',"Your Request has been sent");
+    
 }
 }
 

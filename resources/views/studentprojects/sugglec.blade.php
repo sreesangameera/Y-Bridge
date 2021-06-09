@@ -212,7 +212,7 @@ body{
              $q=str_replace("/","*",$user)
            @endphp
            
-            <td><a href="{{ url('shstu',$q) }}">{{$user}}</a></td>
+            <td><a target="_blank" href="{{ url('shstu',$q) }}">{{$user}}</a></td>
             
             @csrf
             
@@ -272,7 +272,8 @@ body{
     </div>
 
 
-<br><br><br>
+<br><br>
+<h5>When you click on a suggestion result,it will redirected to a respective profile with another tab</h5>
 <a href="/lpp">back</a>
 <br><br><br>
 

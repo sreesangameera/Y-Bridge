@@ -52,7 +52,7 @@ div {text-align: center;}
   type="button"
   class="btn btn-success btn-rounded"
   data-mdb-ripple-color="dark"
- href="/ispro">My Projects</a>
+ href="/ispro/{id}">My Projects</a>
 
 <br>
 <br>

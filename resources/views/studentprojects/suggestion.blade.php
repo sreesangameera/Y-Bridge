@@ -194,7 +194,7 @@ body{
                             <!--span>Lecturer</span-->
     </br>
     </br>
-    <h4>Lecturer ID</h4>
+    <h4>Lecturers</h4>
                             
                         </div>
 
@@ -212,19 +212,20 @@ body{
     </tr>
     </thead>
     <tbody>
-    @foreach(explode(',',$suggestiont) as $usert)
+    
+        
+    
+    @foreach($suggestiont as $usert)
   
                 <tr>
             
-            @php
-             $q=str_replace("/","*",$usert)
-             
-           @endphp 
+            
           
-            <td><a href="{{url('shlec',$q)}}">{{$usert}}</a></td>
-           
-        @endforeach 
-        </tr>  
+            <td><a target="_blank" href="{{url('shlec',$usert->EmployeeID)}}">{{$usert->Title}} {{$usert->FirstName}} {{$usert->LastName}}</a></td>
+           </tr>
+   
+    @endforeach
+         
 
     </tbody>
 </table>
@@ -246,7 +247,7 @@ body{
                             <!--span>Industrialist</span-->
                             <br>
                             <br>
-                            <h4>Industrialist ID</h4>
+                            <h4>Industrialists</h4>
                         </div>
                         
 
@@ -267,15 +268,13 @@ body{
     </thead>
     <tbody>
    
-    @foreach(explode(',',$suggestionta) as $userta)
+    @foreach($suggestionta as $userta)
                 <tr>
             
            
-            @php
-           $r=str_replace("/","*",$userta)
-           @endphp 
+           
             
-            <td><a href="{{url('shind',$r)}}">{{$userta}}</a></br></td>
+            <td><a target="_blank" href="{{url('shind',$userta->CompanyPersonalEmailID)}}">{{$userta->NameWithInitials}}</a></br></td>
             
             
              
@@ -301,6 +300,8 @@ body{
 
 
 <br><br><br>
+<h4>Do not close this page until you chose and send a request to both industrialist and lecturer</h4>
+<h5>When you click on a suggestion result,it will redirected to a respective profile with another tab</h5>
 <a href="/spp">back</a>
 <br><br><br>
 

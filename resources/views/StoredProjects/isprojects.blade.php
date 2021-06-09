@@ -31,7 +31,7 @@
             <th>ProjectID</th>
             <th>Titleoftheproject</th>
             <th>Description</th>
-            
+            <th>Student Id</th>
             
             <th>created_at</th>
             
@@ -46,6 +46,7 @@
                 <td>{{$user->ProjectID}}</td>
                 <td>{{$user->Titleoftheproject}}</td>
                 <td>{{$user->Description}}</td>
+                <td>{{$user->StudentID}}</td>
                 
                 
                 <td>{{$user->created_at}}</td> 

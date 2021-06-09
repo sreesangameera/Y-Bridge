@@ -122,9 +122,21 @@ input[type=text], select, textarea{
                       <!--span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span-->
                     </div>
                     <div>
-            <button  type="button" class="btn btn-warning btn-rounded"><a href="/spps">Request for project + </a></button>
+            
             </div>
+            
                   </div>
+                  <h6>If you wish to add me to your project,fill these requrements and click request</h6>
+                  <form method="post" action="/ireq">
+                  @csrf
+                  <input type="text" placeholder="Lecturer Id" name="inid">
+                  <input type="text" placeholder="Project Id" name="pid">
+                  <input type="hidden" placeholder="Project Id" name="stid" value="{{ $c->StudentID}}">
+                  <input type="hidden" placeholder="Project Id" name="stn" value="{{ $c->FirstName}}{{' '}}{{ $c->LastName}}">
+
+                  <button  type="submit" class="btn btn-warning btn-rounded">Request for project </button>
+                  </form>
+                  
                 </div>
                 <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
                   <div class="text-center text-sm-left mb-2 mb-sm-0">
@@ -136,6 +148,7 @@ input[type=text], select, textarea{
                       
                     </div-->
                   </div>
+                  
 
                   <div class="btn-toolbar">
                   <div class="text-center text-sm-right">
@@ -182,11 +195,17 @@ input[type=text], select, textarea{
                     <p><strong>LinkedIn: </strong> <a href="{{ $c->LinkedIn}} "> {{ $c->LinkedIn}}</a> </p>
                     <p><strong>Study Programme: </strong> {{ $c->StudyProgramme}} </p>
                     <p><strong>Subject Offered: </strong> {{ $c->SubjectsOffered}} </p>
+                    <p><strong>Skills : </strong> {{ $c->Skills}} </p>
                    
                 </div>   
                       </div>
                     </div>
                     
+                    <br>
+                    
+                    <div>
+                    
+                    </div>
                     <!--div class="row">
                       <div class="col-12 col-sm-6 mb-3">
                         <div class="mb-2"><b>Change Password</b></div>
@@ -261,7 +280,32 @@ input[type=text], select, textarea{
 
 
 
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+@if($msg = session()->get('msg'))
+@if($msg == "Your Request has been sent")
+<script>
+     Swal.fire({
+               position: 'top',
+               icon: 'success',
+               title: '{{$msg}}',
+               showConfirmButton: false,
+               timer: 2000
+            
+          });
+     </script>
+     @elseif($msg == "This field can not be null")
+     <script>
+     Swal.fire({
+               position: 'top',
+               icon: 'error',
+               title: '{{$msg}}',
+               showConfirmButton: false,
+               timer: 2000
+            
+          });
+     </script>
+     @endif
+     @endif
 
 </body>
 </html>

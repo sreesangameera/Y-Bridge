@@ -51,7 +51,7 @@ href="/lpp">Add Project
   type="button"
   class="btn btn-success btn-rounded"
   data-mdb-ripple-color="dark"
- href="/lspro">My Projects</a>
+ href="/lspro/{id}">My Projects</a>
 
 <br>
 <br>

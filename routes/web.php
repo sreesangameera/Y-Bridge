@@ -144,10 +144,18 @@ Route::get('/inotifi',[ProjectController::class, 'inotifi']);
 Route::get('/sprqsts',[ProjectController::class, 'sprqsts']);
 Route::get('/lprqsts',[ProjectController::class, 'lprqsts']);
 Route::get('/iprqsts',[ProjectController::class, 'iprqsts']);
-Route::get('/sspro',[ProjectController::class, 'sspro']);
-Route::get('/ispro',[ProjectController::class, 'ispro']);
-Route::get('/lspro',[ProjectController::class, 'lspro']);
+Route::get('/sspro/{id}',[ProjectController::class, 'sspro'])->name('sspro');
+Route::get('/ispro/{id}',[ProjectController::class, 'ispro'])->name('ispro');
+Route::get('/lspro/{id}',[ProjectController::class, 'lspro'])->name('lspro');
 
+Route::get('/racpt/{id}',[ProjectController::class,'racpt'])->name('racpt');
+Route::get('/rdcln/{id}',[ProjectController::class,'rdcln'])->name('rdcln');
+
+Route::get('/racpts/{id}',[ProjectController::class,'racpts'])->name('racpts');
+Route::get('/rdclns/{id}',[ProjectController::class,'rdclns'])->name('rdclns');
+
+Route::get('/racpti/{id}',[ProjectController::class,'racpti'])->name('racpti');
+Route::get('/rdclni/{id}',[ProjectController::class,'rdclni'])->name('rdclni');
 
 Route::get('/create1',[StudentprojectController::class,'create']);
 
@@ -176,8 +184,12 @@ Route::post('/sto',[AcademicprojectController::class,'store1']);
 Route::post('/stor',[IndustrialistprojectController::class,'stor']);
 
 Route::get('/shstu/{id}',[UserController::class,'shstu'])->name('shstu');
+Route::get('/shstu2/{id}',[UserController::class,'shstu2'])->name('shstu2');
 Route::get('/shlec/{id}',[UserController::class,'shlec'])->name('shlec');
 Route::get('/shind/{id}',[UserController::class,'shind'])->name('shind');
+Route::post('sreq',[UserController::class,'streq'])->name('sreq');
+Route::post('lreq',[UserController::class,'lereq'])->name('lreq');
+Route::post('ireq',[UserController::class,'inreq'])->name('ireq');
 /*Route::get('Admin/Admin',function(){
     $data=App\user::all();
     return view('Admin/Admin')->with('table_data',$data);

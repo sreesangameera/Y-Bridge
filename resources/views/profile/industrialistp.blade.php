@@ -185,7 +185,7 @@
                       <div class="col">
                       <div class="col-xs-12 col-sm-8">
                     
-                      <p><strong>CompanyName: </strong> {{ $c->CompanyName}} </p>
+                      <p><strong>Company Name: </strong> {{ $c->CompanyName}} </p>
                     <p><strong>Company Personal Email: </strong> {{ $c->CompanyPersonalEmailID}} </p>
                     <p><strong>Designation: </strong> {{ $c->Designation}}</ </p>
                     <p><strong>LinkedIn: </strong><a href="{{ $c->LinkedIn}} "> {{ $c->LinkedIn}}</a> </p>
@@ -270,7 +270,7 @@
 
   <!-- Modal content -->
   <div class="modal-content">
-  <a href="/profile">X</a>
+  <a type="button" class="btn btn-light btn-sm" style="width:25px;height:30px"  href="/profile">X</a>
     <form method="POST" action="/updateindustrialist" enctype="multipart/form-data">
         @csrf
         <div title="Initials.Name">Name with initials</div><input class="form-control" type="text" name="namewi" placeholder="Name with initials" required="required" value="{{ $c->NameWithInitials}}"><br>
@@ -293,7 +293,7 @@
 
   <!-- Modal content -->
   <div class="modal-content" style="width:25%">
-    <span class="close">&times;</span>
+  <a type="button" class="btn btn-light btn-sm" style="width:25px;height:30px"  href="/profile">X</a>
     <form method="POST" action="/updateindustrialistpp" enctype="multipart/form-data">
         @csrf
         <div title="upload an image">Profile Picture</div><input class="form-control" type="file" name="photo" placeholder="add photo"> 
@@ -309,7 +309,7 @@
 
   <!-- Modal content -->
   <div class="modal-content" style="width:75%">
-    <span class="close">&times;</span>
+  <a type="button" class="btn btn-light btn-sm" style="width:25px;height:30px"  href="/profile">X</a>
     <form method="POST" action="/updateindustrialistri" enctype="multipart/form-data">
         @csrf
         <input type="hidden" name="email" value="{{ $c->CompanyPersonalEmailID}}" >
@@ -382,10 +382,10 @@
         <input type="checkbox" id="High Performance Computing" name="FieldOfInterests[]" value="High Performance Computing" />High Performance Computing</label>
         <label for="twentynine">
         <input type="checkbox" id="Image Processing and Computer Vision" name="FieldOfInterests[]" value="Image Processing and Computer Vision" />Image Processing and Computer Vision</label>
-        <label for="thirty">
+        <!--label for="thirty">
         <input type="checkbox" id="Machine Learning" name="FieldOfInterests[]" value="Machine Learning" />Machine Learning</label>
         <label for="thirtyone">
-        <input type="checkbox" id="Systems and Network Administration" name="FieldOfInterests[]" value="Systems and Network Administration" />Systems and Network Administration</label>
+        <input type="checkbox" id="Systems and Network Administration" name="FieldOfInterests[]" value="Systems and Network Administration" />Systems and Network Administration</label-->
     </div>
   </div>
                     

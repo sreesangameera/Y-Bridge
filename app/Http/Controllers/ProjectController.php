@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class ProjectController extends Controller
 {
@@ -26,31 +27,129 @@ class ProjectController extends Controller
         return view('searchppa');      }
 
     public function snotifi(){
-        return view('Notification/stnotifi');      }
+        $email=   Auth::user()->email ;
+        $id=DB::table('students')->where('EmailID',$email)->value('StudentID');
+        $p=DB::table('notifications')->where('rid',$id)->get();
+        
+        return view('Notification/stnotifi')->with('nt',$p);       }
     
     public function lnotifi(){
-        return view('Notification/lenotifi');      }
+        $email=   Auth::user()->email ;
+        $id=DB::table('academics')->where('EmailID',$email)->value('EmployeeID');
+        $p=DB::table('notifications')->where('rid',$id)->get();
+        return view('Notification/lenotifi')->with('nt',$p);      }
     
     public function inotifi(){
-        return view('Notification/innotifi');      } 
+        $email=   Auth::user()->email ;
+        $id=DB::table('industrialists')->where('CompanyPersonalEmailID',$email)->value('CompanyPersonalEmailID');
+        $p=DB::table('notifications')->where('rid',$id)->get();
+        return view('Notification/innotifi')->with('nt',$p);      } 
     
     public function sprqsts(){
-        return view('ProjectRequests/sprequests');      }
+        $email=   Auth::user()->email ;
+        $id=DB::table('students')->where('EmailID',$email)->value('StudentID');
+        $q=DB::table('requests')->where('rid',$id)->get();
+        return view('ProjectRequests/sprequests')->with('rts',$q);      }
+
+    public function racpts($id){
+        DB::table('requests')->where('id',$id)->update(['accptd' => "accepted",]);
+        $ln=DB::table('requests')->where('id',$id)->value('rn');
+        $pid=DB::table('requests')->where('id',$id)->value('pid');
+        DB::table('academicprojects')->where('projectID',$pid)->update(['StudentID' => $ln,]);
+        return redirect()->back();
+        }
+        public function rdclns($id){
+            $rid=DB::table('requests')->where('id',$id)->value('sid');
+            $ln=DB::table('requests')->where('id',$id)->value('rn');
+            DB::table('notifications')->insert([
+                'msg' => $ln." has declined your request",'rid' => $rid]);
+        DB::table('requests')->where('id',$id)->update(['accptd' => "declined",]);
+    
+        return redirect()->back();
+        }
+
+        public function racptsi($id){
+            DB::table('requests')->where('id',$id)->update(['accptd' => "accepted",]);
+            $ln=DB::table('requests')->where('id',$id)->value('rn');
+            $pid=DB::table('requests')->where('id',$id)->value('pid');
+            DB::table('industrialistprojects')->where('projectID',$pid)->update(['StudentID' => $ln,]);
+            return redirect()->back();
+            }
+            public function rdclnsi($id){
+                $rid=DB::table('requests')->where('id',$id)->value('sid');
+                $ln=DB::table('requests')->where('id',$id)->value('rn');
+                DB::table('notifications')->insert([
+                    'msg' => $ln." has declined your request",'rid' => $rid]);
+            DB::table('requests')->where('id',$id)->update(['accptd' => "declined",]);
+        
+            return redirect()->back();
+            }
         
     public function lprqsts(){
-        return view('ProjectRequests/lprequests');      }
+        $email=   Auth::user()->email ;
+        $id=DB::table('academics')->where('EmailID',$email)->value('EmployeeID');
+        $p=DB::table('requests')->where('rid',$id)->get();
+        return view('ProjectRequests/lprequests')->with('rt',$p); 
+         }
+    public function racpt($id){
+    DB::table('requests')->where('id',$id)->update(['accptd' => "accepted",]);
+    $ln=DB::table('requests')->where('id',$id)->value('rn');
+    $pid=DB::table('requests')->where('id',$id)->value('pid');
+    DB::table('studentprojects')->where('projectID',$pid)->update(['LecturerID' => $ln,]);
+    return redirect()->back();
+    }
+    public function rdcln($id){
+        $rid=DB::table('requests')->where('id',$id)->value('sid');
+        $ln=DB::table('requests')->where('id',$id)->value('rn');
+        DB::table('notifications')->insert([
+            'msg' => $ln." has declined your request",'rid' => $rid]);
+    DB::table('requests')->where('id',$id)->update(['accptd' => "declined",]);
+
+    return redirect()->back();
+    }
         
     public function iprqsts(){
-        return view('ProjectRequests/iprequests');      } 
+        $email=   Auth::user()->email ;
+        $id=DB::table('industrialists')->where('CompanyPersonalEmailID',$email)->value('CompanyPersonalEmailID');
+        $p=DB::table('requests')->where('rid',$id)->get();
+        
+        return view('ProjectRequests/iprequests')->with('rti',$p);     } 
+    public function racpti($id){
+        DB::table('requests')->where('id',$id)->update(['accptd' => "accepted",]);
+        $ln=DB::table('requests')->where('id',$id)->value('rn');
+        $pid=DB::table('requests')->where('id',$id)->value('pid');
+        DB::table('studentprojects')->where('projectID',$pid)->update(['CompanyPersonalEmailID' => $ln,]);
+        return redirect()->back();
+        }
+        public function rdclni($id){
+            $rid=DB::table('requests')->where('id',$id)->value('sid');
+            $ln=DB::table('requests')->where('id',$id)->value('rn');
+            DB::table('notifications')->insert([
+                'msg' => $ln." has declined your request",'rid' => $rid]);
+        DB::table('requests')->where('id',$id)->update(['accptd' => "declined",]);
+    
+        return redirect()->back();
+        }
             
      public function sspro(){
-        $p=DB::table('studentprojects')->get();
+        $email=   Auth::user()->email ;
+        $id=DB::table('students')->where('EmailID',$email)->value('StudentID');
+        
+        $p=DB::table('studentprojects')->where('StudentID',$id)->get();
         return view('StoredProjects/ssprojects')->with('usert',$p);      }
     public function ispro(){
-        $p=DB::table('industrialistprojects')->get();
+        $email=   Auth::user()->email ;
+        $id=DB::table('industrialists')->where('CompanyPersonalEmailID',$email)->value('CompanyPersonalEmailID');
+        
+        $p=DB::table('industrialistprojects')->where('CompanyPersonalEmailID',$id)->get();
+        
         return view('StoredProjects/isprojects')->with('usert',$p);      }
     public function lspro(){
-        $p=DB::table('academicprojects')->get();
+        $email=   Auth::user()->email ;
+        $id=DB::table('academics')->where('EmailID',$email)->value('EmployeeID');
+        
+        $p=DB::table('academicprojects')->where('StudentID',$id)->get();
+        
         return view('StoredProjects/lsprojects')->with('usert',$p);      }
 
 }

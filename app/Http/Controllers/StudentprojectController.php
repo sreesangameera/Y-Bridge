@@ -16,7 +16,7 @@ use App\Models\Desclecturer;
 use App\Models\Suggestion;
 use App\Models\Suggestionstud;
 use App\Models\ConnectIndustrialist;
-
+use App\Models\MainTerm;
 
 class StudentprojectController extends Controller
 {
@@ -28,8 +28,8 @@ class StudentprojectController extends Controller
     public function store1()
     {
 
-    
-       try{ $studentproject = new Studentproject();
+
+       try{$studentproject = new Studentproject();
         $studentproject->Destination = request('Destination');
         $studentproject->StudentID = request('StudentID');
         $studentproject->ProjectID = request('ProjectID');
@@ -71,15 +71,48 @@ class StudentprojectController extends Controller
      $connection = new Connection();
      $connection->StudentID = request('StudentID');
      $connection->MainTermID = $maxMainKey;
-     $connection->save();
+     $connection->save(); 
+
+     
+     
+
+     $lec = DB::table('academics')->select('ResearchInterest','LastName','Title','FirstName','EmployeeID')->get();
+
+     $lecInt= [];
+    $id = [];
+     foreach($lec as $l){
+         if(strcasecmp($l->ResearchInterest,'') != 0){
+              $lecInt = explode(',',$l->ResearchInterest);
+         
+         
+        for($i = 0 ; $i < count($lecInt); $i++){
+            $num = DB::table('mainTerms')->where('mainTerm',$lecInt[$i])->first();  
+                  
+           if($maxMainKey == (integer)$num->mainTermId){
+            
+               array_push($id, $l->EmployeeID);
+               break;
+            
+        }
+     
+     }
+         }
+    }
     
-     $stu =DB::table('connectlecturers')->where('MainTermID',$maxMainKey)->pluck('LecturerID')->toArray();
+     
      $connect = new Suggestion();
      $connect->Destination=request('Destination');
      $connect->MainTermID = $maxMainKey;
-     $connect->StudentID = request('StudentID');
+     $connect->StudentID = request('StudentID');  
+     $connect->LecturerID = implode(",",$id); 
+
+
+
      //$st = request('StudentID');
-     $connect->LecturerID = implode(",",$stu);
+
+
+
+     
      //$connect->save();
      //$connect->LecturerID =$stu;
      //$ls=implode(",",$stu);
@@ -91,12 +124,39 @@ class StudentprojectController extends Controller
      
      
 
-     $stuss =DB::table('connectindustrialists')->where('MainTermID',$maxMainKey)->pluck('CompanyPersonalEmailID')->toArray();
+    
+     
+     $stuss = DB::table('industrialists')->select('CompanyPersonalEmailID','FieldOfInterests')->get();
+
+     $indus= [];
+    $id1 = [];
+     foreach($stuss as $st){
+         if(strcasecmp($st->FieldOfInterests,'') != 0){
+              $indus = explode(',',$st->FieldOfInterests);
+         
+         
+        for($i = 0 ; $i < count($indus); $i++){
+            $num = DB::table('mainTerms')->where('mainTerm',$indus[$i])->first();  
+                  
+           if($maxMainKey == (integer)$num->mainTermId){
+            
+               array_push($id1, $st->CompanyPersonalEmailID);
+               break;
+            
+        }
+     
+     }
+         }
+    }
+     
      //$connect = new Suggestion();
      //$connect->Destination=request('Destination');
      //$connect->MainTermID = $maxMainKey;
      //$connect->StudentID = request('StudentID');
-     $connect->CompanyPersonalEmailID=implode(",",$stuss);
+
+
+
+    $connect->CompanyPersonalEmailID=implode(",",$id1);
      
      
      
@@ -106,11 +166,14 @@ class StudentprojectController extends Controller
      $connect1->StudentID= request('StudentID');
      
      $connect1->save();**/
-     $connect->save();}
+    $connect->save();
+    }
      catch(\Illuminate\Database\QueryException $exception){
         $s="These words are not maching in description box,try another description";
         return redirect()->back()->with('msg',$s);
     }
-    return redirect('/urpd');
+   
+   return redirect()->route('urpd',['id'=> request('StudentID')]);
+   
 }
 }

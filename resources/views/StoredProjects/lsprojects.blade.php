@@ -32,7 +32,7 @@
             <th>Titleoftheproject</th>
             <th>Description</th>
             <th>ProjectType</th>
-           
+            <th>Student ID</th>
             <th>created_at</th>
             
             
@@ -47,7 +47,7 @@
                 <td>{{$user->Titleoftheproject}}</td>
                 <td>{{$user->Description}}</td>
                 <td>{{$user->ProjectType}}</td>
-                
+                <td>{{$user->StudentID}}</td>
                 <td>{{$user->created_at}}</td> 
                 
                 

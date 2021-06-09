@@ -256,7 +256,7 @@ ul.nav-tabs li{
                       <div class="col-xs-12 col-sm-8" >
                     
                     <p><strong>Gender: </strong> {{ $c->Gender}} </p>
-                    <p><strong>StudentId: </strong> {{ $c->StudentID}} </p>
+                    <p><strong>Student Id: </strong> {{ $c->StudentID}} </p>
                     <p><strong>DOB: </strong> {{ $c->DateOfBirth}} </p>
                     <p><strong>Email: </strong> {{ $c->EmailID}} </p>
                     <!--p><strong>Home Address: </strong> {{ $c->HomeAddress}} </p>
@@ -344,7 +344,7 @@ ul.nav-tabs li{
 
   <!-- Modal content -->
   <div class="modal-content" style="width:75%">
-  <a href="/profile">X</a>
+  <a type="button" class="btn btn-light btn-sm" style="width:25px;height:30px"  href="/profile">X</a>
     
     <form method="POST" action="/updatestudent" enctype="multipart/form-data">
         @csrf
@@ -360,7 +360,7 @@ ul.nav-tabs li{
                     <select class="form-control" class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"  name="level" :value="{{ $c->YearOfStudy}}" required autofocus>
                         <option value="{{ $c->YearOfStudy}}">{{ $c->YearOfStudy}}</option>
                         <option value="Level-1G">Level-1G</option>
-                        <option value="Level-1G">Level-1S</option>
+                        <option value="Level-1S">Level-1S</option>
                         <option value="Level-2G">Level-2G</option>
                         <option value="Level-2S">Level-2S</option>
                         <option value="Level-3G">Level-3G</option>
@@ -431,7 +431,7 @@ ul.nav-tabs li{
 
   <!-- Modal content -->
   <div class="modal-content" style="width:25%">
-    <span class="close">&times;</span>
+  <a type="button" class="btn btn-light btn-sm" style="width:25px;height:30px"  href="/profile">X</a>
     <form method="POST" action="/updatestudentpp" enctype="multipart/form-data">
         @csrf
         <div title="upload an image">Profile Picture</div><input class="form-control" type="file" name="photo" placeholder="add photo"> 
@@ -447,7 +447,7 @@ ul.nav-tabs li{
 
   <!-- Modal content -->
   <div class="modal-content" style="width:75%">
-    <span class="close">&times;</span>
+  <a type="button" class="btn btn-light btn-sm" style="width:25px;height:30px"  href="/profile">X</a>
     <form method="POST" action="/updatestudentri" enctype="multipart/form-data">
         @csrf
         

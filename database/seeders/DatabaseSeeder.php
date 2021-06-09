@@ -467,7 +467,7 @@ class DatabaseSeeder extends Seeder
             'AdminRole'=>'',
             'EmailID'=>'ST@gmail.com',
             'LinkedIn'=>'https://www.linkedin.com/in/samanthajeyakumar?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bxst0nxYkSz2Aei88Qh7FuQ%3D%3D',
-            'ContactNumber'=>'0740542130',
+            'ContactNumber'=>'212218194',
             'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-ms-j-samantha-tharani/',
             'ResearchInterest'=>'',
             'FieldOfSpecialization'=>'',

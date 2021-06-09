@@ -214,7 +214,7 @@
                       <div class="col">
                       <div class="col-xs-12 col-sm-8">
                     
-                      <p><strong>EmployeeID : </strong> {{ $c->EmployeeID }} </p>
+                      <p><strong>Employee ID : </strong> {{ $c->EmployeeID }} </p>
                     <p><strong>Gender: </strong> {{ $c->Gender}} </p>
                     <p><strong>DOB: </strong> {{ $c->DateOfBirth}} </p>
                     <p><strong>Designation: </strong> {{ $c->Designation}} </p>
@@ -303,8 +303,8 @@
 
   <!-- Modal content -->
   <div class="modal-content">
-  <a href="/profile">X</a>
-    <form method="POST" action="/updateacademic" enctype="multipart/form-data">
+  <a type="button" class="btn btn-light btn-sm" style="width:25px;height:30px"  href="/profile">X</a>
+    <form name="myForm" method="POST" action="/updateacademic" enctype="multipart/form-data">
         @csrf
         <div title="title">Title</div><div>
                     
@@ -356,10 +356,10 @@
                     <option value="{{ $c->Designation}}">{{ $c->Designation}}</option>
                         <option value="Head of the Department">Head of the Department</option>
                         <option value="Head of the Unit">Head of the Unit</option>
-                        <option value="Senior Lecturer">Dean of the Faculty</option>
-                        <option value="Associate Professor">Vice-Chancellor</option>
-                        <option value="Professor">Rector</option>
-                        <option value="Professor">Director of the Centre</option>
+                        <option value="Dean of the Faculty">Dean of the Faculty</option>
+                        <option value="Vice-Chancellor">Vice-Chancellor</option>
+                        <option value="Rector">Rector</option>
+                        <option value="Director of the Centre">Director of the Centre</option>
                        
                         
                     </select>
@@ -368,7 +368,7 @@
                  <br>
                  
         <div title="https://www.linkedin.com/in/username/">LinkedIn Id</div><input class="form-control" type="text" name="linkedin" placeholder="LinkedIn"  value="{{ $c->LinkedIn}}"><br>
-        <div title="07XXXXXXXX">Contact No.</div><input class="form-control" type="text" name="cno" placeholder="Contact Number"  value="{{ $c->ContactNumber}}"><br>
+        <div title="07XXXXXXXX">Contact No.</div><input class="form-control" type="text" id="cno" name="cno" placeholder="Contact Number"  value="{{ $c->ContactNumber}}"><br>
         <div title="www.sitename.lk/com">Official website</div><input class="form-control" type="text" name="ow" placeholder="Official Website" required="required" value="{{ $c->OfficialWebsite}}"><br>
         
         <div title="old password">Old Password</div><input class="form-control" type="password" id="pwrd" name="pwrd" placeholder="Old Password" required="required" ><br>
@@ -383,7 +383,7 @@
 
   <!-- Modal content -->
   <div class="modal-content" style="width:25%">
-    <span  onclick="document.getElementById('myModalqw').style.display = 'none';" class="close">&times;</span>
+  <a type="button" class="btn btn-light btn-sm" style="width:25px;height:30px"  href="/profile">X</a>
     <form method="POST" action="/updateacademicpp" enctype="multipart/form-data">
         @csrf
         <div title="upload an image">Profile Picture</div><input class="form-control" type="file" name="photo" placeholder="add photo"> 
@@ -399,7 +399,7 @@
 
   <!-- Modal content -->
   <div class="modal-content" style="width:75%">
-    
+  <a type="button" class="btn btn-light btn-sm" style="width:25px;height:30px"  href="/profile">X</a>
     <form method="POST" action="/updateacademicri" enctype="multipart/form-data">
         @csrf
        
@@ -475,17 +475,17 @@
         <input type="checkbox" id="High Performance Computing" name="FieldOfSpecialization[]" value="High Performance Computing" />High Performance Computing</label>
         <label for="twentynine">
         <input type="checkbox" id="Image Processing and Computer Vision" name="FieldOfSpecialization[]" value="Image Processing and Computer Vision" />Image Processing and Computer Vision</label>
-        <label for="thirty">
+        <!--label for="thirty">
         <input type="checkbox" id="Machine Learning" name="FieldOfSpecialization[]" value="Machine Learning" />Machine Learning</label>
         <label for="thirtyone">
-        <input type="checkbox" id="Systems and Network Administration" name="FieldOfSpecialization[]" value="Systems and Network Administration" />Systems and Network Administration</label>
+        <input type="checkbox" id="Systems and Network Administration" name="FieldOfSpecialization[]" value="Systems and Network Administration" />Systems and Network Administration</label-->
         
         <br>
         <br>
         
         
         
-        <!--div title="">Research Interest</div> <select><div>
+        <div title="">Research Interest</div> <select><div>
                     
                    
                     <div class="multiselect">
@@ -553,12 +553,12 @@
         <input type="checkbox" id="High Performance Computing" name="ResearchInterest[]" value="High Performance Computing" />High Performance Computing</label>
         <label for="twentynine">
         <input type="checkbox" id="Image Processing and Computer Vision" name="ResearchInterest[]" value="Image Processing and Computer Vision" />Image Processing and Computer Vision</label>
-        <label for="thirty">
+        <!--label for="thirty">
         <input type="checkbox" id="Machine Learning" name="ResearchInterest[]" value="Machine Learning" />Machine Learning</label>
         <label for="thirtyone">
-        <input type="checkbox" id="Systems and Network Administration" name="ResearchInterest[]" value="Systems and Network Administration" />Systems and Network Administration</label>
+        <input type="checkbox" id="Systems and Network Administration" name="ResearchInterest[]" value="Systems and Network Administration" />Systems and Network Administration</label-->
     
-                    -->
+                    
                 <br>
         
         
@@ -673,6 +673,15 @@ window.onclick = function(event) {
   }
 }
 
+</script>
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
 </script>
 <script>
     var modal1 = document.getElementById("myModalqw");

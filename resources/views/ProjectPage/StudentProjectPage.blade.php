@@ -52,21 +52,21 @@ form {
 			<input type="hidden" value="Student" name="Destination"> 
 				
 		<br />
-        <p>Student ID :<br> <input type="String"
+        <p>Student ID :<br> <input type="String" placeholder="20XX/CSC/XXX  or 20XX/SP/XXX"
                         size="45" name="StudentID" />
                     </p> 
         <br />
         
-        <p>Project ID :<br> <input type="String"
+        <p>Project ID :<h12>(use student id with a number)</h12><br> <input type="String" placeholder="20XX/CSC/XXX-1  or 20XX/SP/XXX-1"
                         size="45" name="ProjectID" />
                     </p> 
         <br />
         
-		<p>Title of the project :<br> <input type="text"
+		<p>Title of the project :<br> <input type="text" placeholder="Title"
                         size="65" name="Titleoftheproject" />
                     </p> 
 		<br /> 
-		<p>Description :<br> <textarea type="text"
+		<p>Description :<br> <textarea type="text" placeholder="Description"
 						class="div1" name="Description" ></textarea></p> 
         <br /> 
         <p> 

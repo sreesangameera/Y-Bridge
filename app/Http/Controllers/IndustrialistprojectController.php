@@ -72,13 +72,36 @@ class IndustrialistprojectController extends Controller
         $connectioni->MainTermID = $maxMainKey;
         $connectioni->save();
 
+        $stu = DB::table('students')->select('Skills','LastName','FirstName','StudentID')->get();
+
+     $stuInt= [];
+    $id = [];
+     foreach($stu as $s){
+         if(strcasecmp($s->Skills,'') != 0){
+              $stuInt = explode(',',$s->Skills);
+         
+         
+        for($i = 0 ; $i < count($stuInt); $i++){
+            $num = DB::table('mainTerms')->where('mainTerm',$stuInt[$i])->first();  
+                  
+           if($maxMainKey == (integer)$num->mainTermId){
+            
+               array_push($id, $s->StudentID);
+               break;
+            
+        }
+     
+     }
+         }
+    }
+
 
         $ind =DB::table('connections')->where('mainTermId',$maxMainKey)->pluck('StudentID')->toArray(); 
         $connect = new Suggestion();
         $connect->Destination=request('Destination');
         $connect->MainTermID = $maxMainKey;
         $connect->CompanyPersonalEmailID  = request('CompanyPersonalEmailID');
-        $connect->StudentID = implode(",",$ind);
+        $connect->StudentID = implode(",",$id);
         $connect->save();}
 
         /*$stu =DB::table('connectlecturers')->where('MainTermID',$maxMainKey)->pluck('LecturerID')->toArray();
@@ -121,5 +144,6 @@ class IndustrialistprojectController extends Controller
      
      
     return redirect('/uri');
+    //return redirect()->route('uri',['id'=> request('CompanyPersonalEmailID')]);
 }
 }

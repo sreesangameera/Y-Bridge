@@ -60,7 +60,7 @@ form {
 		 <p> 
          <input type="hidden" value="Industrialist" name="Destination">
 		<br />
-        <p>Company Personal EmailID :<br> <input type="text"
+        <p>Company Personal EmailID :<br> <input type="text" placeholder="EmailId@examplemail.com"
                         size="45" name="CompanyPersonalEmailID" />
                     </p> 
 
@@ -69,21 +69,21 @@ form {
         <br /> 
         
         
-		<p>Project ID :<br> <input type="text"
+		<p>Project ID :<h12>(use email id with a number)</h12><br> <input type="text" placeholder="EmailId@examplemail.com-1"
                         size="45" name="ProjectID" />
                     </p> 
 
 
                    
 		<br /> 
-		<p>Title of the project :<br> <input type="text"
+		<p>Title of the project :<br> <input type="text" placeholder="Title"
                         size="65" name="Titleoftheproject" />
                     </p> 
 
 
                    
 		<br /> 
-		<p>Description :<br> <textarea type="text"
+		<p>Description :<br> <textarea type="text" placeholder="Description"
 						class="div1" name="Description" ></textarea> </p> 
 			<!--select type="text" value="" name="Description">  
                 <option>Advanced database design and systems</option>
