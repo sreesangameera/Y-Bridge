@@ -708,6 +708,6 @@ window.onclick = function(event) {
     <script src="js/portfolio.js"></script>
     <script src="js/hoverdir.js"></script>    
     
-  
+   
 </body>
 </html>
