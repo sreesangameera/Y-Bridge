@@ -18,7 +18,7 @@ class CreateStudentSocietiesTable extends Migration
             $table->String('Link')->unique()->nullable();
             $table->String('Date')->nullable();
             $table->String('EName')->unique()->nullable();
-            $table->String('Description')->nullable();
+            $table->String('Description',5000)->nullable();
             $table->timestamps();
         });
     }

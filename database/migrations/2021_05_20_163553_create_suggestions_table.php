@@ -15,11 +15,12 @@ class CreateSuggestionsTable extends Migration
     {
         Schema::create('suggestions', function (Blueprint $table) {
             $table->id();
+            $table->string('ProjectID')->nullable();
             $table->string('Destination');
             $table->string('MainTermID');
-            $table->string('StudentID');
-            $table->string('LecturerID')->nullable();
-            $table->string('CompanyPersonalEmailID')->nullable();
+            $table->string('StudentID',5000);
+            $table->string('LecturerID',5000)->nullable();
+            $table->string('CompanyPersonalEmailID',5000)->nullable();
             $table->timestamps();
         });
     }

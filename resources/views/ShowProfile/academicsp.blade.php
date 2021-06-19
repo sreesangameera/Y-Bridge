@@ -196,7 +196,7 @@
                     <p><strong>Contact No: </strong> {{ $c->ContactNumber}} </p>
                     <p><strong>Official Website: </strong><a href="{{ $c->OfficialWebsite}} ">{{ $c->OfficialWebsite}}</a></p>
                     <p><strong>Research Interest: </strong> {{ $c->ResearchInterest}} </p>
-                    <p><strong>Field of Specialization: </strong> {{ $c->FieldOfSpecialization}} </p>
+                    
                     
                 </div>   
                       </div>
@@ -284,7 +284,7 @@
             
           });
      </script>
-     @elseif($msg == "This field can not be null")
+     @elseif($msg == "These fields can not be null")
      <script>
      Swal.fire({
                position: 'top',

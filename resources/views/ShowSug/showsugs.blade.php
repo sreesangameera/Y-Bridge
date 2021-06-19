@@ -157,7 +157,7 @@ body{
 <body  data-new-gr-c-s-check-loaded="14.1007.0" data-gr-ext-installed="">
 
 
-<div class="banner-area banner-bg-1">
+<!--div class="banner-area banner-bg-1">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -172,14 +172,14 @@ body{
 				</div>
 			</div>
 		</div>
-	</div>
+	</div-->
 
 <br><br>
 
  <div class="demo">
         <div class="container">
-        <h4>Do not close this page until you choose and send a request to both industrialist and lecturer</h4>
-<h5>When you click on a suggestion result,it will redirected to a respective profile with another tab</h5>
+        <!--h4>Do not close this page until you chose and send a request to both industrialist and lecturer</h4>
+<h5>When you click on a suggestion result,it will redirected to a respective profile with another tab</h5-->
 <br>
 @if ($message = Session::get('success'))
         <div class="alert alert-success">
@@ -301,11 +301,12 @@ body{
 
 
 <br><br><br>
-
-<a href="/spp">back</a>
+<!--h4>Do not close this page until you chose and send a request to both industrialist and lecturer</h4>
+<h5>When you click on a suggestion result,it will redirected to a respective profile with another tab</h5-->
+<a href="/sspro/{id}">back</a>
 <br><br><br>
 
-    <div class="copyrights">
+    <!--div class="copyrights">
         <div class="container">
             
             <div class="footer-distributed">
@@ -316,7 +317,7 @@ body{
 
                 
             </div>
-        </div><!-- end container -->
+        </div>< end container -->
     </div><!-- end copyrights -->
 
     <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>

@@ -215,6 +215,12 @@ class UserController extends Controller
     public function uped(){
         $p=DB::table('upcoming_events')->get();
             return view('AdminDash/upcomingeve')->with('c',$p);      }
+    public function mtid(){
+        $p=DB::table('mainterms')->get();
+            return view('AdminDash/mainterms')->with('c',$p);      }
+    public function dctnry(){
+        $p=DB::table('dictionaries')->get();
+            return view('AdminDash/dictionary')->with('c',$p);      }
     
     public function upcomingeventsadmin(Request $request){
 
@@ -252,6 +258,63 @@ public function studentsocietiesadminadd(Request $request){
 
                                                                     ]);
     return redirect()->back()->with('msg',"Event Added");
+
+}
+
+public function maintermidadminadd(Request $request){
+    try{    
+            
+    DB::table('mainterms')->insert([
+        'mainTermId' => $request->mainTermId,'mainTerm' => $request->mainTerm
+
+                                                                    ]);}
+                                                                    catch(\Illuminate\Database\QueryException $exception){
+                                                                        $s="These fields can not be null";
+                                                                        return redirect()->back()->with('msg',$s);
+                                                                    }
+    return redirect()->back()->with('msg',"Successfully Done");
+
+}
+
+public function dictionaryadminadd(Request $request){
+        
+            
+    DB::table('dictionaries')->insert([
+        'keywordName' => $request->keywordName,'mainTermId' => $request->mainTermId
+
+                                                                    ]);
+    return redirect()->back()->with('msg',"Successfully Done");
+
+}
+
+
+public function aeadmin(Request $request){
+  
+    DB::table('academics')->where('id',$request->id)->update([
+        'EmailID' => $request->EmailID
+
+                                                                    ]);
+    return redirect()->back()->with('msg',"Successfully Done");
+
+}
+
+public function ieadmin(Request $request){
+  
+    DB::table('industrialists')->where('id',$request->id)->update([
+        'CompanyPersonalEmailID' => $request->CompanyPersonalEmailID
+
+                                                                    ]);
+    return redirect()->back()->with('msg',"Successfully Done");
+
+}
+
+public function seadmin(Request $request){
+  
+    DB::table('students')->where('id',$request->id)->update([
+        'EmailID' => $request->EmailID
+
+                                                                    ]);
+    return redirect()->back()->with('msg',"Successfully Done");
 
 }
 
@@ -296,6 +359,24 @@ return view('studentprojects/suggestion')->with('suggestiont',$sw)->with('sugges
 ///return gettype($ssi);
 
 }
+public function showsugs($ProjectID){
+    //$id = $_GET['id'];
+
+    //$r=str_replace("*","/",$ProjectID);
+$ss =DB::table('suggestions')->where('ProjectID',$ProjectID)->value('LecturerID');
+$ssar = explode(',',$ss);
+$sw = DB::table('academics')->whereIn('EmployeeID',$ssar)->get()->toArray();
+
+
+$ssi =DB::table('suggestions')->where('ProjectID',$ProjectID)->value('CompanyPersonalEmailID');
+$ssa = explode(',',$ssi);
+$si = DB::table('industrialists')->whereIn('CompanyPersonalEmailID',$ssa)->get()->toArray();
+//$su=implode("<br>",$user->LecturerID)->with('suggestiont',$ssi);
+return view('ShowSug/showsugs')->with('suggestiont',$sw)->with('suggestionta',$si);
+
+///return gettype($ssi);
+
+}
 //return view('studentprojects/sugglec')->with('suggestionlec',$ll);
 
 
@@ -307,6 +388,13 @@ public function sugglec(){
      return view('studentprojects/sugglec')->with('suggestionlec',$ll);
      
  }
+
+ public function showsugl($ProjectID){
+    $ll =DB::table('suggestions')->where('ProjectID',$ProjectID)->value('StudentID');
+    $lli =DB::table('suggestions')->orderby('id','DESC')->limit(1)->value('CompanyPersonalEmailID');
+    $x=explode(',',$ll,0);
+        return view('ShowSug/showsugl')->with('suggestionleca',$ll);
+    }
 
 /**public function sugglec(){
      $id = $_GET['id'];
@@ -337,6 +425,14 @@ return view('studentprojects/suggind')->with('suggestionind',$sd);
      
          return view('studentprojects/suggind')->with('suggestionind',$ii);
      }
+
+     public function showsugi($ProjectID){
+
+        $ii =DB::table('suggestions')->where('ProjectID',$ProjectID)->value('StudentID');
+        $iil =DB::table('suggestions')->orderby('id','DESC')->limit(1)->value('LecturerID');
+        
+            return view('ShowSug/showsugi')->with('suggestionind',$ii);
+        }
 //stu-lec
 public function streq(request $request){
     try{$email=   Auth::user()->email ;
@@ -346,7 +442,7 @@ public function streq(request $request){
     DB::table('requests')->insert([
         'sid' => $request->stid,'rid' => $request->lid,'rn' => $request->ln,'sn' => $fn." ".$ln,'pid' => $request->pid ]);}
         catch(\Illuminate\Database\QueryException $exception){
-            $s="This field can not be null";
+            $s="These fields can not be null";
             return redirect()->back()->with('msg',$s);
         }
 
@@ -359,9 +455,9 @@ public function lereq(request $request){
     
 
         DB::table('requests')->insert([
-            'sid' => $request->inid,'rid' => $request->stid,'rn' => $request->stn,'sn' => $nwi,'pid' => $request->pid ]);}
+            'sid' => $request->inid,'rid' => $request->stid,'rn' => $request->stn,'sn' => $nwi,'pid' => $request->pid,'srole' => "industrialist"]);}
             catch(\Illuminate\Database\QueryException $exception){
-                $s="This field can not be null";
+                $s="These fields can not be null";
                 return redirect()->back()->with('msg',$s);
             }
     
@@ -383,15 +479,56 @@ public function inreq(request $request){
    
     
         DB::table('requests')->insert([
-            'sid' => $request->inid,'rid' => $request->stid,'rn' => $request->stn,'sn' => $tt.".".$fn." ".$ln,'pid' => $request->pid ]);}
+            'sid' => $request->inid,'rid' => $request->stid,'rn' => $request->stn,'sn' => $tt.".".$fn." ".$ln,'pid' => $request->pid,'srole' => "lecturer" ]);}
             catch(\Illuminate\Database\QueryException $exception){
-                $s="This field can not be null";
+                $s="These fields can not be null";
                 return redirect()->back()->with('msg',$s);
             }
     
             return redirect()->back()->with('msg',"Your Request has been sent");
     
 }
+public function delmi($id){
+    $user=DB::table('mainterms')->where('id',$id ) ->delete();
+    $s="Deleted successfully";
+    return redirect()->back()->with('usert',$user)->with('msg',$s); 
+}  
+public function deld($id){
+    $user=DB::table('dictionaries')->where('id',$id ) ->delete();
+    $s="Deleted successfully";
+    return redirect()->back()->with('usert',$user)->with('msg',$s); 
+}  
+public function delss($id){
+    $user=DB::table('student_societies')->where('id',$id ) ->delete();
+    $s="Deleted successfully";
+    return redirect()->back()->with('usert',$user)->with('msg',$s); 
+}
+public function deue($id){
+    $user=DB::table('upcoming_events')->where('id',$id ) ->delete();
+    $s="Deleted successfully";
+    return redirect()->back()->with('usert',$user)->with('msg',$s); 
+}  
+public function deldb($id){
+    $user=DB::table('users')->where('id',$id ) ->delete();
+    $s="Deleted successfully";
+    return redirect()->back()->with('usert',$user)->with('msg',$s); 
+}
+public function dell($id){
+    $user=DB::table('academics')->where('id',$id ) ->delete();
+    $s="Deleted successfully";
+    return redirect()->back()->with('usert',$user)->with('msg',$s); 
+}  
+public function dels($id){
+    $user=DB::table('students')->where('id',$id ) ->delete();
+    $s="Deleted successfully";
+    return redirect()->back()->with('usert',$user)->with('msg',$s); 
+}
+public function deli($id){
+    $user=DB::table('industrialists')->where('id',$id ) ->delete();
+    $s="Deleted successfully";
+    return redirect()->back()->with('usert',$user)->with('msg',$s); 
+}  
+
 }
 
 

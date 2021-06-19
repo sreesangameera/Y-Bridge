@@ -15,7 +15,7 @@ class CreateDictionariesTable extends Migration
     {
         Schema::create('dictionaries', function (Blueprint $table) {
             $table->id();
-            $table->string('keywordId');
+            //$table->string('keywordId')->nullable();
             $table->string('keywordName');
             $table->string('mainTermId')->nullable();
 

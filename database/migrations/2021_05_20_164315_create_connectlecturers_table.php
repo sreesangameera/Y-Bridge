@@ -17,6 +17,7 @@ class CreateConnectlecturersTable extends Migration
             $table->id();
             $table->String('LecturerID');
             $table->String('mainTermId');
+            $table->String('Maintermcount');
             $table->timestamps();
         });
     }

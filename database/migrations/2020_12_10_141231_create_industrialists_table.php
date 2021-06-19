@@ -20,7 +20,7 @@ class CreateIndustrialistsTable extends Migration
             $table->Text('NameWithInitials');
             $table->String('Designation')->nullable();
             $table->String('LinkedIn')->unique()->nullable();
-            $table->String('FieldOfInterests')->nullable();
+            $table->String('FieldOfInterests',5000)->nullable();
             $table->Integer('ContactNumber')->nullable();
             $table->String('CompanyName')->nullable();
             $table->timestamps();

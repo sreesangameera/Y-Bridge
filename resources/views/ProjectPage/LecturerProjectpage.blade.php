@@ -77,7 +77,8 @@ form {
 
                    
 		<br /> 
-		<p>Description :<br> <textarea type="text" placeholder="Description"
+		<p>Description :<br> <textarea type="text" placeholder="Short description about your project. include technologies such as programming language, framework, database, etc. that you are going to use in your project.
+"
 						class="div1" name="Description" ></textarea></p> 
         <br /> 
         <!--p> 
@@ -104,10 +105,10 @@ form {
         <p> 
 			Project Type :<br>
 			<select type="text" value="" name="ProjectType"> 
-				<option>Project for first year</option> 
-				<option>Project for second year</option> 
-				<option>Project for third year</option> 
-				<option>Project for fourth year</option> 
+				<option>Team Software project</option> 
+				<option>Individual Project</option> 
+				<option>Research Project</option> 
+				
 				
 			</select> 
         </p> 

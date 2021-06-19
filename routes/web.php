@@ -100,12 +100,28 @@ Route::get('/indd',[UserController::class,'indd']);
 Route::get('/stud',[UserController::class,'stud']);
 Route::get('/acad',[UserController::class,'acad']);
 Route::get('/stusd',[UserController::class,'stusd']);
+Route::get('/mtid',[UserController::class,'mtid']);
+Route::get('/dctnry',[UserController::class,'dctnry']);
+Route::post('/maintermidadminadd',[UserController::class,'maintermidadminadd']);
+Route::post('/dictionaryadminadd',[UserController::class,'dictionaryadminadd']);
 Route::post('/studentsocietiesadmin',[UserController::class,'studentsocietiesadmin']);
 Route::post('/studentsocietiesadminadd',[UserController::class,'studentsocietiesadminadd']);
 Route::get('/uped',[UserController::class,'uped']);
 Route::post('/upcomingeventsadmin',[UserController::class,'upcomingeventsadmin']);
 Route::post('/upcomingeventsadminadd',[UserController::class,'upcomingeventsadminadd']);
 Route::post('/registeruser',[UserController::class,'registeruser']);
+Route::post('/aeadmin',[UserController::class,'aeadmin']);
+Route::post('/ieadmin',[UserController::class,'ieadmin']);
+Route::post('/seadmin',[UserController::class,'seadmin']);
+
+Route::get('/delmi/{id}',[UserController::class,'delmi'])->name('delmi');
+Route::get('/deld/{id}',[UserController::class,'deld'])->name('deld');
+Route::get('/delue/{id}',[UserController::class,'delue'])->name('delue');
+Route::get('/delss/{id}',[UserController::class,'delss'])->name('delss');
+Route::get('/deli/{id}',[UserController::class,'deli'])->name('deli');
+Route::get('/dell/{id}',[UserController::class,'dell'])->name('dell');
+Route::get('/dels/{id}',[UserController::class,'dels'])->name('dels');
+Route::get('/deldb/{id}',[UserController::class,'deldb'])->name('deldb');
 
 Route::get('selectu/{user}/', [UserController::class,'selectu'])->name('selectu');
 
@@ -148,14 +164,25 @@ Route::get('/sspro/{id}',[ProjectController::class, 'sspro'])->name('sspro');
 Route::get('/ispro/{id}',[ProjectController::class, 'ispro'])->name('ispro');
 Route::get('/lspro/{id}',[ProjectController::class, 'lspro'])->name('lspro');
 
+Route::get('/showsugs/{id}',[UserController::class, 'showsugs'])->name('showsugs');
+Route::get('/showsugi/{id}',[UserController::class, 'showsugi'])->name('showsugi');
+Route::get('/showsugl/{id}',[UserController::class, 'showsugl'])->name('showsugl');
+
 Route::get('/racpt/{id}',[ProjectController::class,'racpt'])->name('racpt');
 Route::get('/rdcln/{id}',[ProjectController::class,'rdcln'])->name('rdcln');
 
 Route::get('/racpts/{id}',[ProjectController::class,'racpts'])->name('racpts');
 Route::get('/rdclns/{id}',[ProjectController::class,'rdclns'])->name('rdclns');
 
+Route::get('/racptsi/{id}',[ProjectController::class,'racptsi'])->name('racptsi');
+Route::get('/rdclnsi/{id}',[ProjectController::class,'rdclnsi'])->name('rdclnsi');
+
 Route::get('/racpti/{id}',[ProjectController::class,'racpti'])->name('racpti');
 Route::get('/rdclni/{id}',[ProjectController::class,'rdclni'])->name('rdclni');
+
+Route::get('/delsp/{id}',[ProjectController::class,'delsp'])->name('delsp');
+Route::get('/dellp/{id}',[ProjectController::class,'dellp'])->name('dellp');
+Route::get('/delip/{id}',[ProjectController::class,'delip'])->name('delip');
 
 Route::get('/create1',[StudentprojectController::class,'create']);
 

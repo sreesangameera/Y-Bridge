@@ -27,7 +27,7 @@
                     <select class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" id="role" name="role" :value="old('role')" required autofocus>
                         <option value="Lecturer">Lecturer</option>
                         <option value="Student">Student</option>
-                        <option value="Industry">Industry</option>
+                        <option value="Industry">Industrialist</option>
                     </select>
                     <!--span class="fa fa-envelope form-control-feedback"></span-->
 </br>

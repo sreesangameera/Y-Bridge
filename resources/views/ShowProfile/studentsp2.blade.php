@@ -195,7 +195,7 @@ input[type=text], select, textarea{
                     <p><strong>LinkedIn: </strong> <a href="{{ $c->LinkedIn}} "> {{ $c->LinkedIn}}</a> </p>
                     <p><strong>Study Programme: </strong> {{ $c->StudyProgramme}} </p>
                     <p><strong>Subject Offered: </strong> {{ $c->SubjectsOffered}} </p>
-                    <p><strong>Skills : </strong> {{ $c->Skills}} </p>
+                    <p><strong>Research Interest: </strong> {{ $c->Skills}} </p>
                    
                 </div>   
                       </div>
@@ -292,7 +292,7 @@ input[type=text], select, textarea{
             
           });
      </script>
-     @elseif($msg == "This field can not be null")
+     @elseif($msg == "These fields can not be null")
      <script>
      Swal.fire({
                position: 'top',

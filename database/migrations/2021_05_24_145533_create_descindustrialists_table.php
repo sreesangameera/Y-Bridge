@@ -16,7 +16,8 @@ class CreateDescindustrialistsTable extends Migration
         Schema::create('descindustrialists', function (Blueprint $table) {
             $table->id();
             $table->String('CompanyPersonalEmailID');
-            $table->String('Description');
+            $table->String('Description',5000);
+            $table->String('Mainterms');
             $table->timestamps();
         });
     }

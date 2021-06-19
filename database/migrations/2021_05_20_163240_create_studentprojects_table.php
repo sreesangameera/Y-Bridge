@@ -17,9 +17,9 @@ class CreateStudentprojectsTable extends Migration
             $table->id();
             $table->string('Destination')->default('Student');
             $table->string('StudentID');
-            $table->string('projectID');
+            $table->string('ProjectID');
             $table->string('Titleoftheproject')->nullable();
-            $table->string('Description');
+            $table->string('Description',5000);
             $table->string('ProjectType');
             
             $table->string('LecturerID')->nullable();

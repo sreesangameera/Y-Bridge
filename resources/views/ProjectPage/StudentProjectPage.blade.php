@@ -57,7 +57,7 @@ form {
                     </p> 
         <br />
         
-        <p>Project ID :<h12>(use student id with a number)</h12><br> <input type="String" placeholder="20XX/CSC/XXX-1  or 20XX/SP/XXX-1"
+        <p>Project ID :<h12>(use student id with a number and replace slash with dash)</h12><br> <input type="String" placeholder="20XX-CSC-XXX-1  or 20XX-SP-XXX-1"
                         size="45" name="ProjectID" />
                     </p> 
         <br />
@@ -66,16 +66,16 @@ form {
                         size="65" name="Titleoftheproject" />
                     </p> 
 		<br /> 
-		<p>Description :<br> <textarea type="text" placeholder="Description"
+		<p>Description :<br> <textarea type="text" placeholder="Short description about your project. include technologies such as programming language, framework, database, etc. that you are going to use in your project.
+"
 						class="div1" name="Description" ></textarea></p> 
         <br /> 
         <p> 
 			Project Type :<br>
 			<select type="String" value="" name="ProjectType"> 
-				<option>Project for first year</option> 
-				<option>Project for second year</option> 
-				<option>Project for third year</option> 
-				<option>Project for fourth year</option> 
+            <option>Team Software project</option> 
+				<option>Individual Project</option> 
+				<option>Research Project</option> 
 				
 			</select> 
         </p> 

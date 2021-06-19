@@ -16,7 +16,8 @@ class CreateDesclecturersTable extends Migration
         Schema::create('desclecturers', function (Blueprint $table) {
             $table->id();
             $table->String('LecturerID');
-            $table->String('Description');
+            $table->String('Description',5000);
+            $table->String('Mainterms');
             $table->timestamps();
         });
     }

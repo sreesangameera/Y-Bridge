@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
  
      <!-- Site Metas -->
-    <title>Y-Bridge Student Suggestion Page</title>  
+    <title>Y-Bridge DCS UOJ</title>  
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -156,84 +156,84 @@ body{
 
 <body  data-new-gr-c-s-check-loaded="14.1007.0" data-gr-ext-installed="">
 
-
-<div class="banner-area banner-bg-1">
+<!--div class="banner-area banner-bg-1">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
 					<div class="banner">
 						<h2>Suggestion Page</h2>
                         <ul class="page-title-link">
-                        <li><a href="#">Student</a></li>
-							<li><a href="#">Lecturer</a></li>
 							<li><a href="#">Industrialist</a></li>
+							<li><a href="#">Student</a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+	</div-->
 
 <br><br>
+<div class="container">
+    @yield('content')
+</div>
 
  <div class="demo">
         <div class="container">
-        <h4>Do not close this page until you choose and send a request to both industrialist and lecturer</h4>
-<h5>When you click on a suggestion result,it will redirected to a respective profile with another tab</h5>
+        <!--h4>Do not close this page until you chose and send a request to a Student</h4>
+<h5>When you click on a suggestion result,it will redirected to a respective profile with another tab</h5-->
 <br>
+<div style="width:100%; margin:auto;">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="pricingTable">
+                        <div class="pricingTable-header">
+                            <h3>Proposed Students</h3>
+    </br>
+    
+                            <h4>Student ID</h4>
+                            
+                        </div>
+
+<br>
+<br><br>
 @if ($message = Session::get('success'))
         <div class="alert alert-success">
             <p></p>
         </div>
     @endif
-    <div style="width:100%; margin:auto;">
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <div class="pricingTable">
-                        <div class="pricingTable-header">
-                        <h3>Proposed Lecturers</h3>
-                            <!--span>Lecturer</span-->
-    </br>
-    </br>
-    <h4>Lecturers</h4>
-                            
-                        </div>
-
-<br>
-
                         <div class="pricingContent">
-                        <table  style="float:left; width:100%;">
+                        <table style="float:right; width:100%;">
       
       <thead>  
       <tr>
         <th></th>
-        
+        <th></th>
+        <th></th>
+        <th></th>
         
         
     </tr>
     </thead>
-    <tbody>
-    
-        
-    
-    @foreach($suggestiont as $usert)
-  
+    @foreach(explode(',',$suggestionind) as $user)
+         <tbody>   
                 <tr>
+           
+            @php
+             $q=str_replace("/","*",$user)
+             
+           @endphp 
+            
+            <td><a target="_blank" href="{{url('shstu2',$q)}}">{{$user}}</a></br></td>
+            @csrf
             
             
-          
-            <td><a target="_blank" href="{{url('shlec',$usert->EmployeeID)}}">{{$usert->Title}} {{$usert->FirstName}} {{$usert->LastName}}</a></td>
-           </tr>
-   
-    @endforeach
-         
-
-    </tbody>
-</table>
+        @endforeach 
+</tbody>
+            </table>    
                         </div><!-- /  CONTENT BOX-->
 
 <br><br><br>
-
+                    </div>
                         <div class="pricingTable-sign-up"><!-- BUTTON BOX-->
                             <!--a href="#" class="btn btn-block btn-default">Send Request</a-->
                         </div><!-- BUTTON BOX-->
@@ -241,71 +241,45 @@ body{
                 </div>
 
                 
-               <div class="col-md-3 col-sm-6">
+               <!--div class="col-md-3 col-sm-6">
                     <div class="pricingTable">
                         <div class="pricingTable-header">
-                        <h3>Proposed Industrialists</h3>
-                            <!--span>Industrialist</span-->
-                            <br>
-                            <br>
-                            <h4>Industrialists</h4>
+                            <h4>Proposed Lecturers</h4>
+                            <span>Lecturer</span>
+                            
                         </div>
-                        
 
-
-<br>
+<br><br><br>
+<br><br><br>
 
                         <div class="pricingContent">
-                        <table   style="float:right; width:100%;">
-
-<thead>  
-      <tr>
-        
-        <th></th>
-
-        
-        
-    </tr>
-    </thead>
-    <tbody>
-   
-    @foreach($suggestionta as $userta)
-                <tr>
-            
-           
-           
-            
-            <td><a target="_blank" href="{{url('shind',$userta->CompanyPersonalEmailID)}}">{{$userta->NameWithInitials}}</a></br></td>
-            
-            
-             
-        
-        @endforeach 
-        </tr>  
-
-    </tbody>
-
-</table>
-                        </div><!-- /  CONTENT BOX-->
+                            <ul>
+                                <li><b></b> charith gamage</li><br>
+                                <li><b></b> nipuna nissanka</li><br>
+                                <li><b></b> athula perera</li><br>
+                                <li><b></b> ron hewage</li><br>
+                                <li><b></b> hema dayananda</li><br>
+                            </ul>
+                        </div>< /  CONTENT BOX-->
 
 <br><br><br>
 
-                        <div class="pricingTable-sign-up"><!-- BUTTON BOX-->
-                            <!--a href="#" class="btn btn-block btn-default">Send Request</a-->
+                        <!--div class="pricingTable-sign-up">< BUTTON BOX>
+                            <a href="#" class="btn btn-block btn-default">Send Request</a-->
                         </div><!-- BUTTON BOX-->
                     </div>
-                </div>
+                </div-->
             </div>
         </div>
     </div>
 
 
+    <!--h4>Do not close this page until you chose and send a request to a Student</h4>
+<h5>When you click on a suggestion result,it will redirected to a respective profile with another tab</h5-->
+<a href="/ispro/{id}">back</a>
 <br><br><br>
 
-<a href="/spp">back</a>
-<br><br><br>
-
-    <div class="copyrights">
+    <!--div class="copyrights">
         <div class="container">
             
             <div class="footer-distributed">
@@ -316,8 +290,8 @@ body{
 
                 
             </div>
-        </div><!-- end container -->
-    </div><!-- end copyrights -->
+        </div><! end container ->
+    </div--><!-- end copyrights -->
 
     <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
 

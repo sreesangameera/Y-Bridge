@@ -34,6 +34,8 @@
             <th>Student Id</th>
             
             <th>created_at</th>
+            <th>Action</th>
+            
             
             
         </tr>
@@ -50,6 +52,13 @@
                 
                 
                 <td>{{$user->created_at}}</td> 
+                <td>
+<a href="{{route('delip',$user->id)}}" onclick="return confirm('Are you sure?')",
+    class="btn btn-danger" type="button" 
+>delete</a>&nbsp;<a href="{{route('showsugi',$user->ProjectID)}}"
+    class="btn btn-warning" type="button" 
+>Show Suggestions</a></td>
+                </tr>
                 
                 
                    

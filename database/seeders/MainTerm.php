@@ -16,17 +16,18 @@ class MainTerm extends Seeder
     {
         DB::table('mainTerms')->insert([
             'mainTermId'=>'1',
-             'mainTerm'=>'Advanced Algorithms',]);
+             'mainTerm'=>'Artificial Intelligence',
+             ]);
 
              DB::table('mainTerms')->insert([
 
              'mainTermId'=>'2',
-             'mainTerm'=>'Advanced database design and systems',
+             'mainTerm'=>'Automata Theory',
              ]);
 
              DB::table('mainTerms')->insert([
              'mainTermId'=>'3',
-             'mainTerm'=>'Artificial Intelligence',
+             'mainTerm'=>'Big Data Analysis',
              ]);
 
              DB::table('mainTerms')->insert([
@@ -38,210 +39,216 @@ class MainTerm extends Seeder
              DB::table('mainTerms')->insert([
 
              'mainTermId'=>'5',
-             'mainTerm'=>'Compiler design',
+             'mainTerm'=>'Blockchain',
              ]);
 
              DB::table('mainTerms')->insert([
 
              'mainTermId'=>'6',
-             'mainTerm'=>'Computer Networks and Internet Computing',
+             'mainTerm'=>'Compiler Design',
              ]);
 
              DB::table('mainTerms')->insert([
              'mainTermId'=>'7',
-             'mainTerm'=>'Concepts of Programming Languages',
+             'mainTerm'=>'Computer Architecture',
              ]);
 
              DB::table('mainTerms')->insert([
 
              'mainTermId'=>'8',
-             'mainTerm'=>'Cryptography and Data Security',
+             'mainTerm'=>'Computer Graphics',
              ]);
 
              DB::table('mainTerms')->insert([
 
              'mainTermId'=>'9',
-             'mainTerm'=>'Data communication and computer networks',
+             'mainTerm'=>'Computer Networks',
              ]);
 
              DB::table('mainTerms')->insert([
 
              'mainTermId'=>'10',
-             'mainTerm'=>'Data mining and Machine learning',
+             'mainTerm'=>'Computer Vision',
              ]);
 
              DB::table('mainTerms')->insert([
 
              'mainTermId'=>'11',
-             'mainTerm'=>'Data Structures and Algorithms',
+             'mainTerm'=>'Cryptography',
              ]);
 
              DB::table('mainTerms')->insert([
 
              'mainTermId'=>'12',
-             'mainTerm'=>'Database Management Systems',
+             'mainTerm'=>'Data Communication',
              ]);
 
              DB::table('mainTerms')->insert([
 
              'mainTermId'=>'13',
-             'mainTerm'=>'Digital Image Processing',
+             'mainTerm'=>'Data Mining',
              ]);
 
              DB::table('mainTerms')->insert([
 
              'mainTermId'=>'14',
-             'mainTerm'=>'E-technologies',
+             'mainTerm'=>'Database Management Systems',
              ]);
 
              DB::table('mainTerms')->insert([
 
              'mainTermId'=>'15',
-             'mainTerm'=>'Foundations of Computer Science',
+             'mainTerm'=>'Deep Learning',
              ]);
 
              DB::table('mainTerms')->insert([
 
              'mainTermId'=>'16',
-             'mainTerm'=>'Graphics and Visual Computing',
+             'mainTerm'=>'E-Learning',
              ]);
 
              DB::table('mainTerms')->insert([
 
              'mainTermId'=>'17',
-             'mainTerm'=>'Mobile Computing',
+             'mainTerm'=>'High Performance Computing',
              ]);
 
              DB::table('mainTerms')->insert([
 
              'mainTermId'=>'18',
-             'mainTerm'=>'Multimedia Technologies',
+             'mainTerm'=>'Human Computer Interaction',
              ]);
 
              
              DB::table('mainTerms')->insert([
 
              'mainTermId'=>'19',
-             'mainTerm'=>'Numerical Computing',
+             'mainTerm'=>'Image Processing',
              ]);
 
              DB::table('mainTerms')->insert([
 
              'mainTermId'=>'20',
-             'mainTerm'=>'Numerical Linear algebra and solutions of differential equations',
+             'mainTerm'=>'Information Systems',
              ]);
 
              DB::table('mainTerms')->insert([
 
              'mainTermId'=>'21',
-             'mainTerm'=>'Object Oriented Programming',
+             'mainTerm'=>'Intelligent Systems',
              ]);
 
              DB::table('mainTerms')->insert([
 
              'mainTermId'=>'22',
-             'mainTerm'=>'Operating Systems',
+             'mainTerm'=>'IoT',
              ]);
 
              DB::table('mainTerms')->insert([
 
              'mainTermId'=>'23',
-             'mainTerm'=>'Parallel computing',
+             'mainTerm'=>'Knowledge Representation',
              ]);
 
              DB::table('mainTerms')->insert([
 
              'mainTermId'=>'24',
-             'mainTerm'=>'Principles of computer Architecture',
+             'mainTerm'=>'Local Language Computing',
              ]);
 
              DB::table('mainTerms')->insert([
 
              'mainTermId'=>'25',
-             'mainTerm'=>'Programming in Logic',
+             'mainTerm'=>'Machine Learning',
              ]);
 
              DB::table('mainTerms')->insert([
 
              'mainTermId'=>'26',
-             'mainTerm'=>'Rapid Application Development',
+             'mainTerm'=>'Medical Image Analysis',
              ]);
 
              DB::table('mainTerms')->insert([
 
              'mainTermId'=>'27',
-             'mainTerm'=>'Software Engineering',
+             'mainTerm'=>'Medical Imaging',
              ]);
 
              DB::table('mainTerms')->insert([
 
              'mainTermId'=>'28',
-             'mainTerm'=>'System design, analysis and project management',
+             'mainTerm'=>'Mobile Computing',
              ]);
 
              DB::table('mainTerms')->insert([
 
              'mainTermId'=>'29',
-             'mainTerm'=>'Computer Systems',
+             'mainTerm'=>'Natural Language Processing',
              ]);
 
              DB::table('mainTerms')->insert([
 
              'mainTermId'=>'30',
-             'mainTerm'=>'Human Computer Interaction',
+             'mainTerm'=>'Numerical Computing',
              ]);
 
              DB::table('mainTerms')->insert([
 
              'mainTermId'=>'31',
-             'mainTerm'=>'Design of Algorithms',
+             'mainTerm'=>'Operating Systems',
              ]);
 
              DB::table('mainTerms')->insert([
 
              'mainTermId'=>'32',
-             'mainTerm'=>'Organisational Behaviour',
+             'mainTerm'=>'Opportunistic Network',
              ]);
 
              DB::table('mainTerms')->insert([
 
              'mainTermId'=>'33',
-             'mainTerm'=>'Computer Architecture',
+             'mainTerm'=>'Organizational Behaviour',
              ]);
 
              DB::table('mainTerms')->insert([
 
              'mainTermId'=>'34',
-             'mainTerm'=>'Programming Languages',
+             'mainTerm'=>'Parallel Computing',
              ]);
 
              DB::table('mainTerms')->insert([
 
              'mainTermId'=>'35',
-             'mainTerm'=>'Web Technologies',
+             'mainTerm'=>'Rapid Application Development',
              ]);
 
              DB::table('mainTerms')->insert([
 
              'mainTermId'=>'36',
-             'mainTerm'=>'Emerging Trends',
+             'mainTerm'=>'Social Network Analysis',
              ]);
 
              DB::table('mainTerms')->insert([
 
              'mainTermId'=>'37',
-             'mainTerm'=>'High Performance Computing',
+             'mainTerm'=>'Software-defined Networking',
              ]);
 
              DB::table('mainTerms')->insert([
 
              'mainTermId'=>'38',
-             'mainTerm'=>'Image Processing and Computer Vision',
+             'mainTerm'=>'Spiking Neural Networks',
              ]);
 
              DB::table('mainTerms')->insert([
              'mainTermId'=>'40',
-             'mainTerm'=>'Systems and Network Administration',
+             'mainTerm'=>'System Design and Analysis',
             ]);
-    }
-}
+     
+             
+             DB::table('mainTerms')->insert([
+             'mainTermId'=>'41',
+             'mainTerm'=>'Web Technologies',
+            ]);
+            }
+            }

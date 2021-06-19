@@ -30,7 +30,6 @@ class ProjectController extends Controller
         $email=   Auth::user()->email ;
         $id=DB::table('students')->where('EmailID',$email)->value('StudentID');
         $p=DB::table('notifications')->where('rid',$id)->get();
-        
         return view('Notification/stnotifi')->with('nt',$p);       }
     
     public function lnotifi(){
@@ -48,21 +47,24 @@ class ProjectController extends Controller
     public function sprqsts(){
         $email=   Auth::user()->email ;
         $id=DB::table('students')->where('EmailID',$email)->value('StudentID');
-        $q=DB::table('requests')->where('rid',$id)->get();
-        return view('ProjectRequests/sprequests')->with('rts',$q);      }
+        $qi=DB::table('requests')->where('rid',$id)->where('srole',"industrialist")->get();
+        $ql=DB::table('requests')->where('rid',$id)->where('srole',"lecturer")->get();
+        
+        return view('ProjectRequests/sprequests')->with('irts',$qi)->with('lrts',$ql);      }
 
     public function racpts($id){
         DB::table('requests')->where('id',$id)->update(['accptd' => "accepted",]);
         $ln=DB::table('requests')->where('id',$id)->value('rn');
         $pid=DB::table('requests')->where('id',$id)->value('pid');
-        DB::table('academicprojects')->where('projectID',$pid)->update(['StudentID' => $ln,]);
+        DB::table('academicprojects')->where('ProjectID',$pid)->update(['StudentID' => $ln,]);
         return redirect()->back();
         }
         public function rdclns($id){
             $rid=DB::table('requests')->where('id',$id)->value('sid');
             $ln=DB::table('requests')->where('id',$id)->value('rn');
+            $lnp=DB::table('requests')->where('id',$id)->value('pid');
             DB::table('notifications')->insert([
-                'msg' => $ln." has declined your request",'rid' => $rid]);
+                'msg' => $ln." has declined your request",'rid' => $rid,'pid' => $lnp]);
         DB::table('requests')->where('id',$id)->update(['accptd' => "declined",]);
     
         return redirect()->back();
@@ -72,14 +74,15 @@ class ProjectController extends Controller
             DB::table('requests')->where('id',$id)->update(['accptd' => "accepted",]);
             $ln=DB::table('requests')->where('id',$id)->value('rn');
             $pid=DB::table('requests')->where('id',$id)->value('pid');
-            DB::table('industrialistprojects')->where('projectID',$pid)->update(['StudentID' => $ln,]);
+            DB::table('industrialistprojects')->where('ProjectID',$pid)->update(['StudentID' => $ln,]);
             return redirect()->back();
             }
             public function rdclnsi($id){
                 $rid=DB::table('requests')->where('id',$id)->value('sid');
                 $ln=DB::table('requests')->where('id',$id)->value('rn');
+                $lnp=DB::table('requests')->where('id',$id)->value('pid');
                 DB::table('notifications')->insert([
-                    'msg' => $ln." has declined your request",'rid' => $rid]);
+                    'msg' => $ln." has declined your request",'rid' => $rid,'pid' => $lnp]);
             DB::table('requests')->where('id',$id)->update(['accptd' => "declined",]);
         
             return redirect()->back();
@@ -95,14 +98,15 @@ class ProjectController extends Controller
     DB::table('requests')->where('id',$id)->update(['accptd' => "accepted",]);
     $ln=DB::table('requests')->where('id',$id)->value('rn');
     $pid=DB::table('requests')->where('id',$id)->value('pid');
-    DB::table('studentprojects')->where('projectID',$pid)->update(['LecturerID' => $ln,]);
+    DB::table('studentprojects')->where('ProjectID',$pid)->update(['LecturerID' => $ln,]);
     return redirect()->back();
     }
     public function rdcln($id){
         $rid=DB::table('requests')->where('id',$id)->value('sid');
         $ln=DB::table('requests')->where('id',$id)->value('rn');
+        $lnp=DB::table('requests')->where('id',$id)->value('pid');
         DB::table('notifications')->insert([
-            'msg' => $ln." has declined your request",'rid' => $rid]);
+            'msg' => $ln." has declined your request",'rid' => $rid,'pid' => $lnp]);
     DB::table('requests')->where('id',$id)->update(['accptd' => "declined",]);
 
     return redirect()->back();
@@ -118,14 +122,15 @@ class ProjectController extends Controller
         DB::table('requests')->where('id',$id)->update(['accptd' => "accepted",]);
         $ln=DB::table('requests')->where('id',$id)->value('rn');
         $pid=DB::table('requests')->where('id',$id)->value('pid');
-        DB::table('studentprojects')->where('projectID',$pid)->update(['CompanyPersonalEmailID' => $ln,]);
+        DB::table('studentprojects')->where('ProjectID',$pid)->update(['CompanyPersonalEmailID' => $ln,]);
         return redirect()->back();
         }
         public function rdclni($id){
             $rid=DB::table('requests')->where('id',$id)->value('sid');
             $ln=DB::table('requests')->where('id',$id)->value('rn');
+            $lnp=DB::table('requests')->where('id',$id)->value('pid');
             DB::table('notifications')->insert([
-                'msg' => $ln." has declined your request",'rid' => $rid]);
+                'msg' => $ln." has declined your request",'rid' => $rid,'pid' => $lnp]);
         DB::table('requests')->where('id',$id)->update(['accptd' => "declined",]);
     
         return redirect()->back();
@@ -148,8 +153,25 @@ class ProjectController extends Controller
         $email=   Auth::user()->email ;
         $id=DB::table('academics')->where('EmailID',$email)->value('EmployeeID');
         
-        $p=DB::table('academicprojects')->where('StudentID',$id)->get();
+        $p=DB::table('academicprojects')->where('LecturerID',$id)->get();
         
         return view('StoredProjects/lsprojects')->with('usert',$p);      }
+
+
+        public function delsp($id){
+            $user=DB::table('studentprojects')->where('id',$id ) ->delete();
+            $s="Project Deleted successfully";
+            return redirect()->back()->with('usert',$user)->with('msg',$s); 
+        }  
+
+        public function dellp($id){
+            $user=DB::table('academicprojects')->where('id',$id ) ->delete();
+            return redirect()->back()->with('usert',$user); 
+        }  
+
+        public function delip($id){
+            $user=DB::table('industrialistprojects')->where('id',$id ) ->delete();
+            return redirect()->back()->with('usert',$user); 
+        }  
 
 }

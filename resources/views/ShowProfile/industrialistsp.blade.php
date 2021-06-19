@@ -260,7 +260,7 @@
             
           });
      </script>
-     @elseif($msg == "This field can not be null")
+     @elseif($msg == "These fields can not be null")
      <script>
      Swal.fire({
                position: 'top',

@@ -216,9 +216,9 @@ ul.nav-tabs li{
             <button id="myBtn" type="button" class="btn btn-primary">Edit Profile</button>
             </div>
             <button id="myBtnri" type="button" class="btn btn-info">Skills</button>
-            </div>
             
-              <button class="btn btn-block btn-warning" style="height:40px;" >
+            <div>
+              <button class="btn btn-block btn-warning" style="height:32px;" >
                 <!--i class="fa fa-sign-out"></i-->
                 <form method="POST" action="{{ route('logout') }}">
                             @csrf
@@ -231,7 +231,7 @@ ul.nav-tabs li{
                         </form>
                 
               </button>
-              
+            </div>
             </div>
             
           </div>
@@ -246,20 +246,90 @@ ul.nav-tabs li{
                 
               </div>
               <ul class="nav nav-tabs" >
-                <li class="nav-item"><a href="/Edit " class="active nav-link">Edit Profile</a></li>
+                <li class="nav-item"><a href="profile" class=" nav-link">Profile</a></li>
+                <li class="nav-item"><a href="/updatestudentv" class="active nav-link">Edit Profile</a></li>
               </ul>
               <div class="tab-content pt-3" >
                 <div class="tab-pane active">
                   <form class="form" novalidate="" >
-                    <div class="row">
-                      <div class="col">
-                      <div class="col-xs-12 col-sm-8" >
+                   
+                  <form method="POST" action="/updatestudent" >
+        @csrf
+        <!--button class="btn btn-primary" type="button">
+                        <i class="fa fa-fw fa-camera"></i>
+                        <span>Change Photo</span>
+                      </button><br><br-->
+        <div title="firstname">First Name</div><input class="form-control" type="text" name="fname" placeholder="First Name" required="required" value="{{ $c->FirstName}}"><br>
+        <input type="hidden" name="email" value="{{ $c->EmailID}}" >
+        <div title="lastname">Last Name</div><input class="form-control" type="text" name="lname" placeholder="Last Name" required="required" value="{{ $c->LastName}}"><br>
+        <div title="select">Level</div><div>
                     
+                    <select class="form-control" class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"  name="level" :value="{{ $c->YearOfStudy}}" required autofocus>
+                        <option value="{{ $c->YearOfStudy}}">{{ $c->YearOfStudy}}</option>
+                        <option value="Level-1G">Level-1G</option>
+                        <option value="Level-1S">Level-1S</option>
+                        <option value="Level-2G">Level-2G</option>
+                        <option value="Level-2S">Level-2S</option>
+                        <option value="Level-3G">Level-3G</option>
+                        <option value="Level-3M">Level-3M</option>
+                        <option value="Level-3S">Level-3S</option>
+                        <option value="Level-4M">Level-4M</option>
+                        <option value="Level-4S">Level-4S</option>
+                        <option value="Level-4X">Level-4X</option>
+                    </select>
                     
-                </div>   
-                      </div>
-                    </div>
+                </div><br>
+        
+        
+        <div title="20XX/CSC/XXX,20XX/SP/XXX">Student Id</div><input class="form-control" type="text" name="si" placeholder="Student ID" required="required" value="{{ $c->StudentID}}"><br>
+        
+        <div title="Male/Female/Other">Gender</div><div>
                     
+                    <select class="form-control" class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"  name="g" value="{{ $c->Gender}}"  required autofocus>
+                        <option value="{{ $c->Gender}}">{{ $c->Gender}}</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                       
+                        
+                    </select>
+                    
+                </div><br>
+        <div title="select">Date of Birth</div><input class="form-control" type="date" name="dob" placeholder="DOB" required="required" value="{{ $c->DateOfBirth}}"><br>
+        <div title="enter your home address">Home Address</div><input class="form-control" type="text" name="ha" placeholder="Home Address" required="required" value="{{ $c->HomeAddress}}"><br>
+        <div title="07XXXXXXXX">Contact No</div><input class="form-control" type="text" name="cn" placeholder="Contact Number" required="required" value="{{ $c->ContactNumber}}"><br>
+        <div title="https://www.linkedin.com/in/username/">LinkedIn Id</div><input class="form-control" type="text" name="li" placeholder="LinkedIn" value="{{ $c->LinkedIn}}"><br>
+        <div title="select">Study Programme</div><div>
+                    
+                    <select class="form-control" class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"  name="sp" value="{{ $c->StudyProgramme}}"  required autofocus>
+                        <option value="{{ $c->StudyProgramme}}">{{ $c->StudyProgramme}}</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Physical Science">Physical Science</option>
+                        
+                        
+                    </select>
+                    
+                </div> <br>
+        <div title="select">Subjects Offered</div><div>
+                    
+                    <select class="form-control" class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"  name="so" value="{{ $c->SubjectsOffered}}"  required autofocus>
+                        <option value="{{ $c->SubjectsOffered}}">{{ $c->SubjectsOffered}}</option>
+                        <option value="Direct Computer Science"> Direct Computer Science</option>
+                        <option value="PMM,AMM,CSC">PMM,AMM,CSC</option>
+                        <option value="PMM,STA,CSC">PMM,STA,CSC</option>
+                        <option value="AMM,STA,CSC">AMM,STA,CSC</option>
+                        <option value="AMM,PHY,CSC">AMM,PHY,CSC</option>
+                        <option value="PMM,PHY,CSC">PMM,PHY,CSC</option>
+                        
+                        
+                    </select>
+                    
+                </div> <br>
+        <div title="old password">Old Password</div><input class="form-control" type="password" name="pwrd" placeholder="Old Password" required="required" ><br>
+        <div title="new password or confirm the old password">New Password</div><input class="form-control" type="password" name="nwpswrd" placeholder="New Password" required="required"><br>
+        
+        <input class="btn btn-primary" type="submit" value="submit">
+        
+    </form>
                     <!--div class="row">
                       <div class="col-12 col-sm-6 mb-3">
                         <div class="mb-2"><b>Change Password</b></div>
@@ -334,7 +404,7 @@ ul.nav-tabs li{
 
   <!-- Modal content -->
   <div class="modal-content" style="width:75%">
-  <a href="/profile">X</a>
+  <a type="button" class="btn btn-light btn-sm" style="width:25px;height:30px"  href="/profile">X</a>
     
     <form method="POST" action="/updatestudent" enctype="multipart/form-data">
         @csrf
@@ -350,7 +420,7 @@ ul.nav-tabs li{
                     <select class="form-control" class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"  name="level" :value="{{ $c->YearOfStudy}}" required autofocus>
                         <option value="{{ $c->YearOfStudy}}">{{ $c->YearOfStudy}}</option>
                         <option value="Level-1G">Level-1G</option>
-                        <option value="Level-1G">Level-1S</option>
+                        <option value="Level-1S">Level-1S</option>
                         <option value="Level-2G">Level-2G</option>
                         <option value="Level-2S">Level-2S</option>
                         <option value="Level-3G">Level-3G</option>
@@ -421,7 +491,7 @@ ul.nav-tabs li{
 
   <!-- Modal content -->
   <div class="modal-content" style="width:25%">
-    <span class="close">&times;</span>
+  <a type="button" class="btn btn-light btn-sm" style="width:25px;height:30px"  href="/profile">X</a>
     <form method="POST" action="/updatestudentpp" enctype="multipart/form-data">
         @csrf
         <div title="upload an image">Profile Picture</div><input class="form-control" type="file" name="photo" placeholder="add photo"> 
@@ -437,7 +507,7 @@ ul.nav-tabs li{
 
   <!-- Modal content -->
   <div class="modal-content" style="width:75%">
-    <span class="close">&times;</span>
+  <a type="button" class="btn btn-light btn-sm" style="width:25px;height:30px"  href="/profile">X</a>
     <form method="POST" action="/updatestudentri" enctype="multipart/form-data">
         @csrf
         
@@ -698,6 +768,6 @@ window.onclick = function(event) {
     <script src="js/portfolio.js"></script>
     <script src="js/hoverdir.js"></script>    
     
-  
+   
 </body>
 </html>

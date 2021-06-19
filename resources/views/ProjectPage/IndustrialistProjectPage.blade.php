@@ -83,7 +83,8 @@ form {
 
                    
 		<br /> 
-		<p>Description :<br> <textarea type="text" placeholder="Description"
+		<p>Description :<br> <textarea type="text" placeholder="Short description about your project. include technologies such as programming language, framework, database, etc. that you are going to use in your project.
+"
 						class="div1" name="Description" ></textarea> </p> 
 			<!--select type="text" value="" name="Description">  
                 <option>Advanced database design and systems</option>

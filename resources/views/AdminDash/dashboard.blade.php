@@ -57,7 +57,7 @@
                 </li>
 
                 <li class="collapsed ">
-                  <a href="indd"><i class="fa fa-gift fa-lg"></i>Industrial</a>
+                  <a href="indd"><i class="fa fa-gift fa-lg"></i>Industrialist</a>
                 </li>
 
                 <li class="collapsed ">
@@ -68,6 +68,13 @@
                   <a href="uped"><i class="fa fa-gift fa-lg"></i>Upcoming Events</a>
                 </li>
 
+                <li class="collapsed ">
+                  <a href="mtid"><i class="fa fa-gift fa-lg"></i>Mainterms</a>
+                </li>
+
+                <li class="collapsed ">
+                  <a href="dctnry"><i class="fa fa-gift fa-lg"></i>Dictionary</a>
+                </li>
                  <!--li class="collapsed ">
                   <a href="http://192.248.56.20/match-module/subtopic"><i class="fa fa-gift fa-lg"></i>Sub Topic</a>
                 </li>
@@ -135,7 +142,7 @@
             <th>lname</th>
             <th>role</th>
             <th>email</th>
-            <th>Accept</th>
+            <th>Action</th>
             
             
         </tr>
@@ -150,14 +157,12 @@
                 <td>{{$user->lname}}</td>
                 <td>{{$user->role}}</td>
                 <td>{{$user->email}}</td>
-                <td> 
-                @if($user->not_confirmed)
-                <div class="btn btn-warning">not confirmed</div>
-                @else
-                <div class="btn btn-success">confirmed</div>
-                @endif
-                        <a href="{{route('selectu',$user->id)}}">Confirm</a>
-                        
+                <td>
+               
+                        <a type="button" class="btn btn-success"href="{{route('selectu',$user->id)}}">Confirm</a>
+                        &nbsp;&nbsp;<a href="{{route('deldb',$user->id)}}" onclick="return confirm('Are you sure?')",
+    class="btn btn-danger" type="button" 
+>delete</a>
 
                         
 
@@ -365,6 +370,31 @@ $(document).on("click","#DeleteBtn",function(e){
             
           });
      </script>
+
+@elseif($msg == "Successfully Done")
+     <script>
+     Swal.fire({
+               position: 'top',
+               icon: 'success',
+               title: '{{$msg}}',
+               showConfirmButton: false,
+               timer: 2000
+            
+          });
+     </script>
+
+@elseif($msg == "Deleted successfully")
+     <script>
+     Swal.fire({
+               position: 'top',
+               icon: 'success',
+               title: '{{$msg}}',
+               showConfirmButton: false,
+               timer: 2000
+            
+          });
+     </script>
+     
      @endif
      @endif
 <script> 

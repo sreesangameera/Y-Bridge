@@ -18,11 +18,11 @@ class CreateIndustrialistprojectsTable extends Migration
             $table->string('Destination')->default('Industrialist');
             $table->Text('CompanyPersonalEmailID');
             $table->String('Titleoftheproject')->nullable();
-            $table->String('Description');
+            $table->String('Description',5000);
             $table->String('ProjectID');
             
             $table->string('StudentID')->nullable();
-            $table->string('LecturerID')->nullable();
+            //$table->string('LecturerID')->nullable();
             
             $table->timestamps();
         });

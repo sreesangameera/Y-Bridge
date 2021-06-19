@@ -37,6 +37,7 @@
             <th>LecturerID</th>
             <th>Industrialist</th>
             <th>created at</th>
+            <th>Action</th>
             
             
         </tr>
@@ -46,7 +47,7 @@
         
             <tr>
                 
-                <td>{{$user->projectID}}</td>
+                <td>{{$user->ProjectID}}</td>
                 <td>{{$user->Titleoftheproject}}</td>
                 <td>{{$user->Description}}</td>
                 <td>{{$user->ProjectType}}</td>
@@ -54,8 +55,13 @@
                 <td>{{$user->LecturerID}}</td>
                 <td>{{$user->CompanyPersonalEmailID}}</td>
                 <td>{{$user->created_at}}</td> 
-                
-                
+                <td>
+<a href="{{route('delsp',$user->id)}}" onclick="return confirm('Are you sure?')",
+    class="btn btn-danger" type="button" 
+>delete</a>&nbsp;<a href="{{route('showsugs',$user->ProjectID)}}"
+    class="btn btn-warning" type="button" 
+>Show Suggestions</a></td>
+                </tr>
                    
         @endforeach
         </tbody>
@@ -70,5 +76,20 @@
     <script type="text/javascript" src="/js/datatables.bootstrap1.js"></script>
     <script type="text/javascript" src="/js/sweetalert1.min.js"></script>
     <script src="https://cdn.datatab1es.net/l.16.19/js/dataTab1es.bootstrap4.min.js"></script>   
+    @if($msg = session()->get('msg'))
+@if($msg == "Project Deleted successfully")
+<script>
+     Swal.fire({
+               position: 'top',
+               icon: 'success',
+               title: '{{$msg}}',
+               showConfirmButton: false,
+               timer: 2000
+            
+          });
+     </script>
+     
+     @endif
+     @endif
 </body>
 </html>

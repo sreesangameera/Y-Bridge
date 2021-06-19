@@ -19,11 +19,11 @@ class CreateAcademicprojectsTable extends Migration
             $table->String('LecturerID');
             $table->String('ProjectID');
             $table->String('Titleoftheproject')->nullable();
-            $table->String('Description');
+            $table->String('Description',5000);
            
             $table->String('ProjectType');
             $table->string('StudentID')->nullable();
-            $table->string('CompanyPersonalEmailID')->nullable();
+            //$table->string('CompanyPersonalEmailID')->nullable();
             //$table->String('ProjectStatus');
             $table->timestamps();
         });

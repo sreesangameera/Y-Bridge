@@ -23,6 +23,7 @@
     <link href="/css/metallic1.css" rel="stylesheet" typeee="text/css"/>
         <link href="/css/select21.css" rel="stylesheet" typeee="text/css"/>
 
+
         <link rel="stylesheet" href="styleprof.css">
 
 
@@ -49,7 +50,7 @@
                   <a href="acad"><i class="fa fa-gift fa-lg"></i>Academic</a>
                 </li>
 
-                <li class="collapsed active">
+                <li class="collapsed ">
                   <a href="stud"><i class="fa fa-gift fa-lg"></i>Student</a>
                 </li>
 
@@ -65,7 +66,7 @@
                   <a href="uped"><i class="fa fa-gift fa-lg"></i>Upcoming Events</a>
                 </li>
 
-                <li class="collapsed ">
+                <li class="collapsed active">
                   <a href="mtid"><i class="fa fa-gift fa-lg"></i>Mainterms</a>
                 </li>
 
@@ -129,36 +130,28 @@
  <div id="page-wrapper">
     <div class="row">
     
-        <div class="border"><span>Student Details</span></div>
+        <div class="border"><span>Mainterms</span></div><div><button onclick="document.getElementById('myModalqw2').style.display = 'block';" id="myBtnqw2" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i></button></div>
         <table  class="table table-striped table-bordered tabledash" >
         <thead>
         <tr>
-            <th>Student ID</th>
+            <th>mainTerm Id</th>
+            <th>mainTerm</th>
+            <th>Action</th>
+           
             
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Gender</th>
-            <th>Email ID</th>
-           <th>Action</th>
             
             
         </tr>
         </thead>
         <tbody>
-        @foreach ($studentt as $user)
+        @foreach ($c as $user)
             <tr>
                 
-                <td>{{$user->StudentID}}</td>
-                
-                <td>{{$user->FirstName}}</td>
-                <td>{{$user->LastName}}</td>
-                <td>{{$user->Gender}}</td>
-                <td>{{$user->EmailID}}</td>
-                <td><a><button onclick="document.getElementById('myModalqw').style.display = 'block';document.getElementById('EmailID').value='{{ $user->EmailID}}';document.getElementById('id').value='{{ $user->id}}';" id="myBtnqw" class="btn btn-primary"><!--i class="glyphicon glyphicon-pencil"></i-->Edit</button></a>
-                <a href="{{route('dels',$user->id)}}" onclick="return confirm('Are you sure?')",
+                <td>{{$user->mainTermId}}</td>
+                <td>{{$user->mainTerm}}</td>
+                <td><a href="{{route('delmi',$user->id)}}" onclick="return confirm('Are you sure?')",
     class="btn btn-danger" type="button" 
 >delete</a></td>
-                        
                 
                
             </tr>
@@ -168,16 +161,33 @@
     
     </div>
 </div>
-    
-
 <div id="myModalqw" class="modal" >
-<div class="modal-content" style="width:25%" >
+<div class="modal-content" style="width:25%">
     <span onclick="document.getElementById('myModalqw').style.display = 'none';" class="close">&times;</span>
-<form method="POST" action="/seadmin" enctype="multipart/form-data">
+<form method="POST" action="/upcomingeventsadmin" enctype="multipart/form-data">
         @csrf
         
-        <div title="EmailID">Email ID</div><input id="EmailID" class="form-control" type="text" name="EmailID" placeholder="Email ID" required="required" ><br>
+        <div title="Link">Link</div><input id="link" class="form-control" type="text" name="link" placeholder="Link" required="required" ><br>
         <input id="id" class="form-control" type="hidden" name="id" placeholder="Link" required="required" ><br>
+        <div title="firstname">Date</div><input id="date" class="form-control" type="text" name="date" placeholder="Date" required="required" ><br>
+        <div title="event name">Event Name</div><input id="ename" class="form-control" type="text" name="ename" placeholder="Event Name" required="required" ><br>
+        <div title="description">Description</div><input id="des" class="form-control" type="text" name="description" placeholder="Description" required="required" ><br>
+       <input class="btn btn-primary" type="submit" value="submit">
+        
+    </form>
+    </div>
+
+</div>
+
+<div id="myModalqw2" class="modal" >
+<div class="modal-content" style="width:50%">
+    <span onclick="document.getElementById('myModalqw2').style.display = 'none';" class="close">&times;</span>
+<form method="POST" action="/maintermidadminadd" enctype="multipart/form-data">
+        @csrf
+        
+        <div title="Link">mainTerm Id</div><input id="mainTermId" class="form-control" type="text" name="mainTermId" placeholder="mainTerm Id" required="required" ><br>
+        <input id="id" class="form-control" type="hidden" name="id" placeholder="Link" required="required" ><br>
+        <div title="firstname">mainTerm</div><input id="mainTerm" class="form-control" type="text" name="mainTerm" placeholder="mainTerm" required="required" ><br>
         
        <input class="btn btn-primary" type="submit" value="submit">
         
@@ -185,6 +195,8 @@
     </div>
 
 </div>
+
+
 
 
 
@@ -240,7 +252,7 @@
   <script type="text/javascript">
 	//alert('welcome');
 $(document).ready(function(){
-   var table= $('#student-table').DataTable({
+   var table= $('#lecture-table').DataTable({
         processing: true,
         serverSide: true,
         ajax: '',
@@ -249,8 +261,6 @@ $(document).ready(function(){
             {data: 'last_name', name: 'last_name'},
             {data: 'contact_no', name: 'contact_no'},
             {data: 'email', name: 'email'},
-            {data: 'level', name: 'level'},
-            {data: 'select_level', name: 'select_level',orderable:false,searchable:false},
             {data: 'action', name: 'action',orderable:false,searchable:false},
 
         ],
@@ -258,40 +268,6 @@ $(document).ready(function(){
         "scrollX": true,
         "fnDrawCallback": function (oSettings) {
           $('[data-toggle="tooltip"]').tooltip();
-
-          $('.levelSelectbox').change(function(){
-                    var Id = $(this).attr('name');
-                    var lvl = $(this).val();
-                    var url = '';
-                    var get= $.get(url,{level:lvl,userID:Id});
-                    get.done(function(data){
-                        if(data.success){
-                            swal({
-                                title: "Level selected!",
-                                timer: 2000,
-                                type:"success",
-                                showConfirmButton: false
-                            });
-                            table.ajax.reload();
-                        }else{
-                            swal({
-                                title: "Please choose valid level!.",
-                                timer: 2000,
-                                type:"error",
-                                showConfirmButton: false
-                            });
-                        }
-                    });
-                    get.fail(function(){
-                        swal({
-                            title: "Fail please try again",
-                            timer: 2000,
-                            type:"fail",
-                            showConfirmButton: false
-                        });
-                    });
-                });
-
         }
     });
 
@@ -348,33 +324,6 @@ $(document).on("click","#DeleteBtn",function(e){
 });
 	
 	
-</script>
-<script>
-    var modal = document.getElementById("myModalqw");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtnqw");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
 </script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 @if($msg = session()->get('msg'))

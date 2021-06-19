@@ -215,7 +215,7 @@ ul.nav-tabs li{
                <div>
             <button id="myBtn" type="button" class="btn btn-primary">Edit Profile</button>
             </div>
-            <button id="myBtnri" type="button" class="btn btn-info">Skills</button>
+            <button id="myBtnri" type="button" class="btn btn-info">Research Interest</button>
             
             <div>
               <button class="btn btn-block btn-warning" style="height:32px;" >
@@ -264,7 +264,7 @@ ul.nav-tabs li{
                     <p><strong>LinkedIn: </strong> <a href="{{ $c->LinkedIn}} "> {{ $c->LinkedIn}}</a> </p>
                     <p><strong>Study Programme: </strong> {{ $c->StudyProgramme}} </p>
                     <p><strong>Subject Offered: </strong> {{ $c->SubjectsOffered}} </p>
-                    <p><strong>Skills : </strong> {{ $c->Skills}} </p>
+                    <p><strong>Research Interest: </strong> {{ $c->Skills}} </p>
                    
                 </div>   
                       </div>
@@ -452,7 +452,7 @@ ul.nav-tabs li{
         @csrf
         
         <input type="hidden" name="email" value="{{ $c->EmailID}}" >
-        <div title="">Skills</div><div>
+        <div title="">Research Interest</div><div>
                     
                    
                     <div class="multiselect">
@@ -463,69 +463,90 @@ ul.nav-tabs li{
       <div class="overSelect"></div>
     </div>
     <div id="checkboxes" >
-      <label for="one">
-        <input type="checkbox" id="Advanced database design and systems" name="Skills[]" value="Advanced database design and systems" />Advanced database design and systems</label>
-      <label for="two">
+    <label for="one">
+        <input type="checkbox" id="Artificial Intelligence" name="Skills[]" value="Artificial Intelligence" />Artificial Intelligence</label>
+<label for="two">
+        <input type="checkbox" id="Automata Theory" name="Skills[]" value="Automata Theory" />Automata Theory</label>
+<label for="three">
+        <input type="checkbox" id="Big Data Analysis" name="Skills[]" value="Big Data Analysis" />Big Data Analysis</label>
+<label for="four">
         <input type="checkbox" id="Bioinformatics Computing" name="Skills[]" value="Bioinformatics Computing" />Bioinformatics Computing</label>
-        <label for="three">
-        <input type="checkbox" id="Compiler design" name="Skills[]" value="Compiler design" />Compiler design</label>
-        <label for="four">
-        <input type="checkbox" id="Computer Networks and Internet Computing" name="Skills[]" value="Computer Networks and Internet Computing" />Computer Networks and Internet Computing</label>
-        <label for="five">
-        <input type="checkbox" id="Cryptography and Data Security" name="Skills[]" value="Cryptography and Data Security" />Cryptography and Data Security</label>
-        <label for="six">
-        <input type="checkbox" id="Data communication and computer networks" name="Skills[]" value="Data communication and computer networks" />Data communication and computer networks</label>
-        <label for="seven">
-        <input type="checkbox" id="Data Structures and Algorithms" name="Skills[]" value="Data Structures and Algorithms" />Data Structures and Algorithms</label>
-        <label for="eight">
-        <input type="checkbox" id="Digital Image Processing" name="Skills[]" value="Digital Image Processing" />Digital Image Processing</label>
-        <label for="nine">
-        <input type="checkbox" id="E-technologies" name="Skills[]" value="E-technologies" />E-technologies</label>
-        <label for="ten">
-        <input type="checkbox" id="Foundations of Computer Science" name="Skills[]" value="Foundations of Computer Science" />Foundations of Computer Science</label>
-        <label for="eleven">
-        <input type="checkbox" id="Graphics and Visual Computing" name="Skills[]" value="Graphics and Visual Computing" />Graphics and Visual Computing</label>
-       <label for="twelve">
-        <input type="checkbox" id="Multimedia Technologies" name="Skills[]" value="Multimedia Technologies" />Multimedia Technologies</label>
-        <label for="thirteen">
-        <input type="checkbox" id="Numerical Computing" name="Skills[]" value="Numerical Computing" />Numerical Computing</label>
-        <label for="fourteen">
-        <input type="checkbox" id="Numerical Linear algebra and solutions of differential equations" name="Skills[]" value="Numerical Linear algebra and solutions of differential equations" />Numerical Linear algebra and solutions of differential equations</label>
-        <label for="fifeteen">
-        <input type="checkbox" id="Object Oriented Programming" name="Skills[]" value="Object Oriented Programming" />Object Oriented Programming</label>
-        <label for="sixteen">
-        <input type="checkbox" id="Parallel computing" name="Skills[]" value="Parallel computing" />Parallel computing</label>
-        <label for="seventeen">
-        <input type="checkbox" id="Principles of computer Architecture" name="Skills[]" value="Principles of computer Architecture" />Principles of computer Architecture</label>
-        <label for="eighteen">
-        <input type="checkbox" id="Programming in Logic" name="Skills[]" value="Programming in Logic" />Programming in Logic</label>
-        <label for="nineteen">
-        <input type="checkbox" id="System design, analysis and project management" name="Skills[]" value="System design, analysis and project management" />System design, analysis and project management</label>
-        <label for="twenty">
-        <input type="checkbox" id="Computer Systems" name="Skills[]" value="Computer Systems" />Computer Systems</label>
-        <label for="twentyone">
-        <input type="checkbox" id="Human Computer Interaction" name="Skills[]" value="Human Computer Interaction" />Human Computer Interaction</label>
-        <label for="twentytwo">
-        <input type="checkbox" id="Design of Algorithms" name="Skills[]" value="Design of Algorithms" />Design of Algorithms</label>
-        <label for="twentythree">
-        <input type="checkbox" id="Organisational Behaviour" name="Skills[]" value="Organisational Behaviour" />Organisational Behaviour</label>
-        <label for="twentyfour">
+<label for="five">
+        <input type="checkbox" id="Blockchain" name="Skills[]" value="Blockchain" />Blockchain</label>
+<label for="six">
+        <input type="checkbox" id="Compiler Design" name="Skills[]" value="Compiler Design" />Compiler Design</label>
+<label for="seven">
         <input type="checkbox" id="Computer Architecture" name="Skills[]" value="Computer Architecture" />Computer Architecture</label>
-        <label for="twentyfive">
-        <input type="checkbox" id="Programming Languages" name="Skills[]" value="Programming Languages" />Programming Languages</label>
-        <label for="twentysix">
-        <input type="checkbox" id="Web Technologies" name="Skills[]" value="Web Technologies" />Web Technologies</label>
-        <label for="twentyseven">
-        <input type="checkbox" id="Emerging Trends" name="Skills[]" value="Emerging Trends" />Emerging Trends</label>
-        <label for="twentyeight">
+<label for="eight">
+        <input type="checkbox" id="Computer Graphics" name="Skills[]" value="Computer Graphics" />Computer Graphics</label>
+<label for="nine">
+        <input type="checkbox" id="Computer Networks" name="Skills[]" value="Computer Networks" />Computer Networks</label>
+<label for="ten">
+        <input type="checkbox" id="Computer Vision" name="Skills[]" value="Computer Vision" />Computer Vision</label>
+<label for="eleven">
+        <input type="checkbox" id="Cryptography" name="Skills[]" value="Cryptography" />Cryptography</label>
+<label for="twelve">
+        <input type="checkbox" id="Data Communication" name="Skills[]" value="Data Communication" />Data Communication</label>
+<label for="thirteen">
+        <input type="checkbox" id="Data Mining" name="Skills[]" value="Data Mining" />Data Mining</label>
+<label for="fourteen">
+        <input type="checkbox" id="Database Management Systems" name="Skills[]" value="Database Management Systems" />Database Management Systems</label>
+<label for="fivteen">
+        <input type="checkbox" id="Deep Learning" name="Skills[]" value="Deep Learning" />Deep Learning</label>
+<label for="sixteen">
+        <input type="checkbox" id="E-Learning" name="Skills[]" value="E-Learning" />E-Learning</label>
+<label for="seventeen">
         <input type="checkbox" id="High Performance Computing" name="Skills[]" value="High Performance Computing" />High Performance Computing</label>
-        <label for="twentynine">
-        <input type="checkbox" id="Image Processing and Computer Vision" name="Skills[]" value="Image Processing and Computer Vision" />Image Processing and Computer Vision</label>
-        <label for="thirty">
+<label for="eighteen">
+        <input type="checkbox" id="Human Computer Interaction" name="Skills[]" value="Human Computer Interaction" />Human Computer Interaction</label>
+<label for="nineteen">
+        <input type="checkbox" id="Image Processing" name="Skills[]" value="Image Processing" />Image Processing</label>
+<label for="twenty">
+        <input type="checkbox" id="Information Systems" name="Skills[]" value="Information Systems" />Information Systems</label>
+<label for="twentyone">
+        <input type="checkbox" id="Intelligent Systems" name="Skills[]" value="Intelligent Systems" />Intelligent Systems</label>
+<label for="twentytwo">
+        <input type="checkbox" id="IoT" name="Skills[]" value="IoT" />IoT</label>
+<label for="twentythree">
+        <input type="checkbox" id="Knowledge Representation" name="Skills[]" value="Knowledge Representation" />Knowledge Representation</label>
+<label for="twentyfour">
+        <input type="checkbox" id="Local Language Computing" name="Skills[]" value="Local Language Computing" />Local Language Computing</label>
+<label for="twentyfive">
         <input type="checkbox" id="Machine Learning" name="Skills[]" value="Machine Learning" />Machine Learning</label>
-        <label for="thirtyone">
-        <input type="checkbox" id="Systems and Network Administration" name="Skills[]" value="Systems and Network Administration" />Systems and Network Administration</label>
-    </div>
+<label for="twentysix">
+        <input type="checkbox" id="Medical Image Analysis" name="Skills[]" value="Medical Image Analysis" />Medical Image Analysis</label>
+<label for="twentyseven">
+        <input type="checkbox" id="Medical Imaging" name="Skills[]" value="Medical Imaging" />Medical Imaging</label>
+<label for="twentyeight">
+        <input type="checkbox" id="Mobile Computing" name="Skills[]" value="Mobile Computing" />Mobile Computing</label>
+<label for="twentynine">
+        <input type="checkbox" id="Natural Language Processing" name="Skills[]" value="Natural Language Processing" />Natural Language Processing</label>
+<label for="thirty">
+        <input type="checkbox" id="Neural Networks" name="Skills[]" value="Neural Networks" />Neural Networks</label>
+<label for="thirtyone">
+        <input type="checkbox" id="Numerical Computing" name="Skills[]" value="Numerical Computing" />Numerical Computing</label>
+<label for="thirtytwo">
+        <input type="checkbox" id="Operating Systems" name="Skills[]" value="Operating Systems" />Operating Systems</label>
+<label for="thirtythree">
+        <input type="checkbox" id="Opportunistic Network" name="Skills[]" value="Opportunistic Network" />Opportunistic Network</label>
+<label for="thirtyfour">
+        <input type="checkbox" id="Organizational Behaviour" name="Skills[]" value="Organizational Behaviour" />Organizational Behaviour</label>
+<label for="thirtyfive">
+        <input type="checkbox" id="Parallel Computing" name="Skills[]" value="Parallel Computing" />Parallel Computing</label>
+<label for="thirtysix">
+        <input type="checkbox" id="Rapid Application Development" name="Skills[]" value="Rapid Application Development" />Rapid Application Development</label>
+<label for="thirtyseven">
+        <input type="checkbox" id="Social Network Analysis" name="Skills[]" value="Social Network Analysis" />Social Network Analysis</label>
+<label for="thirtyeight">
+        <input type="checkbox" id="Software-defined Networking" name="Skills[]" value="Software-defined Networking" />Software-defined Networking</label>
+<label for="thirtynine">
+        <input type="checkbox" id="Spiking Neural Networks" name="Skills[]" value="Spiking Neural Networks" />Spiking Neural Networks</label>
+<label for="forty">
+        <input type="checkbox" id="System Design and Analysis" name="Skills[]" value="System Design and Analysis" />System Design and Analysis</label>
+<label for="fortyone">
+        <input type="checkbox" id="Web Technologies" name="Skills[]" value="Web Technologies" />Web Technologies</label>
+
+   </div>
   </div>
                     
                 </div><br>

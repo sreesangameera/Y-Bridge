@@ -34,7 +34,7 @@
             <th>ProjectType</th>
             <th>Student ID</th>
             <th>created_at</th>
-            
+            <th>Action</th>
             
         </tr>
         </thead>
@@ -49,7 +49,13 @@
                 <td>{{$user->ProjectType}}</td>
                 <td>{{$user->StudentID}}</td>
                 <td>{{$user->created_at}}</td> 
-                
+                <td>
+<a href="{{route('dellp',$user->id)}}" onclick="return confirm('Are you sure?')"
+    class="btn btn-danger" type="button" 
+>delete</a>&nbsp; <a href="{{route('showsugl',$user->ProjectID)}}"
+    class="btn btn-warning" type="button" 
+> Show Suggestions</a></td>
+                </tr>
                 
                    
         @endforeach

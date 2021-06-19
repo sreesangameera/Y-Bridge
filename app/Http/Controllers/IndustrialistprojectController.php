@@ -43,14 +43,17 @@ class IndustrialistprojectController extends Controller
         
         //StudentProject::create($request->all());
         $industrialistproject ->save();
-       $description = Str::of(request('Description'))->split('/[\s,]+/');
+       $description = Str::of(request('Description'))->split('/[\s,()"".]+/');
        $keys = DB::table('dictionaries')->get();
        $newArr = [];
+       $mt = [];
        //echo strcasecmp($description[0],"NeTwork");
        foreach($keys as $key){
         for($i = 0 ; $i < count($description) ; $i++){
             if(strcasecmp($description[$i],$key->keywordName) == 0){
                 $newArr[] = $key->keywordName;
+                $mt[] = $key->mainTermId;
+
             }
         }
         
@@ -58,18 +61,27 @@ class IndustrialistprojectController extends Controller
     $desc = new Descindustrialist();
     $desc->CompanyPersonalEmailID  = request('CompanyPersonalEmailID');
     $desc->Description = implode(", ",$newArr);
-
+    $desc->Mainterms = implode(", ",$mt);
     $desc->save();
                
-    $dict =DB::table('dictionaries')->whereIn('keywordName',[$newArr])->pluck('mainTermId')->toArray();
+    //$dict =DB::table('dictionaries')->whereIn('keywordName',[$newArr])->pluck('mainTermId')->toArray();
         
-    $dict = array_count_values($dict);
+    $dict = array_count_values($mt);
     arsort($dict);
     $maxMainKey = array_key_first($dict);
+    $maxi = [];
+    $i=0;
+       foreach(array_keys($dict) as $d){
+       
+           if($i >=3)break;
+               $maxi[]=$d;
+           $i++;
+           }
 
         $connectioni = new Connectindustrialist();
         $connectioni->CompanyPersonalEmailID  = request('CompanyPersonalEmailID');
-        $connectioni->MainTermID = $maxMainKey;
+        $connectioni->MainTermID = implode(", ",$maxi);
+        $connectioni->Maintermcount= implode(", ",$dict);
         $connectioni->save();
 
         $stu = DB::table('students')->select('Skills','LastName','FirstName','StudentID')->get();
@@ -83,23 +95,26 @@ class IndustrialistprojectController extends Controller
          
         for($i = 0 ; $i < count($stuInt); $i++){
             $num = DB::table('mainTerms')->where('mainTerm',$stuInt[$i])->first();  
-                  
-           if($maxMainKey == (integer)$num->mainTermId){
+                  for($i=0; $i< count($maxi); $i++)
+                  {
+           if($maxi[$i] == (integer)$num->mainTermId){
             
                array_push($id, $s->StudentID);
                break;
             
         }
+    }
      
      }
          }
     }
 
 
-        $ind =DB::table('connections')->where('mainTermId',$maxMainKey)->pluck('StudentID')->toArray(); 
+       // $ind =DB::table('connections')->where('mainTermId',$maxMainKey)->pluck('StudentID')->toArray(); 
         $connect = new Suggestion();
         $connect->Destination=request('Destination');
-        $connect->MainTermID = $maxMainKey;
+        $connect->ProjectID=request('ProjectID');
+        $connect->MainTermID = implode(",",$maxi);
         $connect->CompanyPersonalEmailID  = request('CompanyPersonalEmailID');
         $connect->StudentID = implode(",",$id);
         $connect->save();}

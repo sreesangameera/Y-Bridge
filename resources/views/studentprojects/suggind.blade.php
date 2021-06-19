@@ -172,15 +172,16 @@ body{
 		</div>
 	</div>
 
-<br><br><br><br>
+<br><br>
 <div class="container">
     @yield('content')
 </div>
 
  <div class="demo">
         <div class="container">
-
-<br><br><br>
+        <h4>Do not close this page until you choose and send a request to a Student</h4>
+<h5>When you click on a suggestion result,it will redirected to a respective profile with another tab</h5>
+<br>
 <div style="width:100%; margin:auto;">
             <div class="row">
                 <div class="col-md-3 col-sm-6">
@@ -273,8 +274,8 @@ body{
     </div>
 
 
-
-<h5>When you click on a suggestion result,it will redirected to a respective profile with another tab</h5>
+    <!--h4>Do not close this page until you chose and send a request to a Student</h4>
+<h5>When you click on a suggestion result,it will redirected to a respective profile with another tab</h5-->
 <a href="/ipp">back</a>
 <br><br><br>
 
@@ -284,7 +285,7 @@ body{
             <div class="footer-distributed">
                 <div class="footer-left">                   
                     <p class="footer-company-name">All Rights Reserved. &copy; 2020  Design By : 
-					<a href="https://html.design/">Y-Bridge</a></p>
+					<a href="">Y-Bridge</a></p>
                 </div>
 
                 

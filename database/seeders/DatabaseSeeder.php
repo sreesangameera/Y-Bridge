@@ -68,14 +68,14 @@ class DatabaseSeeder extends Seeder
             'LastName'=>'Sivakumaran',
             'Gender'=>'Female',
             'DateOfBirth'=>'1996-03-04',
-            'HomeAddress'=>'j',
+            'HomeAddress'=>'jaffna',
             'EmailID'=>'vs@gmail.com',
             'LinkedIn'=>'https://www.linkedin.com/in/vishnuga-sivakumaran-a900431a4/',
             'ContactNumber'=>'6',
             'YearOfStudy'=>'Level-3M',
             'StudyProgramme'=>'Computer Science',
             'SubjectsOffered'=>'Direct Computer Science',
-            
+            'Skills'=>'',
         ]);
         DB::table('students')->insert([
             'StudentID'=> '2017/SP/040',
@@ -91,6 +91,7 @@ class DatabaseSeeder extends Seeder
             'YearOfStudy'=>'Level-3G',
             'StudyProgramme'=>'Computer Science',
             'SubjectsOffered'=>'PMM,STA,CSC',
+            'Skills'=>'',
             
         ]);
         DB::table('students')->insert([
@@ -107,6 +108,7 @@ class DatabaseSeeder extends Seeder
             'YearOfStudy'=>'Level-3G',
             'StudyProgramme'=>'Physical Science',
             'SubjectsOffered'=>'PMM,STA,CSC',
+            'Skills'=>'',
             
         ]);
         DB::table('students')->insert([
@@ -123,6 +125,7 @@ class DatabaseSeeder extends Seeder
             'YearOfStudy'=>'Level-3G',
             'StudyProgramme'=>'Physical Science',
             'SubjectsOffered'=>'PMM,PHY,CSC',
+            'Skills'=>'',
             
         ]);
         DB::table('students')->insert([
@@ -139,6 +142,7 @@ class DatabaseSeeder extends Seeder
             'YearOfStudy'=>'Level-3G',
             'StudyProgramme'=>'Physical Science',
             'SubjectsOffered'=>'PMM,STA,CSC',
+            'Skills'=>'',
             
         ]);
         
@@ -244,11 +248,10 @@ class DatabaseSeeder extends Seeder
             'AdminRole'=>'',
             'EmailID'=>'SM@gmail.com',
             'LinkedIn'=>'https://www.linkedin.com/in/mahesan-s-5003583?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BB1rqRyszQpisVhHuf23jBA%3D%3D',
-            'ContactNumber'=>'0771542653',
+            'ContactNumber'=>'0212218194',
             'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-dr-s-mahesan/',
-            'ResearchInterest'=>'',
-            'FieldOfSpecialization'=>'',
-
+            'ResearchInterest'=>'Bioinformatics Computing,Image Processing and Computer Vision,High Performance Computing,Numerical Computing',
+            
         ]);
 
         DB::table('users')->insert([
@@ -272,9 +275,9 @@ class DatabaseSeeder extends Seeder
             'EmailID'=>'EC@gmail.com',
             'LinkedIn'=>'https://www.linkedin.com/in/charles-eugene-79351341?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BmA27V%2BNeQ1GzZR3eX1ukpw%3D%3D',
             'ContactNumber'=>'0775698523',
-            'OfficialWebsite'=>'http://www.jfn.ac.lk/',
-            'ResearchInterest'=>'',
-            'FieldOfSpecialization'=>'',
+            'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-dr-e-y-a-charles/',
+            'ResearchInterest'=>'Data Minning and Machine Learning',
+            
 
         ]);
 
@@ -301,9 +304,8 @@ class DatabaseSeeder extends Seeder
             'LinkedIn'=>'https://www.linkedin.com/in/thabotharan?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B8AHwMGZ8ROO4uuxJvAtp9w%3D%3D',
             'ContactNumber'=>'0775648972',
             'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-dr-k-thabotharan/',
-            'ResearchInterest'=>'',
-            'FieldOfSpecialization'=>'',
-
+            'ResearchInterest'=>'Computer Networks and Internet Computing',
+            
         ]);
 
         DB::table('users')->insert([
@@ -329,8 +331,8 @@ class DatabaseSeeder extends Seeder
             'LinkedIn'=>'https://www.linkedin.com/in/amirthalingam-ramanan-23337221?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BqAzsvYvjQOC3rf%2FcDlW7Tg%3D%3D',
             'ContactNumber'=>'0740543210',
             'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-dr-a-ramanan/',
-            'ResearchInterest'=>'',
-            'FieldOfSpecialization'=>'',
+            'ResearchInterest'=>'Digital Image Processing,Data Minning and Machine Learning',
+            
 
         ]);
 
@@ -354,11 +356,11 @@ class DatabaseSeeder extends Seeder
             'Designation'=>'Senior Lecturer',
             'AdminRole'=>'',
             'EmailID'=>'BM@gmail.com',
-            'LinkedIn'=>'https://www.linkedin.com/in/barathy-mayurathan-b0633317a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B85oGMDTLSaCDTRQDVWkJWg%3D%3D',
+            'LinkedIn'=>'https://www.linkedin.com/in/barathy-mayurathan-b0633317a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_vie w_base_contact_details%3B85oGMDTLSaCDTRQDVWkJWg%3D%3D',
             'ContactNumber'=>'0723845562',
             'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-dr-mrs-b-mayurathan/',
-            'ResearchInterest'=>'',
-            'FieldOfSpecialization'=>'',
+            'ResearchInterest'=>'Computer Architecture,Data Minning and Machine Learning',
+            
 
         ]);
 
@@ -385,8 +387,8 @@ class DatabaseSeeder extends Seeder
             'LinkedIn'=>'https://www.linkedin.com/in/siyamalanmanivannan?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Ba59PqMYUTC%2BfJKu%2BeV3q%2BQ%3D%3D',
             'ContactNumber'=>'0775446259',
             'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-dr-m-siyamalan/',
-            'ResearchInterest'=>'',
-            'FieldOfSpecialization'=>'',
+            'ResearchInterest'=>'Computer Architecture,Data Minning and Machine Learning,Image Processing and Computer Vision',
+           
 
         ]);
 
@@ -413,9 +415,8 @@ class DatabaseSeeder extends Seeder
             'LinkedIn'=>'https://www.linkedin.com/in/iamsarves?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bf8HfoLXMRpu8z6BdMdXSUw%3D%3D',
             'ContactNumber'=>'0785265984',
             'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-mr-k-sarveswaran/',
-            'ResearchInterest'=>'',
-            'FieldOfSpecialization'=>'',
-
+            'ResearchInterest'=>'E-technologies,Web Technologies',
+            
         ]);
 
         DB::table('users')->insert([
@@ -440,10 +441,9 @@ class DatabaseSeeder extends Seeder
             'EmailID'=>'SSa@gmail.com',
             'LinkedIn'=>'https://www.linkedin.com/in/sriskandarajah-shriparen-43583737?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B1UCej2%2F1TPu9isUsC5S84Q%3D%3D',
             'ContactNumber'=>'0776542589',
-            'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-dr-k-thabotharan/',
-            'ResearchInterest'=>'',
-            'FieldOfSpecialization'=>'',
-
+            'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-mr-s-shriparen/',
+            'ResearchInterest'=>'Computer Networks and Internet Computing',
+            
         ]);
 
         DB::table('users')->insert([
@@ -469,8 +469,8 @@ class DatabaseSeeder extends Seeder
             'LinkedIn'=>'https://www.linkedin.com/in/samanthajeyakumar?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bxst0nxYkSz2Aei88Qh7FuQ%3D%3D',
             'ContactNumber'=>'212218194',
             'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-ms-j-samantha-tharani/',
-            'ResearchInterest'=>'',
-            'FieldOfSpecialization'=>'',
+            'ResearchInterest'=>'Advanced database design and systems',
+            
 
         ]);
 
@@ -481,6 +481,34 @@ class DatabaseSeeder extends Seeder
             'email'=>'ST@gmail.com',
             'password'=> Hash::make('abcd1234'),
         ]);
+
+        DB::table('users')->insert([
+            'role'=> 'Lecturer',
+            'fname'=>'Somaskandan',
+            'lname'=>'Suthakar',
+            'email'=>'SSaa@gmail.com',
+            'password'=> Hash::make('abcd1234'),
+        ]);
+
+        DB::table('academics')->insert([
+            'EmployeeID'=> '10',
+            'Photo'=>'SSaa@gmail.com.jpg',
+            'Title'=>'Mr.',
+            'FirstName'=>'Somaskandan',
+            'LastName'=>'Suthakar',
+            'Gender'=>'Male',
+            'DateOfBirth'=>'1984-06-30',
+            'Designation'=>'Senior Lecturer',
+            'AdminRole'=>'Head of the Department',
+            'EmailID'=>'SSaa@gmail.com',
+            'LinkedIn'=>'https://www.linkedin.com/in/suthakar-somaskandan-4a96031a/?originalSubdomain=lk',
+            'ContactNumber'=>'212218193',
+            'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-mr-s-suthakar/',
+            'ResearchInterest'=>'Advanced database design and systems',
+            
+
+        ]);
+
         
         DB::table('student_societies')->insert([
             'Link'=> 'www.society.jfn.ac.lk/comsoc/',

@@ -15,8 +15,8 @@ class CreateMainTermsTable extends Migration
     {
         Schema::create('mainTerms', function (Blueprint $table) {
             $table->id();
-            $table->string('mainTermId');
-            $table->string('mainTerm');
+            $table->string('mainTermId')->unique();
+            $table->string('mainTerm')->unique();
             $table->timestamps();
         });
     }

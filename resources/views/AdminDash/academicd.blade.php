@@ -35,7 +35,7 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 <div class="nav-side-menu">
-    <div class="brand">Computer Science</div>
+    <div class="brand">Y-Bridge Admin</div>
     <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
   
         <div class="menu-list">
@@ -55,7 +55,7 @@
                 </li>
 
                 <li class="collapsed ">
-                  <a href="indd"><i class="fa fa-gift fa-lg"></i>Industrial</a>
+                  <a href="indd"><i class="fa fa-gift fa-lg"></i>Industrialist</a>
                 </li>
 
                 <li class="collapsed ">
@@ -66,6 +66,13 @@
                   <a href="uped"><i class="fa fa-gift fa-lg"></i>Upcoming Events</a>
                 </li>
 
+                <li class="collapsed ">
+                  <a href="mtid"><i class="fa fa-gift fa-lg"></i>Mainterms</a>
+                </li>
+
+                <li class="collapsed ">
+                  <a href="dctnry"><i class="fa fa-gift fa-lg"></i>Dictionary</a>
+                </li>
                 <!--li class="collapsed ">
                   <a href="http://192.248.56.20/match-module/subject"><i class="fa fa-gift fa-lg"></i>Subject</a>
                 </li>
@@ -141,7 +148,7 @@
             <th>Last Name</th>
             <th>Gender</th>
             <th>Email ID</th>
-           
+           <th>Action</th>
             
             
         </tr>
@@ -156,7 +163,10 @@
                 <td>{{$user->LastName}}</td>
                 <td>{{$user->Gender}}</td>
                 <td>{{$user->EmailID}}</td>
-                
+                <td><a><button onclick="document.getElementById('myModalqw').style.display = 'block';document.getElementById('EmailID').value='{{ $user->EmailID}}';document.getElementById('id').value='{{ $user->id}}';" id="myBtnqw" class="btn btn-primary"><!--i class="glyphicon glyphicon-pencil"></i-->Edit</button></a>
+                <a href="{{route('dell',$user->id)}}" onclick="return confirm('Are you sure?')",
+    class="btn btn-danger" type="button" 
+>delete</a></td>
                         
                 
                
@@ -169,7 +179,21 @@
 </div>
     
 
+<div id="myModalqw" class="modal" >
+<div class="modal-content" style="width:25%">
+    <span onclick="document.getElementById('myModalqw').style.display = 'none';" class="close">&times;</span>
+<form method="POST" action="/aeadmin" enctype="multipart/form-data">
+        @csrf
+        
+        <div title="EmailID">Email ID</div><input id="EmailID" class="form-control" type="text" name="EmailID" placeholder="Email ID" required="required" ><br>
+        <input id="id" class="form-control" type="hidden" name="id" placeholder="Link" required="required" ><br>
+        
+       <input class="btn btn-primary" type="submit" value="submit">
+        
+    </form>
+    </div>
 
+</div>
 
 
 
@@ -298,6 +322,47 @@ $(document).on("click","#DeleteBtn",function(e){
 	
 	
 </script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+@if($msg = session()->get('msg'))
+@if($msg == "Event updated")
+<script>
+     Swal.fire({
+               position: 'top',
+               icon: 'success',
+               title: '{{$msg}}',
+               showConfirmButton: false,
+               timer: 2000
+            
+          });
+     </script>
+     
+     @elseif($msg == "Successfully Done")
+     <script>
+     Swal.fire({
+               position: 'top',
+               icon: 'success',
+               title: '{{$msg}}',
+               showConfirmButton: false,
+               timer: 2000
+            
+          });
+     </script>
+
+@elseif($msg == "Deleted successfully")
+     <script>
+     Swal.fire({
+               position: 'top',
+               icon: 'success',
+               title: '{{$msg}}',
+               showConfirmButton: false,
+               timer: 2000
+            
+          });
+     </script>
+     
+     
+     @endif
+@endif
 <script> 
     $('.tabledash').DataTable();
  </script>

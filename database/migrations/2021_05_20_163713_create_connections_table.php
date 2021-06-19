@@ -17,6 +17,7 @@ class CreateConnectionsTable extends Migration
             $table->id();
             $table->String('StudentID');
             $table->String('MainTermID');
+            $table->String('Maintermcount');
             $table->timestamps();
         });
     }

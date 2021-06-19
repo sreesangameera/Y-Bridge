@@ -195,11 +195,14 @@ public function updateindustrialistri(Request $request){
 }
 public function updateacademicri(Request $request){
     
-    DB::table('academics')->where('EmailID',$request->email)->update(['FieldOfSpecialization'=>implode(',',$request->FieldOfSpecialization),'ResearchInterest'=>implode(',',$request->ResearchInterest)]);
+    DB::table('academics')->where('EmailID',$request->email)->update(['ResearchInterest'=>implode(',',$request->ResearchInterest)]);
    
 
     
     return redirect()->back();
 }
-
+public function updatestudentv(){
+    $email=   Auth::user()->email ;
+    $c=DB::table('students')->where('EmailID',$email)->first();
+            return view('profile.editsp')->with('c',$c);      }
 }

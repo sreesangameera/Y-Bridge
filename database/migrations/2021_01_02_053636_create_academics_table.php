@@ -30,8 +30,8 @@ class CreateAcademicsTable extends Migration
             //$table->Text('Faculty')->nullable();
             //$table->Text('Department')->nullable();
             $table->String('OfficialWebsite')->nullable();
-            $table->Text('ResearchInterest')->nullable();
-            $table->Text('FieldOfSpecialization')->nullable();
+            $table->String('ResearchInterest',5000)->nullable();
+            //$table->Text('FieldOfSpecialization')->nullable();
             //$table->String('ResearchID')->nullable();
 
             $table->timestamps();
