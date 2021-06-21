@@ -57,7 +57,7 @@ form {
                     </p> 
         <br />
         
-        <p>Project ID :<h12>(use student id with a number and remove slashes)</h12><br> <input type="String" placeholder="20XXCSCXXX-1  or 20XXSPXXX-1"
+        <p>Project ID :<h12>(use student id with a number and remove slashes)</h12><br> <input type="String" placeholder="20XXCSCXXX-1  or 20XX SPXXX-1"
                         size="45" name="ProjectID" />
                     </p> 
         <br />

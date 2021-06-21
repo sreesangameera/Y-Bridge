@@ -16,6 +16,7 @@ class CreateIndustrialistsTable extends Migration
         Schema::create('industrialists', function (Blueprint $table) {
             $table->id();
             $table->String('Photo')->nullable();
+            $table->Text('Title')->nullable();
             $table->String('CompanyPersonalEmailID')->unique();
             $table->Text('NameWithInitials');
             $table->String('Designation')->nullable();

@@ -40,7 +40,7 @@
   </svg>
   
           <div>  
-           {{$rqst->sn}} has requested you to join a new project. &nbsp; 
+          {{$rqst->srole}}  {{$rqst->sn}} has requested you to join a new project. &nbsp; 
           <a type="button" class="btn btn-success btn-rounded" href="{{route('racpts',$rqst->id)}}" >Accept</a>
           &nbsp;
           <a type="button" class="btn btn-danger btn-rounded" href="{{route('rdclns',$rqst->id)}}" >Decline</a>
@@ -66,7 +66,7 @@
 </svg>
 
         <div>  
-         {{$rqst->sn}} has requested you to join a new project. &nbsp; 
+        {{$rqst->srole}} {{$rqst->sn}} has requested you to join a new project. &nbsp; 
         <a type="button" class="btn btn-success btn-rounded" href="{{route('racptsi',$rqst->id)}}" >Accept</a>
         &nbsp;
         <a type="button" class="btn btn-danger btn-rounded" href="{{route('rdclnsi',$rqst->id)}}" >Decline</a>

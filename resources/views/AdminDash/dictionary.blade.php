@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Computer Science</title>
+    <title>Y-Bridge Admin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
      <meta name="_token" content="SFC22gpZIqy5TAzLOu4onWvu4TqiJ6da2P7Tlwi4"/>
@@ -72,6 +72,18 @@
 
                 <li class="collapsed active">
                   <a href="dctnry"><i class="fa fa-gift fa-lg"></i>Dictionary</a>
+                </li>
+
+                <li class="collapsed ">
+                  <a href="spdb"><i class="fa fa-gift fa-lg"></i>Student Projects</a>
+                </li>
+
+                <li class="collapsed ">
+                  <a href="lpdb"><i class="fa fa-gift fa-lg"></i>Lecturer Projects</a>
+                </li>
+
+                <li class="collapsed ">
+                  <a href="ipdb"><i class="fa fa-gift fa-lg"></i>Industrialist Projects</a>
                 </li>
                  <!--li class="collapsed ">
                   <a href="http://192.248.56.20/match-module/subtopic"><i class="fa fa-gift fa-lg"></i>Sub Topic</a>

@@ -250,7 +250,7 @@ class DatabaseSeeder extends Seeder
             'LinkedIn'=>'https://www.linkedin.com/in/mahesan-s-5003583?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BB1rqRyszQpisVhHuf23jBA%3D%3D',
             'ContactNumber'=>'0212218194',
             'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-dr-s-mahesan/',
-            'ResearchInterest'=>'Bioinformatics Computing,Image Processing and Computer Vision,High Performance Computing,Numerical Computing',
+            'ResearchInterest'=>'Bioinformatics Computing, Image Processing and Computer Vision, High Performance Computing, Numerical Computing',
             
         ]);
 
@@ -331,7 +331,7 @@ class DatabaseSeeder extends Seeder
             'LinkedIn'=>'https://www.linkedin.com/in/amirthalingam-ramanan-23337221?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BqAzsvYvjQOC3rf%2FcDlW7Tg%3D%3D',
             'ContactNumber'=>'0740543210',
             'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-dr-a-ramanan/',
-            'ResearchInterest'=>'Digital Image Processing,Data Minning and Machine Learning',
+            'ResearchInterest'=>'Digital Image Processing, Data Minning and Machine Learning',
             
 
         ]);
@@ -359,7 +359,7 @@ class DatabaseSeeder extends Seeder
             'LinkedIn'=>'https://www.linkedin.com/in/barathy-mayurathan-b0633317a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_vie w_base_contact_details%3B85oGMDTLSaCDTRQDVWkJWg%3D%3D',
             'ContactNumber'=>'0723845562',
             'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-dr-mrs-b-mayurathan/',
-            'ResearchInterest'=>'Computer Architecture,Data Minning and Machine Learning',
+            'ResearchInterest'=>'Computer Architecture, Data Minning and Machine Learning',
             
 
         ]);
@@ -387,7 +387,7 @@ class DatabaseSeeder extends Seeder
             'LinkedIn'=>'https://www.linkedin.com/in/siyamalanmanivannan?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Ba59PqMYUTC%2BfJKu%2BeV3q%2BQ%3D%3D',
             'ContactNumber'=>'0775446259',
             'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-dr-m-siyamalan/',
-            'ResearchInterest'=>'Computer Architecture,Data Minning and Machine Learning,Image Processing and Computer Vision',
+            'ResearchInterest'=>'Computer Architecture, Data Minning and Machine Learning, Image Processing and Computer Vision',
            
 
         ]);

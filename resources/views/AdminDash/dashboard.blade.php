@@ -75,6 +75,18 @@
                 <li class="collapsed ">
                   <a href="dctnry"><i class="fa fa-gift fa-lg"></i>Dictionary</a>
                 </li>
+
+                <li class="collapsed ">
+                  <a href="spdb"><i class="fa fa-gift fa-lg"></i>Student Projects</a>
+                </li>
+
+                <li class="collapsed ">
+                  <a href="lpdb"><i class="fa fa-gift fa-lg"></i>Lecturer Projects</a>
+                </li>
+
+                <li class="collapsed ">
+                  <a href="ipdb"><i class="fa fa-gift fa-lg"></i>Industrialist Projects</a>
+                </li>
                  <!--li class="collapsed ">
                   <a href="http://192.248.56.20/match-module/subtopic"><i class="fa fa-gift fa-lg"></i>Sub Topic</a>
                 </li>
@@ -142,6 +154,7 @@
             <th>lname</th>
             <th>role</th>
             <th>email</th>
+            <th>linkedin</th>
             <th>Action</th>
             
             
@@ -157,6 +170,7 @@
                 <td>{{$user->lname}}</td>
                 <td>{{$user->role}}</td>
                 <td>{{$user->email}}</td>
+                <td><a href="{{$user->linkedin}}" target="_blank">{{$user->linkedin}}</a></td>
                 <td>
                
                         <a type="button" class="btn btn-success"href="{{route('selectu',$user->id)}}">Confirm</a>

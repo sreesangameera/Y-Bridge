@@ -41,52 +41,37 @@ class AcademicprojectController extends Controller
         //$academicproject->ProjectStatus = request('ProjectStatus');
         
         $academicproject->save();
-        $description = Str::of(request('Description'))->split('/[\s,"".()]+/');
+        $description = Str::of(request('Description'))->split('/[\s,]+/');
         $keys = DB::table('dictionaries')->get();
         $newArr = [];
         $mt = [];
+       
         foreach($keys as $key){
            for($i = 0 ; $i < count($description) ; $i++){
                if(strcasecmp($description[$i],$key->keywordName) == 0){
                    $newArr[] = $key->keywordName;
                    $mt[] = $key->mainTermId;
-
                }
            }
            
        }
      
-
-       $dict = array_count_values($mt);
-            arsort($dict);
-            $maxMainKey = array_key_first($dict);
-
-
-
         $desc = new Desclecturer();
         $desc->LecturerID = request('LecturerID');
         $desc->Description = implode(", ",$newArr);
-        $desc->Mainterms = implode(", ",$mt);
-        
-
+        $desc->mainterms = implode(", ",$mt);
         $desc->save();
-        $maxi = [];
+
         
-       // $dict =DB::table('dictionaries')->whereIn('keywordName',[$newArr])->pluck('mainTermId')->toArray();
-       $i=0;
-       foreach(array_keys($dict) as $d){
-       
-           if($i >=3)break;
-               $maxi[]=$d;
-           $i++;
-           }
-            
+        $dict =DB::table('dictionaries')->whereIn('keywordName',[$newArr])->pluck('mainTermId')->toArray();
+        
+            $dict = array_count_values($mt);
+            arsort($dict);
+            $maxMainKey = array_key_first($dict);
      
          $connectionl = new Connectlecturer();
          $connectionl->LecturerID = request('LecturerID');
-         $connectionl->MainTermID = implode(", ",$maxi);
-         $connectionl->Maintermcount = implode(", ",$dict);
-        
+         $connectionl->MainTermID = $maxMainKey;
          $connectionl->save();
 
          $stu = DB::table('students')->select('Skills','LastName','FirstName','StudentID')->get();
@@ -100,12 +85,12 @@ class AcademicprojectController extends Controller
          
         for($i = 0 ; $i < count($stuInt); $i++){
             $num = DB::table('mainTerms')->where('mainTerm',$stuInt[$i])->first();  
-                 for($i=0; $i< count($maxi); $i++) {
-           if($maxi[$i] == (integer)$num->mainTermId){
+                  
+           if($maxMainKey == (integer)$num->mainTermId){
             
                array_push($id, $s->StudentID);
                break;
-           }
+            
         }
      
      }
@@ -116,7 +101,7 @@ class AcademicprojectController extends Controller
         $connect = new Suggestion();
         $connect->Destination=request('Destination');
         $connect->ProjectID=request('ProjectID');
-        $connect->MainTermID = implode(",",$maxi);
+        $connect->MainTermID = $maxMainKey;
         $connect->LecturerID = request('LecturerID');
         $connect->StudentID = implode(",",$id);
         $connect->save();}

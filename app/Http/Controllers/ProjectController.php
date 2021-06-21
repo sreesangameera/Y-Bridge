@@ -47,8 +47,8 @@ class ProjectController extends Controller
     public function sprqsts(){
         $email=   Auth::user()->email ;
         $id=DB::table('students')->where('EmailID',$email)->value('StudentID');
-        $qi=DB::table('requests')->where('rid',$id)->where('srole',"industrialist")->get();
-        $ql=DB::table('requests')->where('rid',$id)->where('srole',"lecturer")->get();
+        $qi=DB::table('requests')->where('rid',$id)->where('srole',"Industrialist")->get();
+        $ql=DB::table('requests')->where('rid',$id)->where('srole',"Lecturer")->get();
         
         return view('ProjectRequests/sprequests')->with('irts',$qi)->with('lrts',$ql);      }
 

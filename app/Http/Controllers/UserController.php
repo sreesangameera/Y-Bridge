@@ -132,6 +132,7 @@ class UserController extends Controller
             'lname' => 'required',
             'role' => 'required',
             'email' => 'required|email|unique:users',
+            'linkedin' => 'nullable|unique:users',
             'password' => 'required|min:8|regex:/^.*(?=.{3,})(?=.*[a-zA-Z]).*$/|
             confirmed',
         ]);
@@ -143,6 +144,7 @@ class UserController extends Controller
             $user->lname=$request->lname;
             $user->role=$request->role;
             $user->email=$request->email;
+            $user->linkedin=$request->linkedin;
             $user->password= Hash::make($request->password_confirmation);
             $user->save();
         }
@@ -167,7 +169,7 @@ class UserController extends Controller
         
             $user->NameWithInitials=$x->fname." ".$x->lname;
             $user->CompanyPersonalEmailID=$x->email;
-          
+            $user->LinkedIn=$x->linkedin;
             $user->save();
      }
 
@@ -179,7 +181,7 @@ class UserController extends Controller
                 $user->FirstName=$x->fname;
                 $user->LastName=$x->lname;
                 $user->EmailID=$x->email;
-              
+                $user->LinkedIn=$x->linkedin;
                 $user->save();
          }
 
@@ -189,7 +191,7 @@ class UserController extends Controller
                 $user->FirstName=$x->fname;
                 $user->LastName=$x->lname;
                 $user->EmailID=$x->email;
-              
+                $user->LinkedIn=$x->linkedin;
                 $user->save();
          }
 
@@ -201,26 +203,47 @@ class UserController extends Controller
         return redirect()->back()->with('msg',$t);    
         }
     public function stud(){
+        $email=   Auth::user()->email ;
         $p=DB::table('students')->get();
             return view('AdminDash/studentd')->with('studentt',$p);      }
     public function indd(){
+        $email=   Auth::user()->email ;
         $p=DB::table('industrialists')->get();
             return view('AdminDash/industrialistd')->with('industrialistt',$p);      }
     public function acad(){
+        $email=   Auth::user()->email ;
         $p=DB::table('academics')->get();
             return view('AdminDash/academicd')->with('academict',$p);      }
     public function stusd(){
+        $email=   Auth::user()->email ;
         $p=DB::table('student_societies')->get();
             return view('AdminDash/studentsoc')->with('studentsoct',$p);      }
     public function uped(){
+        $email=   Auth::user()->email ;
         $p=DB::table('upcoming_events')->get();
             return view('AdminDash/upcomingeve')->with('c',$p);      }
     public function mtid(){
+        $email=   Auth::user()->email ;
         $p=DB::table('mainterms')->get();
             return view('AdminDash/mainterms')->with('c',$p);      }
     public function dctnry(){
+        $email=   Auth::user()->email ;
         $p=DB::table('dictionaries')->get();
             return view('AdminDash/dictionary')->with('c',$p);      }
+
+    public function spdb(){
+        $email=   Auth::user()->email ;
+        $p=DB::table('studentprojects')->get();
+            return view('AdminDash/studentpd')->with('usert',$p);      }
+
+    public function lpdb(){
+        $email=   Auth::user()->email ;
+        $p=DB::table('academicprojects')->get();
+            return view('AdminDash/academicpd')->with('usert',$p);      }
+    public function ipdb(){
+        $email=   Auth::user()->email ;
+        $p=DB::table('industrialistprojects')->get();
+            return view('AdminDash/industrialistpd')->with('usert',$p);      }
     
     public function upcomingeventsadmin(Request $request){
 
@@ -269,7 +292,7 @@ public function maintermidadminadd(Request $request){
 
                                                                     ]);}
                                                                     catch(\Illuminate\Database\QueryException $exception){
-                                                                        $s="These fields can not be null";
+                                                                        $s="MaintermId already using";
                                                                         return redirect()->back()->with('msg',$s);
                                                                     }
     return redirect()->back()->with('msg',"Successfully Done");
@@ -452,10 +475,10 @@ public function streq(request $request){
 public function lereq(request $request){
     try{$email=   Auth::user()->email ;
     $nwi=DB::table('industrialists')->where('CompanyPersonalEmailID',$email)->value('NameWithInitials');
-    
+    $tt=DB::table('industrialists')->where('CompanyPersonalEmailID',$email)->value('Title');
 
         DB::table('requests')->insert([
-            'sid' => $request->inid,'rid' => $request->stid,'rn' => $request->stn,'sn' => $nwi,'pid' => $request->pid,'srole' => "industrialist"]);}
+            'sid' => $request->inid,'rid' => $request->stid,'rn' => $request->stn,'sn' =>$tt.".".$nwi,'pid' => $request->pid,'srole' => "industrialist"]);}
             catch(\Illuminate\Database\QueryException $exception){
                 $s="These fields can not be null";
                 return redirect()->back()->with('msg',$s);
@@ -525,6 +548,21 @@ public function dels($id){
 }
 public function deli($id){
     $user=DB::table('industrialists')->where('id',$id ) ->delete();
+    $s="Deleted successfully";
+    return redirect()->back()->with('usert',$user)->with('msg',$s); 
+} 
+public function delspd($id){
+    $user=DB::table('studentprojects')->where('id',$id ) ->delete();
+    $s="Deleted successfully";
+    return redirect()->back()->with('usert',$user)->with('msg',$s); 
+} 
+public function dellpd($id){
+    $user=DB::table('academicprojects')->where('id',$id ) ->delete();
+    $s="Deleted successfully";
+    return redirect()->back()->with('usert',$user)->with('msg',$s); 
+} 
+public function delipd($id){
+    $user=DB::table('industrialistprojects')->where('id',$id ) ->delete();
     $s="Deleted successfully";
     return redirect()->back()->with('usert',$user)->with('msg',$s); 
 }  

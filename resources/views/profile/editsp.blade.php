@@ -251,9 +251,9 @@ ul.nav-tabs li{
               </ul>
               <div class="tab-content pt-3" >
                 <div class="tab-pane active">
-                  <form class="form" novalidate="" >
+                  
                    
-                  <form method="POST" action="/updatestudent" >
+                  <form method="POST" action="/updatestudentva" >
         @csrf
         <!--button class="btn btn-primary" type="button">
                         <i class="fa fa-fw fa-camera"></i>
@@ -385,7 +385,7 @@ ul.nav-tabs li{
                         <button class="btn btn-primary" type="submit">Save Changes</button>
                       </div>
                     </div-->
-                  </form>
+                  
 
                 </div>
               </div>
@@ -405,8 +405,9 @@ ul.nav-tabs li{
   <!-- Modal content -->
   <div class="modal-content" style="width:75%">
   <a type="button" class="btn btn-light btn-sm" style="width:25px;height:30px"  href="/profile">X</a>
-    
-    <form method="POST" action="/updatestudent" enctype="multipart/form-data">
+  
+  
+    <form  method="POST" action="/updatestudent" enctype="multipart/form-data">
         @csrf
         <!--button class="btn btn-primary" type="button">
                         <i class="fa fa-fw fa-camera"></i>
@@ -737,6 +738,14 @@ window.onclick = function(event) {
 }
 
 </script>
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}</script>
 </br>
 </br>
 </br>
@@ -767,6 +776,7 @@ window.onclick = function(event) {
     <script src="js/custom.js"></script>
     <script src="js/portfolio.js"></script>
     <script src="js/hoverdir.js"></script>    
+    
     
    
 </body>

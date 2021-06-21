@@ -37,7 +37,7 @@ Route::get('/profile',[Frontendcontroller::class, 'profile'])->middleware(['auth
 require __DIR__.'/auth.php';
 
 
-
+Route::get('/updatestudent',[UpdateProfiles::class, 'updatestudent']);
 Route::post('/updatestudent',[UpdateProfiles::class, 'updatestudent']);
 Route::post('/updatestudentpp',[UpdateProfiles::class, 'updatestudentpp']);
 Route::post('/profile',[UpdateProfiles::class, 'updatestudentpp']);
@@ -102,6 +102,9 @@ Route::get('/acad',[UserController::class,'acad']);
 Route::get('/stusd',[UserController::class,'stusd']);
 Route::get('/mtid',[UserController::class,'mtid']);
 Route::get('/dctnry',[UserController::class,'dctnry']);
+Route::get('/spdb',[UserController::class,'spdb']);
+Route::get('/lpdb',[UserController::class,'lpdb']);
+Route::get('/ipdb',[UserController::class,'ipdb']);
 Route::post('/maintermidadminadd',[UserController::class,'maintermidadminadd']);
 Route::post('/dictionaryadminadd',[UserController::class,'dictionaryadminadd']);
 Route::post('/studentsocietiesadmin',[UserController::class,'studentsocietiesadmin']);
@@ -122,6 +125,9 @@ Route::get('/deli/{id}',[UserController::class,'deli'])->name('deli');
 Route::get('/dell/{id}',[UserController::class,'dell'])->name('dell');
 Route::get('/dels/{id}',[UserController::class,'dels'])->name('dels');
 Route::get('/deldb/{id}',[UserController::class,'deldb'])->name('deldb');
+Route::get('/delspd/{id}',[UserController::class,'delsp'])->name('delsp');
+Route::get('/dellpd/{id}',[UserController::class,'dellp'])->name('dellp');
+Route::get('/delipd/{id}',[UserController::class,'delip'])->name('delip');
 
 Route::get('selectu/{user}/', [UserController::class,'selectu'])->name('selectu');
 

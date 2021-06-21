@@ -17,7 +17,7 @@ class CreateConnectindustrialistsTable extends Migration
             $table->id();
             $table->String('CompanyPersonalEmailID');
             $table->String('mainTermID');
-            $table->String('Maintermcount');
+            //$table->String('Maintermcount');
             $table->timestamps();
         });
     }

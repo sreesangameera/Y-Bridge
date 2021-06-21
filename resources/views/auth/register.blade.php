@@ -67,6 +67,13 @@
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
 
+            <!-- Linkedin Address -->
+            <div class="mt-4">
+                <x-label for="linkedin" title="linkedin" :value="__('LinkedIn')" />
+
+                <x-input id="linkedin" class="block mt-1 w-full" type="url" name="linkedin" :value="old('linkedin')"  />
+            </div>
+
             <!-- Password -->
             <div class="mt-4">
                 <x-label for="password" title="password should have 8 alphabetic character with at least one number" :value="__('Password')" />

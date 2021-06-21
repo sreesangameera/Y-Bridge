@@ -13,11 +13,11 @@ class UpdateProfiles extends Controller
 {
     public function updatestudent(Request $request){
         /*$request->validate([
-          
-            'StudentID'=>'required|',
-           'email' => 'required|email|unique:users',
-            'password' => 'required|min:8|regex:/^.*(?=.{3,})(?=.*[a-zA-Z]).*$/',
-            'confirm'=> 'required|min:8|regex:/^.*(?=.{3,})(?=.*[a-zA-Z]).*$/'
+            'fname'=> 'required|min:8',
+            //'StudentID'=>'required|',
+           //'email' => 'required|email|unique:users',
+            'pwrd' => 'required|min:8|regex:/^.*(?=.{3,})(?=.*[a-zA-Z]).*$/',
+            'nwpswrd'=> 'required|min:8|regex:/^.*(?=.{3,})(?=.*[a-zA-Z]).*$/'
         ]);*/
 
         $dt = Carbon::createFromFormat('Y-m-d',$request->dob );
@@ -86,7 +86,8 @@ class UpdateProfiles extends Controller
             
             
             try{
-            DB::table('industrialists')->where('CompanyPersonalEmailID',$request->email)->update(['NameWithInitials'=>$request->namewi,
+            DB::table('industrialists')->where('CompanyPersonalEmailID',$request->email)->update(['Title'=>$request->title,
+                                                                                    'NameWithInitials'=>$request->namewi,
                                                                                     'CompanyName'=>$request->comn,
                                                                                     'Designation'=>$request->designation,
                                                                                     'LinkedIn'=>$request->linkedin,
@@ -205,4 +206,6 @@ public function updatestudentv(){
     $email=   Auth::user()->email ;
     $c=DB::table('students')->where('EmailID',$email)->first();
             return view('profile.editsp')->with('c',$c);      }
+
+           
 }
