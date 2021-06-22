@@ -179,8 +179,8 @@ body{
 
  <div class="demo">
         <div class="container">
-        <h4>Do not close this page until you choose and send a request to a Student</h4>
-<h5>When you click on a suggestion result,it will redirected to a respective profile with another tab</h5>
+        <h4>You can see more details and request to connect with the suggested participant through Click on the Registration number</h4>
+
 <br>
 <div style="width:100%; margin:auto;">
             <div class="row">
@@ -223,7 +223,7 @@ body{
              
            @endphp 
             
-            <td><a target="_blank" href="{{url('shstu2',$q)}}">{{$user}}</a></br></td>
+            <td><a target="_blank" href="{{url('shstu2',$q)}}">{{$user}}</a>&nbsp; <br> &nbsp;</td>
             @csrf
             
             

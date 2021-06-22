@@ -149,6 +149,7 @@ class DatabaseSeeder extends Seeder
        
         DB::table('industrialists')->insert([
             'Photo'=> 'HP@gmail.com.jpg',
+            'Title'=>'Mr.',
             'NameWithInitials'=>' H.Purasinghe',
             'Designation'=>'Founder and CEO',
             'CompanyPersonalEmailID'=>'HP@gmail.com',
@@ -170,6 +171,7 @@ class DatabaseSeeder extends Seeder
     
         DB::table('industrialists')->insert([
             'Photo'=> 'MSa@gmail.com.jpg',
+            'Title'=>'Mr.',
             'NameWithInitials'=>' M.Sekaram',
             'Designation'=>'Founder and CEO',
             'CompanyPersonalEmailID'=>'MSa@gmail.com',
@@ -192,6 +194,7 @@ class DatabaseSeeder extends Seeder
 
         DB::table('industrialists')->insert([
             'Photo'=> 'SG@gmail.com.jpg',
+            'Title'=>'Mr.',
             'NameWithInitials'=>' S.Gamwarige',
             'Designation'=>'General Manager and VP Engineering',
             'CompanyPersonalEmailID'=>'SG@gmail.com',
@@ -212,6 +215,7 @@ class DatabaseSeeder extends Seeder
 
         DB::table('industrialists')->insert([
             'Photo'=> 'MR@gmail.com.jpg',
+            'Title'=>'Mr.',
             'NameWithInitials'=>'M.Ratnayake',
             'Designation'=>'Chief Information Officer and Board Member',
             'CompanyPersonalEmailID'=>'MR@gmail.com',
@@ -250,7 +254,7 @@ class DatabaseSeeder extends Seeder
             'LinkedIn'=>'https://www.linkedin.com/in/mahesan-s-5003583?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BB1rqRyszQpisVhHuf23jBA%3D%3D',
             'ContactNumber'=>'0212218194',
             'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-dr-s-mahesan/',
-            'ResearchInterest'=>'Bioinformatics Computing, Image Processing and Computer Vision, High Performance Computing, Numerical Computing',
+            'ResearchInterest'=>'Knowledge Representation, Natural Language Processing, Automata Theory, Intelligent Systems, Information Systems, High Performance Computing, Numerical Computing, Image Processing, BioInformatics Computing',
             
         ]);
 
@@ -276,7 +280,7 @@ class DatabaseSeeder extends Seeder
             'LinkedIn'=>'https://www.linkedin.com/in/charles-eugene-79351341?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BmA27V%2BNeQ1GzZR3eX1ukpw%3D%3D',
             'ContactNumber'=>'0775698523',
             'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-dr-e-y-a-charles/',
-            'ResearchInterest'=>'Data Minning and Machine Learning',
+            'ResearchInterest'=>'Data Mining, Machine Learning, Neural Networks, Spiking Neural Networks',
             
 
         ]);
@@ -304,7 +308,7 @@ class DatabaseSeeder extends Seeder
             'LinkedIn'=>'https://www.linkedin.com/in/thabotharan?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B8AHwMGZ8ROO4uuxJvAtp9w%3D%3D',
             'ContactNumber'=>'0775648972',
             'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-dr-k-thabotharan/',
-            'ResearchInterest'=>'Computer Networks and Internet Computing',
+            'ResearchInterest'=>'Opportunistic Network, Computer Network, Social Network Analysis, IoT, Big Data Analysis',
             
         ]);
 
@@ -331,7 +335,7 @@ class DatabaseSeeder extends Seeder
             'LinkedIn'=>'https://www.linkedin.com/in/amirthalingam-ramanan-23337221?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BqAzsvYvjQOC3rf%2FcDlW7Tg%3D%3D',
             'ContactNumber'=>'0740543210',
             'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-dr-a-ramanan/',
-            'ResearchInterest'=>'Digital Image Processing, Data Minning and Machine Learning',
+            'ResearchInterest'=>'Image Processing, Computer Vision, Machine Learning, Deep Learning',
             
 
         ]);
@@ -359,7 +363,7 @@ class DatabaseSeeder extends Seeder
             'LinkedIn'=>'https://www.linkedin.com/in/barathy-mayurathan-b0633317a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_vie w_base_contact_details%3B85oGMDTLSaCDTRQDVWkJWg%3D%3D',
             'ContactNumber'=>'0723845562',
             'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-dr-mrs-b-mayurathan/',
-            'ResearchInterest'=>'Computer Architecture, Data Minning and Machine Learning',
+            'ResearchInterest'=>'Computer Vision, Machine Learning',
             
 
         ]);
@@ -387,7 +391,7 @@ class DatabaseSeeder extends Seeder
             'LinkedIn'=>'https://www.linkedin.com/in/siyamalanmanivannan?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Ba59PqMYUTC%2BfJKu%2BeV3q%2BQ%3D%3D',
             'ContactNumber'=>'0775446259',
             'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-dr-m-siyamalan/',
-            'ResearchInterest'=>'Computer Architecture, Data Minning and Machine Learning, Image Processing and Computer Vision',
+            'ResearchInterest'=>'Deep Learning, Machine Learning, Computer Vision, Medical Image Analysis',
            
 
         ]);
@@ -415,7 +419,7 @@ class DatabaseSeeder extends Seeder
             'LinkedIn'=>'https://www.linkedin.com/in/iamsarves?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bf8HfoLXMRpu8z6BdMdXSUw%3D%3D',
             'ContactNumber'=>'0785265984',
             'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-mr-k-sarveswaran/',
-            'ResearchInterest'=>'E-technologies,Web Technologies',
+            'ResearchInterest'=>'E-Learning, Local Language Computing, Web Technologies',
             
         ]);
 
@@ -442,7 +446,7 @@ class DatabaseSeeder extends Seeder
             'LinkedIn'=>'https://www.linkedin.com/in/sriskandarajah-shriparen-43583737?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B1UCej2%2F1TPu9isUsC5S84Q%3D%3D',
             'ContactNumber'=>'0776542589',
             'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-mr-s-shriparen/',
-            'ResearchInterest'=>'Computer Networks and Internet Computing',
+            'ResearchInterest'=>'Computer Networks, Software-defined Networking',
             
         ]);
 
@@ -469,7 +473,7 @@ class DatabaseSeeder extends Seeder
             'LinkedIn'=>'https://www.linkedin.com/in/samanthajeyakumar?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bxst0nxYkSz2Aei88Qh7FuQ%3D%3D',
             'ContactNumber'=>'212218194',
             'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-ms-j-samantha-tharani/',
-            'ResearchInterest'=>'Advanced database design and systems',
+            'ResearchInterest'=>'Database Management Systems, Blockchain, IoT, Big Data Analysis',
             
 
         ]);
@@ -504,9 +508,7 @@ class DatabaseSeeder extends Seeder
             'LinkedIn'=>'https://www.linkedin.com/in/suthakar-somaskandan-4a96031a/?originalSubdomain=lk',
             'ContactNumber'=>'212218193',
             'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-mr-s-suthakar/',
-            'ResearchInterest'=>'Advanced database design and systems',
-            
-
+            'ResearchInterest'=>'Computer Graphics,High Performance Computing,Medical Imaging'
         ]);
 
         

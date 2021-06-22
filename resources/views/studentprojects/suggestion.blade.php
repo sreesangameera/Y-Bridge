@@ -178,8 +178,8 @@ body{
 
  <div class="demo">
         <div class="container">
-        <h4>Do not close this page until you choose and send a request to both industrialist and lecturer</h4>
-<h5>When you click on a suggestion result,it will redirected to a respective profile with another tab</h5>
+        <h4>You can see more details and request to connect with the suggested participant through Click on the Name/ Registration number</h4>
+
 <br>
 @if ($message = Session::get('success'))
         <div class="alert alert-success">
@@ -222,7 +222,7 @@ body{
             
             
           
-            <td><a target="_blank" href="{{url('shlec',$usert->EmployeeID)}}">{{$usert->Title}} {{$usert->FirstName}} {{$usert->LastName}}</a></td>
+            <td><a target="_blank" href="{{url('shlec',$usert->EmployeeID)}}">{{$usert->Title}} {{$usert->FirstName}} {{$usert->LastName}} &nbsp; <br> &nbsp; </a></td>
            </tr>
    
     @endforeach
@@ -275,7 +275,7 @@ body{
            
            
             
-            <td><a target="_blank" href="{{url('shind',$userta->CompanyPersonalEmailID)}}">{ $userta->Title}}{{$userta->NameWithInitials}}</a></br></td>
+            <td><a target="_blank" href="{{url('shind',$userta->CompanyPersonalEmailID)}}">{{ $userta->Title}}{{$userta->NameWithInitials}}</a></br></td>
             
             
              
