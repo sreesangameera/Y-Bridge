@@ -462,9 +462,9 @@ body{
   </div></div>
 </div>
 
-     <div class="panel panel-primary">
+<div class="panel panel-primary">
                                 <div class="panel-body">
-                                <h3> <a href="#">Participants</a></h3>
+                                <h3> <a href="#">Participants </a></h3>
                                     <div role="tabpanel">
                                         <!-- Nav tabs -->
                                         <ul class="nav nav-tabs" role="tablist">
@@ -500,50 +500,109 @@ body{
                                                     </ul>
                                                     <div class="tab-content">
                                                         <div role="tabpanel" class="tab-pane active" id="1g">
-                                                                                                                                                                                                                                                 
+                                                        <table  >
+                                                                    <thead>
+                                                                    <tr>
+                                                                        
+                                                                        <th></th>
+                                                                        <th></th>
+                                                                        
+                                                                    </tr>
+                                                                    </thead>
+                                                                    @foreach ($studentt as $user)
+                                                                        @if($user->YearOfStudy=="Level-1G" || $user->YearOfStudy=="Level-1S" )
+                                                                        <tr>
+                                                            
+                                                                            <td><div class="pull-left" >
+                                                                            <img src="/upload/profile/{{ $user->photo}}" class="profilep"height="60" width="60" alt="">
+                                                                            </div><td>
+                                                                            <td><div class="pull-up" ><a href="{{$user->LinkedIn}}"  target="_blank"><br>{{$user->FirstName}}{{" "}}{{$user->LastName}}</a><br>{{$user->YearOfStudy}}
+                                                                            </div></td>
+                                                                            
+                                                                        </tr>
+                                                                        @endif
+                                                                    @endforeach
+                                                                
+                                                                </table>                                                                                                                                                                   
                                                         </div>
                                                         <div role="tabpanel" class="tab-pane" id="2g">
-                                                                                                                        
+                                                        <table  >
+                                                                    <thead>
+                                                                    <tr>
+                                                                        
+                                                                        <th></th>
+                                                                        <th></th>
+                                                                        
+                                                                    </tr>
+                                                                    </thead>
+                                                                    @foreach ($studentt as $user)
+                                                                        @if($user->YearOfStudy=="Level-2G" || $user->YearOfStudy=="Level-2S")
+                                                                        <tr>
+                                                            
+                                                                            <td><div class="pull-left" >
+                                                                            <img src="/upload/profile/{{ $user->photo}}" class="profilep"height="60" width="60" alt="">
+                                                                            </div><td>
+                                                                            <td><div class="pull-up" ><a href="{{$user->LinkedIn}}"  target="_blank"><br>{{$user->FirstName}}{{" "}}{{$user->LastName}}</a><br>{{$user->YearOfStudy}}
+                                                                            </div></td>
+                                                                            
+                                                                        </tr>
+                                                                        @endif
+                                                                    @endforeach
+                                                                
+                                                                </table>                                                           
                                                         </div>
                                                         <div role="tabpanel" class="tab-pane" id="3g">
-                                                        <table  >
-                        <thead>
-                        <tr>
-                            
-                            <th></th>
-                            <th><th>
-                            
-                            
-                        
-                            
-                            
-                        </tr>
-                        @foreach ($studentt as $user)
-                            <tr>
-                
-                                <td><div class="pull-left" >
-                                <img src="/upload/profile/{{ $user->photo}}" class="profilep"height="60" width="60" alt="">
-	    </div><td>
-                                <td><div class="pull-up" ><a href="{{$user->LinkedIn}}"  target="_blank"><br>{{$user->FirstName}}{{" "}}{{$user->LastName}}</a><br>{{$user->YearOfStudy}}
-                                </div></td>
-                                
-                                
-                            
-                            
-
-                                        
-
-                                        
-                            
-                                
-                            
-                            </tr>
-                        @endforeach
-                        <thead>
-                              </table>                                                                                                                       
+                                                                                                                           
+                                                                <table  >
+                                                                    <thead>
+                                                                    <tr>
+                                                                        
+                                                                        <th></th>
+                                                                        <th></th>
+                                                                        
+                                                                    </tr>
+                                                                    </thead>
+                                                                    @foreach ($studentt as $user)
+                                                                        @if($user->YearOfStudy=="Level-3G" || $user->YearOfStudy=="Level-3M" || $user->YearOfStudy=="Level-3S")
+                                                                        <tr>
+                                                            
+                                                                            <td><div class="pull-left" >
+                                                                            <img src="/upload/profile/{{ $user->photo}}" class="profilep"height="60" width="60" alt="">
+                                                                            </div><td>
+                                                                            <td><div class="pull-up" ><a href="{{$user->LinkedIn}}"  target="_blank"><br>{{$user->FirstName}}{{" "}}{{$user->LastName}}</a><br>{{$user->YearOfStudy}}
+                                                                            </div></td>
+                                                                            
+                                                                        </tr>
+                                                                        @endif
+                                                                    @endforeach
+                                                                
+                                                                </table>                                                                                                                                                                                                                                                                                                                                                             <a href="http://192.248.56.20/match-module/all-user/2?Atype=3G&amp;Btype=3M&amp;Ctype=3S" class="pull-right" id="showUserBtn" title="Students"></a>
                                                         </div>
                                                          <div role="tabpanel" class="tab-pane" id="4g">
-                                                                                                                                                                                                                                                   
+                                                         <table  >
+                                                                    <thead>
+                                                                    <tr>
+                                                                        
+                                                                        <th></th>
+                                                                        <th></th>
+                                                                        
+                                                                    </tr>
+                                                                    </thead>
+                                                                    @foreach ($studentt as $user)
+                                                                        @if($user->YearOfStudy=="Level-4X" || $user->YearOfStudy=="Level-4M" || $user->YearOfStudy=="Level-4S")
+                                                                        <tr>
+                                                            
+                                                                            <td><div class="pull-left" >
+                                                                            <img src="/upload/profile/{{ $user->photo}}" class="profilep"height="60" width="60" alt="">
+                                                                            </div><td>
+                                                                            <td><div class="pull-up" ><a href="{{$user->LinkedIn}}"  target="_blank"><br>{{$user->FirstName}}{{" "}}{{$user->LastName}}</a><br>{{$user->YearOfStudy}}
+                                                                            </div></td>
+                                                                            
+                                                                        </tr>
+                                                                        @endif
+                                                                    @endforeach
+                                                                
+                                                                </table>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       <a href="http://192.248.56.20/match-module/all-user/2?Atype=4S&amp;Btype=4M" class="pull-right" id="showUserBtn" title="Students"></a>
                                                         </div>
 
                                                     </div>
@@ -551,6 +610,7 @@ body{
 
                                             </div>
                                             <div role="tabpanel" class="tab-pane active" id="Academics">
+                                           
                                             <table  >
                         <thead>
                         <tr>
@@ -585,7 +645,10 @@ body{
                             </tr>
                         @endforeach
                         <thead>
-                              </table>                                                                                                                
+                              </table> 
+                                                                                                    
+
+                                                                                                                                                                            <a href="http://192.248.56.20/match-module/all-user/1" class="pull-right" id="showUserBtn" title="Academics"></a>
                                             </div>
                                             <div role="tabpanel" class="tab-pane" id="Industries">
                                             <table  >
@@ -606,7 +669,7 @@ body{
                                 <td><div class="pull-left">
                                 <img src="/upload/profile/{{ $user->Photo}}" class="profilep"height="60" width="60" alt="">
 	    </div><td>
-                                <td><a href="{{$user->LinkedIn}}" class="pull-up" target="_blank"><br>{{$user->NameWithInitials}}</a><br>{{$user->Designation}} at {{$user->CompanyName}}
+                                <td><a href="{{$user->LinkedIn}}" class="pull-up" target="_blank"><br>{{$user->Title}}{{$user->NameWithInitials}}</a><br>{{$user->Designation}} at {{$user->CompanyName}}
                                 </td>
                                 
                                 
@@ -622,20 +685,27 @@ body{
                             </tr>
                         @endforeach
                         <thead>
-                              </table>                                                                                                                         
-                                            </div>
+                              </table>                                                                                                                                                                                      
                                         </div>
                                     </div>
                                     
                                 </div>
-                                <hr class="hr1">
                             </div>
+                           
+
+       
+                        </div><!-- end testimonial -->
+                    </div><!-- end carousel -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+
+         
 
            
-                            <hr class="hr1">
-                      
-                <br>
-                            
+               
+               
+    </div><!-- end section -->
+      
                        
                             <div class="panel panel-primary">
     

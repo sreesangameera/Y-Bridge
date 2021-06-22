@@ -213,7 +213,7 @@ body{
              $q=str_replace("/","*",$user)
            @endphp
            
-            <td><a target="_blank" href="{{ url('shstu',$q) }}">{{$user}}</a></td>
+            <td><a target="_blank" href="{{ url('shstu',$q) }}">{{$user}}&nbsp; <br> &nbsp;</a></td>
             
             @csrf
             

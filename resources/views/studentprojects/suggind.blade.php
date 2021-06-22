@@ -223,7 +223,7 @@ body{
              
            @endphp 
             
-            <td><a target="_blank" href="{{url('shstu2',$q)}}">{{$user}}</a>&nbsp; <br> &nbsp;</td>
+            <td><a target="_blank" href="{{url('shstu2',$q)}}">{{$user}}&nbsp; <br> &nbsp;</a></td>
             @csrf
             
             

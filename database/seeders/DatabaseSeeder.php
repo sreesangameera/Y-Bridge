@@ -36,7 +36,7 @@ class DatabaseSeeder extends Seeder
             'role'=> 'Student',
             'fname'=>'Rasika',
             'lname'=>'Lakmal',
-            'email'=>'drasikalakmal@gmail.com',
+            'email'=>'rld@gmail.com',
             'password'=> Hash::make('abcd1234'),
         ]);
         DB::table('users')->insert([
@@ -60,6 +60,78 @@ class DatabaseSeeder extends Seeder
             'email'=>'ku@gmail.com',
             'password'=> Hash::make('abcd1234'),
         ]);
+
+      DB::table('users')->insert([
+            'role'=> 'Student',
+            'fname'=>'Sahan',
+            'lname'=>'Herath',
+            'email'=>'sahandherath@gmail.com',
+            'password'=> Hash::make('abcd1234'),
+        ]);
+
+       DB::table('users')->insert([
+            'role'=> 'Student',
+            'fname'=>'Samitha',
+            'lname'=>'Dilan',
+            'email'=>'samitadil@gmail.com',
+            'password'=> Hash::make('abcd1234'),
+        ]);
+
+
+        DB::table('users')->insert([
+            'role'=> 'Student',
+            'fname'=>'Nilaxy',
+            'lname'=>'Thirugnanseelan',
+            'email'=>'nilaxyseelan@gmail.com',
+            'password'=> Hash::make('abcd1234'),
+        ]);
+
+
+        DB::table('users')->insert([
+            'role'=> 'Student',
+            'fname'=>'Vithushan',
+            'lname'=>'Logeswaran',
+            'email'=>'vithushan@ieee.org',
+            'password'=> Hash::make('abcd1234'),
+        ]);
+
+
+        DB::table('students')->insert([
+            'StudentID'=> '2016/CSC/002',
+            'photo'=>'sahand.herath@gmail.com.jpg',
+            'FirstName'=>'Sahan',
+            'LastName'=>'Herath',
+            'Gender'=>'Male',
+            'DateOfBirth'=>'1996-05-26',
+            'HomeAddress'=>'kandy',
+            'EmailID'=>' sahandherath@gmail.com',
+            'LinkedIn'=>'https://www.linkedin.com/in/sahan-herath-035741192/',
+            'ContactNumber'=>'0773456784',
+            'YearOfStudy'=>'Level-4S',
+            'StudyProgramme'=>'Computer Science',
+            'SubjectsOffered'=>'CSC',
+            'Skills'=>'Deep Learning,E-Learning,High Performance Computing,Human Computer Interaction,Image Processing,Information Systems,Intelligent Systems,IoT',
+            
+        ]);
+
+        DB::table('students')->insert([
+            'StudentID'=> '2016/CSC/003',
+            'photo'=>'samitadil@gmail.com.jpg',
+            'FirstName'=>'Samitha',
+            'LastName'=>'Dilan',
+            'Gender'=>'Male',
+            'DateOfBirth'=>'1996-06-26',
+            'HomeAddress'=>'Ratnapura',
+            'EmailID'=>'samitadil@gmail.com',
+            'LinkedIn'=>'https://www.linkedin.com/in/samithadilan/',
+            'ContactNumber'=>'0773456704',
+            'YearOfStudy'=>'Level-4S',
+            'StudyProgramme'=>'Computer Science',
+            'SubjectsOffered'=>'CSC',
+            'Skills'=>'Knowledge Representation,Local Language Computing,Machine Learning,Medical Image Analysis,Medical Imaging,Mobile Computing,Natural Language Processing',
+            
+        ]);
+
      
         DB::table('students')->insert([
             'StudentID'=> '2017/SP/002',
@@ -75,7 +147,7 @@ class DatabaseSeeder extends Seeder
             'YearOfStudy'=>'Level-3M',
             'StudyProgramme'=>'Computer Science',
             'SubjectsOffered'=>'Direct Computer Science',
-            'Skills'=>'',
+            'Skills'=>'Data Mining,Neural Networks,Natural Language Processing,Operating Systems,Parallel Computing',
         ]);
         DB::table('students')->insert([
             'StudentID'=> '2017/SP/040',
@@ -85,13 +157,13 @@ class DatabaseSeeder extends Seeder
             'Gender'=>'Male',
             'DateOfBirth'=>'1996-12-02',
             'HomeAddress'=>'Gampaha',
-            'EmailID'=>'drasikalakmal@gmail.com',
+            'EmailID'=>'rld@gmail.com',
             'LinkedIn'=>'https://www.linkedin.com/in/rasika-lakmal-dassanayaka-11a52b173/',
             'ContactNumber'=>'0718919576',
             'YearOfStudy'=>'Level-3G',
             'StudyProgramme'=>'Computer Science',
             'SubjectsOffered'=>'PMM,STA,CSC',
-            'Skills'=>'',
+            'Skills'=>'IoT,Knowledge Representation,Local Language Computing,Machine Learning,Medical Image Analysis,Medical Imaging',
             
         ]);
         DB::table('students')->insert([
@@ -108,7 +180,7 @@ class DatabaseSeeder extends Seeder
             'YearOfStudy'=>'Level-3G',
             'StudyProgramme'=>'Physical Science',
             'SubjectsOffered'=>'PMM,STA,CSC',
-            'Skills'=>'',
+            'Skills'=>'E-Learning,Human Computer Interaction,Image Processing,Information Systems,Intelligent Systems',
             
         ]);
         DB::table('students')->insert([
@@ -125,11 +197,11 @@ class DatabaseSeeder extends Seeder
             'YearOfStudy'=>'Level-3G',
             'StudyProgramme'=>'Physical Science',
             'SubjectsOffered'=>'PMM,PHY,CSC',
-            'Skills'=>'',
+            'Skills'=>'Data Communication,High Performance Computing,Database Management Systems,Deep Learning',
             
         ]);
         DB::table('students')->insert([
-            'StudentID'=> '2017/SP/056',
+            'StudentID'=> '2017/SP/167',
             'photo'=>'ku@gmail.com.jpg',
             'FirstName'=>'Kavikshana',
             'LastName'=>'Ujantha Premalal',
@@ -142,9 +214,52 @@ class DatabaseSeeder extends Seeder
             'YearOfStudy'=>'Level-3G',
             'StudyProgramme'=>'Physical Science',
             'SubjectsOffered'=>'PMM,STA,CSC',
-            'Skills'=>'',
+            'Skills'=>'Computer Graphics,Computer Networks,Computer Vision,Cryptography,Data Communication',
             
         ]);
+
+
+       DB::table('students')->insert([
+            'StudentID'=> '2018/CSC/002',
+            'photo'=>'nilaxyseelan@gmail.com.jpg',
+            'FirstName'=>'Nilaxy',
+            'LastName'=>'Thirugnanseelan',
+            'Gender'=>'Female',
+            'DateOfBirth'=>'1998-09-21',
+            'HomeAddress'=>'Jaffna',
+            'EmailID'=>'nilaxyseelan@gmail.com',
+            'LinkedIn'=>'https://www.linkedin.com/in/nilaxy-seelan-6517781a4/',
+            'ContactNumber'=>'0773456774',
+            'YearOfStudy'=>'Level-2S',
+            'StudyProgramme'=>'Computer Science',
+            'SubjectsOffered'=>'CSC',
+            'Skills'=>'Artificial Intelligence,Automata Theory,Big Data Analysis,Bioinformatics Computing,Blockchain,Compiler Design,Computer Architecture',
+            
+        ]);
+
+
+
+
+        DB::table('students')->insert([
+            'StudentID'=> '2018/CSC/003',
+            'photo'=>'vithushan@ieee.org.jpg',
+            'FirstName'=>'Vithushan',
+            'LastName'=>'Logeswaran',
+            'Gender'=>'Male',
+            'DateOfBirth'=>'1998-06-21',
+            'HomeAddress'=>'Jaffna',
+            'EmailID'=>'vithushan@ieee.org',
+            'LinkedIn'=>'https://www.linkedin.com/in/vithushan-logeswaran-b2658b181/',
+            'ContactNumber'=>'0773456686',
+            'YearOfStudy'=>'Level-2S',
+            'StudyProgramme'=>'Computer Science',
+            'SubjectsOffered'=>'CSC',
+            'Skills'=>'Computer Graphics,Computer Networks,Computer Vision,Cryptography,Data Communication,Data Mining,Database Management Systems',
+            
+        ]);
+
+
+
         
        
         DB::table('industrialists')->insert([
@@ -154,7 +269,7 @@ class DatabaseSeeder extends Seeder
             'Designation'=>'Founder and CEO',
             'CompanyPersonalEmailID'=>'HP@gmail.com',
             'LinkedIn'=>'https://www.linkedin.com/in/harsha-purasinghe-8713504?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bb28Ls99zS3KCs8VUQQPerA%3D%3D',
-            'FieldOfInterests'=>'',
+            'FieldOfInterests'=>'Artificial Intelligence,Automata Theory,Big Data Analysis,Compiler Design,Computer Graphics,Data Mining,Image Processing',
             'ContactNumber'=>'0775332814',
             'CompanyName'=>'WSO2',
 
@@ -176,7 +291,7 @@ class DatabaseSeeder extends Seeder
             'Designation'=>'Founder and CEO',
             'CompanyPersonalEmailID'=>'MSa@gmail.com',
             'LinkedIn'=>'https://www.linkedin.com/in/manosekaram?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B2RxXZXYBTSCyMZGM3IYkmA%3D%3D',
-            'FieldOfInterests'=>'',
+            'FieldOfInterests'=>'Parallel Computing,Rapid Application Development,Social Network Analysis,Software-defined Networking,Spiking Neural Networks,System Design and Analysis,Web Technologies',
             'ContactNumber'=>'0778218520',
             'CompanyName'=>'99x and StartupX Foundry',
 
@@ -199,7 +314,7 @@ class DatabaseSeeder extends Seeder
             'Designation'=>'General Manager and VP Engineering',
             'CompanyPersonalEmailID'=>'SG@gmail.com',
             'LinkedIn'=>'https://www.linkedin.com/in/sankalpa-gamwarige-35a58b8?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BbuKuDM%2BNSbmmAt5kWhDV5A%3D%3D',
-            'FieldOfInterests'=>'',
+            'FieldOfInterests'=>'Numerical Computing,Operating Systems,Opportunistic Network,Organizational Behaviour,Parallel Computing,Rapid Application Development',
             'ContactNumber'=>'0812464446',
             'CompanyName'=>'Zone24x7 Inc',
 
@@ -220,7 +335,7 @@ class DatabaseSeeder extends Seeder
             'Designation'=>'Chief Information Officer and Board Member',
             'CompanyPersonalEmailID'=>'MR@gmail.com',
             'LinkedIn'=>'https://www.linkedin.com/in/maduratnayake?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BOp1QeRLZTTSFVnk9jJ%2B5GA%3D%3D',
-            'FieldOfInterests'=>'',
+            'FieldOfInterests'=>'Data Mining,Database Management Systems,Deep Learning,E-Learning,High Performance Computing,Human Computer Interaction',
             'ContactNumber'=>'0723845548',
             'CompanyName'=>'Virtusa',
 
@@ -233,6 +348,93 @@ class DatabaseSeeder extends Seeder
             'email'=>'MR@gmail.com',
             'password'=> Hash::make('abcd1234'),
         ]);
+
+        DB::table('industrialists')->insert([
+		'Photo'=> 'DP@gmail.com.jpg',
+        'Title'=>'Mr.',
+		'NameWithInitials'=>'D.Perera',
+		'Designation'=>'Tech Evangelist',
+		'CompanyPersonalEmailID'=>'DP@gmail.com',
+		'LinkedIn'=>'https://www.linkedin.com/in/dinuthperera',
+		'FieldOfInterests'=>'Machine Learning,Medical Image Analysis,Medical Imaging,Mobile Computing,Natural Language Processing,Neural Networks,Numerical Computing',
+		'ContactNumber'=>'0771234567',
+		'CompanyName'=>'Odoo Dev',
+	]);
+	
+
+        DB::table('users')->insert([
+            'role'=> 'Industry',
+            'fname'=>'Dinuth',
+            'lname'=>'Perera',
+            'email'=>'DP@gmail.com',
+            'password'=> Hash::make('abcd1234'),
+        ]);
+
+
+
+        DB::table('industrialists')->insert([
+		'Photo'=> 'KMb@gmail.com.jpg',
+        'Title'=>'Mr.',
+		'NameWithInitials'=>'K.Malinda',
+		'Designation'=>'Flutter Developer',
+		'CompanyPersonalEmailID'=>'KMb@gmail.com',
+		'LinkedIn'=>'https://www.linkedin.com/in/kamal-malinda',
+		'FieldOfInterests'=>'Image Processing,Information Systems,Intelligent Systems,IoT,Knowledge Representation,Local Language Computing,Machine Learning',
+		'ContactNumber'=>'0772345678',
+		'CompanyName'=>'83 Studios',
+	]);
+        DB::table('users')->insert([
+            'role'=> 'Industry',
+            'fname'=>'Kamal',
+            'lname'=>'Malinda',
+            'email'=>'KMb@gmail.com',
+            'password'=> Hash::make('abcd1234'),
+        ]);
+
+
+        DB::table('industrialists')->insert([
+		'Photo'=> 'NJ@gmail.com.jpg',
+        'Title'=>'Mr.',
+		'NameWithInitials'=>'N.Jaleel',
+		'Designation'=>'Cheif Operating Officer',
+		'CompanyPersonalEmailID'=>'NJ@gmail.com',
+		'LinkedIn'=>'https://www.linkedin.com/in/noorain-jaleel-a52586175',
+		'FieldOfInterests'=>'Computer Architecture,Computer Graphics,Computer Networks,Computer Vision,Cryptography,Data Communication,Data Mining',
+		'ContactNumber'=>'0773465789',
+		'CompanyName'=>'KeenEye',
+	]);
+
+
+        DB::table('users')->insert([
+            'role'=> 'Industry',
+            'fname'=>'Noorain',
+            'lname'=>'Jaleel',
+            'email'=>'NJ@gmail.com',
+            'password'=> Hash::make('abcd1234'),
+        ]);
+
+
+        DB::table('industrialists')->insert([
+		'Photo'=> 'PW@gmail.com.jpg',
+        'Title'=>'Mr.',
+		'NameWithInitials'=>'P.Weerasekara',
+		'Designation'=>'Chief Operating Officer',
+		'CompanyPersonalEmailID'=>'PW@gmail.com',
+		'LinkedIn'=>'https://www.linkedin.com/in/panduka-weerasekara-672165111',
+		'FieldOfInterests'=>'Artificial Intelligence,Automata Theory,Big Data Analysis,Bioinformatics Computing,Blockchain,Compiler Design',
+		'ContactNumber'=>'0762345768',
+		'CompanyName'=>'PelicanCube',
+	]);
+
+    DB::table('users')->insert([
+            'role'=> 'Industry',
+            'fname'=>'Panduka',
+            'lname'=>'Weerasekara',
+            'email'=>'PW@gmail.com',
+            'password'=> Hash::make('abcd1234'),
+        ]);
+
+
 
 
 
@@ -254,7 +456,7 @@ class DatabaseSeeder extends Seeder
             'LinkedIn'=>'https://www.linkedin.com/in/mahesan-s-5003583?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BB1rqRyszQpisVhHuf23jBA%3D%3D',
             'ContactNumber'=>'0212218194',
             'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-dr-s-mahesan/',
-            'ResearchInterest'=>'Knowledge Representation, Natural Language Processing, Automata Theory, Intelligent Systems, Information Systems, High Performance Computing, Numerical Computing, Image Processing, BioInformatics Computing',
+            'ResearchInterest'=>'Knowledge Representation,Natural Language Processing,Automata Theory,Intelligent Systems,Information Systems,High Performance Computing,Numerical Computing,Image Processing,BioInformatics Computing',
             
         ]);
 
@@ -280,7 +482,7 @@ class DatabaseSeeder extends Seeder
             'LinkedIn'=>'https://www.linkedin.com/in/charles-eugene-79351341?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BmA27V%2BNeQ1GzZR3eX1ukpw%3D%3D',
             'ContactNumber'=>'0775698523',
             'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-dr-e-y-a-charles/',
-            'ResearchInterest'=>'Data Mining, Machine Learning, Neural Networks, Spiking Neural Networks',
+            'ResearchInterest'=>'Data Mining,Machine Learning,Neural Networks,Spiking Neural Networks',
             
 
         ]);
@@ -308,7 +510,7 @@ class DatabaseSeeder extends Seeder
             'LinkedIn'=>'https://www.linkedin.com/in/thabotharan?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B8AHwMGZ8ROO4uuxJvAtp9w%3D%3D',
             'ContactNumber'=>'0775648972',
             'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-dr-k-thabotharan/',
-            'ResearchInterest'=>'Opportunistic Network, Computer Network, Social Network Analysis, IoT, Big Data Analysis',
+            'ResearchInterest'=>'Opportunistic Network,Computer Networks,Social Network Analysis,IoT,Big Data Analysis',
             
         ]);
 
@@ -335,7 +537,7 @@ class DatabaseSeeder extends Seeder
             'LinkedIn'=>'https://www.linkedin.com/in/amirthalingam-ramanan-23337221?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BqAzsvYvjQOC3rf%2FcDlW7Tg%3D%3D',
             'ContactNumber'=>'0740543210',
             'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-dr-a-ramanan/',
-            'ResearchInterest'=>'Image Processing, Computer Vision, Machine Learning, Deep Learning',
+            'ResearchInterest'=>'Image Processing,Computer Vision,Machine Learning,Deep Learning',
             
 
         ]);
@@ -363,7 +565,7 @@ class DatabaseSeeder extends Seeder
             'LinkedIn'=>'https://www.linkedin.com/in/barathy-mayurathan-b0633317a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_vie w_base_contact_details%3B85oGMDTLSaCDTRQDVWkJWg%3D%3D',
             'ContactNumber'=>'0723845562',
             'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-dr-mrs-b-mayurathan/',
-            'ResearchInterest'=>'Computer Vision, Machine Learning',
+            'ResearchInterest'=>'Computer Vision,Machine Learning',
             
 
         ]);
@@ -391,7 +593,7 @@ class DatabaseSeeder extends Seeder
             'LinkedIn'=>'https://www.linkedin.com/in/siyamalanmanivannan?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Ba59PqMYUTC%2BfJKu%2BeV3q%2BQ%3D%3D',
             'ContactNumber'=>'0775446259',
             'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-dr-m-siyamalan/',
-            'ResearchInterest'=>'Deep Learning, Machine Learning, Computer Vision, Medical Image Analysis',
+            'ResearchInterest'=>'Deep Learning,Machine Learning,Computer Vision,Medical Image Analysis',
            
 
         ]);
@@ -419,7 +621,7 @@ class DatabaseSeeder extends Seeder
             'LinkedIn'=>'https://www.linkedin.com/in/iamsarves?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bf8HfoLXMRpu8z6BdMdXSUw%3D%3D',
             'ContactNumber'=>'0785265984',
             'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-mr-k-sarveswaran/',
-            'ResearchInterest'=>'E-Learning, Local Language Computing, Web Technologies',
+            'ResearchInterest'=>'E-Learning,Local Language Computing,Web Technologies',
             
         ]);
 
@@ -446,7 +648,7 @@ class DatabaseSeeder extends Seeder
             'LinkedIn'=>'https://www.linkedin.com/in/sriskandarajah-shriparen-43583737?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B1UCej2%2F1TPu9isUsC5S84Q%3D%3D',
             'ContactNumber'=>'0776542589',
             'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-mr-s-shriparen/',
-            'ResearchInterest'=>'Computer Networks, Software-defined Networking',
+            'ResearchInterest'=>'Computer Networks,Software-defined Networking',
             
         ]);
 
@@ -473,7 +675,7 @@ class DatabaseSeeder extends Seeder
             'LinkedIn'=>'https://www.linkedin.com/in/samanthajeyakumar?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bxst0nxYkSz2Aei88Qh7FuQ%3D%3D',
             'ContactNumber'=>'212218194',
             'OfficialWebsite'=>'http://www.csc.jfn.ac.lk/index.php/profile-ms-j-samantha-tharani/',
-            'ResearchInterest'=>'Database Management Systems, Blockchain, IoT, Big Data Analysis',
+            'ResearchInterest'=>'Database Management Systems,Blockchain,IoT,Big Data Analysis',
             
 
         ]);

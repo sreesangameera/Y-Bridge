@@ -206,7 +206,7 @@ body{
             <div class="row">
                 <div class="col-md-6">
                     <div class="message-box">
-                    <h3> <a href="#">Inroduction</a></h3>
+                    <h3> <a href="#">Introduction</a></h3>
                         
                         
 

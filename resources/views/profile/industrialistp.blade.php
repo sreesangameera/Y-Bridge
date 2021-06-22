@@ -337,87 +337,87 @@
     </div>
     <div id="checkboxes" >
     <label for="one">
-        <input type="checkbox" id="Artificial Intelligence" name="FieldOfInterests[]" value=" Artificial Intelligence" />Artificial Intelligence</label>
+        <input type="checkbox" id="Artificial Intelligence" name="FieldOfInterests[]" value="Artificial Intelligence" />Artificial Intelligence</label>
 <label for="two">
-        <input type="checkbox" id="Automata Theory" name="FieldOfInterests[]" value=" Automata Theory" />Automata Theory</label>
+        <input type="checkbox" id="Automata Theory" name="FieldOfInterests[]" value="Automata Theory" />Automata Theory</label>
 <label for="three">
-        <input type="checkbox" id="Big Data Analysis" name="FieldOfInterests[]" value=" Big Data Analysis" />Big Data Analysis</label>
+        <input type="checkbox" id="Big Data Analysis" name="FieldOfInterests[]" value="Big Data Analysis" />Big Data Analysis</label>
 <label for="four">
-        <input type="checkbox" id="Bioinformatics Computing" name="FieldOfInterests[]" value=" Bioinformatics Computing" />Bioinformatics Computing</label>
+        <input type="checkbox" id="Bioinformatics Computing" name="FieldOfInterests[]" value="Bioinformatics Computing" />Bioinformatics Computing</label>
 <label for="five">
-        <input type="checkbox" id="Blockchain" name="FieldOfInterests[]" value=" Blockchain" />Blockchain</label>
+        <input type="checkbox" id="Blockchain" name="FieldOfInterests[]" value="Blockchain" />Blockchain</label>
 <label for="six">
-        <input type="checkbox" id="Compiler Design" name="FieldOfInterests[]" value=" Compiler Design" />Compiler Design</label>
+        <input type="checkbox" id="Compiler Design" name="FieldOfInterests[]" value="Compiler Design" />Compiler Design</label>
 <label for="seven">
-        <input type="checkbox" id="Computer Architecture" name="FieldOfInterests[]" value=" Computer Architecture" />Computer Architecture</label>
+        <input type="checkbox" id="Computer Architecture" name="FieldOfInterests[]" value="Computer Architecture" />Computer Architecture</label>
 <label for="eight">
-        <input type="checkbox" id="Computer Graphics" name="FieldOfInterests[]" value=" Computer Graphics" />Computer Graphics</label>
+        <input type="checkbox" id="Computer Graphics" name="FieldOfInterests[]" value="Computer Graphics" />Computer Graphics</label>
 <label for="nine">
-        <input type="checkbox" id="Computer Networks" name="FieldOfInterests[]" value=" Computer Networks" />Computer Networks</label>
+        <input type="checkbox" id="Computer Networks" name="FieldOfInterests[]" value="Computer Networks" />Computer Networks</label>
 <label for="ten">
-        <input type="checkbox" id="Computer Vision" name="FieldOfInterests[]" value=" Computer Vision" />Computer Vision</label>
+        <input type="checkbox" id="Computer Vision" name="FieldOfInterests[]" value="Computer Vision" />Computer Vision</label>
 <label for="eleven">
-        <input type="checkbox" id="Cryptography" name="FieldOfInterests[]" value=" Cryptography" />Cryptography</label>
+        <input type="checkbox" id="Cryptography" name="FieldOfInterests[]" value="Cryptography" />Cryptography</label>
 <label for="twelve">
-        <input type="checkbox" id="Data Communication" name="FieldOfInterests[]" value=" Data Communication" />Data Communication</label>
+        <input type="checkbox" id="Data Communication" name="FieldOfInterests[]" value="Data Communication" />Data Communication</label>
 <label for="thirteen">
-        <input type="checkbox" id="Data Mining" name="FieldOfInterests[]" value=" Data Mining" />Data Mining</label>
+        <input type="checkbox" id="Data Mining" name="FieldOfInterests[]" value="Data Mining" />Data Mining</label>
 <label for="fourteen">
-        <input type="checkbox" id="Database Management Systems" name="FieldOfInterests[]" value=" Database Management Systems" />Database Management Systems</label>
+        <input type="checkbox" id="Database Management Systems" name="FieldOfInterests[]" value="Database Management Systems" />Database Management Systems</label>
 <label for="fifteen">
-        <input type="checkbox" id="Deep Learning" name="FieldOfInterests[]" value=" Deep Learning" />Deep Learning</label>
+        <input type="checkbox" id="Deep Learning" name="FieldOfInterests[]" value="Deep Learning" />Deep Learning</label>
 <label for="sixteen">
-        <input type="checkbox" id="E-Learning" name="FieldOfInterests[]" value=" E-Learning" />E-Learning</label>
+        <input type="checkbox" id="E-Learning" name="FieldOfInterests[]" value="E-Learning" />E-Learning</label>
 <label for="seventeen">
-        <input type="checkbox" id="High Performance Computing" name="FieldOfInterests[]" value=" High Performance Computing" />High Performance Computing</label>
+        <input type="checkbox" id="High Performance Computing" name="FieldOfInterests[]" value="High Performance Computing" />High Performance Computing</label>
 <label for="eighteen">
-        <input type="checkbox" id="Human Computer Interaction" name="FieldOfInterests[]" value=" Human Computer Interaction" />Human Computer Interaction</label>
+        <input type="checkbox" id="Human Computer Interaction" name="FieldOfInterests[]" value="Human Computer Interaction" />Human Computer Interaction</label>
 <label for="nineteen">
-        <input type="checkbox" id="Image Processing" name="FieldOfInterests[]" value=" Image Processing" />Image Processing</label>
+        <input type="checkbox" id="Image Processing" name="FieldOfInterests[]" value="Image Processing" />Image Processing</label>
 <label for="twenty">
-        <input type="checkbox" id="Information Systems" name="FieldOfInterests[]" value=" Information Systems" />Information Systems</label>
+        <input type="checkbox" id="Information Systems" name="FieldOfInterests[]" value="Information Systems" />Information Systems</label>
 <label for="twentyone">
-        <input type="checkbox" id="Intelligent Systems" name="FieldOfInterests[]" value=" Intelligent Systems" />Intelligent Systems</label>
+        <input type="checkbox" id="Intelligent Systems" name="FieldOfInterests[]" value="Intelligent Systems" />Intelligent Systems</label>
 <label for="twentytwo">
-        <input type="checkbox" id="IoT" name="FieldOfInterests[]" value=" IoT" />IoT</label>
+        <input type="checkbox" id="IoT" name="FieldOfInterests[]" value="IoT" />IoT</label>
 <label for="twentythree">
-        <input type="checkbox" id="Knowledge Representation" name="FieldOfInterests[]" value=" Knowledge Representation" />Knowledge Representation</label>
+        <input type="checkbox" id="Knowledge Representation" name="FieldOfInterests[]" value="Knowledge Representation" />Knowledge Representation</label>
 <label for="twentyfour">
-        <input type="checkbox" id="Local Language Computing" name="FieldOfInterests[]" value=" Local Language Computing" />Local Language Computing</label>
+        <input type="checkbox" id="Local Language Computing" name="FieldOfInterests[]" value="Local Language Computing" />Local Language Computing</label>
 <label for="twentyfive">
-        <input type="checkbox" id="Machine Learning" name="FieldOfInterests[]" value=" Machine Learning" />Machine Learning</label>
+        <input type="checkbox" id="Machine Learning" name="FieldOfInterests[]" value="Machine Learning" />Machine Learning</label>
 <label for="twentysix">
-        <input type="checkbox" id="Medical Image Analysis" name="FieldOfInterests[]" value=" Medical Image Analysis" />Medical Image Analysis</label>
+        <input type="checkbox" id="Medical Image Analysis" name="FieldOfInterests[]" value="Medical Image Analysis" />Medical Image Analysis</label>
 <label for="twentyseven">
-        <input type="checkbox" id="Medical Imaging" name="FieldOfInterests[]" value=" Medical Imaging" />Medical Imaging</label>
+        <input type="checkbox" id="Medical Imaging" name="FieldOfInterests[]" value="Medical Imaging" />Medical Imaging</label>
 <label for="twentyeight">
-        <input type="checkbox" id="Mobile Computing" name="FieldOfInterests[]" value=" Mobile Computing" />Mobile Computing</label>
+        <input type="checkbox" id="Mobile Computing" name="FieldOfInterests[]" value="Mobile Computing" />Mobile Computing</label>
 <label for="twentynine">
-        <input type="checkbox" id="Natural Language Processing" name="FieldOfInterests[]" value=" Natural Language Processing" />Natural Language Processing</label>
+        <input type="checkbox" id="Natural Language Processing" name="FieldOfInterests[]" value="Natural Language Processing" />Natural Language Processing</label>
 <label for="thirty">
-        <input type="checkbox" id="Neural Networks" name="FieldOfInterests[]" value=" Neural Networks" />Neural Networks</label>
+        <input type="checkbox" id="Neural Networks" name="FieldOfInterests[]" value="Neural Networks" />Neural Networks</label>
 <label for="thirtyone">
-        <input type="checkbox" id="Numerical Computing" name="FieldOfInterests[]" value=" Numerical Computing" />Numerical Computing</label>
+        <input type="checkbox" id="Numerical Computing" name="FieldOfInterests[]" value="Numerical Computing" />Numerical Computing</label>
 <label for="thirtytwo">
-        <input type="checkbox" id="Operating Systems" name="FieldOfInterests[]" value=" Operating Systems" />Operating Systems</label>
+        <input type="checkbox" id="Operating Systems" name="FieldOfInterests[]" value="Operating Systems" />Operating Systems</label>
 <label for="thirtythree">
-        <input type="checkbox" id="Opportunistic Network" name="FieldOfInterests[]" value=" Opportunistic Network" />Opportunistic Network</label>
+        <input type="checkbox" id="Opportunistic Network" name="FieldOfInterests[]" value="Opportunistic Network" />Opportunistic Network</label>
 <label for="thirtyfour">
-        <input type="checkbox" id="Organizational Behaviour" name="FieldOfInterests[]" value=" Organizational Behaviour" />Organizational Behaviour</label>
+        <input type="checkbox" id="Organizational Behaviour" name="FieldOfInterests[]" value="Organizational Behaviour" />Organizational Behaviour</label>
 <label for="thirtyfive">
-        <input type="checkbox" id="Parallel Computing" name="FieldOfInterests[]" value=" Parallel Computing" />Parallel Computing</label>
+        <input type="checkbox" id="Parallel Computing" name="FieldOfInterests[]" value="Parallel Computing" />Parallel Computing</label>
 <label for="thirtysix">
-        <input type="checkbox" id="Rapid Application Development" name="FieldOfInterests[]" value=" Rapid Application Development" />Rapid Application Development</label>
+        <input type="checkbox" id="Rapid Application Development" name="FieldOfInterests[]" value="Rapid Application Development" />Rapid Application Development</label>
 <label for="thirtyseven">
-        <input type="checkbox" id="Social Network Analysis" name="FieldOfInterests[]" value=" Social Network Analysis" />Social Network Analysis</label>
+        <input type="checkbox" id="Social Network Analysis" name="FieldOfInterests[]" value="Social Network Analysis" />Social Network Analysis</label>
 <label for="thirtyeight">
-        <input type="checkbox" id="Software-defined Networking" name="FieldOfInterests[]" value=" Software-defined Networking" />Software-defined Networking</label>
+        <input type="checkbox" id="Software-defined Networking" name="FieldOfInterests[]" value="Software-defined Networking" />Software-defined Networking</label>
 <label for="thirtynine">
-        <input type="checkbox" id="Spiking Neural Networks" name="FieldOfInterests[]" value=" Spiking Neural Networks" />Spiking Neural Networks</label>
+        <input type="checkbox" id="Spiking Neural Networks" name="FieldOfInterests[]" value="Spiking Neural Networks" />Spiking Neural Networks</label>
 <label for="forty">
-        <input type="checkbox" id="System Design and Analysis" name="FieldOfInterests[]" value=" System Design and Analysis" />System Design and Analysis</label>
+        <input type="checkbox" id="System Design and Analysis" name="FieldOfInterests[]" value="System Design and Analysis" />System Design and Analysis</label>
 <label for="fortyone">
-        <input type="checkbox" id="Web Technologies" name="FieldOfInterests[]" value=" Web Technologies" />Web Technologies</label>
+        <input type="checkbox" id="Web Technologies" name="FieldOfInterests[]" value="Web Technologies" />Web Technologies</label>
 
 
  </div>

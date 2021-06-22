@@ -275,7 +275,7 @@ body{
            
            
             
-            <td><a target="_blank" href="{{url('shind',$userta->CompanyPersonalEmailID)}}">{{ $userta->Title}}{{$userta->NameWithInitials}}</a></br></td>
+            <td><a target="_blank" href="{{url('shind',$userta->CompanyPersonalEmailID)}}">{{ $userta->Title}}{{$userta->NameWithInitials}}&nbsp; <br> &nbsp;</a></br></td>
             
             
              

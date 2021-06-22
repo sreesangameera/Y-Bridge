@@ -410,7 +410,7 @@ body{
                                 <td><div class="pull-left">
                                 <img src="/upload/profile/{{ $user->Photo}}" class="profilep"height="60" width="60" alt="">
 	    </div><td>
-                                <td><a href="{{$user->LinkedIn}}" class="pull-up" target="_blank"><br>{{$user->NameWithInitials}}</a><br>{{$user->Designation}} at {{$user->CompanyName}}
+                                <td><a href="{{$user->LinkedIn}}" class="pull-up" target="_blank"><br>{{$user->Title}}{{$user->NameWithInitials}}</a><br>{{$user->Designation}} at {{$user->CompanyName}}
                                 </td>
                                 
                                 

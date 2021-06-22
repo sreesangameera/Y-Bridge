@@ -222,7 +222,7 @@ body{
             
             
           
-            <td><a target="_blank" href="{{url('shlec',$usert->EmployeeID)}}">{{$usert->Title}} {{$usert->FirstName}} {{$usert->LastName}}</a></td>
+            <td><a target="_blank" href="{{url('shlec',$usert->EmployeeID)}}">{{$usert->Title}} {{$usert->FirstName}} {{$usert->LastName}}&nbsp; <br> &nbsp;</a></td>
            </tr>
    
     @endforeach
@@ -275,7 +275,7 @@ body{
            
            
             
-            <td><a target="_blank" href="{{url('shind',$userta->CompanyPersonalEmailID)}}">{{$userta->NameWithInitials}}</a></br></td>
+            <td><a target="_blank" href="{{url('shind',$userta->CompanyPersonalEmailID)}}">{{$userta->NameWithInitials}}&nbsp; <br> &nbsp;</a></br></td>
             
             
              
